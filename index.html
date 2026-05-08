@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -17,13 +18,16 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
+}
+
+html{
 scroll-behavior:smooth;
 }
 
 body{
 background:#050505;
 color:white;
-font-family:'Oswald', sans-serif;
+font-family:'Inter',sans-serif;
 overflow-x:hidden;
 }
 
@@ -34,94 +38,100 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
-padding:20px 50px;
+height:90px;
+padding:0 50px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(0,0,0,0.45);
+background:rgba(0,0,0,0.55);
 backdrop-filter:blur(10px);
-z-index:1000;
+z-index:999;
+border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
 .logo{
 display:flex;
 align-items:center;
-gap:15px;
+gap:18px;
 }
 
 .logo img{
-height:55px;
-width:auto;
-object-fit:contain;
+height:52px;
+width:52px;
+object-fit:cover;
+border-radius:4px;
 }
 
 .logo h1{
-font-size:2rem;
-letter-spacing:3px;
-}
-
-nav ul{
-display:flex;
-gap:35px;
-list-style:none;
-}
-
-nav ul li a{
-color:white;
-text-decoration:none;
-font-size:1rem;
+font-family:'Oswald',sans-serif;
+font-size:2.2rem;
 letter-spacing:2px;
+}
+
+.menu{
+display:flex;
+gap:45px;
+}
+
+.menu a{
+text-decoration:none;
+color:white;
+font-family:'Oswald',sans-serif;
+font-size:1rem;
+letter-spacing:1px;
 transition:0.3s;
 }
 
-nav ul li a:hover{
-color:#c1121f;
+.menu a:hover{
+color:#ff1f1f;
 }
 
 /* HERO */
 
 .hero{
 height:100vh;
+width:100%;
+position:relative;
+
 background:
-linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.75)),
+linear-gradient(to right, rgba(0,0,0,0.82), rgba(0,0,0,0.45)),
+linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0)),
 url('HeroATZ.jpg');
 
 background-size:cover;
 background-position:center;
 display:flex;
 align-items:center;
-padding:0 7%;
-position:relative;
+padding:0 6%;
 overflow:hidden;
 }
 
 .hero-content{
 max-width:1000px;
+z-index:2;
 }
 
 .hero h2{
-font-size:8rem;
-line-height:0.92;
-font-weight:700;
+font-family:'Oswald',sans-serif;
+font-size:8vw;
+line-height:0.9;
 text-transform:uppercase;
-letter-spacing:2px;
-}
-
-.white{
+letter-spacing:1px;
 color:white;
 }
 
-.red{
-color:#c1121f;
+.hero h2 span{
+display:block;
+color:#d40000;
+text-shadow:0 0 25px rgba(255,0,0,0.35);
 }
 
 .hero p{
 margin-top:30px;
-font-size:1.3rem;
-font-weight:300;
-max-width:800px;
-line-height:1.6;
-color:#d0d0d0;
+font-size:1.2rem;
+max-width:700px;
+line-height:1.7;
+color:#d8d8d8;
 }
 
 .buttons{
@@ -132,146 +142,117 @@ flex-wrap:wrap;
 }
 
 .btn{
-padding:18px 35px;
-border:2px solid white;
+padding:18px 36px;
 text-decoration:none;
-color:white;
+font-family:'Oswald',sans-serif;
 font-size:1rem;
-letter-spacing:2px;
+letter-spacing:1px;
 transition:0.3s;
-}
-
-.btn:hover{
-background:white;
-color:black;
+border-radius:4px;
 }
 
 .btn-red{
-background:#c1121f;
-border:none;
-}
-
-.btn-red:hover{
-background:#ff3045;
+background:#d40000;
 color:white;
 }
 
-/* RUNE */
-
-.rune{
-position:absolute;
-bottom:40px;
-right:50px;
-opacity:0.12;
+.btn-red:hover{
+background:#ff1f1f;
+transform:translateY(-2px);
 }
 
-.rune img{
-height:180px;
+.btn-dark{
+border:1px solid rgba(255,255,255,0.3);
+color:white;
+background:rgba(255,255,255,0.05);
+}
+
+.btn-dark:hover{
+background:rgba(255,255,255,0.12);
+}
+
+/* RUNA */
+
+.runa{
+position:absolute;
+right:4%;
+bottom:8%;
+width:180px;
+opacity:0.18;
+pointer-events:none;
 }
 
 /* SECTIONS */
 
 section{
-padding:120px 8%;
+padding:140px 8%;
+border-top:1px solid rgba(255,255,255,0.06);
+background:#050505;
 }
 
 .section-title{
-font-size:4rem;
-margin-bottom:40px;
+font-family:'Oswald',sans-serif;
+font-size:5rem;
+line-height:0.95;
 text-transform:uppercase;
-letter-spacing:3px;
+margin-bottom:50px;
 }
 
-.section-text{
-font-size:1.2rem;
-line-height:1.8;
+.quote{
 max-width:900px;
-color:#d0d0d0;
+border-left:3px solid #d40000;
+padding-left:25px;
 }
 
-/* CARDS */
-
-.cards{
-margin-top:60px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-}
-
-.card{
-position:relative;
-height:420px;
-overflow:hidden;
-border-radius:12px;
-background:#111;
-}
-
-.card img{
-width:100%;
-height:100%;
-object-fit:cover;
-transition:0.5s;
-}
-
-.card:hover img{
-transform:scale(1.08);
-}
-
-.card-overlay{
-position:absolute;
-bottom:0;
-left:0;
-width:100%;
-padding:30px;
-background:linear-gradient(transparent, rgba(0,0,0,0.95));
-}
-
-.card-overlay h3{
-font-size:2rem;
-margin-bottom:10px;
-}
-
-.card-overlay p{
-font-size:1rem;
-color:#d0d0d0;
+.quote p{
+font-size:1.5rem;
+line-height:1.8;
+margin-bottom:25px;
+color:#e2e2e2;
 }
 
 /* FOOTER */
 
 footer{
 padding:60px 8%;
-background:black;
-text-align:center;
-border-top:1px solid #222;
+border-top:1px solid rgba(255,255,255,0.08);
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:20px;
+}
+
+footer h3{
+font-family:'Oswald',sans-serif;
+font-size:2rem;
+letter-spacing:2px;
 }
 
 footer p{
-color:#777;
-letter-spacing:2px;
+color:#888;
 }
 
 /* MOBILE */
 
-@media(max-width:900px){
+@media(max-width:1100px){
 
 nav{
-padding:15px 20px;
-flex-direction:column;
-gap:15px;
+padding:0 20px;
+height:80px;
 }
 
-nav ul{
-flex-wrap:wrap;
-justify-content:center;
-gap:15px;
+.menu{
+display:none;
 }
 
 .hero{
-padding:0 5%;
+padding:0 8%;
 }
 
 .hero h2{
-font-size:4rem;
+font-size:20vw;
+line-height:0.9;
 }
 
 .hero p{
@@ -279,11 +260,28 @@ font-size:1rem;
 }
 
 .section-title{
-font-size:2.5rem;
+font-size:3rem;
 }
 
-.rune img{
-height:120px;
+.quote p{
+font-size:1.15rem;
+}
+
+.runa{
+width:120px;
+right:5%;
+bottom:5%;
+}
+
+.buttons{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.btn{
+width:100%;
+max-width:320px;
+text-align:center;
 }
 
 }
@@ -293,7 +291,7 @@ height:120px;
 
 <body>
 
-<!-- NAV -->
+<!-- NAVBAR -->
 
 <nav>
 
@@ -302,13 +300,13 @@ height:120px;
 <h1>ATZ</h1>
 </div>
 
-<ul>
-<li><a href="educazione.html">EDUCAZIONE</a></li>
-<li><a href="cani-da-lavoro.html">WORKING DOGS</a></li>
-<li><a href="ricerca-soccorso.html">RICERCA E SOCCORSO</a></li>
-<li><a href="dwd.html">DWD / UNBROKEN DOGS</a></li>
-<li><a href="norse.html">LINEA NORSE</a></li>
-</ul>
+<div class="menu">
+<a href="#educazione">Educazione</a>
+<a href="#workingdogs">Working Dogs</a>
+<a href="#soccorso">Ricerca e soccorso</a>
+<a href="#dwd">DWD / Unbroken Dogs</a>
+<a href="#norse">Linea Norse</a>
+</div>
 
 </nav>
 
@@ -319,18 +317,14 @@ height:120px;
 <div class="hero-content">
 
 <h2>
-<span class="white">
-NON HO PRESO<br>
-UN CANE PER<br>
-TENERLO SUL<br>
-DIVANO.
-</span>
+Non ho preso<br>
+un cane per<br>
+tenerlo sul<br>
+divano.<br>
 
-<br>
-
-<span class="red">
-L'HO PRESO COME<br>
-COLLEGA DI VITA.
+<span>
+L'ho preso come<br>
+collega di vita.
 </span>
 </h2>
 
@@ -341,75 +335,87 @@ Li comprendiamo per ciò che sono.
 
 <div class="buttons">
 
-<a href="educazione.html" class="btn btn-red">
-SCOPRI IL PROGETTO
+<a href="#educazione" class="btn btn-red">
+Scopri il progetto
 </a>
 
-<a href="cani-da-lavoro.html" class="btn">
-WORKING DOG CULTURE
+<a href="#workingdogs" class="btn btn-dark">
+Working Dog Culture
 </a>
 
 </div>
 
 </div>
 
-<div class="rune">
-<img src="runaATZ.jpg">
-</div>
+<img src="runaATZ.jpg" class="runa">
 
 </section>
 
 <!-- EDUCAZIONE -->
 
-<section>
+<section id="educazione">
 
-<h2 class="section-title">
-Educazione e rieducazione
-</h2>
+<h3 class="section-title">
+Educazione e<br>
+rieducazione
+</h3>
 
-<p class="section-text">
+<div class="quote">
+
+<p>
 “L' educazione non è solo il rispetto delle regole,
 ma in primis il rispetto di tutti.”
+</p>
 
-<br><br>
-
+<p>
 “Relazione prima di prestazione.”
+</p>
 
-<br><br>
-
+<p>
 “Il rispetto è una cosa reciproca,
 lo si dà quando lo si riceve.
 E si, vale anche per i cani.”
 </p>
 
-<div class="cards">
-
-<div class="card">
-<img src="Educazione1.jpg">
-
-<div class="card-overlay">
-<h3>Relazione</h3>
-<p>Comprendere il cane prima di pretendere qualcosa da lui.</p>
-</div>
 </div>
 
-<div class="card">
-<img src="Educazione2.jpg">
+</section>
 
-<div class="card-overlay">
-<h3>Equilibrio</h3>
-<p>Costruire cani lucidi, stabili e presenti.</p>
-</div>
+<!-- WORKING DOGS -->
+
+<section id="workingdogs">
+
+<h3 class="section-title">
+Working Dogs
+</h3>
+
+<div class="quote">
+
+<p>
+Cultura del cane da lavoro.
+Non spettacolo. Non estetica.
+Relazione, presenza, responsabilità.
+</p>
+
 </div>
 
-<div class="card">
-<img src="Educazione3.jpg">
+</section>
 
-<div class="card-overlay">
-<h3>Cultura</h3>
-<p>Il cane non è un accessorio. È un compagno di vita.</p>
-</div>
-</div>
+<!-- RICERCA E SOCCORSO -->
+
+<section id="soccorso">
+
+<h3 class="section-title">
+Ricerca e<br>
+soccorso
+</h3>
+
+<div class="quote">
+
+<p>
+“Fare soccorso non è tutta la nostra vita intera,
+farlo insieme al nostro cane però rende la nostra vita intera.”
+</p>
 
 </div>
 
@@ -417,37 +423,46 @@ E si, vale anche per i cani.”
 
 <!-- DWD -->
 
-<section>
+<section id="dwd">
 
-<h2 class="section-title">
-DWD / Unbroken Dogs
-</h2>
+<h3 class="section-title">
+DWD /<br>
+Unbroken Dogs
+</h3>
 
-<p class="section-text">
-“Dogs With Disabilities”
+<div class="quote">
 
-<br><br>
+<p>
+Dogs With Disabilities.
+</p>
 
+<p>
 “I limiti sono negli occhi di chi guarda.”
 </p>
+
+</div>
 
 </section>
 
 <!-- NORSE -->
 
-<section>
+<section id="norse">
 
-<h2 class="section-title">
+<h3 class="section-title">
 Linea Norse
-</h2>
+</h3>
 
-<p class="section-text">
+<div class="quote">
+
+<p>
 “Onora i morti ma combatti per i vivi”
+</p>
 
-<br><br>
-
+<p>
 “Meglio un uccello libero che un re prigioniero”
 </p>
+
+</div>
 
 </section>
 
@@ -455,8 +470,13 @@ Linea Norse
 
 <footer>
 
+<div>
+<h3>ATZ</h3>
+<p>WORKING DOG CULTURE</p>
+</div>
+
 <p>
-ATZ • WORKING DOG CULTURE
+© ATZ
 </p>
 
 </footer>
