@@ -131,4 +131,170 @@ border:1px solid #222;
 
 .card img{
 width:100%;
-height
+height:100%;
+object-fit:cover;
+filter:grayscale(100%);
+transition:0.4s;
+}
+
+.card:hover img{
+transform:scale(1.05);
+filter:grayscale(0%);
+}
+
+.overlay{
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+padding:20px;
+background:linear-gradient(transparent, rgba(0,0,0,0.9));
+}
+
+.overlay h2{
+font-size:32px;
+}
+
+.pink{
+color:#ff00aa;
+}
+
+.red{
+color:#ff2222;
+}
+
+.footer{
+padding:40px;
+text-align:center;
+background:black;
+border-top:1px solid #222;
+}
+
+.socials{
+margin-top:20px;
+display:flex;
+justify-content:center;
+gap:20px;
+}
+
+.socials a{
+color:white;
+text-decoration:none;
+font-size:18px;
+}
+
+.socials a:hover{
+color:#ff0077;
+}
+
+@media(max-width:900px){
+
+.hero{
+padding:30px;
+}
+
+.hero h1{
+font-size:50px;
+}
+
+.menu{
+gap:15px;
+font-size:14px;
+top:25px;
+right:20px;
+}
+
+.logo{
+width:90px;
+}
+
+.runa{
+width:50px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<img src="logoATZ.jpg" class="logo">
+
+<div class="menu">
+<a href="#">HOME</a>
+<a href="#">GALLERY</a>
+<a href="#">DISABILITY</a>
+<a href="#">NORSE</a>
+<a href="#">CONTATTI</a>
+</div>
+
+<div class="subtitle">WORKING DOG CULTURE</div>
+
+<h1>
+IL CANE NON VA SCELTO<br>
+PER RIEMPIRE CASA.<br>
+<span class="highlight">VA SCELTO COME<br>
+COMPAGNO DI VITA.</span>
+</h1>
+
+<div class="buttons">
+<a href="#" class="btn">SCOPRI</a>
+<a href="#" class="btn">CONTATTI</a>
+</div>
+
+<img src="runaATZ.jpg" class="runa">
+
+</section>
+
+<section class="section">
+
+<div class="cards">
+
+<div class="card">
+<img src="Educazione1.jpg">
+
+<div class="overlay">
+<h2 class="pink">DISABILITY LINE</h2>
+<p>Forza oltre i limiti.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="Thor1.jpg">
+
+<div class="overlay">
+<h2 class="red">NORSE LINE</h2>
+<p>Radici. Forza. Lealtà.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="Logan1.jpg">
+
+<div class="overlay">
+<h2>WORKING DOGS</h2>
+<p>Disciplina e dedizione.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+<h2>A TUTTA ZAMPA</h2>
+
+<div class="socials">
+<a href="#">Instagram</a>
+<a href="#">Facebook</a>
+<a href="#">WhatsApp</a>
+</div>
+
+</footer>
+
+</body>
+</html>
