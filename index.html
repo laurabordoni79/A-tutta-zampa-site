@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>A Tutta Zampa</title>
+<title>A Tutta Zampa | ATZ</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -16,441 +17,118 @@ box-sizing:border-box;
 }
 
 body{
-background:#050505;
+background:#000;
+font-family:'Oswald', sans-serif;
 color:white;
-font-family:Arial,sans-serif;
-line-height:1.6;
 overflow-x:hidden;
 }
-
-/* HEADER */
-
-.header{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-padding:20px 40px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-z-index:999;
-background:linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
-}
-
-.header img.logo{
-height:75px;
-}
-
-.header img.runa{
-height:42px;
-opacity:0.9;
-}
-
-/* HERO */
 
 .hero{
 height:100vh;
 background:
-linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.92)),
-url('HeroATZ.jpg') center/cover;
+linear-gradient(to right, rgba(0,0,0,0.95), rgba(0,0,0,0.55)),
+url('HeroATZ.jpg');
+background-size:cover;
+background-position:center;
 display:flex;
-align-items:center;
+flex-direction:column;
+justify-content:center;
 padding:60px;
+position:relative;
 }
 
-.hero-content{
-max-width:750px;
-margin-top:80px;
+.logo{
+position:absolute;
+top:30px;
+left:30px;
+width:140px;
 }
 
-.label{
-color:#8f8f8f;
-text-transform:uppercase;
-letter-spacing:4px;
-font-size:13px;
-margin-bottom:18px;
-}
-
-h1,h2{
-font-weight:900;
-text-transform:uppercase;
+.menu{
+position:absolute;
+top:40px;
+right:40px;
+display:flex;
+gap:30px;
+font-size:18px;
 letter-spacing:2px;
 }
 
-h1{
-font-size:72px;
-line-height:0.95;
-margin-bottom:25px;
-}
-
-h2{
-font-size:42px;
-line-height:1.1;
-margin-bottom:25px;
-}
-
-.hero p{
-font-size:24px;
-color:#e0e0e0;
-max-width:650px;
-}
-
-section{
-padding:100px 25px;
-border-bottom:1px solid rgba(255,255,255,0.06);
-}
-
-.container{
-max-width:1250px;
-margin:auto;
-}
-
-p{
-font-size:19px;
-color:#cfcfcf;
-max-width:850px;
-}
-
-.quote{
-margin-top:30px;
-font-size:22px;
-font-style:italic;
+.menu a{
 color:white;
-border-left:3px solid white;
-padding-left:20px;
-}
-
-/* GALLERY */
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:22px;
-margin-top:45px;
-}
-
-.gallery img{
-width:100%;
-height:360px;
-object-fit:cover;
-border-radius:24px;
+text-decoration:none;
 transition:0.3s;
-filter:grayscale(10%);
 }
 
-.gallery img:hover{
-transform:scale(1.02);
-filter:grayscale(0%);
+.menu a:hover{
+color:#ff0077;
 }
 
-/* FOOTER */
-
-.footer{
-padding:70px 20px;
-text-align:center;
+.runa{
+position:absolute;
+right:40px;
+bottom:40px;
+width:70px;
+opacity:0.85;
 }
 
-.footer img{
-height:70px;
+.subtitle{
+color:#ff0077;
+font-size:22px;
+letter-spacing:4px;
 margin-bottom:20px;
-opacity:0.9;
 }
 
-.footer p{
-margin:auto;
-color:#7d7d7d;
-font-size:15px;
+.hero h1{
+font-size:85px;
+line-height:0.95;
+max-width:700px;
+text-transform:uppercase;
+margin-bottom:30px;
 }
 
-/* MOBILE */
-
-@media(max-width:768px){
-
-.header{
-padding:18px 20px;
+.highlight{
+color:#ff0077;
 }
 
-.header img.logo{
-height:58px;
+.buttons{
+display:flex;
+gap:20px;
 }
 
-.header img.runa{
-height:34px;
+.btn{
+padding:15px 35px;
+border:2px solid #ff0077;
+color:white;
+text-decoration:none;
+font-size:18px;
+letter-spacing:2px;
+transition:0.3s;
 }
 
-.hero{
-padding:30px;
+.btn:hover{
+background:#ff0077;
 }
 
-.hero-content{
-margin-top:100px;
+.section{
+padding:80px 40px;
+background:#050505;
 }
 
-h1{
-font-size:46px;
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+margin-top:40px;
 }
 
-h2{
-font-size:34px;
-}
-
-.hero p{
-font-size:20px;
-}
-
-.gallery img{
+.card{
 height:300px;
+position:relative;
+overflow:hidden;
+border:1px solid #222;
 }
 
-}
-
-</style>
-</head>
-
-<body>
-
-<!-- HEADER -->
-
-<div class="header">
-
-<img src="logoATZ.jpg" class="logo">
-
-<img src="runaATZ.jpg" class="runa">
-
-</div>
-
-<!-- HERO -->
-
-<section class="hero">
-
-<div class="hero-content">
-
-<div class="label">
-A Tutta Zampa
-</div>
-
-<h1>
-WORKING DOGS<br>
-REAL CULTURE
-</h1>
-
-<p>
-Il cane non è nato per essere decorazione.
-È nato per collaborare.
-</p>
-
-<div class="quote">
-“Il cane perfetto non esiste.
-Esiste il cane compreso.”
-</div>
-
-</div>
-</section>
-
-<!-- EDUCAZIONE -->
-
-<section>
-
-<div class="container">
-
-<div class="label">
-Educazione e Recupero Comportamentale
-</div>
-
-<h2>
-Equilibrio.<br>
-Fiducia.<br>
-Collaborazione.
-</h2>
-
-<p>
-La cultura cinofila per ATZ non sono mai i comandi insegnati al cane,
-ma la relazione che si viene a creare e che trasforma il binomio
-in un animale a sei zampe.
-</p>
-
-<div class="quote">
-“Si impara tutto con il gioco (e a volte il cibo),
-ma niente viene fatto per gioco.”
-</div>
-
-<div class="gallery">
-
-<img src="Educazione1.jpg">
-<img src="Educazione2.jpg">
-<img src="Educazione3.jpg">
-
-</div>
-
-</div>
-</section>
-
-<!-- WORKING DOGS -->
-
-<section>
-
-<div class="container">
-
-<div class="label">
-Working Dogs
-</div>
-
-<h2>
-Istinto.<br>
-Controllo.<br>
-Lavoro.
-</h2>
-
-<p>
-Il lavoro sportivo sviluppa comunicazione,
-gestione emotiva e collaborazione reale tra cane e conduttore.
-</p>
-
-<div class="gallery">
-
-<img src="Morso1.jpg">
-<img src="Morso2.jpg">
-
-</div>
-
-</div>
-</section>
-
-<!-- RICERCA -->
-
-<section>
-
-<div class="container">
-
-<div class="label">
-Ricerca e Soccorso
-</div>
-
-<h2>
-Preparazione.<br>
-Squadra.<br>
-Responsabilità.
-</h2>
-
-<p>
-La ricerca non è spettacolo.
-La ricerca è preparazione, equilibrio,
-lavoro di squadra e formazione soprattutto del conduttore.
-Costruire un cane è relativamente facile.
-L’ostacolo più grande è chi regge il guinzaglio.
-</p>
-
-<div class="quote">
-“Non ci si improvvisa soccorritori.
-Qui non si scherza.”
-</div>
-
-<div class="quote">
-“Il cane è un animale con un naso intorno.”
-</div>
-
-<div class="quote">
-“L’unico limite che conosce il tuo naso
-è quello imposto dalla mia immaginazione e dalla mia pigrizia.”
-</div>
-
-<div class="gallery">
-
-<img src="ProtezioneCivile1.jpg">
-<img src="ProtezioneCivile2.jpg">
-<img src="ProtezioneCivile3.jpg">
-<img src="ProtezioneCivile4.jpg">
-<img src="ProtezioneCivile5.jpg">
-<img src="ProtezioneCivile6.jpg">
-<img src="ProtezioneCivile7.jpg">
-<img src="ProtezioneCivile8.jpg">
-<img src="Rilevamento1.jpg">
-
-</div>
-
-</div>
-</section>
-
-<!-- UNBROKEN -->
-
-<section>
-
-<div class="container">
-
-<div class="label">
-Unbroken Dogs
-</div>
-
-<h2>
-Different.<br>
-Not Less.
-</h2>
-
-<p>
-I cani disabili non hanno bisogno di compassione.
-Hanno bisogno di spazio per vivere,
-adattarsi ed esprimere il loro carattere.
-</p>
-
-<div class="gallery">
-
-<img src="Logan1.jpg">
-<img src="Logan2.jpg">
-<img src="Logan3.jpg">
-<img src="Logan4.jpg">
-<img src="Logan5.jpg">
-<img src="Logan6.jpg">
-<img src="Logan7.jpg">
-
-</div>
-
-</div>
-</section>
-
-<!-- THOR -->
-
-<section>
-
-<div class="container">
-
-<div class="label">
-Thor
-</div>
-
-<h2>
-Caos.<br>
-Carisma.<br>
-Thor-tellino.
-</h2>
-
-<p>
-Perché la vita con i cani non è solo lavoro.
-È anche personalità,
-ironia e quotidianità condivisa.
-</p>
-
-<div class="gallery">
-
-<img src="Thor1.jpg">
-<img src="Thor2.jpg">
-
-</div>
-
-</div>
-</section>
-
-<!-- FOOTER -->
-
-<div class="footer">
-
-<img src="runaATZ.jpg">
-
-<p>
-A Tutta Zampa — Working Dog Culture
-</p>
-
-</div>
-
-</body>
-</html>
+.card img{
+width:100%;
+height
