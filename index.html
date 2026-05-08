@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <title>ATZ • Working Dog Culture</title>
 
@@ -33,225 +32,253 @@ overflow-x:hidden;
 
 /* NAVBAR */
 
-nav{
+header{
 position:fixed;
 top:0;
 left:0;
 width:100%;
-height:90px;
-padding:0 50px;
+z-index:999;
+background:rgba(0,0,0,0.55);
+backdrop-filter:blur(8px);
+border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.navbar{
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(0,0,0,0.55);
-backdrop-filter:blur(10px);
-z-index:999;
-border-bottom:1px solid rgba(255,255,255,0.08);
+padding:18px 40px;
 }
 
 .logo{
 display:flex;
 align-items:center;
-gap:18px;
+gap:15px;
 }
 
 .logo img{
-height:52px;
-width:52px;
+width:55px;
+height:55px;
 object-fit:cover;
 border-radius:4px;
 }
 
 .logo h1{
 font-family:'Oswald',sans-serif;
-font-size:2.2rem;
+font-size:2rem;
 letter-spacing:2px;
 }
 
-.menu{
+nav{
 display:flex;
-gap:45px;
+gap:35px;
+flex-wrap:wrap;
 }
 
-.menu a{
-text-decoration:none;
+nav a{
 color:white;
+text-decoration:none;
 font-family:'Oswald',sans-serif;
 font-size:1rem;
 letter-spacing:1px;
 transition:0.3s;
 }
 
-.menu a:hover{
-color:#ff1f1f;
+nav a:hover{
+color:#c1121f;
 }
 
 /* HERO */
 
 .hero{
 height:100vh;
-width:100%;
 position:relative;
-
-background:
-linear-gradient(to right, rgba(0,0,0,0.82), rgba(0,0,0,0.45)),
-linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0)),
-url('HeroATZ.jpg');
-
-background-size:cover;
-background-position:center;
 display:flex;
 align-items:center;
 padding:0 6%;
 overflow:hidden;
+
+background:
+linear-gradient(to right,
+rgba(0,0,0,0.88) 20%,
+rgba(0,0,0,0.55) 55%,
+rgba(0,0,0,0.82) 100%
+),
+url('HeroATZ.jpg');
+
+background-size:cover;
+background-position:center;
 }
 
 .hero-content{
 max-width:1000px;
+position:relative;
 z-index:2;
+margin-top:60px;
 }
 
 .hero h2{
 font-family:'Oswald',sans-serif;
-font-size:8vw;
+font-size:7vw;
 line-height:0.9;
 text-transform:uppercase;
-letter-spacing:1px;
-color:white;
+font-weight:700;
+letter-spacing:2px;
+color:#f5f5f5;
 }
 
 .hero h2 span{
 display:block;
-color:#d40000;
-text-shadow:0 0 25px rgba(255,0,0,0.35);
+color:#c1121f;
+text-shadow:0 0 25px rgba(193,18,31,0.55);
 }
 
 .hero p{
 margin-top:30px;
 font-size:1.2rem;
 max-width:700px;
-line-height:1.7;
-color:#d8d8d8;
+color:#d7d7d7;
+line-height:1.6;
 }
 
-.buttons{
-margin-top:40px;
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-}
-
-.btn{
-padding:18px 36px;
-text-decoration:none;
-font-family:'Oswald',sans-serif;
-font-size:1rem;
-letter-spacing:1px;
-transition:0.3s;
-border-radius:4px;
-}
-
-.btn-red{
-background:#d40000;
-color:white;
-}
-
-.btn-red:hover{
-background:#ff1f1f;
-transform:translateY(-2px);
-}
-
-.btn-dark{
-border:1px solid rgba(255,255,255,0.3);
-color:white;
-background:rgba(255,255,255,0.05);
-}
-
-.btn-dark:hover{
-background:rgba(255,255,255,0.12);
-}
-
-/* RUNA */
-
-.runa{
+.hero-rune{
 position:absolute;
-right:4%;
-bottom:8%;
-width:180px;
-opacity:0.18;
-pointer-events:none;
+bottom:40px;
+right:40px;
+width:130px;
+opacity:0.9;
+filter:drop-shadow(0 0 12px rgba(0,0,0,0.7));
 }
 
 /* SECTIONS */
 
-section{
-padding:140px 8%;
+.section{
+padding:120px 8%;
 border-top:1px solid rgba(255,255,255,0.06);
+}
+
+.section h3{
+font-family:'Oswald',sans-serif;
+font-size:4rem;
+margin-bottom:25px;
+text-transform:uppercase;
+letter-spacing:2px;
+}
+
+.section p{
+font-size:1.1rem;
+line-height:1.8;
+max-width:950px;
+}
+
+/* COLORI DELLE LINEE */
+
+.educazione{
+background:#11100d;
+}
+
+.educazione h3{
+color:#d8c3a5;
+}
+
+.educazione .quote{
+color:#f1e3cf;
+}
+
+.workingdogs{
+background:#080808;
+}
+
+.workingdogs h3{
+color:#8b0000;
+}
+
+.workingdogs .quote{
+color:#d5d5d5;
+}
+
+.soccorso{
+background:#16110b;
+}
+
+.soccorso h3{
+color:#ff6b00;
+}
+
+.soccorso .quote{
+color:#ffe1c7;
+}
+
+.dwd{
+background:#0f0b12;
+}
+
+.dwd h3{
+color:#d14dff;
+}
+
+.dwd .quote{
+color:#f1d7ff;
+}
+
+.norse{
 background:#050505;
 }
 
-.section-title{
-font-family:'Oswald',sans-serif;
-font-size:5rem;
-line-height:0.95;
-text-transform:uppercase;
-margin-bottom:50px;
+.norse h3{
+color:#b11226;
 }
+
+.norse .quote{
+color:#d0d0d0;
+}
+
+/* QUOTES */
 
 .quote{
+font-family:'Oswald',sans-serif;
+font-size:2rem;
+line-height:1.3;
+margin-top:35px;
 max-width:900px;
-border-left:3px solid #d40000;
-padding-left:25px;
-}
-
-.quote p{
-font-size:1.5rem;
-line-height:1.8;
-margin-bottom:25px;
-color:#e2e2e2;
+text-transform:uppercase;
 }
 
 /* FOOTER */
 
 footer{
 padding:60px 8%;
+background:black;
+text-align:center;
 border-top:1px solid rgba(255,255,255,0.08);
-display:flex;
-justify-content:space-between;
-align-items:center;
-flex-wrap:wrap;
-gap:20px;
-}
-
-footer h3{
-font-family:'Oswald',sans-serif;
-font-size:2rem;
-letter-spacing:2px;
 }
 
 footer p{
 color:#888;
+font-size:0.95rem;
 }
 
-/* MOBILE */
+/* RESPONSIVE */
 
-@media(max-width:1100px){
+@media(max-width:900px){
+
+.navbar{
+padding:15px 20px;
+flex-direction:column;
+gap:20px;
+}
 
 nav{
-padding:0 20px;
-height:80px;
-}
-
-.menu{
-display:none;
+justify-content:center;
+gap:18px;
 }
 
 .hero{
-padding:0 8%;
+padding:0 7%;
 }
 
 .hero h2{
-font-size:20vw;
+font-size:16vw;
 line-height:0.9;
 }
 
@@ -259,29 +286,18 @@ line-height:0.9;
 font-size:1rem;
 }
 
-.section-title{
-font-size:3rem;
+.section h3{
+font-size:2.5rem;
 }
 
-.quote p{
-font-size:1.15rem;
+.quote{
+font-size:1.4rem;
 }
 
-.runa{
-width:120px;
-right:5%;
-bottom:5%;
-}
-
-.buttons{
-flex-direction:column;
-align-items:flex-start;
-}
-
-.btn{
-width:100%;
-max-width:320px;
-text-align:center;
+.hero-rune{
+width:90px;
+right:20px;
+bottom:20px;
 }
 
 }
@@ -291,24 +307,24 @@ text-align:center;
 
 <body>
 
-<!-- NAVBAR -->
-
-<nav>
+<header>
+<div class="navbar">
 
 <div class="logo">
-<img src="logoATZ.jpg">
+<img src="logoATZ.jpg" alt="ATZ Logo">
 <h1>ATZ</h1>
 </div>
 
-<div class="menu">
+<nav>
 <a href="#educazione">Educazione</a>
 <a href="#workingdogs">Working Dogs</a>
 <a href="#soccorso">Ricerca e soccorso</a>
 <a href="#dwd">DWD / Unbroken Dogs</a>
 <a href="#norse">Linea Norse</a>
-</div>
-
 </nav>
+
+</div>
+</header>
 
 <!-- HERO -->
 
@@ -319,9 +335,7 @@ text-align:center;
 <h2>
 Non ho preso<br>
 un cane per<br>
-tenerlo sul<br>
-divano.<br>
-
+tenerlo sul divano.
 <span>
 L'ho preso come<br>
 collega di vita.
@@ -333,150 +347,104 @@ Non abbiamo bisogno di trasformare i cani in esseri umani per rispettarli.
 Li comprendiamo per ciò che sono.
 </p>
 
-<div class="buttons">
-
-<a href="#educazione" class="btn btn-red">
-Scopri il progetto
-</a>
-
-<a href="#workingdogs" class="btn btn-dark">
-Working Dog Culture
-</a>
-
 </div>
 
-</div>
-
-<img src="runaATZ.jpg" class="runa">
+<img class="hero-rune" src="runaATZ.jpg" alt="Runa ATZ">
 
 </section>
 
 <!-- EDUCAZIONE -->
 
-<section id="educazione">
+<section class="section educazione" id="educazione">
 
-<h3 class="section-title">
-Educazione e<br>
-rieducazione
-</h3>
+<h3>Educazione e rieducazione</h3>
+
+<p>
+Relazione prima di prestazione.
+Il rispetto è reciproco. Vale anche per i cani.
+</p>
 
 <div class="quote">
-
-<p>
 “L' educazione non è solo il rispetto delle regole,
 ma in primis il rispetto di tutti.”
-</p>
-
-<p>
-“Relazione prima di prestazione.”
-</p>
-
-<p>
-“Il rispetto è una cosa reciproca,
-lo si dà quando lo si riceve.
-E si, vale anche per i cani.”
-</p>
-
 </div>
 
 </section>
 
 <!-- WORKING DOGS -->
 
-<section id="workingdogs">
+<section class="section workingdogs" id="workingdogs">
 
-<h3 class="section-title">
-Working Dogs
-</h3>
-
-<div class="quote">
+<h3>Working Dogs</h3>
 
 <p>
 Cultura del cane da lavoro.
-Non spettacolo. Non estetica.
-Relazione, presenza, responsabilità.
+Presenza, stabilità, istinto, controllo.
 </p>
 
+<div class="quote">
+“Non ho preso un cane per tenerlo sul divano.”
 </div>
 
 </section>
 
-<!-- RICERCA E SOCCORSO -->
+<!-- RICERCA -->
 
-<section id="soccorso">
+<section class="section soccorso" id="soccorso">
 
-<h3 class="section-title">
-Ricerca e<br>
-soccorso
-</h3>
-
-<div class="quote">
+<h3>Ricerca e soccorso</h3>
 
 <p>
-“Fare soccorso non è tutta la nostra vita intera,
-farlo insieme al nostro cane però rende la nostra vita intera.”
+Fare soccorso insieme al proprio cane significa condividere responsabilità,
+fiducia e vita reale.
 </p>
 
+<div class="quote">
+“Non mi interessa altro.
+Si parte in due, si torna in due.”
 </div>
 
 </section>
 
 <!-- DWD -->
 
-<section id="dwd">
+<section class="section dwd" id="dwd">
 
-<h3 class="section-title">
-DWD /<br>
-Unbroken Dogs
-</h3>
-
-<div class="quote">
+<h3>DWD / Unbroken Dogs</h3>
 
 <p>
 Dogs With Disabilities.
+Cani che dimostrano ogni giorno che i limiti
+esistono soprattutto negli occhi di chi guarda.
 </p>
 
-<p>
+<div class="quote">
 “I limiti sono negli occhi di chi guarda.”
-</p>
-
 </div>
 
 </section>
 
 <!-- NORSE -->
 
-<section id="norse">
+<section class="section norse" id="norse">
 
-<h3 class="section-title">
-Linea Norse
-</h3>
+<h3>Linea Norse</h3>
+
+<p>
+Una linea più simbolica, più rituale,
+più essenziale.
+</p>
 
 <div class="quote">
-
-<p>
-“Onora i morti ma combatti per i vivi”
-</p>
-
-<p>
-“Meglio un uccello libero che un re prigioniero”
-</p>
-
+“Onora i morti ma combatti per i vivi.”
 </div>
 
 </section>
 
-<!-- FOOTER -->
-
 <footer>
 
-<div>
-<h3>ATZ</h3>
-<p>WORKING DOG CULTURE</p>
-</div>
-
 <p>
-© ATZ
+ATZ • Working Dog Culture
 </p>
 
 </footer>
