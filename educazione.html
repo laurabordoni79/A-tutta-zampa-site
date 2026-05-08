@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Educazione e Rieducazione | ATZ</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#050505;
+color:white;
+font-family:'Oswald', sans-serif;
+overflow-x:hidden;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.92)),
+url('https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=1974&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+padding:80px 8%;
+}
+
+.hero-content{
+max-width:900px;
+}
+
+.subtitle{
+color:#ff006e;
+font-size:1.3rem;
+letter-spacing:4px;
+margin-bottom:25px;
+text-transform:uppercase;
+}
+
+.hero h1{
+font-size:clamp(4rem, 10vw, 9rem);
+line-height:0.95;
+text-transform:uppercase;
+font-weight:700;
+margin-bottom:40px;
+}
+
+.hero h1 span{
+color:#ff006e;
+}
+
+.description{
+font-size:1.3rem;
+line-height:1.8;
+color:#cccccc;
+max-width:700px;
+}
+
+.section{
+padding:140px 8%;
+background:#0a0a0a;
+border-top:1px solid #151515;
+}
+
+.section:nth-child(even){
+background:#050505;
+}
+
+.section-title{
+font-size:clamp(2.5rem, 6vw, 5rem);
+text-transform:uppercase;
+margin-bottom:60px;
+line-height:1;
+}
+
+.quote{
+font-size:clamp(2rem, 5vw, 4rem);
+line-height:1.1;
+text-transform:uppercase;
+margin-bottom:60px;
+font-weight:700;
+max-width:1200px;
+}
+
+.quote span{
+color:#ff006e;
+}
+
+.text{
+font-size:1.2rem;
+line-height:2;
+color:#cfcfcf;
+max-width:850px;
+}
+
+.footer{
+padding:80px 8%;
+background:black;
+border-top:1px solid #111;
+}
+
+.footer p{
+color:#888;
+font-size:1rem;
+letter-spacing:2px;
+text-transform:uppercase;
+}
+
+a{
+color:white;
+text-decoration:none;
+}
+
+.back{
+position:fixed;
+top:30px;
+right:30px;
+border:1px solid #ff006e;
+padding:14px 22px;
+text-transform:uppercase;
+letter-spacing:2px;
+transition:0.3s;
+background:rgba(0,0,0,0.5);
+z-index:999;
+}
+
+.back:hover{
+background:#ff006e;
+}
+
+@media(max-width:768px){
+
+.hero{
+padding:120px 8%;
+}
+
+.hero h1{
+font-size:4rem;
+}
+
+.quote{
+font-size:2.2rem;
+}
+
+.description,
+.text{
+font-size:1rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<a href="index.html" class="back">Home</a>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="subtitle">
+ATZ • EDUCAZIONE E RIEDUCAZIONE
+</div>
+
+<h1>
+Relazione prima di <span>prestazione.</span>
+</h1>
+
+<div class="description">
+L’educazione non è solo il rispetto delle regole,
+ma in primis il rispetto di tutti.
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">
+Educazione
+</h2>
+
+<div class="quote">
+Il rispetto è una cosa reciproca,
+lo si dà quando lo si riceve.
+<span>E sì, vale anche per i cani.</span>
+</div>
+
+<div class="text">
+Ogni relazione nasce dalla comunicazione.
+Non lavoriamo per creare automi,
+ma per costruire equilibrio,
+comprensione e collaborazione reale tra cane e proprietario.
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">
+Rieducazione
+</h2>
+
+<div class="quote">
+Non esistono cani rotti.
+<span>Esistono relazioni lasciate sole.</span>
+</div>
+
+<div class="text">
+La rieducazione comportamentale richiede tempo,
+ascolto, lucidità e responsabilità.
+Ogni cane ha un linguaggio,
+una storia e capacità che meritano di essere comprese.
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">
+Working Dog Culture
+</h2>
+
+<div class="quote">
+Meticolosamente addestrato,
+un proprietario può diventare
+<span>un valido compagno per il suo cane.</span>
+</div>
+
+</section>
+
+<footer class="footer">
+
+<p>
+ATZ • Working Dog Culture
+</p>
+
+</footer>
+
+</body>
+</html>
