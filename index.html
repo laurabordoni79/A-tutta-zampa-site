@@ -1,453 +1,368 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-<title>ATZ • Working Dog Culture</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-background:#050505;
-color:white;
-font-family:'Inter',sans-serif;
-overflow-x:hidden;
-}
-
-/* NAVBAR */
-
-header{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-z-index:999;
-background:rgba(0,0,0,0.55);
-backdrop-filter:blur(8px);
-border-bottom:1px solid rgba(255,255,255,0.08);
-}
-
-.navbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 40px;
-}
-
-.logo{
-display:flex;
-align-items:center;
-gap:15px;
-}
-
-.logo img{
-width:55px;
-height:55px;
-object-fit:cover;
-border-radius:4px;
-}
-
-.logo h1{
-font-family:'Oswald',sans-serif;
-font-size:2rem;
-letter-spacing:2px;
-}
-
-nav{
-display:flex;
-gap:35px;
-flex-wrap:wrap;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-font-family:'Oswald',sans-serif;
-font-size:1rem;
-letter-spacing:1px;
-transition:0.3s;
-}
-
-nav a:hover{
-color:#c1121f;
-}
-
-/* HERO */
+/* ===================================================== */
+/* =============== HERO DEFINITIVA ATZ ================= */
+/* ===================================================== */
 
 .hero{
 height:100vh;
 position:relative;
+
 display:flex;
 align-items:center;
-padding:0 6%;
+
+padding:0 5%;
+
 overflow:hidden;
 
 background:
 linear-gradient(to right,
-rgba(0,0,0,0.88) 20%,
-rgba(0,0,0,0.55) 55%,
-rgba(0,0,0,0.82) 100%
+rgba(0,0,0,0.60) 5%,
+rgba(0,0,0,0.18) 48%,
+rgba(0,0,0,0.45) 100%
 ),
 url('HeroATZ.jpg');
 
 background-size:cover;
-background-position:center;
+background-position:center center;
 }
 
+/* ===================================================== */
+/* ================= CONTENUTO HERO ==================== */
+/* ===================================================== */
+
 .hero-content{
-max-width:1000px;
 position:relative;
 z-index:2;
-margin-top:60px;
+
+width:82%;
+max-width:1450px;
+
+margin-top:0;
 }
+
+/* ===================================================== */
+/* ==================== TESTO HERO ===================== */
+/* ===================================================== */
 
 .hero h2{
 font-family:'Oswald',sans-serif;
-font-size:7vw;
-line-height:0.9;
-text-transform:uppercase;
+
+font-size:4.2vw;
+
+line-height:0.78;
+
 font-weight:700;
-letter-spacing:2px;
-color:#f5f5f5;
+
+letter-spacing:-2px;
+
+text-transform:uppercase;
+
+color:#f4f4f4;
+
+max-width:1350px;
+
+text-shadow:
+0 0 12px rgba(0,0,0,0.22);
 }
+
+/* ===================================================== */
+/* ================= ROSA/FUCSIA ORIGINALE ============= */
+/* ===================================================== */
 
 .hero h2 span{
+
 display:block;
-color:#c1121f;
-text-shadow:0 0 25px rgba(193,18,31,0.55);
+
+margin-top:10px;
+
+color:#ff4fd8;
+
+text-shadow:
+0 0 8px rgba(255,79,216,0.28),
+0 0 24px rgba(255,79,216,0.25),
+0 0 45px rgba(255,79,216,0.14);
+
 }
+
+/* ===================================================== */
+/* ================== TESTO SECONDARIO ================= */
+/* ===================================================== */
 
 .hero p{
-margin-top:30px;
-font-size:1.2rem;
-max-width:700px;
-color:#d7d7d7;
-line-height:1.6;
+
+margin-top:24px;
+
+font-size:1rem;
+
+line-height:1.65;
+
+max-width:760px;
+
+font-weight:300;
+
+color:#f0f0f0;
+
+text-shadow:
+0 0 10px rgba(0,0,0,0.15);
+
 }
+
+/* ===================================================== */
+/* ====================== RUNA ========================= */
+/* ===================================================== */
 
 .hero-rune{
+
 position:absolute;
-bottom:40px;
-right:40px;
-width:130px;
-opacity:0.9;
-filter:drop-shadow(0 0 12px rgba(0,0,0,0.7));
+
+right:340px;
+
+bottom:28px;
+
+width:150px;
+
+opacity:0.07;
+
+filter:
+blur(0.5px)
+drop-shadow(0 0 18px rgba(255,79,216,0.10));
+
+pointer-events:none;
+
+z-index:1;
+
 }
 
-/* SECTIONS */
+/* ===================================================== */
+/* ===================== NAVBAR ======================== */
+/* ===================================================== */
 
-.section{
-padding:120px 8%;
-border-top:1px solid rgba(255,255,255,0.06);
+header{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+
+z-index:999;
+
+background:rgba(0,0,0,0.22);
+
+backdrop-filter:blur(10px);
+
+border-bottom:
+1px solid rgba(255,255,255,0.03);
+
 }
 
-.section h3{
+/* ===================================================== */
+/* =================== CONTENITORE NAV ================= */
+/* ===================================================== */
+
+.navbar{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:28px 54px;
+
+}
+
+/* ===================================================== */
+/* ======================= LOGO ======================== */
+/* ===================================================== */
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:18px;
+
+}
+
+.logo img{
+
+width:60px;
+height:60px;
+
+object-fit:cover;
+
+}
+
+.logo h1{
+
 font-family:'Oswald',sans-serif;
-font-size:4rem;
-margin-bottom:25px;
-text-transform:uppercase;
+
+font-size:2.9rem;
+
 letter-spacing:2px;
+
+color:white;
+
 }
 
-.section p{
-font-size:1.1rem;
-line-height:1.8;
-max-width:950px;
+/* ===================================================== */
+/* ======================= MENU ======================== */
+/* ===================================================== */
+
+nav{
+
+display:flex;
+
+align-items:center;
+
+gap:54px;
+
 }
 
-/* COLORI DELLE LINEE */
+nav a{
 
-.educazione{
-background:#11100d;
-}
-
-.educazione h3{
-color:#d8c3a5;
-}
-
-.educazione .quote{
-color:#f1e3cf;
-}
-
-.workingdogs{
-background:#080808;
-}
-
-.workingdogs h3{
-color:#8b0000;
-}
-
-.workingdogs .quote{
-color:#d5d5d5;
-}
-
-.soccorso{
-background:#16110b;
-}
-
-.soccorso h3{
-color:#ff6b00;
-}
-
-.soccorso .quote{
-color:#ffe1c7;
-}
-
-.dwd{
-background:#0f0b12;
-}
-
-.dwd h3{
-color:#d14dff;
-}
-
-.dwd .quote{
-color:#f1d7ff;
-}
-
-.norse{
-background:#050505;
-}
-
-.norse h3{
-color:#b11226;
-}
-
-.norse .quote{
-color:#d0d0d0;
-}
-
-/* QUOTES */
-
-.quote{
 font-family:'Oswald',sans-serif;
-font-size:2rem;
-line-height:1.3;
-margin-top:35px;
-max-width:900px;
+
+font-size:1.28rem;
+
+letter-spacing:1px;
+
 text-transform:uppercase;
+
+color:#f5f5f5;
+
+text-decoration:none;
+
+transition:0.3s;
+
+position:relative;
+
 }
 
-/* FOOTER */
+/* HOVER */
 
-footer{
-padding:60px 8%;
-background:black;
-text-align:center;
-border-top:1px solid rgba(255,255,255,0.08);
+nav a:hover{
+
+color:#ff4fd8;
+
 }
 
-footer p{
-color:#888;
-font-size:0.95rem;
+/* LINEA HOVER */
+
+nav a::after{
+
+content:'';
+
+position:absolute;
+
+left:0;
+bottom:-7px;
+
+width:0%;
+
+height:2px;
+
+background:#ff4fd8;
+
+transition:0.3s;
+
 }
 
-/* RESPONSIVE */
+nav a:hover::after{
+
+width:100%;
+
+}
+
+/* ===================================================== */
+/* ==================== RESPONSIVE ===================== */
+/* ===================================================== */
 
 @media(max-width:900px){
 
-.navbar{
-padding:15px 20px;
-flex-direction:column;
-gap:20px;
-}
-
-nav{
-justify-content:center;
-gap:18px;
-}
-
 .hero{
-padding:0 7%;
+
+padding:0 6%;
+
+background-position:center;
+
+}
+
+.hero-content{
+
+width:100%;
+
 }
 
 .hero h2{
-font-size:16vw;
-line-height:0.9;
+
+font-size:9.8vw;
+
+line-height:0.82;
+
+letter-spacing:-1px;
+
 }
 
 .hero p{
-font-size:1rem;
-}
 
-.section h3{
-font-size:2.5rem;
-}
+font-size:0.96rem;
 
-.quote{
-font-size:1.4rem;
+max-width:96%;
+
 }
 
 .hero-rune{
-width:90px;
-right:20px;
-bottom:20px;
-}
+
+right:25px;
+
+bottom:18px;
+
+width:72px;
+
+opacity:0.08;
 
 }
 
-</style>
-</head>
+.navbar{
 
-<body>
+padding:16px 18px;
 
-<header>
-<div class="navbar">
+flex-direction:column;
 
-<div class="logo">
-<img src="logoATZ.jpg" alt="ATZ Logo">
-<h1>ATZ</h1>
-</div>
+gap:16px;
 
-<nav>
-<a href="#educazione">Educazione</a>
-<a href="#workingdogs">Working Dogs</a>
-<a href="#soccorso">Ricerca e soccorso</a>
-<a href="#dwd">DWD / Unbroken Dogs</a>
-<a href="#norse">Linea Norse</a>
-</nav>
+}
 
-</div>
-</header>
+nav{
 
-<!-- HERO -->
+justify-content:center;
 
-<section class="hero">
+gap:18px;
 
-<div class="hero-content">
+flex-wrap:wrap;
 
-<h2>
-Non ho preso<br>
-un cane per<br>
-tenerlo sul divano.
-<span>
-L'ho preso come<br>
-collega di vita.
-</span>
-</h2>
+}
 
-<p>
-Non abbiamo bisogno di trasformare i cani in esseri umani per rispettarli.
-Li comprendiamo per ciò che sono.
-</p>
+nav a{
 
-</div>
+font-size:0.92rem;
 
-<img class="hero-rune" src="runaATZ.jpg" alt="Runa ATZ">
+}
 
-</section>
+.logo h1{
 
-<!-- EDUCAZIONE -->
+font-size:2rem;
 
-<section class="section educazione" id="educazione">
+}
 
-<h3>Educazione e rieducazione</h3>
+.logo img{
 
-<p>
-Relazione prima di prestazione.
-Il rispetto è reciproco. Vale anche per i cani.
-</p>
+width:48px;
+height:48px;
 
-<div class="quote">
-“L' educazione non è solo il rispetto delle regole,
-ma in primis il rispetto di tutti.”
-</div>
+}
 
-</section>
-
-<!-- WORKING DOGS -->
-
-<section class="section workingdogs" id="workingdogs">
-
-<h3>Working Dogs</h3>
-
-<p>
-Cultura del cane da lavoro.
-Presenza, stabilità, istinto, controllo.
-</p>
-
-<div class="quote">
-“Non ho preso un cane per tenerlo sul divano.”
-</div>
-
-</section>
-
-<!-- RICERCA -->
-
-<section class="section soccorso" id="soccorso">
-
-<h3>Ricerca e soccorso</h3>
-
-<p>
-Fare soccorso insieme al proprio cane significa condividere responsabilità,
-fiducia e vita reale.
-</p>
-
-<div class="quote">
-“Non mi interessa altro.
-Si parte in due, si torna in due.”
-</div>
-
-</section>
-
-<!-- DWD -->
-
-<section class="section dwd" id="dwd">
-
-<h3>DWD / Unbroken Dogs</h3>
-
-<p>
-Dogs With Disabilities.
-Cani che dimostrano ogni giorno che i limiti
-esistono soprattutto negli occhi di chi guarda.
-</p>
-
-<div class="quote">
-“I limiti sono negli occhi di chi guarda.”
-</div>
-
-</section>
-
-<!-- NORSE -->
-
-<section class="section norse" id="norse">
-
-<h3>Linea Norse</h3>
-
-<p>
-Una linea più simbolica, più rituale,
-più essenziale.
-</p>
-
-<div class="quote">
-“Onora i morti ma combatti per i vivi.”
-</div>
-
-</section>
-
-<footer>
-
-<p>
-ATZ • Working Dog Culture
-</p>
-
-</footer>
-
-</body>
-</html>
+}
