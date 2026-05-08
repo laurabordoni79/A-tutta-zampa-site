@@ -19,7 +19,7 @@ box-sizing:border-box;
 }
 
 body{
-background:#000;
+background:black;
 color:white;
 font-family:'Oswald', sans-serif;
 overflow-x:hidden;
@@ -32,12 +32,13 @@ height:100vh;
 background:
 linear-gradient(to right, rgba(0,0,0,0.92), rgba(0,0,0,0.45)),
 url('HeroATZ.jpg');
+
 background-size:cover;
 background-position:center;
 display:flex;
 flex-direction:column;
 justify-content:center;
-padding:80px;
+padding:90px;
 position:relative;
 }
 
@@ -45,9 +46,9 @@ position:relative;
 
 .logo{
 position:absolute;
-top:30px;
-left:30px;
-width:130px;
+top:25px;
+left:25px;
+width:110px;
 z-index:10;
 }
 
@@ -55,8 +56,8 @@ z-index:10;
 
 .menu{
 position:absolute;
-top:40px;
-right:40px;
+top:35px;
+right:35px;
 display:flex;
 gap:25px;
 z-index:10;
@@ -65,7 +66,7 @@ z-index:10;
 .menu a{
 color:white;
 text-decoration:none;
-font-size:15px;
+font-size:14px;
 letter-spacing:2px;
 transition:0.3s;
 }
@@ -78,27 +79,27 @@ color:#ff0077;
 
 .runa{
 position:absolute;
-right:40px;
-bottom:40px;
-width:65px;
+bottom:30px;
+right:30px;
+width:55px;
 opacity:0.9;
 }
 
 /* TESTI */
 
 .subtitle{
-font-size:20px;
-letter-spacing:5px;
+font-size:18px;
+letter-spacing:4px;
 color:#ff0077;
 margin-bottom:20px;
 }
 
 .hero h1{
-font-size:82px;
+font-size:78px;
 line-height:0.95;
+max-width:900px;
 text-transform:uppercase;
-max-width:850px;
-margin-bottom:30px;
+margin-bottom:35px;
 }
 
 .highlight{
@@ -120,14 +121,14 @@ color:white;
 text-decoration:none;
 letter-spacing:2px;
 transition:0.3s;
-font-size:16px;
+font-size:15px;
 }
 
 .btn:hover{
 background:#ff0077;
 }
 
-/* SECTION */
+/* SEZIONE */
 
 .section{
 padding:90px 40px;
@@ -168,7 +169,7 @@ bottom:0;
 left:0;
 width:100%;
 padding:25px;
-background:linear-gradient(transparent, rgba(0,0,0,0.92));
+background:linear-gradient(transparent, rgba(0,0,0,0.95));
 }
 
 .overlay h2{
@@ -189,13 +190,13 @@ color:#ff3333;
 .footer{
 padding:60px 20px;
 text-align:center;
-background:black;
 border-top:1px solid #222;
+background:black;
 }
 
 .footer h2{
+font-size:34px;
 margin-bottom:20px;
-font-size:36px;
 }
 
 .socials{
@@ -221,43 +222,52 @@ color:#ff0077;
 @media(max-width:900px){
 
 .hero{
-padding:140px 30px 80px;
+padding:170px 40px 80px;
 }
 
 .hero h1{
-font-size:58px;
+font-size:46px;
+line-height:1;
+max-width:650px;
+}
+
+.subtitle{
+font-size:16px;
 }
 
 .logo{
-width:100px;
+width:90px;
 top:20px;
 left:20px;
 }
 
 .menu{
-top:25px;
+top:20px;
 right:20px;
-gap:15px;
+gap:12px;
+flex-wrap:wrap;
+justify-content:flex-end;
+max-width:55%;
 }
 
 .menu a{
-font-size:12px;
+font-size:11px;
 }
 
 .runa{
-width:45px;
+width:40px;
 right:20px;
 bottom:20px;
 }
 
 .buttons{
-flex-direction:column;
-align-items:flex-start;
+flex-direction:row;
+flex-wrap:wrap;
 }
 
 .btn{
-width:220px;
-text-align:center;
+padding:14px 24px;
+font-size:13px;
 }
 
 }
@@ -276,26 +286,37 @@ line-height:1;
 }
 
 .subtitle{
-font-size:14px;
+font-size:13px;
 letter-spacing:3px;
 }
 
 .menu{
 flex-direction:column;
 align-items:flex-end;
-gap:6px;
+gap:5px;
+max-width:none;
 }
 
 .menu a{
-font-size:11px;
+font-size:10px;
 }
 
 .logo{
-width:80px;
+width:75px;
 }
 
 .runa{
-width:38px;
+width:34px;
+}
+
+.buttons{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.btn{
+width:220px;
+text-align:center;
 }
 
 .section{
@@ -333,10 +354,12 @@ WORKING DOG CULTURE
 <h1>
 IL CANE NON VA SCELTO<br>
 PER RIEMPIRE CASA.<br>
+
 <span class="highlight">
 VA SCELTO COME<br>
 COMPAGNO DI VITA.
 </span>
+
 </h1>
 
 <div class="buttons">
@@ -369,7 +392,7 @@ DISABILITY LINE
 </h2>
 
 <p>
-Different. Not Less.
+Forza oltre i limiti.
 </p>
 </div>
 
@@ -385,7 +408,7 @@ NORSE LINE
 </h2>
 
 <p>
-Roots. Strength. Loyalty.
+Radici. Forza. Lealtà.
 </p>
 </div>
 
@@ -401,7 +424,7 @@ WORKING DOGS
 </h2>
 
 <p>
-Discipline and partnership.
+Disciplina e collaborazione.
 </p>
 </div>
 
