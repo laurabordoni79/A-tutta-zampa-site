@@ -2,12 +2,20 @@
 <html lang="it">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ATZ</title>
+<title>ATZ • Working Dog Culture</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
+
+/* ================= RESET ================= */
 
 *{
 margin:0;
@@ -15,69 +23,412 @@ padding:0;
 box-sizing:border-box;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
-background:black;
-color:white;
-font-family:Arial,sans-serif;
+background:#050505;
+color:#f5f5f5;
+font-family:'Inter',sans-serif;
 overflow-x:hidden;
 }
 
+/* ================= HEADER ================= */
+
+header{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+
+z-index:999;
+
+background:rgba(0,0,0,0.22);
+
+backdrop-filter:blur(10px);
+
+border-bottom:
+1px solid rgba(255,255,255,0.04);
+}
+
+.navbar{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:24px 50px;
+}
+
+/* ================= LOGO ================= */
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:16px;
+}
+
+.logo img{
+
+width:55px;
+height:55px;
+
+object-fit:cover;
+}
+
+.logo h1{
+
+font-family:'Oswald',sans-serif;
+
+font-size:2.5rem;
+
+letter-spacing:2px;
+}
+
+/* ================= MENU ================= */
+
+nav{
+
+display:flex;
+
+gap:40px;
+
+align-items:center;
+}
+
+nav a{
+
+font-family:'Oswald',sans-serif;
+
+text-decoration:none;
+
+color:white;
+
+font-size:1.08rem;
+
+text-transform:uppercase;
+
+letter-spacing:1px;
+
+transition:0.3s;
+
+position:relative;
+}
+
+nav a:hover{
+
+color:#ff4fd8;
+}
+
+nav a::after{
+
+content:'';
+
+position:absolute;
+
+left:0;
+bottom:-6px;
+
+width:0%;
+
+height:2px;
+
+background:#ff4fd8;
+
+transition:0.3s;
+}
+
+nav a:hover::after{
+
+width:100%;
+}
+
+/* ================= HERO ================= */
+
 .hero{
+
 height:100vh;
 
 display:flex;
+
 align-items:center;
 
-padding:60px;
+padding:0 6%;
 
 position:relative;
 
+overflow:hidden;
+
 background:
-linear-gradient(
-rgba(0,0,0,0.45),
+linear-gradient(to right,
+rgba(0,0,0,0.55),
+rgba(0,0,0,0.12),
 rgba(0,0,0,0.45)
 ),
 
 url('HeroATZ.jpg');
 
 background-size:cover;
+
 background-position:center;
 }
 
+/* ================= HERO CONTENT ================= */
+
 .hero-content{
-max-width:1100px;
+
+position:relative;
+
 z-index:2;
+
+max-width:1200px;
 }
 
-.hero h1{
-font-size:90px;
-line-height:0.9;
+/* ================= HERO TITLE ================= */
+
+.hero h2{
+
+font-family:'Oswald',sans-serif;
+
+font-size:4.6vw;
+
+line-height:0.82;
+
+font-weight:700;
+
+text-transform:uppercase;
+
+letter-spacing:-2px;
+
+color:#f5f5f5;
+
+text-shadow:
+0 0 16px rgba(0,0,0,0.22);
+}
+
+/* ================= FUCSIA ================= */
+
+.hero h2 span{
+
+display:block;
+
+margin-top:14px;
+
+color:#ff4fd8;
+
+text-shadow:
+0 0 14px rgba(255,79,216,0.30),
+0 0 30px rgba(255,79,216,0.25);
+}
+
+/* ================= HERO TEXT ================= */
+
+.hero p{
+
+margin-top:28px;
+
+max-width:720px;
+
+font-size:1rem;
+
+line-height:1.7;
+
+font-weight:300;
+
+color:#f0f0f0;
+}
+
+/* ================= RUNA ================= */
+
+.hero-rune{
+
+position:absolute;
+
+right:240px;
+bottom:30px;
+
+width:130px;
+
+opacity:0.08;
+
+pointer-events:none;
+
+filter:
+drop-shadow(0 0 20px rgba(255,79,216,0.10));
+}
+
+/* ================= SECTIONS ================= */
+
+.section{
+
+padding:130px 8%;
+
+border-top:
+1px solid rgba(255,255,255,0.05);
+}
+
+.section h3{
+
+font-family:'Oswald',sans-serif;
+
+font-size:4rem;
+
+margin-bottom:24px;
+
 text-transform:uppercase;
 }
 
-.hero span{
-display:block;
-margin-top:20px;
+.section p{
+
+font-size:1.12rem;
+
+line-height:1.9;
+
+max-width:900px;
+}
+
+/* ================= EDUCAZIONE ================= */
+
+.educazione{
+
+background:#11100d;
+}
+
+.educazione h3{
+
+color:#d8c3a5;
+}
+
+/* ================= WORKING DOGS ================= */
+
+.workingdogs{
+
+background:#090909;
+}
+
+.workingdogs h3{
+
+color:#9e1b32;
+}
+
+/* ================= RICERCA ================= */
+
+.soccorso{
+
+background:#15110c;
+}
+
+.soccorso h3{
+
+color:#ff6b00;
+}
+
+/* ================= DWD ================= */
+
+.dwd{
+
+background:#0d0a12;
+}
+
+.dwd h3{
 
 color:#ff4fd8;
 }
 
-.hero p{
-margin-top:30px;
-font-size:20px;
-max-width:700px;
-line-height:1.6;
+/* ================= NORSE ================= */
+
+.norse{
+
+background:#050505;
 }
 
-.runa{
-position:absolute;
+.norse h3{
 
-right:60px;
-bottom:40px;
+color:#b11226;
+}
 
-width:120px;
+/* ================= RESPONSIVE ================= */
 
-opacity:0.12;
+@media(max-width:900px){
+
+.navbar{
+
+padding:18px;
+
+flex-direction:column;
+
+gap:16px;
+}
+
+nav{
+
+gap:18px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+}
+
+nav a{
+
+font-size:0.9rem;
+}
+
+.logo h1{
+
+font-size:2rem;
+}
+
+.logo img{
+
+width:48px;
+height:48px;
+}
+
+.hero{
+
+padding:0 6%;
+}
+
+.hero h2{
+
+font-size:10vw;
+
+line-height:0.84;
+
+letter-spacing:-1px;
+}
+
+.hero p{
+
+font-size:0.95rem;
+
+max-width:100%;
+}
+
+.hero-rune{
+
+right:20px;
+
+bottom:20px;
+
+width:70px;
+}
+
+.section h3{
+
+font-size:2.6rem;
+}
+
 }
 
 </style>
@@ -85,11 +436,45 @@ opacity:0.12;
 
 <body>
 
+<!-- HEADER -->
+
+<header>
+
+<div class="navbar">
+
+<div class="logo">
+
+<img src="logoATZ.jpg">
+
+<h1>ATZ</h1>
+
+</div>
+
+<nav>
+
+<a href="#educazione">Educazione</a>
+
+<a href="#workingdogs">Working Dogs</a>
+
+<a href="#soccorso">Ricerca e soccorso</a>
+
+<a href="#dwd">DWD / Unbroken Dogs</a>
+
+<a href="#norse">Linea Norse</a>
+
+</nav>
+
+</div>
+
+</header>
+
+<!-- HERO -->
+
 <section class="hero">
 
 <div class="hero-content">
 
-<h1>
+<h2>
 
 NON HO PRESO<br>
 UN CANE PER<br>
@@ -100,15 +485,89 @@ L'HO PRESO COME<br>
 COLLEGA DI VITA.
 </span>
 
-</h1>
+</h2>
 
 <p>
-ATZ • Working Dog Culture
+
+Non abbiamo bisogno di trasformare i cani in esseri umani per rispettarli.
+Li comprendiamo per ciò che sono.
+
 </p>
 
 </div>
 
-<img src="runaATZ.jpg" class="runa">
+<img src="runaATZ.jpg" class="hero-rune">
+
+</section>
+
+<!-- EDUCAZIONE -->
+
+<section class="section educazione" id="educazione">
+
+<h3>Educazione e rieducazione</h3>
+
+<p>
+
+“L'educazione non è solo il rispetto delle regole,
+ma in primis il rispetto di tutti.”
+
+</p>
+
+</section>
+
+<!-- WORKING DOGS -->
+
+<section class="section workingdogs" id="workingdogs">
+
+<h3>Working Dogs</h3>
+
+<p>
+
+Relazione. Cultura. Operatività.
+
+</p>
+
+</section>
+
+<!-- RICERCA -->
+
+<section class="section soccorso" id="soccorso">
+
+<h3>Ricerca e soccorso</h3>
+
+<p>
+
+“Si parte in due, si torna in due.”
+
+</p>
+
+</section>
+
+<!-- DWD -->
+
+<section class="section dwd" id="dwd">
+
+<h3>DWD / Unbroken Dogs</h3>
+
+<p>
+
+“I limiti sono negli occhi di chi guarda.”
+
+</p>
+
+</section>
+
+<!-- NORSE -->
+
+<section class="section norse" id="norse">
+
+<h3>Linea Norse</h3>
+
+<p>
+
+“Onora i morti ma combatti per i vivi.”
+
+</p>
 
 </section>
 
