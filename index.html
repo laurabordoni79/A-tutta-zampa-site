@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ATZ • Working Dog Culture</title>
+<title>ATZ • A Tutta Zampa</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
 
@@ -19,7 +19,7 @@ box-sizing:border-box;
 }
 
 body{
-background:black;
+background:#050505;
 color:white;
 font-family:'Oswald', sans-serif;
 overflow-x:hidden;
@@ -36,9 +36,9 @@ url('HeroATZ.jpg');
 background-size:cover;
 background-position:center;
 display:flex;
-flex-direction:column;
 justify-content:center;
-padding:90px;
+align-items:center;
+padding:80px;
 position:relative;
 }
 
@@ -46,9 +46,9 @@ position:relative;
 
 .logo{
 position:absolute;
-top:25px;
-left:25px;
-width:110px;
+top:30px;
+left:30px;
+width:115px;
 z-index:10;
 }
 
@@ -59,16 +59,20 @@ position:absolute;
 top:35px;
 right:35px;
 display:flex;
-gap:25px;
+gap:22px;
+flex-wrap:wrap;
+justify-content:flex-end;
+max-width:55%;
 z-index:10;
 }
 
 .menu a{
 color:white;
 text-decoration:none;
-font-size:14px;
+font-size:13px;
 letter-spacing:2px;
 transition:0.3s;
+text-transform:uppercase;
 }
 
 .menu a:hover{
@@ -79,34 +83,42 @@ color:#ff0077;
 
 .runa{
 position:absolute;
-bottom:30px;
-right:30px;
-width:55px;
+bottom:35px;
+right:35px;
+width:65px;
 opacity:0.9;
 }
 
-/* TESTI */
+/* HERO CONTENT */
+
+.hero-content{
+max-width:900px;
+}
 
 .subtitle{
-font-size:18px;
-letter-spacing:4px;
 color:#ff0077;
+letter-spacing:4px;
+font-size:15px;
 margin-bottom:20px;
+text-transform:uppercase;
 }
 
 .hero h1{
-font-size:78px;
+font-size:82px;
 line-height:0.95;
-max-width:900px;
 text-transform:uppercase;
 margin-bottom:35px;
 }
 
-.highlight{
-color:#ff0077;
+.hero p{
+max-width:650px;
+font-size:20px;
+line-height:1.7;
+color:#d7d7d7;
+margin-bottom:40px;
 }
 
-/* BOTTONI */
+/* BUTTONS */
 
 .buttons{
 display:flex;
@@ -115,74 +127,110 @@ flex-wrap:wrap;
 }
 
 .btn{
-padding:15px 35px;
+padding:16px 34px;
 border:2px solid #ff0077;
-color:white;
 text-decoration:none;
+color:white;
 letter-spacing:2px;
 transition:0.3s;
-font-size:15px;
+font-size:14px;
+text-transform:uppercase;
 }
 
 .btn:hover{
 background:#ff0077;
 }
 
-/* SEZIONE */
+/* SECTIONS */
 
 .section{
-padding:90px 40px;
-background:#050505;
+padding:130px 9%;
+border-top:1px solid rgba(255,255,255,0.06);
 }
 
-/* CARDS */
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
+.section-label{
+color:#ff0077;
+letter-spacing:4px;
+font-size:13px;
+margin-bottom:20px;
+text-transform:uppercase;
 }
 
-.card{
-height:320px;
-overflow:hidden;
-position:relative;
-border:1px solid #222;
+.section h2{
+font-size:58px;
+line-height:1;
+margin-bottom:30px;
+text-transform:uppercase;
+max-width:900px;
 }
 
-.card img{
-width:100%;
-height:100%;
-object-fit:cover;
-filter:grayscale(100%);
-transition:0.4s;
+.section p{
+max-width:850px;
+font-size:20px;
+line-height:1.8;
+color:#d0d0d0;
 }
 
-.card:hover img{
-transform:scale(1.05);
-filter:grayscale(0%);
+/* MANIFESTO */
+
+.manifesto{
+padding:170px 10%;
+text-align:center;
+background:#000;
 }
 
-.overlay{
-position:absolute;
-bottom:0;
-left:0;
-width:100%;
-padding:25px;
-background:linear-gradient(transparent, rgba(0,0,0,0.95));
+.manifesto h2{
+font-size:90px;
+line-height:0.95;
+text-transform:uppercase;
+max-width:1100px;
+margin:auto;
 }
 
-.overlay h2{
-font-size:34px;
-margin-bottom:10px;
+.manifesto span{
+color:#ff0077;
 }
+
+/* COLORS */
 
 .pink{
 color:#ff00aa;
 }
 
 .red{
-color:#ff3333;
+color:#a30000;
+}
+
+.sand{
+color:#d0b38c;
+}
+
+/* CONTACTS */
+
+.contacts{
+padding:120px 9%;
+background:#050505;
+border-top:1px solid rgba(255,255,255,0.06);
+}
+
+.contacts h2{
+font-size:60px;
+margin-bottom:40px;
+text-transform:uppercase;
+}
+
+.contact-grid{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+margin-top:30px;
+}
+
+.contact-box{
+padding:20px 28px;
+border:1px solid #333;
+font-size:18px;
+letter-spacing:1px;
 }
 
 /* FOOTER */
@@ -190,31 +238,21 @@ color:#ff3333;
 .footer{
 padding:60px 20px;
 text-align:center;
-border-top:1px solid #222;
+border-top:1px solid rgba(255,255,255,0.06);
 background:black;
 }
 
-.footer h2{
-font-size:34px;
+.footer img{
+width:45px;
 margin-bottom:20px;
+opacity:0.85;
 }
 
-.socials{
-display:flex;
-justify-content:center;
-gap:25px;
-flex-wrap:wrap;
-}
-
-.socials a{
-color:white;
-text-decoration:none;
-letter-spacing:2px;
-transition:0.3s;
-}
-
-.socials a:hover{
-color:#ff0077;
+.footer p{
+color:#777;
+letter-spacing:3px;
+font-size:12px;
+text-transform:uppercase;
 }
 
 /* TABLET */
@@ -222,21 +260,19 @@ color:#ff0077;
 @media(max-width:900px){
 
 .hero{
-padding:170px 40px 80px;
+padding:150px 35px 80px;
 }
 
 .hero h1{
-font-size:46px;
-line-height:1;
-max-width:650px;
+font-size:52px;
 }
 
-.subtitle{
-font-size:16px;
+.hero p{
+font-size:18px;
 }
 
 .logo{
-width:90px;
+width:85px;
 top:20px;
 left:20px;
 }
@@ -245,29 +281,37 @@ left:20px;
 top:20px;
 right:20px;
 gap:12px;
-flex-wrap:wrap;
-justify-content:flex-end;
-max-width:55%;
+max-width:60%;
 }
 
 .menu a{
-font-size:11px;
+font-size:10px;
 }
 
 .runa{
-width:40px;
+width:42px;
 right:20px;
 bottom:20px;
 }
 
-.buttons{
-flex-direction:row;
-flex-wrap:wrap;
+.section{
+padding:100px 35px;
 }
 
-.btn{
-padding:14px 24px;
-font-size:13px;
+.section h2{
+font-size:42px;
+}
+
+.manifesto{
+padding:120px 35px;
+}
+
+.manifesto h2{
+font-size:52px;
+}
+
+.contacts h2{
+font-size:44px;
 }
 
 }
@@ -277,7 +321,7 @@ font-size:13px;
 @media(max-width:600px){
 
 .hero{
-padding:130px 20px 60px;
+padding:140px 22px 70px;
 }
 
 .hero h1{
@@ -285,15 +329,18 @@ font-size:42px;
 line-height:1;
 }
 
+.hero p{
+font-size:16px;
+}
+
 .subtitle{
-font-size:13px;
-letter-spacing:3px;
+font-size:12px;
 }
 
 .menu{
 flex-direction:column;
 align-items:flex-end;
-gap:5px;
+gap:6px;
 max-width:none;
 }
 
@@ -302,7 +349,7 @@ font-size:10px;
 }
 
 .logo{
-width:75px;
+width:72px;
 }
 
 .runa{
@@ -320,11 +367,39 @@ text-align:center;
 }
 
 .section{
-padding:70px 20px;
+padding:80px 22px;
 }
 
-.overlay h2{
-font-size:26px;
+.section h2{
+font-size:34px;
+}
+
+.section p{
+font-size:17px;
+}
+
+.manifesto{
+padding:100px 22px;
+}
+
+.manifesto h2{
+font-size:38px;
+}
+
+.contacts{
+padding:90px 22px;
+}
+
+.contacts h2{
+font-size:34px;
+}
+
+.contact-grid{
+flex-direction:column;
+}
+
+.contact-box{
+width:100%;
 }
 
 }
@@ -335,42 +410,59 @@ font-size:26px;
 
 <body>
 
+<!-- HERO -->
+
 <section class="hero">
 
 <img src="logoATZ.jpg" class="logo">
 
 <div class="menu">
-<a href="#">HOME</a>
-<a href="#">WORKING DOGS</a>
-<a href="#">DISABILITY</a>
-<a href="#">NORSE</a>
-<a href="#">CONTATTI</a>
+
+<a href="#">Home</a>
+<a href="#">Educazione</a>
+<a href="#">Cani da lavoro</a>
+<a href="#">Ricerca e soccorso</a>
+<a href="#">DWD / Unbroken Dogs</a>
+<a href="#">Linea Norse</a>
+<a href="#">Contatti</a>
+
 </div>
 
+<div class="hero-content">
+
 <div class="subtitle">
-WORKING DOG CULTURE
+ATZ • WORKING DOG CULTURE
 </div>
 
 <h1>
-IL CANE NON VA SCELTO<br>
-PER RIEMPIRE CASA.<br>
+NON HO PRESO<br>
+UN CANE PER<br>
+TENERLO SUL DIVANO.<br><br>
 
-<span class="highlight">
-VA SCELTO COME<br>
-COMPAGNO DI VITA.
+<span class="pink">
+L'HO PRESO COME<br>
+COLLEGA DI VITA.
 </span>
 
 </h1>
 
+<p>
+Educazione e rieducazione comportamentale,
+cani da lavoro, ricerca e soccorso,
+DWD / Unbroken Dogs e cultura cinofila editoriale.
+</p>
+
 <div class="buttons">
 
 <a href="#" class="btn">
-SCOPRI
+Scopri ATZ
 </a>
 
 <a href="#" class="btn">
-CONTATTI
+Contatti
 </a>
+
+</div>
 
 </div>
 
@@ -378,83 +470,189 @@ CONTATTI
 
 </section>
 
+<!-- EDUCAZIONE -->
+
 <section class="section">
 
-<div class="cards">
-
-<div class="card">
-
-<img src="Educazione1.jpg">
-
-<div class="overlay">
-<h2 class="pink">
-DISABILITY LINE
-</h2>
-
-<p>
-Forza oltre i limiti.
-</p>
+<div class="section-label">
+Educazione e rieducazione
 </div>
 
-</div>
-
-<div class="card">
-
-<img src="Thor1.jpg">
-
-<div class="overlay">
-<h2 class="red">
-NORSE LINE
-</h2>
-
-<p>
-Radici. Forza. Lealtà.
-</p>
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="Logan1.jpg">
-
-<div class="overlay">
 <h2>
-WORKING DOGS
+Capire un cane vale più che controllarlo.
 </h2>
 
 <p>
-Disciplina e collaborazione.
+Ogni cane ha una mente, un linguaggio e capacità da valorizzare.
+Costruire relazione significa imparare a comunicare davvero.
+Non esistono cani rotti.
+Esistono relazioni lasciate sole.
 </p>
+
+</section>
+
+<!-- CANI DA LAVORO -->
+
+<section class="section">
+
+<div class="section-label sand">
+Cani da lavoro
 </div>
 
+<h2>
+Disciplina.<br>
+Collaborazione.<br>
+Operatività.
+</h2>
+
+<p>
+Il cane da lavoro non nasce macchina.
+Nasce partner.
+Il lavoro sviluppa comunicazione,
+gestione emotiva e collaborazione reale.
+</p>
+
+</section>
+
+<!-- RICERCA E SOCCORSO -->
+
+<section class="section">
+
+<div class="section-label red">
+Ricerca e soccorso
+</div>
+
+<h2>
+La ricerca non è spettacolo.
+</h2>
+
+<p>
+Non ci si improvvisa soccorritori.
+Preparazione, lucidità e fiducia assoluta
+tra cane e conduttore costruiscono il vero lavoro operativo.
+</p>
+
+</section>
+
+<!-- DWD -->
+
+<section class="section">
+
+<div class="section-label pink">
+DWD / Unbroken Dogs
+</div>
+
+<h2>
+Different.<br>
+Not Less.
+</h2>
+
+<p>
+La disabilità cambia il percorso.
+Non il valore.
+I cani disabili non hanno bisogno di compassione.
+Hanno bisogno di spazio per vivere davvero.
+</p>
+
+</section>
+
+<!-- NORSE -->
+
+<section class="section">
+
+<div class="section-label red">
+Linea Norse
+</div>
+
+<h2>
+Radici.<br>
+Forza.<br>
+Lealtà.
+</h2>
+
+<p>
+Una linea identitaria ispirata
+alla simbologia nordica,
+alla cultura working dog
+e all’estetica streetwear editoriale.
+</p>
+
+</section>
+
+<!-- MERCH -->
+
+<section class="section">
+
+<div class="section-label sand">
+Merch / Streetwear
+</div>
+
+<h2>
+Working Dog Culture.
+</h2>
+
+<p>
+Magliette, hoodie e identità visiva.
+Una linea streetwear costruita attorno
+alla cultura cinofila reale,
+alle rune ATZ
+e al mondo DWD / Unbroken Dogs.
+</p>
+
+</section>
+
+<!-- MANIFESTO -->
+
+<section class="manifesto">
+
+<h2>
+IL CANE PERFETTO<br>
+NON ESISTE.<br>
+
+<span>
+ESISTE IL CANE<br>
+COMPRESO.
+</span>
+
+</h2>
+
+</section>
+
+<!-- CONTACTS -->
+
+<section class="contacts">
+
+<h2>
+Contatti
+</h2>
+
+<div class="contact-grid">
+
+<div class="contact-box">
+WhatsApp • 3533019361
+</div>
+
+<div class="contact-box">
+WhatsApp • 3930132398
+</div>
+
+<div class="contact-box">
+atuttazampadogpark@gmail.com
 </div>
 
 </div>
 
 </section>
 
+<!-- FOOTER -->
+
 <footer class="footer">
 
-<h2>
-A TUTTA ZAMPA
-</h2>
+<img src="runaATZ.jpg">
 
-<div class="socials">
-
-<a href="#">
-INSTAGRAM
-</a>
-
-<a href="#">
-WHATSAPP
-</a>
-
-<a href="#">
-EMAIL
-</a>
-
-</div>
+<p>
+ATZ • A Tutta Zampa • Working Dog Culture
+</p>
 
 </footer>
 
