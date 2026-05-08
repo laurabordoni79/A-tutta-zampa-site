@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cani da Lavoro | ATZ</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#040404;
+color:white;
+font-family:'Oswald', sans-serif;
+overflow-x:hidden;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.94)),
+url('https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=80&w=2070&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+padding:80px 8%;
+position:relative;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+inset:0;
+background:
+radial-gradient(circle at center, rgba(255,0,110,0.10), transparent 70%);
+pointer-events:none;
+}
+
+.hero-content{
+max-width:950px;
+position:relative;
+z-index:2;
+}
+
+.subtitle{
+color:#ff006e;
+font-size:1.3rem;
+letter-spacing:4px;
+margin-bottom:25px;
+text-transform:uppercase;
+}
+
+.hero h1{
+font-size:clamp(4rem, 10vw, 9rem);
+line-height:0.95;
+text-transform:uppercase;
+font-weight:700;
+margin-bottom:40px;
+}
+
+.hero h1 span{
+color:#ff006e;
+}
+
+.description{
+font-size:1.3rem;
+line-height:1.8;
+color:#d0d0d0;
+max-width:750px;
+}
+
+.section{
+padding:140px 8%;
+background:#090909;
+border-top:1px solid #151515;
+}
+
+.section:nth-child(even){
+background:#050505;
+}
+
+.section-title{
+font-size:clamp(2.5rem, 6vw, 5rem);
+text-transform:uppercase;
+margin-bottom:60px;
+line-height:1;
+}
+
+.quote{
+font-size:clamp(2rem, 5vw, 4rem);
+line-height:1.1;
+text-transform:uppercase;
+margin-bottom:60px;
+font-weight:700;
+max-width:1200px;
+}
+
+.quote span{
+color:#ff006e;
+}
+
+.text{
+font-size:1.2rem;
+line-height:2;
+color:#cfcfcf;
+max-width:850px;
+}
+
+.footer{
+padding:80px 8%;
+background:black;
+border-top:1px solid #111;
+}
+
+.footer p{
+color:#888;
+font-size:1rem;
+letter-spacing:2px;
+text-transform:uppercase;
+}
+
+a{
+color:white;
+text-decoration:none;
+}
+
+.back{
+position:fixed;
+top:30px;
+right:30px;
+border:1px solid #ff006e;
+padding:14px 22px;
+text-transform:uppercase;
+letter-spacing:2px;
+transition:0.3s;
+background:rgba(0,0,0,0.5);
+z-index:999;
+}
+
+.back:hover{
+background:#ff006e;
+}
+
+@media(max-width:768px){
+
+.hero{
+padding:120px 8%;
+}
+
+.hero h1{
+font-size:4rem;
+}
+
+.quote{
+font-size:2.2rem;
+}
+
+.description,
+.text{
+font-size:1rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<a href="index.html" class="back">Home</a>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="subtitle">
+ATZ • CANI DA LAVORO
+</div>
+
+<h1">
+Il cane da lavoro non nasce macchina.
+<span>Nasce partner.</span>
+</h1>
+
+<div class="description">
+Il lavoro costruisce comunicazione,
+equilibrio
+e collaborazione reale tra cane e conduttore.
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">
+Working Dogs
+</h2>
+
+<div class="quote">
+Istinto.
+Controllo.
+<span>Collaborazione.</span>
+</div>
+
+<div class="text">
+Ogni cane possiede capacità,
+motivazioni
+e predisposizioni che meritano di essere sviluppate con lucidità e rispetto.
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">
+Disciplina
+</h2>
+
+<div class="quote">
+Il lavoro non serve a costruire automi.
+<span>Serve a costruire comunicazione.</span>
+</div>
+
+<div class="text">
+Disciplina significa comprensione,
+gestione emotiva
+e capacità di lavorare insieme,
+non semplice esecuzione meccanica.
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">
+Working Dog Culture
+</h2>
+
+<div class="quote">
+Relazione.
+Equilibrio.
+<span>Identità.</span>
+</div>
+
+</section>
+
+<footer class="footer">
+
+<p>
+ATZ • Working Dog Culture
+</p>
+
+</footer>
+
+</body>
+</html>
