@@ -1,284 +1,399 @@
-export default function ATZHomepage() {
-  const sections = [
-    {
-      id: 'educazione',
-      title: 'EDUCAZIONE / RIEDUCAZIONE',
-      subtitle: 'Relazione. Presenza. Rispetto.',
-      quote:
-        'Il rispetto è una cosa reciproca, lo si dà quando lo si riceve. E sì, vale anche per i cani.',
-      description:
-        'L’educazione non è controllo cieco. È costruzione di relazione, fiducia e comunicazione reale.',
-      accent: 'white',
-      bg: 'from-black via-zinc-950 to-black',
-      border: 'border-zinc-800',
-      button:
-        'border-white/20 text-zinc-200 hover:bg-white hover:text-black hover:border-white',
-      glow: 'bg-white/10',
-      image:
-        'https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=1600&auto=format&fit=crop',
-    },
+<!DOCTYPE html><html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATZ / Unbroken Dogs</title>  <script src="https://cdn.tailwindcss.com"></script>  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;700&family=Inter:wght@200;300;400;500;700;900&display=swap" rel="stylesheet">  <style>
+    * {
+      scroll-behavior: smooth;
+    }
 
-    {
-      id: 'lavoro',
-      title: 'CANI DA LAVORO',
-      subtitle: 'Campo. Fango. Concentrazione.',
-      quote: 'Il cane non nasce per restare fermo.',
-      description:
-        'Operatività, disciplina e lavoro reale. Una linea costruita attorno al movimento e alla concretezza.',
-      accent: '#d4b483',
-      bg: 'from-[#1c1814] via-[#33281d] to-black',
-      border: 'border-[#5f4d39]',
-      button:
-        'border-[#8b7355] text-[#d4b483] hover:bg-[#d4b483] hover:text-black hover:border-[#d4b483]',
-      glow: 'bg-[#d4b483]/20',
-      image:
-        'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?q=80&w=1600&auto=format&fit=crop',
-    },
+    body {
+      margin: 0;
+      background: #000;
+      color: white;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
 
-    {
-      id: 'soccorso',
-      title: 'RICERCA E SOCCORSO',
-      subtitle: 'Emergenza. Fiducia. Ritorno.',
-      quote:
-        'Non mi interessa altro, si parte in due, si torna in due.',
-      description:
-        'Ricerca operativa, notti fredde, pioggia, silenzio e assoluta fiducia tra cane e conduttore.',
-      accent: '#c85c21',
-      bg: 'from-black via-[#2b1408] to-[#4a1d07]',
-      border: 'border-orange-900',
-      button:
-        'border-orange-700 text-orange-300 hover:bg-orange-500 hover:text-black hover:border-orange-500',
-      glow: 'bg-orange-500/20',
-      image:
-        'https://images.unsplash.com/photo-1507146426996-ef05306b995a?q=80&w=1600&auto=format&fit=crop',
-    },
+    h1,h2,h3 {
+      font-family: 'Cormorant Garamond', serif;
+    }
 
-    {
-      id: 'dwd',
-      title: 'DWD / UNBROKEN DOGS',
-      subtitle: 'Dogs With Disabilities.',
-      quote: 'I limiti sono negli occhi di chi guarda.',
-      description:
-        'Una linea dedicata ai cani con disabilità. Nessun pietismo. Solo dignità, presenza e identità.',
-      accent: '#d946ef',
-      bg: 'from-black via-[#160818] to-[#2a1033]',
-      border: 'border-fuchsia-900',
-      button:
-        'border-fuchsia-700 text-fuchsia-300 hover:bg-fuchsia-500 hover:text-black hover:border-fuchsia-500',
-      glow: 'bg-fuchsia-500/20',
-      image:
-        'https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?q=80&w=1600&auto=format&fit=crop',
-    },
+    .grain {
+      position: absolute;
+      inset: 0;
+      opacity: 0.05;
+      background-image:
+        radial-gradient(circle at center, white 1px, transparent 1px);
+      background-size: 24px 24px;
+      pointer-events: none;
+    }
 
-    {
-      id: 'norse',
-      title: 'LINEA NORSE',
-      subtitle: 'Memoria. Ferro. Sangue.',
-      quote: 'Onora i morti ma combatti per i vivi.',
-      description:
-        'La parte rituale del brand. Simboli, runa, memoria e presenza silenziosa.',
-      accent: '#7a0d0d',
-      bg: 'from-black via-[#170303] to-[#300000]',
-      border: 'border-red-950',
-      button:
-        'border-red-900 text-red-500 hover:bg-red-700 hover:text-white hover:border-red-700',
-      glow: 'bg-red-700/20',
-      image:
-        'https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?q=80&w=1600&auto=format&fit=crop',
-    },
-  ]
+    .hero-bg {
+      background:
+        linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+        url('https://images.unsplash.com/photo-1516939884455-1445c8652f83?q=80&w=2200&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+    }
 
-  return (
-    <main className="bg-black text-white overflow-x-hidden selection:bg-red-800 selection:text-white scroll-smooth">
+    .section-image {
+      transition: all 1s ease;
+      filter: grayscale(100%);
+    }
 
-      {/* HERO */}
-      <section className="relative min-h-screen flex items-center justify-center text-center overflow-hidden">
+    .section-image:hover {
+      transform: scale(1.05);
+      filter: grayscale(0%);
+    }
 
-        <div
-          className="absolute inset-0 bg-cover bg-center scale-105 opacity-30"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1516939884455-1445c8652f83?q=80&w=2000&auto=format&fit=crop')",
-          }}
-        />
+    .glow {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 999px;
+      filter: blur(120px);
+      opacity: 0.2;
+    }
 
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black" />
+    .btn {
+      padding: 18px 34px;
+      border: 1px solid rgba(255,255,255,0.2);
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      font-size: 11px;
+      transition: all 0.5s ease;
+      background: transparent;
+      color: white;
+      cursor: pointer;
+    }
 
-        <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle_at_center,white_1px,transparent_1px)] bg-[length:24px_24px]" />
+    .btn:hover {
+      background: white;
+      color: black;
+    }
 
-        <div className="relative z-10 px-6 max-w-6xl mx-auto">
+    .section {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+  </style></head>
+<body>  <!-- HERO -->  <section class="hero-bg section justify-center text-center px-6"><div class="grain"></div>
 
-          <div className="mb-12 flex justify-center items-center">
-            <div className="relative w-28 h-28 rotate-45 border border-red-900/70">
-              <div className="absolute inset-3 border border-white/10" />
-            </div>
-          </div>
+<div class="relative z-10 max-w-6xl mx-auto">
 
-          <p className="uppercase tracking-[0.5em] text-zinc-500 text-xs md:text-sm mb-8">
-            ATZ / UNBROKEN DOGS
-          </p>
+  <div class="mb-12 flex justify-center">
+    <div class="w-28 h-28 rotate-45 border border-red-900 relative">
+      <div class="absolute inset-3 border border-white/10"></div>
+    </div>
+  </div>
 
-          <h1 className="text-6xl md:text-9xl font-black tracking-[0.25em] leading-none mb-12">
-            A T Z
-          </h1>
+  <p class="uppercase tracking-[0.5em] text-zinc-500 text-xs md:text-sm mb-8">
+    ATZ / UNBROKEN DOGS
+  </p>
 
-          <p className="text-2xl md:text-5xl leading-tight font-light text-zinc-100 max-w-5xl mx-auto">
-            “Non ho preso un cane
-            <br />
-            per tenerlo sul divano.
-            <br />
-            L&apos;ho preso come collega di vita.”
-          </p>
+  <h1 class="text-6xl md:text-9xl font-bold tracking-[0.25em] mb-12 leading-none">
+    A T Z
+  </h1>
 
-          <div className="mt-16 flex flex-wrap justify-center gap-6">
+  <p class="text-2xl md:text-5xl font-light leading-tight max-w-5xl mx-auto text-zinc-100">
+    “Non ho preso un cane per tenerlo sul divano.
+    <br>
+    L'ho preso come collega di vita.”
+  </p>
 
-            <button className="px-10 py-5 border border-white/20 uppercase tracking-[0.35em] text-sm text-white hover:bg-white hover:text-black transition-all duration-500">
-              Esplora
-            </button>
+  <div class="mt-16 flex flex-wrap justify-center gap-6">
 
-            <button className="px-10 py-5 border border-red-900 text-red-500 uppercase tracking-[0.35em] text-sm hover:bg-red-700 hover:text-white transition-all duration-500">
-              DWD / Unbroken Dogs
-            </button>
+    <button class="btn">
+      Esplora
+    </button>
 
-          </div>
-        </div>
-      </section>
+    <button class="btn border-red-900 text-red-500 hover:bg-red-700 hover:text-white">
+      DWD / Unbroken Dogs
+    </button>
 
-      {/* MANIFESTO */}
-      <section className="relative py-40 px-6 border-t border-zinc-900 bg-zinc-950">
+  </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto text-center">
+</div>
 
-          <p className="uppercase tracking-[0.45em] text-zinc-500 text-sm mb-10">
-            Manifesto
-          </p>
+  </section>  <!-- MANIFESTO -->  <section class="relative py-40 px-6 bg-zinc-950 border-t border-zinc-900 text-center overflow-hidden"><div class="grain"></div>
 
-          <h2 className="text-4xl md:text-7xl font-light leading-tight text-zinc-100 max-w-5xl mx-auto">
-            Il rispetto non è obbedienza.
-            <br />
-            È relazione.
-          </h2>
+<div class="relative z-10 max-w-6xl mx-auto">
 
-          <div className="w-32 h-px bg-red-900 mx-auto my-14" />
+  <p class="uppercase tracking-[0.45em] text-zinc-500 text-sm mb-10">
+    Manifesto
+  </p>
 
-          <p className="text-zinc-400 text-lg md:text-2xl leading-relaxed max-w-4xl mx-auto">
-            Educazione, lavoro operativo, soccorso,
-            dignità e identità.
-            <br />
-            Ogni linea racconta un modo diverso di vivere il cane.
-          </p>
+  <h2 class="text-5xl md:text-7xl font-light leading-tight text-zinc-100 max-w-5xl mx-auto">
+    Relazione prima di prestazione.
+  </h2>
 
-        </div>
-      </section>
+  <div class="w-32 h-px bg-red-900 mx-auto my-14"></div>
 
-      {/* SEZIONI */}
-      {sections.map((section, index) => (
-        <section
-          key={section.id}
-          className={`relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br ${section.bg}`}
-        >
+  <p class="text-zinc-400 text-lg md:text-2xl leading-relaxed max-w-4xl mx-auto">
+    Il rispetto è una cosa reciproca,
+    lo si dà quando lo si riceve.
+    <br>
+    E sì, vale anche per i cani.
+  </p>
 
-          <div
-            className="absolute inset-0 bg-cover bg-center opacity-20 scale-105"
-            style={{ backgroundImage: `url(${section.image})` }}
-          />
+</div>
 
-          <div className="absolute inset-0 bg-black/60" />
+  </section>  <!-- EDUCAZIONE -->  <section class="section bg-gradient-to-br from-black via-zinc-950 to-black px-6"><div class="absolute inset-0 bg-black/50"></div>
 
-          <div className="relative z-10 max-w-7xl mx-auto px-6 py-28 grid lg:grid-cols-2 gap-20 items-center w-full">
+<div class="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center py-28 w-full">
 
-            <div>
+  <div>
 
-              <p className="uppercase tracking-[0.45em] text-zinc-500 text-sm mb-6">
-                Linea {String(index + 1).padStart(2, '0')}
-              </p>
+    <p class="uppercase tracking-[0.45em] text-zinc-500 text-sm mb-6">
+      Linea 01
+    </p>
 
-              <h2 className="text-5xl md:text-8xl font-black leading-none mb-8">
-                {section.title}
-              </h2>
+    <h2 class="text-5xl md:text-8xl font-bold leading-none mb-8">
+      EDUCAZIONE / RIEDUCAZIONE
+    </h2>
 
-              <p
-                className="uppercase tracking-[0.3em] text-sm mb-10"
-                style={{ color: section.accent }}
-              >
-                {section.subtitle}
-              </p>
+    <p class="uppercase tracking-[0.3em] text-sm mb-10 text-white">
+      Relazione. Presenza. Rispetto.
+    </p>
 
-              <blockquote className="text-3xl md:text-5xl font-light italic leading-tight text-zinc-100 mb-12">
-                “{section.quote}”
-              </blockquote>
+    <blockquote class="text-3xl md:text-5xl italic font-light leading-tight mb-12 text-zinc-100">
+      “Relazione prima di prestazione.”
+    </blockquote>
 
-              <p className="text-zinc-300 text-lg md:text-xl leading-relaxed max-w-2xl mb-14">
-                {section.description}
-              </p>
+    <p class="text-zinc-300 text-lg md:text-xl leading-relaxed max-w-2xl mb-14">
+      L’educazione non è controllo cieco. È costruzione di relazione, fiducia e comunicazione reale.
+    </p>
 
-              <div className="flex flex-wrap gap-5">
+    <div class="flex flex-wrap gap-5">
+      <button class="btn">Esplora la linea</button>
+      <button class="btn border-zinc-700 text-zinc-400 hover:border-white">Approfondisci</button>
+    </div>
 
-                <button
-                  className={`px-10 py-5 border uppercase tracking-[0.35em] text-xs transition-all duration-500 ${section.button}`}
-                >
-                  Esplora la linea
-                </button>
+  </div>
 
-                <button
-                  className={`px-10 py-5 border ${section.border} uppercase tracking-[0.35em] text-xs text-zinc-400 hover:text-white hover:border-white/40 transition-all duration-500`}
-                >
-                  Approfondisci
-                </button>
+  <div class="relative flex justify-center items-center">
 
-              </div>
-            </div>
+    <div class="glow bg-white"></div>
 
-            <div className="relative flex justify-center items-center">
+    <div class="relative rounded-[2.5rem] overflow-hidden border border-white/10 bg-black/40 max-w-xl shadow-2xl">
 
-              <div
-                className={`absolute w-[500px] h-[500px] rounded-full blur-3xl ${section.glow}`}
-              />
+      <img
+        src="https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=1600&auto=format&fit=crop"
+        class="section-image w-full h-[700px] object-cover"
+      >
 
-              <div className="relative rounded-[2.5rem] overflow-hidden border border-white/10 bg-black/40 backdrop-blur-sm shadow-[0_0_80px_rgba(0,0,0,0.6)] max-w-xl">
+    </div>
+  </div>
 
-                <img
-                  src={section.image}
-                  alt={section.title}
-                  className="w-full h-[700px] object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-1000"
-                />
+</div>
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+  </section>  <!-- CANI DA LAVORO -->  <section class="section bg-gradient-to-br from-[#1c1814] via-[#33281d] to-black px-6"><div class="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center py-28 w-full">
 
-              </div>
-            </div>
-          </div>
-        </section>
-      ))}
+  <div>
 
-      {/* FOOTER */}
-      <section className="relative py-44 px-6 bg-black border-t border-zinc-900 overflow-hidden">
+    <p class="uppercase tracking-[0.45em] text-zinc-500 text-sm mb-6">
+      Linea 02
+    </p>
 
-        <div className="relative z-10 max-w-6xl mx-auto text-center">
+    <h2 class="text-5xl md:text-8xl font-bold leading-none mb-8">
+      CANI DA LAVORO
+    </h2>
 
-          <p className="uppercase tracking-[0.45em] text-zinc-600 text-sm mb-8">
-            Apparel / Gear / Identity
-          </p>
+    <p class="uppercase tracking-[0.3em] text-sm mb-10 text-[#d4b483]">
+      Campo. Fango. Concentrazione.
+    </p>
 
-          <h2 className="text-4xl md:text-7xl font-light leading-tight mb-12">
-            Non è merch.
-            <br />
-            È identità.
-          </h2>
+    <blockquote class="text-3xl md:text-5xl italic font-light leading-tight mb-12 text-zinc-100">
+      “Il cane non nasce per restare fermo.”
+    </blockquote>
 
-          <p className="text-zinc-400 text-lg md:text-2xl leading-relaxed max-w-4xl mx-auto mb-16">
-            Educazione. Operatività. Soccorso.
-            <br />
-            Dignità. Memoria. Presenza.
-          </p>
+    <p class="text-zinc-300 text-lg md:text-xl leading-relaxed max-w-2xl mb-14">
+      Operatività, disciplina e lavoro reale. Una linea costruita attorno al movimento e alla concretezza.
+    </p>
 
-          <button className="px-10 py-5 border border-white/20 uppercase tracking-[0.35em] text-sm hover:bg-white hover:text-black transition-all duration-500">
-            Entra in ATZ
-          </button>
+    <div class="flex flex-wrap gap-5">
+      <button class="btn border-[#8b7355] text-[#d4b483] hover:bg-[#d4b483] hover:text-black">
+        Esplora la linea
+      </button>
+    </div>
 
-        </div>
-      </section>
+  </div>
 
-    </main>
-  )
-}
+  <div class="relative flex justify-center items-center">
+
+    <div class="glow bg-[#d4b483]"></div>
+
+    <div class="relative rounded-[2.5rem] overflow-hidden border border-white/10 bg-black/40 max-w-xl shadow-2xl">
+
+      <img
+        src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?q=80&w=1600&auto=format&fit=crop"
+        class="section-image w-full h-[700px] object-cover"
+      >
+
+    </div>
+  </div>
+
+</div>
+
+  </section>  <!-- RICERCA E SOCCORSO -->  <section class="section bg-gradient-to-br from-black via-[#2b1408] to-[#4a1d07] px-6"><div class="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center py-28 w-full">
+
+  <div>
+
+    <p class="uppercase tracking-[0.45em] text-zinc-500 text-sm mb-6">
+      Linea 03
+    </p>
+
+    <h2 class="text-5xl md:text-8xl font-bold leading-none mb-8">
+      RICERCA E SOCCORSO
+    </h2>
+
+    <p class="uppercase tracking-[0.3em] text-sm mb-10 text-orange-400">
+      Emergenza. Fiducia. Ritorno.
+    </p>
+
+    <blockquote class="text-3xl md:text-5xl italic font-light leading-tight mb-12 text-zinc-100">
+      “Non mi interessa altro,
+      si parte in due,
+      si torna in due.”
+    </blockquote>
+
+    <p class="text-zinc-300 text-lg md:text-xl leading-relaxed max-w-2xl mb-14">
+      Ricerca operativa, notti fredde, pioggia, silenzio e assoluta fiducia tra cane e conduttore.
+    </p>
+
+  </div>
+
+  <div class="relative flex justify-center items-center">
+
+    <div class="glow bg-orange-500"></div>
+
+    <div class="relative rounded-[2.5rem] overflow-hidden border border-white/10 bg-black/40 max-w-xl shadow-2xl">
+
+      <img
+        src="https://images.unsplash.com/photo-1507146426996-ef05306b995a?q=80&w=1600&auto=format&fit=crop"
+        class="section-image w-full h-[700px] object-cover"
+      >
+
+    </div>
+  </div>
+
+</div>
+
+  </section>  <!-- DWD -->  <section class="section bg-gradient-to-br from-black via-[#160818] to-[#2a1033] px-6"><div class="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center py-28 w-full">
+
+  <div>
+
+    <p class="uppercase tracking-[0.45em] text-zinc-500 text-sm mb-6">
+      Linea 04
+    </p>
+
+    <h2 class="text-5xl md:text-8xl font-bold leading-none mb-8">
+      DWD / UNBROKEN DOGS
+    </h2>
+
+    <p class="uppercase tracking-[0.3em] text-sm mb-10 text-fuchsia-400">
+      Dogs With Disabilities
+    </p>
+
+    <blockquote class="text-3xl md:text-5xl italic font-light leading-tight mb-12 text-zinc-100">
+      “I limiti sono negli occhi di chi guarda.”
+    </blockquote>
+
+    <p class="text-zinc-300 text-lg md:text-xl leading-relaxed max-w-2xl mb-14">
+      Nessun pietismo. Solo dignità, presenza e identità.
+    </p>
+
+  </div>
+
+  <div class="relative flex justify-center items-center">
+
+    <div class="glow bg-fuchsia-500"></div>
+
+    <div class="relative rounded-[2.5rem] overflow-hidden border border-white/10 bg-black/40 max-w-xl shadow-2xl">
+
+      <img
+        src="https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?q=80&w=1600&auto=format&fit=crop"
+        class="section-image w-full h-[700px] object-cover"
+      >
+
+    </div>
+  </div>
+
+</div>
+
+  </section>  <!-- NORSE -->  <section class="section bg-gradient-to-br from-black via-[#170303] to-[#300000] px-6"><div class="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center py-28 w-full">
+
+  <div>
+
+    <p class="uppercase tracking-[0.45em] text-zinc-500 text-sm mb-6">
+      Linea 05
+    </p>
+
+    <h2 class="text-5xl md:text-8xl font-bold leading-none mb-8">
+      LINEA NORSE
+    </h2>
+
+    <p class="uppercase tracking-[0.3em] text-sm mb-10 text-red-500">
+      Memoria. Ferro. Sangue.
+    </p>
+
+    <blockquote class="text-3xl md:text-5xl italic font-light leading-tight mb-12 text-zinc-100">
+      “Onora i morti ma combatti per i vivi.”
+    </blockquote>
+
+    <p class="text-zinc-300 text-lg md:text-xl leading-relaxed max-w-2xl mb-14">
+      Meglio un uccello libero che un re prigioniero.
+    </p>
+
+  </div>
+
+  <div class="relative flex justify-center items-center">
+
+    <div class="glow bg-red-700"></div>
+
+    <div class="relative rounded-[2.5rem] overflow-hidden border border-white/10 bg-black/40 max-w-xl shadow-2xl">
+
+      <img
+        src="https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?q=80&w=1600&auto=format&fit=crop"
+        class="section-image w-full h-[700px] object-cover"
+      >
+
+    </div>
+  </div>
+
+</div>
+
+  </section>  <!-- FOOTER -->  <footer class="relative py-40 px-6 bg-black border-t border-zinc-900 text-center overflow-hidden"><div class="grain"></div>
+
+<div class="relative z-10 max-w-5xl mx-auto">
+
+  <p class="uppercase tracking-[0.45em] text-zinc-600 text-sm mb-8">
+    Gear / Apparel / Identity
+  </p>
+
+  <h2 class="text-4xl md:text-7xl font-light leading-tight mb-12">
+    Non è merch.
+    <br>
+    È identità.
+  </h2>
+
+  <p class="text-zinc-400 text-lg md:text-2xl leading-relaxed max-w-4xl mx-auto mb-16">
+    Educazione. Operatività. Soccorso.
+    <br>
+    Dignità. Memoria. Presenza.
+  </p>
+
+  <button class="btn">
+    Entra in ATZ
+  </button>
+
+</div>
+
+  </footer></body>
+</html>
