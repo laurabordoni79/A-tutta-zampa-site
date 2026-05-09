@@ -27,13 +27,9 @@ scroll-behavior:smooth;
 }
 
 body{
-
 background:#000;
-
 color:white;
-
 font-family:'Oswald',sans-serif;
-
 overflow-x:hidden;
 }
 
@@ -42,20 +38,13 @@ HEADER
 ========================================= */
 
 header{
-
 position:fixed;
-
 top:0;
 left:0;
-
 width:100%;
-
 z-index:999;
-
 background:rgba(0,0,0,0.28);
-
 backdrop-filter:blur(10px);
-
 border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
@@ -64,13 +53,9 @@ NAVBAR
 ========================================= */
 
 .navbar{
-
 display:flex;
-
 justify-content:space-between;
-
 align-items:center;
-
 padding:20px 50px;
 }
 
@@ -79,84 +64,55 @@ LOGO
 ========================================= */
 
 .logo{
-
 display:flex;
-
 align-items:center;
-
 gap:16px;
 }
 
 .logo img{
-
 width:56px;
 height:56px;
-
 object-fit:contain;
-
 display:block;
 }
 
 .logo h1{
-
 font-size:2.6rem;
-
 font-weight:700;
-
 letter-spacing:2px;
-
 color:white;
 }
 
 /* =========================================
-MENU PREMIUM
+MENU
 ========================================= */
 
 .main-nav{
-
 display:flex;
-
 align-items:center;
-
 gap:16px;
-
 flex-wrap:wrap;
 }
 
 .main-nav a{
-
 text-decoration:none;
-
 color:white;
-
 font-size:0.92rem;
-
 font-weight:500;
-
 letter-spacing:1px;
-
 text-transform:uppercase;
-
 padding:13px 22px;
-
 border:2px solid rgba(255,79,216,0.75);
-
 background:rgba(0,0,0,0.16);
-
 backdrop-filter:blur(6px);
-
 transition:0.3s ease;
-
 box-shadow:
 0 0 12px rgba(255,79,216,0.12);
 }
 
 .main-nav a:hover{
-
 transform:translateY(-2px);
-
 background:rgba(255,79,216,0.12);
-
 box-shadow:
 0 0 20px rgba(255,79,216,0.28);
 }
@@ -166,21 +122,14 @@ HERO
 ========================================= */
 
 .hero{
-
 height:100vh;
-
 position:relative;
-
 display:flex;
-
 align-items:center;
-
 padding:0 6%;
-
 overflow:hidden;
 
 background:
-
 linear-gradient(
 to right,
 rgba(0,0,0,0.48) 0%,
@@ -191,20 +140,12 @@ rgba(0,0,0,0.22) 100%
 url('HeroATZ.jpg');
 
 background-size:cover;
-
 background-position:center top;
 }
 
-/* =========================================
-LUCE SUL CANE
-========================================= */
-
 .hero::after{
-
 content:'';
-
 position:absolute;
-
 inset:0;
 
 background:
@@ -215,53 +156,33 @@ transparent 26%
 );
 
 mix-blend-mode:screen;
-
 pointer-events:none;
 }
 
 /* =========================================
-CONTENUTO HERO
+HERO CONTENT
 ========================================= */
 
 .hero-content{
-
 position:relative;
-
 z-index:2;
-
 max-width:720px;
 }
 
-/* =========================================
-TESTO HERO
-========================================= */
-
 .hero h2{
-
 font-size:5.1rem;
-
 line-height:0.90;
-
 letter-spacing:-2px;
-
 text-transform:uppercase;
-
 color:#f4f4f4;
 
 text-shadow:
 0 0 18px rgba(0,0,0,0.32);
 }
 
-/* =========================================
-ROSA/FUCSIA
-========================================= */
-
 .hero h2 span{
-
 display:block;
-
 margin-top:12px;
-
 color:#ff4fd8;
 
 text-shadow:
@@ -269,22 +190,12 @@ text-shadow:
 0 0 24px rgba(255,79,216,0.22);
 }
 
-/* =========================================
-TESTO SECONDARIO
-========================================= */
-
 .hero p{
-
 margin-top:24px;
-
 font-size:1.08rem;
-
 line-height:1.7;
-
 font-weight:300;
-
 max-width:680px;
-
 color:#f0f0f0;
 }
 
@@ -293,17 +204,11 @@ RUNA
 ========================================= */
 
 .hero-rune{
-
 position:absolute;
-
 right:34px;
-
 bottom:26px;
-
 width:58px;
-
 display:block;
-
 opacity:0.92;
 
 filter:
@@ -311,42 +216,33 @@ brightness(0) invert(1)
 drop-shadow(0 0 8px rgba(255,255,255,0.14));
 
 pointer-events:none;
-
 z-index:5;
 }
 
 /* =========================================
-SEZIONI
+SECTIONS
 ========================================= */
 
 .section{
-
 padding:130px 8%;
-
 border-top:
 1px solid rgba(255,255,255,0.05);
 }
 
 .section h3{
-
 font-size:3.5rem;
-
 margin-bottom:24px;
-
 text-transform:uppercase;
 }
 
 .section p{
-
 font-size:1.1rem;
-
 line-height:1.8;
-
 max-width:850px;
 }
 
 /* =========================================
-COLORI LINEE
+SECTION COLORS
 ========================================= */
 
 .educazione{
@@ -390,76 +286,186 @@ color:#b11226;
 }
 
 /* =========================================
-RESPONSIVE TABLET
+FOOTER
+========================================= */
+
+.atz-footer{
+
+padding:90px 6% 50px;
+
+background:#020202;
+
+border-top:
+1px solid rgba(255,255,255,0.05);
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:center;
+
+gap:50px;
+}
+
+/* =========================================
+SOCIAL BUTTONS
+========================================= */
+
+.footer-socials{
+
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:18px;
+}
+
+.footer-socials a{
+
+text-decoration:none;
+
+color:white;
+
+font-size:0.82rem;
+
+letter-spacing:1px;
+
+text-transform:uppercase;
+
+padding:13px 24px;
+
+border:2px solid rgba(255,79,216,0.75);
+
+background:rgba(255,255,255,0.02);
+
+transition:0.3s ease;
+
+box-shadow:
+0 0 12px rgba(255,79,216,0.10);
+}
+
+.footer-socials a:hover{
+
+transform:translateY(-2px);
+
+background:rgba(255,79,216,0.10);
+
+box-shadow:
+0 0 20px rgba(255,79,216,0.25);
+}
+
+/* =========================================
+FOOTER BRAND
+========================================= */
+
+.footer-brand{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+gap:18px;
+}
+
+.footer-brand img{
+
+width:68px;
+
+opacity:0.92;
+
+filter:
+brightness(0) invert(1)
+drop-shadow(0 0 10px rgba(255,255,255,0.12));
+}
+
+.footer-brand p{
+
+font-size:0.72rem;
+
+letter-spacing:5px;
+
+color:rgba(255,255,255,0.55);
+
+text-transform:uppercase;
+}
+
+/* =========================================
+RESPONSIVE
 ========================================= */
 
 @media(max-width:900px){
 
 .navbar{
-
 padding:16px 20px;
-
 flex-direction:column;
-
 gap:18px;
 }
 
 .logo h1{
-
 font-size:2rem;
 }
 
 .logo img{
-
 width:46px;
 height:46px;
 }
 
 .main-nav{
-
 justify-content:center;
-
 gap:10px;
 }
 
 .main-nav a{
-
 padding:10px 14px;
-
 font-size:0.75rem;
 }
 
 .hero{
-
 padding:0 5%;
 }
 
 .hero h2{
-
 font-size:3.9rem;
-
 line-height:0.92;
 }
 
 .hero p{
-
 font-size:0.95rem;
-
 max-width:95%;
 }
 
 .hero-rune{
-
 width:48px;
-
 right:18px;
-
 bottom:18px;
 }
 
 .section h3{
-
 font-size:2.4rem;
+}
+
+.footer-socials{
+gap:12px;
+}
+
+.footer-socials a{
+padding:10px 16px;
+font-size:0.72rem;
+}
+
+.footer-brand img{
+width:54px;
+}
+
+.footer-brand p{
+font-size:0.62rem;
+letter-spacing:3px;
 }
 
 }
@@ -544,7 +550,7 @@ Li comprendiamo per ciò che sono.
 </section>
 
 <!-- =========================================
-SEZIONI
+SECTIONS
 ========================================= -->
 
 <section class="section educazione">
@@ -607,6 +613,44 @@ ma in primis il rispetto di tutti.”
 </p>
 
 </section>
+
+<!-- =========================================
+FOOTER
+========================================= -->
+
+<footer class="atz-footer">
+
+<div class="footer-socials">
+
+<a href="https://wa.me/393000000000" target="_blank">
+WhatsApp
+</a>
+
+<a href="mailto:tuaemail@email.com">
+Mail
+</a>
+
+<a href="https://instagram.com/tuoprofilo" target="_blank">
+Instagram
+</a>
+
+<a href="https://facebook.com/tuapagina" target="_blank">
+Facebook
+</a>
+
+</div>
+
+<div class="footer-brand">
+
+<img src="runaATZ.jpg" alt="ATZ">
+
+<p>
+WORKING DOGS CULTURE
+</p>
+
+</div>
+
+</footer>
 
 </body>
 
