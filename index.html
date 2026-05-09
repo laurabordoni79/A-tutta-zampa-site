@@ -386,7 +386,211 @@ bottom:25px;
 }
 
 }
+<style>
 
+/* =========================
+LOGO SISTEMATO
+========================= */
+
+.logo img{
+width:58px;
+height:58px;
+object-fit:contain;
+display:block;
+filter:brightness(0) invert(1);
+}
+
+/* =========================
+TESTO HERO RIDIMENSIONATO
+========================= */
+
+.hero h2{
+
+font-size:5.1rem;
+
+line-height:0.90;
+
+letter-spacing:-2px;
+
+max-width:720px;
+}
+
+.hero h2 span{
+
+display:block;
+
+margin-top:12px;
+
+color:#ff4fd8;
+
+text-shadow:
+0 0 10px rgba(255,79,216,0.30),
+0 0 22px rgba(255,79,216,0.20);
+}
+
+/* =========================
+CANE PIÙ VISIBILE
+========================= */
+
+.hero{
+
+background:
+
+linear-gradient(
+to right,
+rgba(0,0,0,0.48) 0%,
+rgba(0,0,0,0.08) 42%,
+rgba(0,0,0,0.20) 100%
+),
+
+url('HeroATZ.jpg');
+
+background-size:cover;
+
+background-position:center top;
+}
+
+/* luce sul muso */
+
+.hero::after{
+
+content:'';
+
+position:absolute;
+
+inset:0;
+
+background:
+radial-gradient(
+circle at 72% 36%,
+rgba(255,255,255,0.26),
+transparent 26%
+);
+
+mix-blend-mode:screen;
+
+pointer-events:none;
+}
+
+/* =========================
+RUNA SISTEMATA
+========================= */
+
+.hero-rune{
+
+position:absolute;
+
+right:34px;
+
+bottom:28px;
+
+width:62px;
+
+display:block;
+
+opacity:0.95;
+
+filter:
+brightness(0) invert(1)
+drop-shadow(0 0 8px rgba(255,255,255,0.14));
+
+z-index:5;
+}
+
+/* =========================
+MENU PREMIUM
+========================= */
+
+.main-nav{
+
+display:flex;
+
+gap:16px;
+
+align-items:center;
+}
+
+.main-nav a{
+
+padding:13px 22px;
+
+border:2px solid rgba(255,79,216,0.75);
+
+background:rgba(0,0,0,0.18);
+
+color:white;
+
+text-decoration:none;
+
+font-size:0.92rem;
+
+font-weight:500;
+
+letter-spacing:1px;
+
+text-transform:uppercase;
+
+transition:0.3s ease;
+
+box-shadow:
+0 0 12px rgba(255,79,216,0.12);
+}
+
+.main-nav a:hover{
+
+transform:translateY(-2px);
+
+background:rgba(255,79,216,0.12);
+
+box-shadow:
+0 0 18px rgba(255,79,216,0.30);
+}
+
+/* =========================
+RESPONSIVE TABLET
+========================= */
+
+@media(max-width:900px){
+
+.hero h2{
+
+font-size:3.9rem;
+
+line-height:0.92;
+}
+
+.hero-rune{
+
+width:50px;
+
+right:18px;
+
+bottom:18px;
+}
+
+.logo img{
+
+width:46px;
+height:46px;
+}
+
+.main-nav{
+
+gap:10px;
+
+flex-wrap:wrap;
+}
+
+.main-nav a{
+
+padding:10px 14px;
+
+font-size:0.75rem;
+}
+
+}
+
+</style>
 </style>
 
 </head>
