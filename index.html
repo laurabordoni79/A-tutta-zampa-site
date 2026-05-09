@@ -22,6 +22,10 @@ padding:0;
 box-sizing:border-box;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 
 background:#000;
@@ -91,8 +95,6 @@ height:56px;
 object-fit:contain;
 
 display:block;
-
-filter:brightness(0) invert(1);
 }
 
 .logo h1{
@@ -117,6 +119,8 @@ display:flex;
 align-items:center;
 
 gap:16px;
+
+flex-wrap:wrap;
 }
 
 .main-nav a{
@@ -206,7 +210,7 @@ inset:0;
 background:
 radial-gradient(
 circle at 72% 36%,
-rgba(255,255,255,0.24),
+rgba(255,255,255,0.22),
 transparent 26%
 );
 
@@ -234,7 +238,7 @@ TESTO HERO
 
 .hero h2{
 
-font-size:5.2rem;
+font-size:5.1rem;
 
 line-height:0.90;
 
@@ -282,9 +286,6 @@ font-weight:300;
 max-width:680px;
 
 color:#f0f0f0;
-
-text-shadow:
-0 0 10px rgba(0,0,0,0.25);
 }
 
 /* =========================================
@@ -299,11 +300,11 @@ right:34px;
 
 bottom:26px;
 
-width:60px;
+width:58px;
 
 display:block;
 
-opacity:0.95;
+opacity:0.92;
 
 filter:
 brightness(0) invert(1)
@@ -312,6 +313,80 @@ drop-shadow(0 0 8px rgba(255,255,255,0.14));
 pointer-events:none;
 
 z-index:5;
+}
+
+/* =========================================
+SEZIONI
+========================================= */
+
+.section{
+
+padding:130px 8%;
+
+border-top:
+1px solid rgba(255,255,255,0.05);
+}
+
+.section h3{
+
+font-size:3.5rem;
+
+margin-bottom:24px;
+
+text-transform:uppercase;
+}
+
+.section p{
+
+font-size:1.1rem;
+
+line-height:1.8;
+
+max-width:850px;
+}
+
+/* =========================================
+COLORI LINEE
+========================================= */
+
+.educazione{
+background:#11100d;
+}
+
+.educazione h3{
+color:#d8c3a5;
+}
+
+.workingdogs{
+background:#090909;
+}
+
+.workingdogs h3{
+color:#9e1b32;
+}
+
+.soccorso{
+background:#15110c;
+}
+
+.soccorso h3{
+color:#ff6b00;
+}
+
+.dwd{
+background:#0d0a12;
+}
+
+.dwd h3{
+color:#ff4fd8;
+}
+
+.norse{
+background:#050505;
+}
+
+.norse h3{
+color:#b11226;
 }
 
 /* =========================================
@@ -344,8 +419,6 @@ height:46px;
 
 justify-content:center;
 
-flex-wrap:wrap;
-
 gap:10px;
 }
 
@@ -377,11 +450,16 @@ max-width:95%;
 
 .hero-rune{
 
-width:50px;
+width:48px;
 
 right:18px;
 
 bottom:18px;
+}
+
+.section h3{
+
+font-size:2.4rem;
 }
 
 }
@@ -392,13 +470,17 @@ bottom:18px;
 
 <body>
 
+<!-- =========================================
+HEADER
+========================================= -->
+
 <header>
 
 <div class="navbar">
 
 <div class="logo">
 
-<img src="runa-bianca.png" alt="ATZ">
+<img src="logoATZ.jpg" alt="ATZ">
 
 <h1>ATZ</h1>
 
@@ -421,6 +503,10 @@ bottom:18px;
 </div>
 
 </header>
+
+<!-- =========================================
+HERO
+========================================= -->
 
 <section class="hero">
 
@@ -453,7 +539,72 @@ Li comprendiamo per ciò che sono.
 
 </div>
 
-<img src="runa-bianca.png" class="hero-rune" alt="Runa">
+<img src="runaATZ.jpg" class="hero-rune" alt="Runa">
+
+</section>
+
+<!-- =========================================
+SEZIONI
+========================================= -->
+
+<section class="section educazione">
+
+<h3>Educazione e rieducazione</h3>
+
+<p>
+
+“L'educazione non è solo il rispetto delle regole,
+ma in primis il rispetto di tutti.”
+
+</p>
+
+</section>
+
+<section class="section workingdogs">
+
+<h3>Working Dogs</h3>
+
+<p>
+
+“Relazione prima di prestazione.”
+
+</p>
+
+</section>
+
+<section class="section soccorso">
+
+<h3>Ricerca e soccorso</h3>
+
+<p>
+
+“Si parte in due, si torna in due.”
+
+</p>
+
+</section>
+
+<section class="section dwd">
+
+<h3>DWD / Unbroken Dogs</h3>
+
+<p>
+
+“I limiti sono negli occhi di chi guarda.”
+
+</p>
+
+</section>
+
+<section class="section norse">
+
+<h3>Linea Norse</h3>
+
+<p>
+
+“Onora i morti ma combatti per i vivi.”
+
+</p>
 
 </section>
 
