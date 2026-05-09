@@ -53,7 +53,12 @@ backdrop-filter:blur(10px);
 
 border-bottom:
 1px solid rgba(255,255,255,0.04);
+
+box-shadow:
+0 0 40px rgba(0,0,0,0.22);
 }
+
+/* ================= NAVBAR ================= */
 
 .navbar{
 
@@ -63,7 +68,11 @@ justify-content:space-between;
 
 align-items:center;
 
-padding:24px 50px;
+padding:22px 54px;
+
+max-width:1700px;
+
+margin:auto;
 }
 
 /* ================= LOGO ================= */
@@ -92,51 +101,72 @@ font-family:'Oswald',sans-serif;
 font-size:2.5rem;
 
 letter-spacing:2px;
+
+color:white;
 }
 
-/* ================= MENU ================= */
+/* ================= MENU PREMIUM ================= */
 
-nav{
+.main-nav{
 
 display:flex;
 
-gap:40px;
-
 align-items:center;
+
+justify-content:flex-end;
+
+gap:44px;
+
+flex-wrap:wrap;
+
+width:100%;
 }
 
-nav a{
+.main-nav a{
 
 font-family:'Oswald',sans-serif;
 
-text-decoration:none;
+font-size:1.12rem;
 
-color:white;
-
-font-size:1.08rem;
-
-text-transform:uppercase;
+font-weight:500;
 
 letter-spacing:1px;
 
-transition:0.3s;
+text-transform:uppercase;
+
+text-decoration:none;
+
+color:#f5f5f5;
 
 position:relative;
+
+padding-bottom:8px;
+
+transition:
+color 0.3s ease,
+transform 0.3s ease,
+opacity 0.3s ease;
+
+opacity:0.88;
 }
 
-nav a:hover{
+.main-nav a:hover{
 
 color:#ff4fd8;
+
+opacity:1;
+
+transform:translateY(-2px);
 }
 
-nav a::after{
+.main-nav a::after{
 
 content:'';
 
 position:absolute;
 
 left:0;
-bottom:-6px;
+bottom:0;
 
 width:0%;
 
@@ -144,10 +174,10 @@ height:2px;
 
 background:#ff4fd8;
 
-transition:0.3s;
+transition:0.35s;
 }
 
-nav a:hover::after{
+.main-nav a:hover::after{
 
 width:100%;
 }
@@ -366,21 +396,19 @@ padding:18px;
 
 flex-direction:column;
 
-gap:16px;
+gap:18px;
 }
 
-nav{
-
-gap:18px;
-
-flex-wrap:wrap;
+.main-nav{
 
 justify-content:center;
+
+gap:18px;
 }
 
-nav a{
+.main-nav a{
 
-font-size:0.9rem;
+font-size:0.92rem;
 }
 
 .logo h1{
@@ -450,7 +478,7 @@ font-size:2.6rem;
 
 </div>
 
-<nav>
+<nav class="main-nav">
 
 <a href="#educazione">Educazione</a>
 
@@ -458,9 +486,9 @@ font-size:2.6rem;
 
 <a href="#soccorso">Ricerca e soccorso</a>
 
-<a href="#dwd">DWD / Unbroken Dogs</a>
+<a href="#dwd">Unbroken Dogs</a>
 
-<a href="#norse">Linea Norse</a>
+<a href="#norse">Norse</a>
 
 </nav>
 
