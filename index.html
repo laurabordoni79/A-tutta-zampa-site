@@ -1,427 +1,410 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ATZ | Working Dogs Culture</title>
 
-<title>ATZ</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-    background:black;
-    color:white;
-    font-family:'Bebas Neue', sans-serif;
-    overflow-x:hidden;
+background:#000;
+font-family:'Oswald',sans-serif;
+color:white;
+overflow-x:hidden;
 }
 
-/* =========================
-   HEADER
-========================= */
+.hero{
+position:relative;
+min-height:100vh;
 
-.hero-header{
-    width:100%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding-top:45px;
-    padding-bottom:45px;
+background:
+linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(0,0,0,0.95)),
+url('HeroATZ.jpg');
 
-    background:
-    radial-gradient(circle at center,
-    rgba(255,255,255,0.08) 0%,
-    rgba(0,0,0,1) 70%);
+background-size:cover;
+background-position:center;
+
+display:flex;
+flex-direction:column;
+align-items:center;
+
+padding:40px 20px 80px;
 }
 
-.atz-logo-wrap{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:35px;
-
-    width:100%;
+.hero::after{
+content:'';
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+height:250px;
+background:linear-gradient(to bottom, transparent, #000);
 }
 
-.atz-runa{
-    width:100px;
-    height:auto;
-    object-fit:contain;
+.logo-wrapper{
+position:relative;
+z-index:2;
 
-    filter:
-    drop-shadow(0 0 8px rgba(255,255,255,0.18))
-    drop-shadow(0 0 16px rgba(255,255,255,0.08));
+display:flex;
+align-items:center;
+gap:28px;
+
+margin-top:10px;
+margin-bottom:70px;
 }
 
-.atz-title{
-    color:white;
-    font-size:88px;
-    letter-spacing:8px;
-    line-height:1;
-
-    text-shadow:
-    0 0 8px rgba(255,255,255,0.15);
+.logo-rune{
+width:95px;
+filter:drop-shadow(0 0 14px rgba(255,255,255,0.22));
 }
 
-/* =========================
-   MENU BUTTONS
-========================= */
-
-.main-menu{
-    width:100%;
-
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    align-items:center;
-
-    gap:20px;
-
-    padding-left:20px;
-    padding-right:20px;
-
-    margin-top:30px;
-    margin-bottom:60px;
+.logo-text{
+font-size:4rem;
+font-weight:700;
+letter-spacing:4px;
 }
 
-.menu-btn{
-    border:3px solid #ff2ad4;
-    color:white;
+.manifesto{
+position:relative;
+z-index:2;
 
-    text-decoration:none;
+max-width:900px;
+text-align:left;
 
-    padding:20px 30px;
-
-    font-size:30px;
-    letter-spacing:2px;
-
-    transition:0.3s;
-
-    background:rgba(0,0,0,0.75);
-
-    min-width:260px;
-    text-align:center;
-
-    box-shadow:
-    0 0 15px rgba(255,42,212,0.2);
+margin-bottom:70px;
 }
 
-.menu-btn:hover{
-    background:#ff2ad4;
-    color:black;
-
-    box-shadow:
-    0 0 25px rgba(255,42,212,0.5);
+.manifesto-small{
+font-size:1.2rem;
+font-weight:300;
+letter-spacing:2px;
+color:#cccccc;
+margin-bottom:15px;
 }
 
-/* =========================
-   HERO MANIFESTO
-========================= */
-
-.hero-manifesto{
-    width:100%;
-    min-height:80vh;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    padding:60px 25px;
-
-    text-align:left;
-
-    background:
-    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)),
-    url('hero.jpg');
-
-    background-size:cover;
-    background-position:center;
+.manifesto-big{
+font-size:6rem;
+line-height:0.95;
+font-weight:700;
+text-transform:uppercase;
 }
 
-.manifesto-content{
-    max-width:1000px;
+.highlight{
+color:#ff2bd6;
+text-shadow:0 0 18px rgba(255,43,214,0.45);
 }
 
-.hero-big-text{
-    font-size:110px;
-    line-height:0.9;
-    color:white;
+.manifesto-sub{
+margin-top:30px;
+font-size:1.4rem;
+line-height:1.6;
+font-weight:300;
+color:#d0d0d0;
+max-width:800px;
 }
 
-.hero-pink{
-    color:#ff2ad4;
+.sections{
+position:relative;
+z-index:2;
 
-    text-shadow:
-    0 0 18px rgba(255,42,212,0.4);
+display:grid;
+grid-template-columns:repeat(2, minmax(220px, 320px));
+gap:24px;
+
+margin-top:40px;
 }
 
-.hero-small-text{
-    margin-top:35px;
+.section-btn{
+text-decoration:none;
+color:white;
 
-    font-size:28px;
-    line-height:1.4;
+border:4px solid #ff2bd6;
 
-    color:rgba(255,255,255,0.82);
+padding:28px 18px;
 
-    font-family:Arial, sans-serif;
+text-align:center;
+
+font-size:2rem;
+letter-spacing:2px;
+font-weight:500;
+
+background:rgba(0,0,0,0.45);
+backdrop-filter:blur(3px);
+
+transition:0.3s;
+
+box-shadow:0 0 18px rgba(255,43,214,0.18);
 }
 
-/* =========================
-   CONTACTS
-========================= */
+.section-btn:hover{
+transform:translateY(-4px);
+box-shadow:0 0 28px rgba(255,43,214,0.4);
+}
 
-.contacts-section{
-    width:100%;
+.norse-center{
+grid-column:1 / -1;
+justify-self:center;
+width:280px;
+}
 
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    align-items:center;
+.quote-section{
+padding:120px 20px;
+text-align:center;
+background:#000;
+}
 
-    gap:22px;
+.quote-section h2{
+font-size:4rem;
+font-weight:300;
+letter-spacing:2px;
+max-width:1000px;
+margin:auto;
+line-height:1.2;
+}
 
-    padding-top:80px;
-    padding-bottom:80px;
+.contacts{
+padding:80px 20px 100px;
 
-    padding-left:20px;
-    padding-right:20px;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:24px;
+
+background:#000;
 }
 
 .contact-btn{
-    border:3px solid #ff2ad4;
+text-decoration:none;
+color:white;
 
-    padding:18px 30px;
+border:3px solid #ff2bd6;
 
-    color:white;
-    text-decoration:none;
+padding:18px 34px;
 
-    font-size:28px;
-    letter-spacing:2px;
+font-size:1.5rem;
+letter-spacing:2px;
 
-    min-width:230px;
-    text-align:center;
-
-    background:rgba(0,0,0,0.8);
-
-    transition:0.3s;
-
-    box-shadow:
-    0 0 15px rgba(255,42,212,0.18);
+transition:0.3s;
 }
 
 .contact-btn:hover{
-    background:#ff2ad4;
-    color:black;
-
-    box-shadow:
-    0 0 25px rgba(255,42,212,0.45);
+background:#ff2bd6;
+color:black;
 }
 
-/* =========================
-   FOOTER
-========================= */
-
-.atz-footer{
-    width:100%;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    gap:25px;
-
-    padding-top:80px;
-    padding-bottom:80px;
-
-    background:black;
+footer{
+padding:70px 20px 90px;
+text-align:center;
+background:#000;
 }
 
-.footer-runa{
-    width:90px;
-    height:auto;
+.footer-rune{
+width:120px;
+margin-bottom:26px;
+opacity:0.95;
 
-    filter:
-    drop-shadow(0 0 10px rgba(255,255,255,0.16));
+filter:drop-shadow(0 0 10px rgba(255,255,255,0.12));
+}
+
+.footer-logo{
+font-size:3rem;
+font-weight:700;
+letter-spacing:6px;
+margin-bottom:18px;
 }
 
 .footer-text{
-    color:rgba(255,255,255,0.6);
-
-    font-size:18px;
-    letter-spacing:10px;
-
-    text-align:center;
+font-size:1rem;
+letter-spacing:10px;
+color:#888;
+text-transform:uppercase;
 }
 
-/* =========================
-   MOBILE
-========================= */
+@media(max-width:900px){
 
-@media (max-width:768px){
+.logo-wrapper{
+flex-direction:row;
+gap:18px;
+margin-bottom:50px;
+}
 
-    .hero-header{
-        padding-top:30px;
-        padding-bottom:30px;
-    }
+.logo-rune{
+width:70px;
+}
 
-    .atz-logo-wrap{
-        gap:18px;
-    }
+.logo-text{
+font-size:3rem;
+}
 
-    .atz-runa{
-        width:72px;
-    }
+.manifesto{
+text-align:center;
+}
 
-    .atz-title{
-        font-size:54px;
-        letter-spacing:4px;
-    }
+.manifesto-big{
+font-size:3.9rem;
+}
 
-    .main-menu{
-        gap:15px;
-        margin-bottom:40px;
-    }
+.manifesto-sub{
+font-size:1.15rem;
+text-align:center;
+}
 
-    .menu-btn{
-        width:100%;
-        min-width:unset;
+.sections{
+grid-template-columns:1fr;
+width:100%;
+max-width:650px;
+}
 
-        font-size:24px;
+.section-btn{
+font-size:1.9rem;
+padding:26px 16px;
+}
 
-        padding:18px 20px;
-    }
+.norse-center{
+width:100%;
+}
 
-    .hero-manifesto{
-        min-height:70vh;
-        padding:45px 20px;
-    }
+.quote-section h2{
+font-size:2.3rem;
+}
 
-    .hero-big-text{
-        font-size:58px;
-        line-height:0.95;
-    }
+.contact-btn{
+width:85%;
+text-align:center;
+}
 
-    .hero-small-text{
-        font-size:20px;
-        line-height:1.5;
-    }
+.footer-rune{
+width:90px;
+}
 
-    .contacts-section{
-        gap:15px;
-        padding-top:60px;
-        padding-bottom:60px;
-    }
+.footer-logo{
+font-size:2.2rem;
+}
 
-    .contact-btn{
-        width:100%;
-        min-width:unset;
+.footer-text{
+letter-spacing:5px;
+font-size:0.8rem;
+}
 
-        font-size:22px;
-    }
-
-    .footer-runa{
-        width:65px;
-    }
-
-    .footer-text{
-        font-size:12px;
-        letter-spacing:6px;
-        padding-left:10px;
-        padding-right:10px;
-    }
 }
 
 </style>
-
 </head>
+
 <body>
 
-<!-- HEADER -->
+<section class="hero">
 
-<header class="hero-header">
+<div class="logo-wrapper">
+<img src="runa-minimal.png" class="logo-rune" alt="ATZ Rune">
 
-    <div class="atz-logo-wrap">
+<div class="logo-text">
+ATZ
+</div>
+</div>
 
-        <img src="runa-minimal.png" alt="ATZ" class="atz-runa">
+<div class="manifesto">
 
-        <h1 class="atz-title">ATZ</h1>
+<div class="manifesto-small">
+WORKING DOGS CULTURE
+</div>
 
-    </div>
+<div class="manifesto-big">
 
-</header>
+NON HO PRESO<br>
+UN CANE PER<br>
+TENERLO SUL<br>
+DIVANO.<br>
 
-<!-- MENU -->
+<span class="highlight">
+L'HO PRESO<br>
+COME COLLEGA DI<br>
+VITA.
+</span>
 
-<section class="main-menu">
+</div>
 
-    <a href="educazione.html" class="menu-btn">EDUCAZIONE</a>
+<div class="manifesto-sub">
+Non abbiamo bisogno di trasformare i cani in esseri umani per rispettarli. Li comprendiamo per ciò che sono.
+</div>
 
-    <a href="workingdogs.html" class="menu-btn">WORKING DOGS</a>
+</div>
 
-    <a href="ricercaesoccorso.html" class="menu-btn">RICERCA E SOCCORSO</a>
+<div class="sections">
 
-    <a href="unbrokendogs.html" class="menu-btn">UNBROKEN DOGS</a>
+<a href="educazione.html" class="section-btn">
+EDUCAZIONE
+</a>
 
-    <a href="norse.html" class="menu-btn">NORSE</a>
+<a href="cani-da-lavoro.html" class="section-btn">
+WORKING DOGS
+</a>
 
-</section>
+<a href="ricerca-soccorso.html" class="section-btn">
+RICERCA E SOCCORSO
+</a>
 
-<!-- HERO -->
+<a href="dwd.html" class="section-btn">
+UNBROKEN DOGS
+</a>
 
-<section class="hero-manifesto">
+<a href="norse.html" class="section-btn norse-center">
+NORSE
+</a>
 
-    <div class="manifesto-content">
-
-        <h2 class="hero-big-text">
-            NON HO PRESO UN CANE PER TENERLO SUL DIVANO.<br>
-            <span class="hero-pink">
-            L'HO PRESO COME COLLEGA DI VITA.
-            </span>
-        </h2>
-
-        <p class="hero-small-text">
-            Non abbiamo bisogno di trasformare i cani in esseri umani per rispettarli.
-            Li comprendiamo per ciò che sono.
-        </p>
-
-    </div>
-
-</section>
-
-<!-- CONTACTS -->
-
-<section class="contacts-section">
-
-    <a href="#" class="contact-btn">WHATSAPP</a>
-
-    <a href="#" class="contact-btn">MAIL</a>
-
-    <a href="#" class="contact-btn">INSTAGRAM</a>
-
-    <a href="#" class="contact-btn">TIKTOK</a>
+</div>
 
 </section>
 
-<!-- FOOTER -->
+<section class="quote-section">
 
-<footer class="atz-footer">
+<h2>
+“Onora i morti ma combatti per i vivi.”
+</h2>
 
-    <img src="runa-incisa.png" alt="ATZ" class="footer-runa">
+</section>
 
-    <p class="footer-text">
-        WORKING DOGS CULTURE
-    </p>
+<section class="contacts">
+
+<a href="#" class="contact-btn">
+WHATSAPP
+</a>
+
+<a href="mailto:tuamail@example.com" class="contact-btn">
+MAIL
+</a>
+
+<a href="#" class="contact-btn">
+INSTAGRAM
+</a>
+
+<a href="#" class="contact-btn">
+TIKTOK
+</a>
+
+</section>
+
+<footer>
+
+<img src="runa-incisa.png" class="footer-rune" alt="ATZ Rune Incisa">
+
+<div class="footer-logo">
+ATZ
+</div>
+
+<div class="footer-text">
+WORKING DOGS CULTURE
+</div>
 
 </footer>
 
