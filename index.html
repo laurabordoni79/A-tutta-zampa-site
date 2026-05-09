@@ -1,657 +1,429 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ATZ • Working Dog Culture</title>
+<title>ATZ</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
 <style>
 
-/* =========================================
-RESET
-========================================= */
-
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-background:#000;
-color:white;
-font-family:'Oswald',sans-serif;
-overflow-x:hidden;
+    background:black;
+    color:white;
+    font-family:'Bebas Neue', sans-serif;
+    overflow-x:hidden;
 }
 
-/* =========================================
-HEADER
-========================================= */
+/* =========================
+   HEADER
+========================= */
 
-header{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-z-index:999;
-background:rgba(0,0,0,0.28);
-backdrop-filter:blur(10px);
-border-bottom:1px solid rgba(255,255,255,0.05);
+.hero-header{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding-top:45px;
+    padding-bottom:45px;
+
+    background:
+    radial-gradient(circle at center,
+    rgba(255,255,255,0.08) 0%,
+    rgba(0,0,0,1) 70%);
 }
 
-/* =========================================
-NAVBAR
-========================================= */
+.atz-logo-wrap{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:35px;
 
-.navbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 50px;
+    width:100%;
 }
 
-/* =========================================
-LOGO
-========================================= */
+.atz-runa{
+    width:100px;
+    height:auto;
+    object-fit:contain;
 
-.logo{
-display:flex;
-align-items:center;
-gap:16px;
+    filter:
+    drop-shadow(0 0 8px rgba(255,255,255,0.18))
+    drop-shadow(0 0 16px rgba(255,255,255,0.08));
 }
 
-.logo img{
-width:56px;
-height:56px;
-object-fit:contain;
-display:block;
+.atz-title{
+    color:white;
+    font-size:88px;
+    letter-spacing:8px;
+    line-height:1;
+
+    text-shadow:
+    0 0 8px rgba(255,255,255,0.15);
 }
 
-.logo h1{
-font-size:2.6rem;
-font-weight:700;
-letter-spacing:2px;
-color:white;
+/* =========================
+   MENU BUTTONS
+========================= */
+
+.main-menu{
+    width:100%;
+
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+
+    gap:20px;
+
+    padding-left:20px;
+    padding-right:20px;
+
+    margin-top:30px;
+    margin-bottom:60px;
 }
 
-/* =========================================
-MENU
-========================================= */
+.menu-btn{
+    border:3px solid #ff2ad4;
+    color:white;
 
-.main-nav{
-display:flex;
-align-items:center;
-gap:16px;
-flex-wrap:wrap;
+    text-decoration:none;
+
+    padding:20px 30px;
+
+    font-size:30px;
+    letter-spacing:2px;
+
+    transition:0.3s;
+
+    background:rgba(0,0,0,0.75);
+
+    min-width:260px;
+    text-align:center;
+
+    box-shadow:
+    0 0 15px rgba(255,42,212,0.2);
 }
 
-.main-nav a{
-text-decoration:none;
-color:white;
-font-size:0.92rem;
-font-weight:500;
-letter-spacing:1px;
-text-transform:uppercase;
-padding:13px 22px;
-border:2px solid rgba(255,79,216,0.75);
-background:rgba(0,0,0,0.16);
-backdrop-filter:blur(6px);
-transition:0.3s ease;
-box-shadow:
-0 0 12px rgba(255,79,216,0.12);
+.menu-btn:hover{
+    background:#ff2ad4;
+    color:black;
+
+    box-shadow:
+    0 0 25px rgba(255,42,212,0.5);
 }
 
-.main-nav a:hover{
-transform:translateY(-2px);
-background:rgba(255,79,216,0.12);
-box-shadow:
-0 0 20px rgba(255,79,216,0.28);
+/* =========================
+   HERO MANIFESTO
+========================= */
+
+.hero-manifesto{
+    width:100%;
+    min-height:80vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:60px 25px;
+
+    text-align:left;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)),
+    url('hero.jpg');
+
+    background-size:cover;
+    background-position:center;
 }
 
-/* =========================================
-HERO
-========================================= */
-
-.hero{
-height:100vh;
-position:relative;
-display:flex;
-align-items:center;
-padding:0 6%;
-overflow:hidden;
-
-background:
-linear-gradient(
-to right,
-rgba(0,0,0,0.48) 0%,
-rgba(0,0,0,0.08) 42%,
-rgba(0,0,0,0.22) 100%
-),
-
-url('HeroATZ.jpg');
-
-background-size:cover;
-background-position:center top;
+.manifesto-content{
+    max-width:1000px;
 }
 
-.hero::after{
-content:'';
-position:absolute;
-inset:0;
-
-background:
-radial-gradient(
-circle at 72% 36%,
-rgba(255,255,255,0.22),
-transparent 26%
-);
-
-mix-blend-mode:screen;
-pointer-events:none;
+.hero-big-text{
+    font-size:110px;
+    line-height:0.9;
+    color:white;
 }
 
-/* =========================================
-HERO CONTENT
-========================================= */
+.hero-pink{
+    color:#ff2ad4;
 
-.hero-content{
-position:relative;
-z-index:2;
-max-width:720px;
+    text-shadow:
+    0 0 18px rgba(255,42,212,0.4);
 }
 
-.hero h2{
-font-size:5.1rem;
-line-height:0.90;
-letter-spacing:-2px;
-text-transform:uppercase;
-color:#f4f4f4;
+.hero-small-text{
+    margin-top:35px;
 
-text-shadow:
-0 0 18px rgba(0,0,0,0.32);
+    font-size:28px;
+    line-height:1.4;
+
+    color:rgba(255,255,255,0.82);
+
+    font-family:Arial, sans-serif;
 }
 
-.hero h2 span{
-display:block;
-margin-top:12px;
-color:#ff4fd8;
+/* =========================
+   CONTACTS
+========================= */
 
-text-shadow:
-0 0 10px rgba(255,79,216,0.32),
-0 0 24px rgba(255,79,216,0.22);
+.contacts-section{
+    width:100%;
+
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+
+    gap:22px;
+
+    padding-top:80px;
+    padding-bottom:80px;
+
+    padding-left:20px;
+    padding-right:20px;
 }
 
-.hero p{
-margin-top:24px;
-font-size:1.08rem;
-line-height:1.7;
-font-weight:300;
-max-width:680px;
-color:#f0f0f0;
+.contact-btn{
+    border:3px solid #ff2ad4;
+
+    padding:18px 30px;
+
+    color:white;
+    text-decoration:none;
+
+    font-size:28px;
+    letter-spacing:2px;
+
+    min-width:230px;
+    text-align:center;
+
+    background:rgba(0,0,0,0.8);
+
+    transition:0.3s;
+
+    box-shadow:
+    0 0 15px rgba(255,42,212,0.18);
 }
 
-/* =========================================
-RUNA
-========================================= */
+.contact-btn:hover{
+    background:#ff2ad4;
+    color:black;
 
-.hero-rune{
-position:absolute;
-right:34px;
-bottom:26px;
-width:58px;
-display:block;
-opacity:0.92;
-
-filter:
-brightness(0) invert(1)
-drop-shadow(0 0 8px rgba(255,255,255,0.14));
-
-pointer-events:none;
-z-index:5;
+    box-shadow:
+    0 0 25px rgba(255,42,212,0.45);
 }
 
-/* =========================================
-SECTIONS
-========================================= */
-
-.section{
-padding:130px 8%;
-border-top:
-1px solid rgba(255,255,255,0.05);
-}
-
-.section h3{
-font-size:3.5rem;
-margin-bottom:24px;
-text-transform:uppercase;
-}
-
-.section p{
-font-size:1.1rem;
-line-height:1.8;
-max-width:850px;
-}
-
-/* =========================================
-SECTION COLORS
-========================================= */
-
-.educazione{
-background:#11100d;
-}
-
-.educazione h3{
-color:#d8c3a5;
-}
-
-.workingdogs{
-background:#090909;
-}
-
-.workingdogs h3{
-color:#9e1b32;
-}
-
-.soccorso{
-background:#15110c;
-}
-
-.soccorso h3{
-color:#ff6b00;
-}
-
-.dwd{
-background:#0d0a12;
-}
-
-.dwd h3{
-color:#ff4fd8;
-}
-
-.norse{
-background:#050505;
-}
-
-.norse h3{
-color:#b11226;
-}
-
-/* =========================================
-FOOTER
-========================================= */
+/* =========================
+   FOOTER
+========================= */
 
 .atz-footer{
+    width:100%;
 
-padding:90px 6% 50px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 
-background:#020202;
+    gap:25px;
 
-border-top:
-1px solid rgba(255,255,255,0.05);
+    padding-top:80px;
+    padding-bottom:80px;
 
-display:flex;
-
-flex-direction:column;
-
-align-items:center;
-
-justify-content:center;
-
-gap:50px;
+    background:black;
 }
 
-/* =========================================
-SOCIAL BUTTONS
-========================================= */
+.footer-runa{
+    width:90px;
+    height:auto;
 
-.footer-socials{
-
-display:flex;
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-gap:18px;
+    filter:
+    drop-shadow(0 0 10px rgba(255,255,255,0.16));
 }
 
-.footer-socials a{
+.footer-text{
+    color:rgba(255,255,255,0.6);
 
-text-decoration:none;
+    font-size:18px;
+    letter-spacing:10px;
 
-color:white;
-
-font-size:0.82rem;
-
-letter-spacing:1px;
-
-text-transform:uppercase;
-
-padding:13px 24px;
-
-border:2px solid rgba(255,79,216,0.75);
-
-background:rgba(255,255,255,0.02);
-
-transition:0.3s ease;
-
-box-shadow:
-0 0 12px rgba(255,79,216,0.10);
+    text-align:center;
 }
 
-.footer-socials a:hover{
+/* =========================
+   MOBILE
+========================= */
 
-transform:translateY(-2px);
+@media (max-width:768px){
 
-background:rgba(255,79,216,0.10);
+    .hero-header{
+        padding-top:30px;
+        padding-bottom:30px;
+    }
 
-box-shadow:
-0 0 20px rgba(255,79,216,0.25);
-}
+    .atz-logo-wrap{
+        gap:18px;
+    }
 
-/* =========================================
-FOOTER BRAND
-========================================= */
+    .atz-runa{
+        width:72px;
+    }
 
-.footer-brand{
+    .atz-title{
+        font-size:54px;
+        letter-spacing:4px;
+    }
 
-display:flex;
+    .main-menu{
+        gap:15px;
+        margin-bottom:40px;
+    }
 
-flex-direction:column;
+    .menu-btn{
+        width:100%;
+        min-width:unset;
 
-align-items:center;
+        font-size:24px;
 
-gap:18px;
-}
+        padding:18px 20px;
+    }
 
-.footer-brand img{
+    .hero-manifesto{
+        min-height:70vh;
+        padding:45px 20px;
+    }
 
-width:68px;
+    .hero-big-text{
+        font-size:58px;
+        line-height:0.95;
+    }
 
-opacity:0.92;
+    .hero-small-text{
+        font-size:20px;
+        line-height:1.5;
+    }
 
-filter:
-brightness(0) invert(1)
-drop-shadow(0 0 10px rgba(255,255,255,0.12));
-}
+    .contacts-section{
+        gap:15px;
+        padding-top:60px;
+        padding-bottom:60px;
+    }
 
-.footer-brand p{
+    .contact-btn{
+        width:100%;
+        min-width:unset;
 
-font-size:0.72rem;
+        font-size:22px;
+    }
 
-letter-spacing:5px;
+    .footer-runa{
+        width:65px;
+    }
 
-color:rgba(255,255,255,0.55);
-
-text-transform:uppercase;
-}
-
-/* =========================================
-RESPONSIVE
-========================================= */
-
-@media(max-width:900px){
-
-.navbar{
-padding:16px 20px;
-flex-direction:column;
-gap:18px;
-}
-
-.logo h1{
-font-size:2rem;
-}
-
-.logo img{
-width:46px;
-height:46px;
-}
-
-.main-nav{
-justify-content:center;
-gap:10px;
-}
-
-.main-nav a{
-padding:10px 14px;
-font-size:0.75rem;
-}
-
-.hero{
-padding:0 5%;
-}
-
-.hero h2{
-font-size:3.9rem;
-line-height:0.92;
-}
-
-.hero p{
-font-size:0.95rem;
-max-width:95%;
-}
-
-.hero-rune{
-width:48px;
-right:18px;
-bottom:18px;
-}
-
-.section h3{
-font-size:2.4rem;
-}
-
-.footer-socials{
-gap:12px;
-}
-
-.footer-socials a{
-padding:10px 16px;
-font-size:0.72rem;
-}
-
-.footer-brand img{
-width:54px;
-}
-
-.footer-brand p{
-font-size:0.62rem;
-letter-spacing:3px;
-}
-
+    .footer-text{
+        font-size:12px;
+        letter-spacing:6px;
+        padding-left:10px;
+        padding-right:10px;
+    }
 }
 
 </style>
 
 </head>
-
 <body>
 
-<!-- =========================================
-HEADER
-========================================= -->
+<!-- HEADER -->
 
-<header>
+<header class="hero-header">
 
-<div class="navbar">
+    <div class="atz-logo-wrap">
 
-<div class="logo">
+        <img src="runa-minimal.png" alt="ATZ" class="atz-runa">
 
-<img src="logoATZ.jpg" alt="ATZ">
+        <h1 class="atz-title">ATZ</h1>
 
-<h1>ATZ</h1>
-
-</div>
-
-<nav class="main-nav">
-
-<a href="educazione.html">Educazione</a>
-
-<a href="workingdogs.html">Working Dogs</a>
-
-<a href="soccorso.html">Ricerca e soccorso</a>
-
-<a href="dwd.html">Unbroken Dogs</a>
-
-<a href="norse.html">Norse</a>
-
-</nav>
-
-</div>
+    </div>
 
 </header>
 
-<!-- =========================================
-HERO
-========================================= -->
+<!-- MENU -->
 
-<section class="hero">
+<section class="main-menu">
 
-<div class="hero-content">
+    <a href="educazione.html" class="menu-btn">EDUCAZIONE</a>
 
-<h2>
+    <a href="workingdogs.html" class="menu-btn">WORKING DOGS</a>
 
-NON HO PRESO<br>
+    <a href="ricercaesoccorso.html" class="menu-btn">RICERCA E SOCCORSO</a>
 
-UN CANE PER<br>
+    <a href="unbrokendogs.html" class="menu-btn">UNBROKEN DOGS</a>
 
-TENERLO SUL DIVANO.
-
-<span>
-
-L'HO PRESO COME<br>
-
-COLLEGA DI VITA.
-
-</span>
-
-</h2>
-
-<p>
-
-Non abbiamo bisogno di trasformare i cani in esseri umani per rispettarli.
-Li comprendiamo per ciò che sono.
-
-</p>
-
-</div>
-
-<img src="runaATZ.jpg" class="hero-rune" alt="Runa">
+    <a href="norse.html" class="menu-btn">NORSE</a>
 
 </section>
 
-<!-- =========================================
-SECTIONS
-========================================= -->
+<!-- HERO -->
 
-<section class="section educazione">
+<section class="hero-manifesto">
 
-<h3>Educazione e rieducazione</h3>
+    <div class="manifesto-content">
 
-<p>
+        <h2 class="hero-big-text">
+            NON HO PRESO UN CANE PER TENERLO SUL DIVANO.<br>
+            <span class="hero-pink">
+            L'HO PRESO COME COLLEGA DI VITA.
+            </span>
+        </h2>
 
-“L'educazione non è solo il rispetto delle regole,
-ma in primis il rispetto di tutti.”
+        <p class="hero-small-text">
+            Non abbiamo bisogno di trasformare i cani in esseri umani per rispettarli.
+            Li comprendiamo per ciò che sono.
+        </p>
 
-</p>
-
-</section>
-
-<section class="section workingdogs">
-
-<h3>Working Dogs</h3>
-
-<p>
-
-“Relazione prima di prestazione.”
-
-</p>
+    </div>
 
 </section>
 
-<section class="section soccorso">
+<!-- CONTACTS -->
 
-<h3>Ricerca e soccorso</h3>
+<section class="contacts-section">
 
-<p>
+    <a href="#" class="contact-btn">WHATSAPP</a>
 
-“Si parte in due, si torna in due.”
+    <a href="#" class="contact-btn">MAIL</a>
 
-</p>
+    <a href="#" class="contact-btn">INSTAGRAM</a>
 
-</section>
-
-<section class="section dwd">
-
-<h3>DWD / Unbroken Dogs</h3>
-
-<p>
-
-“I limiti sono negli occhi di chi guarda.”
-
-</p>
+    <a href="#" class="contact-btn">TIKTOK</a>
 
 </section>
 
-<section class="section norse">
-
-<h3>Linea Norse</h3>
-
-<p>
-
-“Onora i morti ma combatti per i vivi.”
-
-</p>
-
-</section>
-
-<!-- =========================================
-FOOTER
-========================================= -->
+<!-- FOOTER -->
 
 <footer class="atz-footer">
 
-<div class="footer-socials">
+    <img src="runa-incisa.png" alt="ATZ" class="footer-runa">
 
-<a href="https://wa.me/393000000000" target="_blank">
-WhatsApp
-</a>
-
-<a href="mailto:tuaemail@email.com">
-Mail
-</a>
-
-<a href="https://instagram.com/tuoprofilo" target="_blank">
-Instagram
-</a>
-
-<a href="https://facebook.com/tuapagina" target="_blank">
-Facebook
-</a>
-
-</div>
-
-<div class="footer-brand">
-
-<img src="runaATZ.jpg" alt="ATZ">
-
-<p>
-WORKING DOGS CULTURE
-</p>
-
-</div>
+    <p class="footer-text">
+        WORKING DOGS CULTURE
+    </p>
 
 </footer>
 
 </body>
-
 </html>
