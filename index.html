@@ -23,12 +23,16 @@ color:white;
 overflow-x:hidden;
 }
 
+/* =========================================
+HERO
+========================================= */
+
 .hero{
 position:relative;
 min-height:100vh;
 
 background:
-linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(0,0,0,0.95)),
+linear-gradient(to bottom, rgba(0,0,0,0.72), rgba(0,0,0,0.96)),
 url('HeroATZ.jpg');
 
 background-size:cover;
@@ -47,9 +51,15 @@ position:absolute;
 bottom:0;
 left:0;
 width:100%;
-height:250px;
-background:linear-gradient(to bottom, transparent, #000);
+height:260px;
+
+background:
+linear-gradient(to bottom, transparent, #000);
 }
+
+/* =========================================
+TOP LOGO
+========================================= */
 
 .logo-wrapper{
 position:relative;
@@ -65,7 +75,9 @@ margin-bottom:70px;
 
 .logo-rune{
 width:95px;
-filter:drop-shadow(0 0 14px rgba(255,255,255,0.22));
+
+filter:
+drop-shadow(0 0 14px rgba(255,255,255,0.22));
 }
 
 .logo-text{
@@ -74,14 +86,19 @@ font-weight:700;
 letter-spacing:4px;
 }
 
+/* =========================================
+MANIFESTO
+========================================= */
+
 .manifesto{
 position:relative;
 z-index:2;
 
 max-width:900px;
+
 text-align:left;
 
-margin-bottom:70px;
+margin-bottom:40px;
 }
 
 .manifesto-small{
@@ -89,6 +106,7 @@ font-size:1.2rem;
 font-weight:300;
 letter-spacing:2px;
 color:#cccccc;
+
 margin-bottom:15px;
 }
 
@@ -101,24 +119,70 @@ text-transform:uppercase;
 
 .highlight{
 color:#ff2bd6;
-text-shadow:0 0 18px rgba(255,43,214,0.45);
+
+text-shadow:
+0 0 18px rgba(255,43,214,0.45);
 }
 
 .manifesto-sub{
 margin-top:30px;
+
 font-size:1.4rem;
 line-height:1.6;
 font-weight:300;
+
 color:#d0d0d0;
+
 max-width:800px;
 }
+
+/* =========================================
+EDITORIAL LOGO
+========================================= */
+
+.editorial-logo{
+
+position:relative;
+z-index:2;
+
+width:100%;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+margin-top:10px;
+margin-bottom:55px;
+}
+
+.editorial-logo img{
+
+width:240px;
+max-width:70vw;
+
+opacity:0.92;
+
+filter:
+grayscale(100%)
+brightness(1.05)
+drop-shadow(0 0 12px rgba(255,255,255,0.10));
+
+transition:0.3s ease;
+}
+
+/* =========================================
+SECTIONS
+========================================= */
 
 .sections{
 position:relative;
 z-index:2;
 
 display:grid;
-grid-template-columns:repeat(2, minmax(220px, 320px));
+
+grid-template-columns:
+repeat(2, minmax(220px, 320px));
+
 gap:24px;
 
 margin-top:40px;
@@ -139,27 +203,40 @@ letter-spacing:2px;
 font-weight:500;
 
 background:rgba(0,0,0,0.45);
+
 backdrop-filter:blur(3px);
 
 transition:0.3s;
 
-box-shadow:0 0 18px rgba(255,43,214,0.18);
+box-shadow:
+0 0 18px rgba(255,43,214,0.18);
 }
 
 .section-btn:hover{
+
 transform:translateY(-4px);
-box-shadow:0 0 28px rgba(255,43,214,0.4);
+
+box-shadow:
+0 0 28px rgba(255,43,214,0.4);
 }
 
 .norse-center{
 grid-column:1 / -1;
+
 justify-self:center;
+
 width:280px;
 }
 
+/* =========================================
+QUOTE
+========================================= */
+
 .quote-section{
 padding:120px 20px;
+
 text-align:center;
+
 background:#000;
 }
 
@@ -167,10 +244,17 @@ background:#000;
 font-size:4rem;
 font-weight:300;
 letter-spacing:2px;
+
 max-width:1000px;
+
 margin:auto;
+
 line-height:1.2;
 }
+
+/* =========================================
+CONTACTS
+========================================= */
 
 .contacts{
 padding:80px 20px 100px;
@@ -178,6 +262,7 @@ padding:80px 20px 100px;
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
+
 gap:24px;
 
 background:#000;
@@ -202,39 +287,55 @@ background:#ff2bd6;
 color:black;
 }
 
+/* =========================================
+FOOTER
+========================================= */
+
 footer{
 padding:70px 20px 90px;
+
 text-align:center;
+
 background:#000;
 }
 
 .footer-rune{
 width:120px;
+
 margin-bottom:26px;
+
 opacity:0.95;
 
-filter:drop-shadow(0 0 10px rgba(255,255,255,0.12));
+filter:
+drop-shadow(0 0 10px rgba(255,255,255,0.12));
 }
 
 .footer-logo{
 font-size:3rem;
 font-weight:700;
 letter-spacing:6px;
+
 margin-bottom:18px;
 }
 
 .footer-text{
 font-size:1rem;
 letter-spacing:10px;
+
 color:#888;
+
 text-transform:uppercase;
 }
+
+/* =========================================
+MOBILE
+========================================= */
 
 @media(max-width:900px){
 
 .logo-wrapper{
-flex-direction:row;
 gap:18px;
+
 margin-bottom:50px;
 }
 
@@ -256,17 +357,24 @@ font-size:3.9rem;
 
 .manifesto-sub{
 font-size:1.15rem;
+
 text-align:center;
+}
+
+.editorial-logo img{
+width:170px;
 }
 
 .sections{
 grid-template-columns:1fr;
+
 width:100%;
 max-width:650px;
 }
 
 .section-btn{
 font-size:1.9rem;
+
 padding:26px 16px;
 }
 
@@ -280,6 +388,7 @@ font-size:2.3rem;
 
 .contact-btn{
 width:85%;
+
 text-align:center;
 }
 
@@ -303,15 +412,25 @@ font-size:0.8rem;
 
 <body>
 
+<!-- HERO -->
+
 <section class="hero">
 
+<!-- TOP LOGO -->
+
 <div class="logo-wrapper">
-<img src="runa-minimal.png" class="logo-rune" alt="ATZ Rune">
+
+<img src="runa-minimal.png"
+class="logo-rune"
+alt="ATZ Rune">
 
 <div class="logo-text">
 ATZ
 </div>
+
 </div>
+
+<!-- MANIFESTO -->
 
 <div class="manifesto">
 
@@ -327,44 +446,67 @@ TENERLO SUL<br>
 DIVANO.<br>
 
 <span class="highlight">
+
 L'HO PRESO<br>
 COME COLLEGA DI<br>
 VITA.
+
 </span>
 
 </div>
 
 <div class="manifesto-sub">
-Non abbiamo bisogno di trasformare i cani in esseri umani per rispettarli. Li comprendiamo per ciò che sono.
+
+Non abbiamo bisogno di trasformare i cani in esseri umani per rispettarli.
+Li comprendiamo per ciò che sono.
+
 </div>
 
 </div>
+
+<!-- EDITORIAL LOGO -->
+
+<div class="editorial-logo">
+
+<img src="logoATZ.jpg"
+alt="ATZ Logo">
+
+</div>
+
+<!-- SECTION BUTTONS -->
 
 <div class="sections">
 
-<a href="educazione.html" class="section-btn">
+<a href="educazione.html"
+class="section-btn">
 EDUCAZIONE
 </a>
 
-<a href="cani-da-lavoro.html" class="section-btn">
+<a href="cani-da-lavoro.html"
+class="section-btn">
 WORKING DOGS
 </a>
 
-<a href="ricerca-soccorso.html" class="section-btn">
+<a href="ricerca-soccorso.html"
+class="section-btn">
 RICERCA E SOCCORSO
 </a>
 
-<a href="dwd.html" class="section-btn">
+<a href="dwd.html"
+class="section-btn">
 UNBROKEN DOGS
 </a>
 
-<a href="norse.html" class="section-btn norse-center">
+<a href="norse.html"
+class="section-btn norse-center">
 NORSE
 </a>
 
 </div>
 
 </section>
+
+<!-- QUOTE -->
 
 <section class="quote-section">
 
@@ -374,29 +516,39 @@ NORSE
 
 </section>
 
+<!-- CONTACTS -->
+
 <section class="contacts">
 
-<a href="#" class="contact-btn">
+<a href="#"
+class="contact-btn">
 WHATSAPP
 </a>
 
-<a href="mailto:tuamail@example.com" class="contact-btn">
+<a href="mailto:tuamail@example.com"
+class="contact-btn">
 MAIL
 </a>
 
-<a href="#" class="contact-btn">
+<a href="#"
+class="contact-btn">
 INSTAGRAM
 </a>
 
-<a href="#" class="contact-btn">
+<a href="#"
+class="contact-btn">
 TIKTOK
 </a>
 
 </section>
 
+<!-- FOOTER -->
+
 <footer>
 
-<img src="runa-incisa.png" class="footer-rune" alt="ATZ Rune Incisa">
+<img src="runa-incisa.png"
+class="footer-rune"
+alt="ATZ Rune Incisa">
 
 <div class="footer-logo">
 ATZ
