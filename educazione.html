@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Educazione e Rieducazione | ATZ</title>
+<title>ATZ | Educazione e Rieducazione</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 <style>
+
+/* =========================================
+RESET
+========================================= */
 
 *{
 margin:0;
@@ -17,238 +23,739 @@ box-sizing:border-box;
 }
 
 body{
-background:#050505;
+background:#000;
+font-family:'Oswald',sans-serif;
 color:white;
-font-family:'Oswald', sans-serif;
 overflow-x:hidden;
 }
 
+/* =========================================
+HERO
+========================================= */
+
 .hero{
-height:100vh;
+
+position:relative;
+
+min-height:100vh;
+
 background:
-linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.92)),
-url('https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=1974&auto=format&fit=crop');
+linear-gradient(
+to bottom,
+rgba(0,0,0,0.78),
+rgba(0,0,0,0.96)
+),
+
+url('HeroATZ.jpg');
+
 background-size:cover;
 background-position:center;
+
+display:flex;
+flex-direction:column;
+align-items:center;
+
+padding:40px 20px 100px;
+}
+
+.hero::after{
+
+content:'';
+
+position:absolute;
+
+bottom:0;
+left:0;
+
+width:100%;
+height:260px;
+
+background:
+linear-gradient(
+to bottom,
+transparent,
+#000
+);
+
+}
+
+/* =========================================
+TOP LOGO
+========================================= */
+
+.logo-wrapper{
+
+position:relative;
+z-index:2;
+
 display:flex;
 align-items:center;
-padding:80px 8%;
+gap:24px;
+
+margin-top:10px;
+margin-bottom:70px;
 }
 
-.hero-content{
-max-width:900px;
+.logo-rune{
+
+width:90px;
+
+filter:
+drop-shadow(0 0 14px rgba(255,255,255,0.18));
 }
 
-.subtitle{
-color:#ff006e;
-font-size:1.3rem;
-letter-spacing:4px;
-margin-bottom:25px;
-text-transform:uppercase;
-}
+.logo-text{
 
-.hero h1{
-font-size:clamp(4rem, 10vw, 9rem);
-line-height:0.95;
-text-transform:uppercase;
-font-weight:700;
-margin-bottom:40px;
-}
-
-.hero h1 span{
-color:#ff006e;
-}
-
-.description{
-font-size:1.3rem;
-line-height:1.8;
-color:#cccccc;
-max-width:700px;
-}
-
-.section{
-padding:140px 8%;
-background:#0a0a0a;
-border-top:1px solid #151515;
-}
-
-.section:nth-child(even){
-background:#050505;
-}
-
-.section-title{
-font-size:clamp(2.5rem, 6vw, 5rem);
-text-transform:uppercase;
-margin-bottom:60px;
-line-height:1;
-}
-
-.quote{
-font-size:clamp(2rem, 5vw, 4rem);
-line-height:1.1;
-text-transform:uppercase;
-margin-bottom:60px;
-font-weight:700;
-max-width:1200px;
-}
-
-.quote span{
-color:#ff006e;
-}
-
-.text{
-font-size:1.2rem;
-line-height:2;
-color:#cfcfcf;
-max-width:850px;
-}
-
-.footer{
-padding:80px 8%;
-background:black;
-border-top:1px solid #111;
-}
-
-.footer p{
-color:#888;
-font-size:1rem;
-letter-spacing:2px;
-text-transform:uppercase;
-}
-
-a{
-color:white;
-text-decoration:none;
-}
-
-.back{
-position:fixed;
-top:30px;
-right:30px;
-border:1px solid #ff006e;
-padding:14px 22px;
-text-transform:uppercase;
-letter-spacing:2px;
-transition:0.3s;
-background:rgba(0,0,0,0.5);
-z-index:999;
-}
-
-.back:hover{
-background:#ff006e;
-}
-
-@media(max-width:768px){
-
-.hero{
-padding:120px 8%;
-}
-
-.hero h1{
 font-size:4rem;
+font-weight:700;
+letter-spacing:4px;
 }
 
-.quote{
+/* =========================================
+TITLE
+========================================= */
+
+.page-title{
+
+position:relative;
+z-index:2;
+
+text-align:center;
+
+max-width:1000px;
+}
+
+.page-title-small{
+
+font-size:1.1rem;
+letter-spacing:3px;
+font-weight:300;
+
+color:#d9c2a3;
+
+margin-bottom:20px;
+}
+
+.page-title h1{
+
+font-size:6rem;
+line-height:0.95;
+
+text-transform:uppercase;
+
+margin-bottom:30px;
+}
+
+.page-title p{
+
+font-size:1.6rem;
+
+font-weight:300;
+
+color:#d0d0d0;
+}
+
+/* =========================================
+EDITORIAL LOGO
+========================================= */
+
+.editorial-logo{
+
+position:relative;
+z-index:2;
+
+margin-top:70px;
+
+display:flex;
+justify-content:center;
+}
+
+.editorial-logo img{
+
+width:220px;
+max-width:70vw;
+
+opacity:0.92;
+
+filter:
+grayscale(100%)
+brightness(1.05)
+drop-shadow(0 0 10px rgba(255,255,255,0.10));
+}
+
+/* =========================================
+MANIFESTO
+========================================= */
+
+.manifesto{
+
+padding:140px 10%;
+
+background:#090909;
+}
+
+.manifesto h2{
+
+font-size:5rem;
+line-height:1;
+
+text-transform:uppercase;
+
+max-width:1100px;
+}
+
+.highlight{
+
+color:#d9c2a3;
+
+text-shadow:
+0 0 18px rgba(217,194,163,0.18);
+}
+
+/* =========================================
+APPROACH
+========================================= */
+
+.approach{
+
+padding:140px 10%;
+
+background:#0f0d09;
+
+border-top:
+1px solid rgba(255,255,255,0.05);
+}
+
+.approach h3{
+
+font-size:3rem;
+
+margin-bottom:40px;
+
+color:#d9c2a3;
+}
+
+.approach p{
+
+font-size:1.5rem;
+
+line-height:1.8;
+
+max-width:1000px;
+
+font-weight:300;
+
+color:#d0d0d0;
+}
+
+/* =========================================
+FORMATION
+========================================= */
+
+.formation{
+
+padding:140px 10%;
+
+background:#090909;
+
+border-top:
+1px solid rgba(255,255,255,0.05);
+}
+
+.formation-title{
+
+font-size:3rem;
+
+margin-bottom:60px;
+
+color:#d9c2a3;
+}
+
+.formation-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(2, minmax(280px, 1fr));
+
+gap:40px;
+}
+
+.formation-card{
+
+border:3px solid rgba(217,194,163,0.22);
+
+padding:50px 40px;
+
+background:
+rgba(0,0,0,0.45);
+
+transition:0.3s;
+
+box-shadow:
+0 0 18px rgba(217,194,163,0.08);
+}
+
+.formation-card:hover{
+
+transform:translateY(-4px);
+
+box-shadow:
+0 0 28px rgba(217,194,163,0.18);
+}
+
+.formation-card h4{
+
 font-size:2.2rem;
+
+margin-bottom:24px;
+
+text-transform:uppercase;
 }
 
-.description,
-.text{
+.formation-card p{
+
+font-size:1.3rem;
+
+line-height:1.7;
+
+font-weight:300;
+
+color:#d0d0d0;
+
+margin-bottom:28px;
+}
+
+.coming-soon{
+
+font-size:0.95rem;
+
+letter-spacing:5px;
+
+color:#d9c2a3;
+
+opacity:0.75;
+}
+
+/* =========================================
+FINAL QUOTE
+========================================= */
+
+.final-quote{
+
+padding:160px 10%;
+
+background:#000;
+
+text-align:center;
+}
+
+.final-quote h2{
+
+font-size:4.5rem;
+
+line-height:1.1;
+
+font-weight:300;
+
+max-width:1000px;
+
+margin:auto;
+}
+
+/* =========================================
+HOME BUTTON
+========================================= */
+
+.home-button-wrap{
+
+padding-bottom:120px;
+
+display:flex;
+justify-content:center;
+
+background:#000;
+}
+
+.home-button{
+
+text-decoration:none;
+
+color:white;
+
+border:3px solid #d9c2a3;
+
+padding:20px 38px;
+
+font-size:1.3rem;
+
+letter-spacing:3px;
+
+transition:0.3s;
+}
+
+.home-button:hover{
+
+background:#d9c2a3;
+
+color:black;
+}
+
+/* =========================================
+FOOTER
+========================================= */
+
+footer{
+
+padding:70px 20px 90px;
+
+text-align:center;
+
+background:#000;
+}
+
+.footer-rune{
+
+width:110px;
+
+margin-bottom:26px;
+
+filter:
+drop-shadow(0 0 10px rgba(255,255,255,0.10));
+}
+
+.footer-logo{
+
+font-size:3rem;
+
+font-weight:700;
+
+letter-spacing:6px;
+
+margin-bottom:18px;
+}
+
+.footer-text{
+
 font-size:1rem;
+
+letter-spacing:10px;
+
+color:#777;
+
+text-transform:uppercase;
+}
+
+/* =========================================
+MOBILE
+========================================= */
+
+@media(max-width:900px){
+
+.logo-wrapper{
+
+gap:16px;
+
+margin-bottom:50px;
+}
+
+.logo-rune{
+
+width:70px;
+}
+
+.logo-text{
+
+font-size:3rem;
+}
+
+.page-title h1{
+
+font-size:3.7rem;
+}
+
+.page-title p{
+
+font-size:1.2rem;
+}
+
+.editorial-logo img{
+
+width:170px;
+}
+
+.manifesto{
+
+padding:90px 8%;
+}
+
+.manifesto h2{
+
+font-size:3rem;
+}
+
+.approach{
+
+padding:90px 8%;
+}
+
+.approach h3{
+
+font-size:2.3rem;
+}
+
+.approach p{
+
+font-size:1.2rem;
+}
+
+.formation{
+
+padding:90px 8%;
+}
+
+.formation-title{
+
+font-size:2.3rem;
+}
+
+.formation-grid{
+
+grid-template-columns:1fr;
+}
+
+.formation-card{
+
+padding:40px 28px;
+}
+
+.formation-card h4{
+
+font-size:1.7rem;
+}
+
+.formation-card p{
+
+font-size:1.1rem;
+}
+
+.final-quote{
+
+padding:110px 8%;
+}
+
+.final-quote h2{
+
+font-size:2.8rem;
+}
+
+.footer-rune{
+
+width:85px;
+}
+
+.footer-logo{
+
+font-size:2.1rem;
+}
+
+.footer-text{
+
+font-size:0.8rem;
+
+letter-spacing:5px;
 }
 
 }
 
 </style>
+
 </head>
 
 <body>
 
-<a href="index.html" class="back">Home</a>
+<!-- HERO -->
 
 <section class="hero">
 
-<div class="hero-content">
+<div class="logo-wrapper">
 
-<div class="subtitle">
-ATZ • EDUCAZIONE E RIEDUCAZIONE
+<img src="runa-minimal.png"
+class="logo-rune"
+alt="ATZ Rune">
+
+<div class="logo-text">
+ATZ
+</div>
+
+</div>
+
+<div class="page-title">
+
+<div class="page-title-small">
+EDUCAZIONE / RIEDUCAZIONE
 </div>
 
 <h1>
-Relazione prima di <span>prestazione.</span>
+RELAZIONE<br>
+PRIMA DI<br>
+PRESTAZIONE.
 </h1>
 
-<div class="description">
-L’educazione non è solo il rispetto delle regole,
+<p>
+L'educazione non è solo il rispetto delle regole,
 ma in primis il rispetto di tutti.
+</p>
+
 </div>
+
+<div class="editorial-logo">
+
+<img src="logoATZ.jpg"
+alt="ATZ Logo">
 
 </div>
 
 </section>
 
-<section class="section">
+<!-- MANIFESTO -->
 
-<h2 class="section-title">
-Educazione
+<section class="manifesto">
+
+<h2>
+
+NON HO PRESO<br>
+UN CANE PER<br>
+TENERLO SUL<br>
+DIVANO.<br>
+
+<span class="highlight">
+
+L'HO PRESO<br>
+COME COLLEGA<br>
+DI VITA.
+
+</span>
+
 </h2>
 
-<div class="quote">
-Il rispetto è una cosa reciproca,
-lo si dà quando lo si riceve.
-<span>E sì, vale anche per i cani.</span>
-</div>
-
-<div class="text">
-Ogni relazione nasce dalla comunicazione.
-Non lavoriamo per creare automi,
-ma per costruire equilibrio,
-comprensione e collaborazione reale tra cane e proprietario.
-</div>
-
 </section>
 
-<section class="section">
+<!-- APPROACH -->
 
-<h2 class="section-title">
-Rieducazione
-</h2>
+<section class="approach">
 
-<div class="quote">
-Non esistono cani rotti.
-<span>Esistono relazioni lasciate sole.</span>
-</div>
-
-<div class="text">
-La rieducazione comportamentale richiede tempo,
-ascolto, lucidità e responsabilità.
-Ogni cane ha un linguaggio,
-una storia e capacità che meritano di essere comprese.
-</div>
-
-</section>
-
-<section class="section">
-
-<h2 class="section-title">
-Working Dog Culture
-</h2>
-
-<div class="quote">
-Meticolosamente addestrato,
-un proprietario può diventare
-<span>un valido compagno per il suo cane.</span>
-</div>
-
-</section>
-
-<footer class="footer">
+<h3>
+APPROCCIO
+</h3>
 
 <p>
-ATZ • Working Dog Culture
+
+Niente perfezione da social.
+Niente circo.
+Niente umanizzazione estrema.
+
+Lavoriamo sulla relazione, sulla comunicazione e sulla comprensione reale del cane.
+
+Persone reali.
+Cani reali.
+Situazioni reali.
+
+Perché il rispetto è una cosa reciproca.
+Lo si dà quando lo si riceve.
+
 </p>
+
+</section>
+
+<!-- FORMAZIONE -->
+
+<section class="formation">
+
+<h3 class="formation-title">
+FORMAZIONE
+</h3>
+
+<div class="formation-grid">
+
+<div class="formation-card">
+
+<h4>
+Educatore cinofilo
+</h4>
+
+<p>
+Costruire relazione,
+comunicazione e cultura cinofila.
+</p>
+
+<div class="coming-soon">
+COMING SOON
+</div>
+
+</div>
+
+<div class="formation-card">
+
+<h4>
+Rieducatore comportamentale
+</h4>
+
+<p>
+Lavorare con le emozioni.
+</p>
+
+<div class="coming-soon">
+COMING SOON
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FINAL QUOTE -->
+
+<section class="final-quote">
+
+<h2>
+“Il rispetto è una cosa reciproca.”
+</h2>
+
+</section>
+
+<!-- HOME BUTTON -->
+
+<div class="home-button-wrap">
+
+<a href="index.html"
+class="home-button">
+
+TORNA ALLA HOME
+
+</a>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+
+<img src="runa-incisa.png"
+class="footer-rune"
+alt="ATZ Rune">
+
+<div class="footer-logo">
+ATZ
+</div>
+
+<div class="footer-text">
+WORKING DOGS CULTURE
+</div>
 
 </footer>
 
 </body>
+
 </html>
