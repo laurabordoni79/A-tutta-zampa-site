@@ -1,261 +1,504 @@
-<!-- ========================= -->
-<!-- RICERCA E SOCCORSO -->
-<!-- ========================= -->
+<!DOCTYPE html>
+<html lang="it">
 
-<section class="section hero-section"
-style="
-background:
-linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.75)),
-url('images/soccorso/file_00000000381c7243a2a79aaa7d7aabad.png');
-background-size: contain;
-background-repeat: no-repeat;
-background-position: center;
-">
+<head>
 
-<div class="hero-content">
-<div class="hero-logo">ATZ</div>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<p class="section-mini">RICERCA E SOCCORSO</p>
+<title>ATZ | Ricerca e Soccorso</title>
 
-<h1>
-NON MI INTERESSA ALTRO.<br>
-SI PARTE IN DUE,<br>
-SI TORNA IN DUE.
-</h1>
-
-<p class="hero-sub">
-Fare soccorso non è tutta la nostra vita intera,
-farlo insieme al nostro cane però rende la nostra vita intera.
-</p>
-</div>
-</section>
-
-<!-- ESTENSIONE -->
-<section class="image-section"
-style="
-background:
-linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.82)),
-url('images/soccorso/file_00000000486871f49a8679acf4cb99b6.png');
-background-size: contain;
-background-repeat: no-repeat;
-background-position: center;
-">
-
-<div class="overlay-box">
-<h2>
-QUI IL CANE NON È UNO STRUMENTO,<br>
-MA L’ESTENSIONE DEL TUO BRACCIO DESTRO.
-</h2>
-</div>
-</section>
-
-<!-- OPERATIVITÀ -->
-<section class="image-section"
-style="
-background:
-linear-gradient(to bottom, rgba(0,0,0,0.58), rgba(0,0,0,0.85)),
-url('images/soccorso/file_00000000fac8720a921c45cbc6aa3d2b.png');
-background-size: contain;
-background-repeat: no-repeat;
-background-position: center;
-">
-
-<div class="overlay-box">
-<h2>
-NON ESISTE EGO.<br>
-ESISTE SOLO LA RICERCA.
-</h2>
-
-<p>
-Ogni uscita, ogni addestramento, ogni chiamata:
-fiducia assoluta tra cane e conduttore.
-</p>
-</div>
-</section>
-
-<!-- FOTO CHE NON SI VEDEVA -->
-<section class="image-section"
-style="
-background:
-linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.88)),
-url('images/soccorso/file_00000000f2347246adcded74dfad5509.png');
-background-size: contain;
-background-repeat: no-repeat;
-background-position: center;
-min-height: 120vh;
-">
-
-<div class="overlay-box">
-<h2>
-QUANDO TUTTI SI FERMANO,<br>
-NOI INIZIAMO A CERCARE.
-</h2>
-
-<p>
-Silenzio. Odore. Direzione.
-Il cane legge ciò che l’uomo non vede.
-</p>
-</div>
-</section>
-
-<!-- FINALE -->
-<section class="final-section">
-
-<h2>
-NON SERVONO PAROLE.<br>
-SERVE TORNARE A CASA INSIEME.
-</h2>
-
-<p>
-Ricerca e soccorso non nasce per apparire.
-Nasce per esserci quando conta davvero.
-</p>
-
-</section>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 <style>
 
-body{
+/* =========================
+RESET
+========================= */
+
+*{
 margin:0;
 padding:0;
+box-sizing:border-box;
+}
+
+body{
 background:#050505;
-font-family:Arial, sans-serif;
+font-family:'Oswald',sans-serif;
 color:white;
 overflow-x:hidden;
 }
 
+/* =========================
+GENERAL
+========================= */
+
 section{
 position:relative;
 width:100%;
+overflow:hidden;
 }
 
-.hero-section{
-min-height:100vh;
+.image-section{
+
+min-height:120vh;
+
 display:flex;
 justify-content:center;
 align-items:center;
-text-align:center;
+
 padding:80px 20px;
+
+background-size:contain;
+background-repeat:no-repeat;
+background-position:center;
+background-color:#050505;
+}
+
+/* =========================
+HERO
+========================= */
+
+.hero-section{
+
+min-height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+padding:80px 20px;
+
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,0.42),
+rgba(0,0,0,0.72)
+),
+
+url('images/soccorso/file_00000000381c7243a2a79aaa7d7aabad.png');
+
+background-size:contain;
+background-repeat:no-repeat;
+background-position:center;
+background-color:#050505;
 }
 
 .hero-content{
+
 max-width:1100px;
-z-index:2;
+
+text-align:center;
 }
 
 .hero-logo{
-font-size:70px;
+
+font-size:72px;
 font-weight:900;
+
 letter-spacing:6px;
+
 margin-bottom:30px;
 }
 
 .section-mini{
-color:#ff2d75;
-letter-spacing:6px;
+
 font-size:14px;
-margin-bottom:20px;
+
+letter-spacing:6px;
+
+color:#ff2d75;
+
+margin-bottom:24px;
 }
 
 .hero-section h1{
-font-size:clamp(52px,9vw,130px);
+
+font-size:clamp(56px,9vw,130px);
+
 line-height:0.92;
-margin:0;
+
 font-weight:900;
+
 text-transform:uppercase;
 }
 
 .hero-sub{
+
 max-width:900px;
+
 margin:40px auto 0 auto;
-font-size:clamp(16px,2vw,24px);
-line-height:1.7;
-color:#d7d7d7;
+
+font-size:clamp(18px,2vw,24px);
+
+line-height:1.8;
+
+color:#d5d5d5;
 }
 
-.image-section{
-min-height:110vh;
-display:flex;
-justify-content:center;
-align-items:center;
-padding:80px 20px;
-}
+/* =========================
+EDITORIAL BOX
+========================= */
 
 .overlay-box{
-background:rgba(0,0,0,0.45);
+
+background:
+rgba(0,0,0,0.42);
+
 padding:50px;
+
 max-width:1000px;
+
 text-align:center;
+
 backdrop-filter:blur(3px);
 }
 
 .overlay-box h2{
-font-size:clamp(38px,7vw,90px);
+
+font-size:clamp(40px,7vw,92px);
+
 line-height:1;
-margin-bottom:30px;
-text-transform:uppercase;
+
 font-weight:900;
+
+text-transform:uppercase;
+
+margin-bottom:30px;
 }
 
 .overlay-box p{
-font-size:clamp(16px,2vw,24px);
+
+font-size:clamp(18px,2vw,24px);
+
 line-height:1.8;
+
 color:#d6d6d6;
 }
 
+/* =========================
+FINAL
+========================= */
+
 .final-section{
+
 padding:140px 20px;
+
 text-align:center;
+
 background:#050505;
 }
 
 .final-section h2{
+
 font-size:clamp(42px,7vw,95px);
+
 line-height:1;
+
 margin-bottom:30px;
+
 font-weight:900;
+
 text-transform:uppercase;
 }
 
 .final-section p{
+
 max-width:900px;
+
 margin:auto;
+
 font-size:clamp(18px,2vw,26px);
+
 line-height:1.8;
+
 color:#d0d0d0;
 }
 
-/* MOBILE */
+/* =========================
+FOOTER
+========================= */
+
+footer{
+
+padding:100px 20px;
+
+text-align:center;
+
+background:#000;
+}
+
+footer h3{
+
+font-size:46px;
+
+letter-spacing:6px;
+
+margin-bottom:14px;
+}
+
+footer p{
+
+letter-spacing:5px;
+
+color:#777;
+}
+
+/* =========================
+MOBILE
+========================= */
 
 @media(max-width:768px){
 
 .hero-section{
-min-height:90vh;
-background-size:contain !important;
+min-height:95vh;
 }
 
 .image-section{
-min-height:95vh;
-background-size:contain !important;
+min-height:100vh;
+}
+
+.hero-logo{
+font-size:44px;
+}
+
+.hero-section h1{
+font-size:58px;
 }
 
 .overlay-box{
 padding:30px 20px;
-width:90%;
-}
-
-.hero-logo{
-font-size:42px;
-}
-
-.hero-section h1{
-font-size:56px;
 }
 
 .overlay-box h2{
 font-size:42px;
+}
+
+.overlay-box p{
+font-size:16px;
+}
+
+.final-section h2{
+font-size:46px;
 }
 
 }
 
 </style>
+
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero-section">
+
+<div class="hero-content">
+
+<div class="hero-logo">
+ATZ
+</div>
+
+<p class="section-mini">
+RICERCA E SOCCORSO
+</p>
+
+<h1>
+
+NON MI INTERESSA ALTRO.<br>
+SI PARTE IN DUE,<br>
+SI TORNA IN DUE.
+
+</h1>
+
+<p class="hero-sub">
+
+Fare soccorso non è la nostra vita intera.
+Farlo insieme al nostro cane però rende
+la nostra vita intera.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ESTENSIONE -->
+
+<section class="image-section"
+
+style="
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,0.45),
+rgba(0,0,0,0.80)
+),
+
+url('images/soccorso/file_00000000486871f49a8679acf4cb99b6.png');
+">
+
+<div class="overlay-box">
+
+<h2>
+
+QUI IL CANE<br>
+NON È UNO STRUMENTO,<br>
+MA L’ESTENSIONE<br>
+DEL TUO BRACCIO DESTRO.
+
+</h2>
+
+</div>
+
+</section>
+
+<!-- OPERATIVITÀ -->
+
+<section class="image-section"
+
+style="
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,0.45),
+rgba(0,0,0,0.82)
+),
+
+url('images/soccorso/file_00000000fac8720a921c45cbc6aa3d2b.png');
+">
+
+<div class="overlay-box">
+
+<h2>
+
+NON ESISTE EGO.<br>
+ESISTE SOLO<br>
+LA RICERCA.
+
+</h2>
+
+<p>
+
+Ogni uscita richiede lucidità,
+presenza mentale e fiducia assoluta
+tra cane e conduttore.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- NUOVA SEZIONE SOCCORSO BANNER -->
+
+<section class="image-section"
+
+style="
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,0.38),
+rgba(0,0,0,0.72)
+),
+
+url('images/soccorso/soccorso-banner.jpg');
+
+background-size:contain;
+background-repeat:no-repeat;
+background-position:center;
+">
+
+<div class="overlay-box">
+
+<h2>
+
+QUI NON SI CERCA GLORIA.<br>
+SI CERCANO PERSONE.
+
+</h2>
+
+<p>
+
+Non ci si improvvisa 
+  soccorritori.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- FOTO 5509 -->
+
+<section class="image-section"
+
+style="
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,0.45),
+rgba(0,0,0,0.84)
+),
+
+url('images/soccorso/file_00000000f2347246adcded74dfad5509.png');
+">
+
+<div class="overlay-box">
+
+<h2>
+
+QUANDO L'UOMO SI FERMA,<br>
+IL CANE INIZIA A CERCARE.
+
+</h2>
+
+<p>
+
+Silenzio. Odore. Direzione.
+Il cane sente ciò che l’uomo non vede.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- FINAL -->
+
+<section class="final-section">
+
+<h2>
+
+NON SERVONO PAROLE.<br>
+SERVE TORNARE A CASA, INSIEME.
+
+</h2>
+
+<p>
+
+Ricerca e soccorso non nasce per apparire.
+Nasce per esserci quando conta davvero.
+
+</p>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<h3>
+ATZ
+</h3>
+
+<p>
+SEARCH & RESCUE DIVISION
+</p>
+
+</footer>
+
+</body>
+
+</html>
