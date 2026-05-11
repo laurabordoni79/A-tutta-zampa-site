@@ -1,748 +1,261 @@
-<!DOCTYPE html>
-<html lang="it">
+<!-- ========================= -->
+<!-- RICERCA E SOCCORSO -->
+<!-- ========================= -->
 
-<head>
+<section class="section hero-section"
+style="
+background:
+linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.75)),
+url('images/soccorso/file_00000000381c7243a2a79aaa7d7aabad.png');
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="hero-content">
+<div class="hero-logo">ATZ</div>
 
-<title>ATZ | Ricerca e Soccorso</title>
+<p class="section-mini">RICERCA E SOCCORSO</p>
 
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+<h1>
+NON MI INTERESSA ALTRO.<br>
+SI PARTE IN DUE,<br>
+SI TORNA IN DUE.
+</h1>
+
+<p class="hero-sub">
+Fare soccorso non è tutta la nostra vita intera,
+farlo insieme al nostro cane però rende la nostra vita intera.
+</p>
+</div>
+</section>
+
+<!-- ESTENSIONE -->
+<section class="image-section"
+style="
+background:
+linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.82)),
+url('images/soccorso/file_00000000486871f49a8679acf4cb99b6.png');
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+">
+
+<div class="overlay-box">
+<h2>
+QUI IL CANE NON È UNO STRUMENTO,<br>
+MA L’ESTENSIONE DEL TUO BRACCIO DESTRO.
+</h2>
+</div>
+</section>
+
+<!-- OPERATIVITÀ -->
+<section class="image-section"
+style="
+background:
+linear-gradient(to bottom, rgba(0,0,0,0.58), rgba(0,0,0,0.85)),
+url('images/soccorso/file_00000000fac8720a921c45cbc6aa3d2b.png');
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+">
+
+<div class="overlay-box">
+<h2>
+NON ESISTE EGO.<br>
+ESISTE SOLO LA RICERCA.
+</h2>
+
+<p>
+Ogni uscita, ogni addestramento, ogni chiamata:
+fiducia assoluta tra cane e conduttore.
+</p>
+</div>
+</section>
+
+<!-- FOTO CHE NON SI VEDEVA -->
+<section class="image-section"
+style="
+background:
+linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.88)),
+url('images/soccorso/file_00000000f2347246adcded74dfad5509.png');
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+min-height: 120vh;
+">
+
+<div class="overlay-box">
+<h2>
+QUANDO TUTTI SI FERMANO,<br>
+NOI INIZIAMO A CERCARE.
+</h2>
+
+<p>
+Silenzio. Odore. Direzione.
+Il cane legge ciò che l’uomo non vede.
+</p>
+</div>
+</section>
+
+<!-- FINALE -->
+<section class="final-section">
+
+<h2>
+NON SERVONO PAROLE.<br>
+SERVE TORNARE A CASA INSIEME.
+</h2>
+
+<p>
+Ricerca e soccorso non nasce per apparire.
+Nasce per esserci quando conta davvero.
+</p>
+
+</section>
 
 <style>
 
-/* =========================================
-RESET
-========================================= */
-
-*{
+body{
 margin:0;
 padding:0;
-box-sizing:border-box;
-}
-
-body{
-background:#000;
-font-family:'Oswald',sans-serif;
+background:#050505;
+font-family:Arial, sans-serif;
 color:white;
 overflow-x:hidden;
 }
 
-/* =========================================
-GENERAL SECTION IMAGE STYLE
-========================================= */
+section{
+position:relative;
+width:100%;
+}
+
+.hero-section{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:80px 20px;
+}
+
+.hero-content{
+max-width:1100px;
+z-index:2;
+}
+
+.hero-logo{
+font-size:70px;
+font-weight:900;
+letter-spacing:6px;
+margin-bottom:30px;
+}
+
+.section-mini{
+color:#ff2d75;
+letter-spacing:6px;
+font-size:14px;
+margin-bottom:20px;
+}
+
+.hero-section h1{
+font-size:clamp(52px,9vw,130px);
+line-height:0.92;
+margin:0;
+font-weight:900;
+text-transform:uppercase;
+}
+
+.hero-sub{
+max-width:900px;
+margin:40px auto 0 auto;
+font-size:clamp(16px,2vw,24px);
+line-height:1.7;
+color:#d7d7d7;
+}
 
 .image-section{
-
-background-repeat:no-repeat;
-background-position:center;
-background-size:contain;
-background-color:#000;
-}
-
-/* =========================================
-HERO
-========================================= */
-
-.hero{
-
-position:relative;
-
-min-height:150vh;
-
-background:
-linear-gradient(
-to bottom,
-rgba(0,0,0,0.35),
-rgba(0,0,0,0.55)
-),
-
-url('images/soccorso/soccorso-banner.jpg');
-
-background-repeat:no-repeat;
-background-position:center top;
-background-size:contain;
-background-color:#000;
-
+min-height:110vh;
 display:flex;
-flex-direction:column;
+justify-content:center;
 align-items:center;
-
-padding:40px 20px 120px;
+padding:80px 20px;
 }
 
-.hero::after{
-
-content:'';
-
-position:absolute;
-
-bottom:0;
-left:0;
-
-width:100%;
-height:240px;
-
-background:
-linear-gradient(
-to bottom,
-transparent,
-#000
-);
-
-}
-
-/* =========================================
-TOP LOGO
-========================================= */
-
-.logo-wrapper{
-
-position:relative;
-z-index:2;
-
-display:flex;
-align-items:center;
-gap:22px;
-
-margin-top:10px;
-margin-bottom:90px;
-}
-
-.logo-rune{
-
-width:54px;
-
-opacity:0.88;
-
-filter:
-drop-shadow(0 0 12px rgba(255,255,255,0.10));
-}
-
-.logo-text{
-
-font-size:4rem;
-font-weight:700;
-letter-spacing:4px;
-}
-
-/* =========================================
-TITLE
-========================================= */
-
-.page-title{
-
-position:relative;
-z-index:2;
-
-text-align:center;
-
-max-width:1100px;
-}
-
-.page-title-small{
-
-font-size:1.1rem;
-letter-spacing:4px;
-font-weight:300;
-
-color:#8d1c2f;
-
-margin-bottom:24px;
-}
-
-.page-title h1{
-
-font-size:6rem;
-line-height:0.95;
-
-text-transform:uppercase;
-
-margin-bottom:40px;
-}
-
-.page-title p{
-
-font-size:1.5rem;
-
-font-weight:300;
-
-line-height:1.6;
-
-color:#d0d0d0;
-
-max-width:950px;
-
-margin:auto;
-}
-
-/* =========================================
-EDITORIAL BLOCK
-========================================= */
-
-.editorial{
-
-padding:140px 8%;
-
-background:
-linear-gradient(
-to bottom,
-rgba(0,0,0,0.55),
-rgba(0,0,0,0.75)
-),
-
-url('images/soccorso/file_00000000fac8720a921c45cbc6aa3d2b.png');
-
-background-repeat:no-repeat;
-background-position:center;
-background-size:contain;
-background-color:#000;
-
-text-align:center;
-}
-
-.editorial h2{
-
-font-size:4.4rem;
-
-line-height:1.1;
-
-max-width:1200px;
-
-margin:auto;
-
-text-transform:uppercase;
-}
-
-.highlight{
-
-color:#8d1c2f;
-
-text-shadow:
-0 0 18px rgba(141,28,47,0.22);
-}
-
-/* =========================================
-OPERATIVE
-========================================= */
-
-.operative{
-
-padding:150px 10%;
-
-background:
-linear-gradient(
-to bottom,
-rgba(0,0,0,0.55),
-rgba(0,0,0,0.78)
-),
-
-url('images/soccorso/file_00000000381c7243a2a79aaa7d7aabad.png');
-
-background-repeat:no-repeat;
-background-position:center;
-background-size:contain;
-background-color:#000;
-}
-
-.operative-box{
-
+.overlay-box{
+background:rgba(0,0,0,0.45);
+padding:50px;
 max-width:1000px;
-
-margin:auto;
-
-padding:60px;
-
-background:
-rgba(0,0,0,0.50);
-
-border:
-1px solid rgba(255,255,255,0.06);
-
+text-align:center;
 backdrop-filter:blur(3px);
 }
 
-.operative h3{
-
-font-size:3rem;
-
-margin-bottom:34px;
-
-color:#8d1c2f;
-}
-
-.operative p{
-
-font-size:1.45rem;
-
-line-height:1.8;
-
-font-weight:300;
-
-color:#d0d0d0;
-}
-
-/* =========================================
-MISSION
-========================================= */
-
-.mission{
-
-padding:150px 8%;
-
-background:
-linear-gradient(
-to bottom,
-rgba(0,0,0,0.45),
-rgba(0,0,0,0.72)
-),
-
-url('images/soccorso/file_00000000f2347246adcde7d4dfad5509.png');
-
-background-repeat:no-repeat;
-background-position:center;
-background-size:contain;
-background-color:#000;
-
-text-align:center;
-}
-
-.mission h2{
-
-font-size:4.5rem;
-
-line-height:1.1;
-
-margin-bottom:40px;
-}
-
-.mission p{
-
-max-width:1100px;
-
-margin:auto;
-
-font-size:1.45rem;
-
-line-height:1.8;
-
-font-weight:300;
-
-color:#d0d0d0;
-}
-
-/* =========================================
-FINAL QUOTE
-========================================= */
-
-.final-quote{
-
-padding:180px 8%;
-
-background:
-linear-gradient(
-to bottom,
-rgba(0,0,0,0.35),
-rgba(0,0,0,0.70)
-),
-
-url('images/soccorso/file_00000000486871f49a8679acf4cb99b6.png');
-
-background-repeat:no-repeat;
-background-position:center;
-background-size:contain;
-background-color:#000;
-
-text-align:center;
-}
-
-.final-quote h2{
-
-font-size:4.3rem;
-
-line-height:1.2;
-
-font-weight:300;
-
-max-width:1100px;
-
-margin:auto;
-}
-
-/* =========================================
-HOME BUTTON
-========================================= */
-
-.home-button-wrap{
-
-padding:100px 20px 120px;
-
-display:flex;
-justify-content:center;
-
-background:#000;
-}
-
-.home-button{
-
-text-decoration:none;
-
-color:white;
-
-border:3px solid #8d1c2f;
-
-padding:20px 38px;
-
-font-size:1.2rem;
-
-letter-spacing:3px;
-
-transition:0.3s;
-}
-
-.home-button:hover{
-
-background:#8d1c2f;
-}
-
-/* =========================================
-FOOTER
-========================================= */
-
-footer{
-
-padding:70px 20px 90px;
-
-text-align:center;
-
-background:#000;
-}
-
-.footer-rune{
-
-width:100px;
-
-margin-bottom:24px;
-
-filter:
-drop-shadow(0 0 12px rgba(255,255,255,0.10));
-}
-
-.footer-logo{
-
-font-size:3rem;
-
-font-weight:700;
-
-letter-spacing:6px;
-
-margin-bottom:18px;
-}
-
-.footer-text{
-
-font-size:1rem;
-
-letter-spacing:10px;
-
+.overlay-box h2{
+font-size:clamp(38px,7vw,90px);
+line-height:1;
+margin-bottom:30px;
 text-transform:uppercase;
-
-color:#666;
+font-weight:900;
 }
 
-/* =========================================
-MOBILE
-========================================= */
-
-@media(max-width:900px){
-
-.hero{
-
-min-height:110vh;
-
-background-position:center top;
+.overlay-box p{
+font-size:clamp(16px,2vw,24px);
+line-height:1.8;
+color:#d6d6d6;
 }
 
-.logo-wrapper{
-
-gap:16px;
-
-margin-bottom:60px;
+.final-section{
+padding:140px 20px;
+text-align:center;
+background:#050505;
 }
 
-.logo-rune{
-
-width:44px;
+.final-section h2{
+font-size:clamp(42px,7vw,95px);
+line-height:1;
+margin-bottom:30px;
+font-weight:900;
+text-transform:uppercase;
 }
 
-.logo-text{
-
-font-size:2.8rem;
+.final-section p{
+max-width:900px;
+margin:auto;
+font-size:clamp(18px,2vw,26px);
+line-height:1.8;
+color:#d0d0d0;
 }
 
-.page-title h1{
+/* MOBILE */
 
-font-size:3.5rem;
+@media(max-width:768px){
+
+.hero-section{
+min-height:90vh;
+background-size:contain !important;
 }
 
-.page-title p{
-
-font-size:1.1rem;
+.image-section{
+min-height:95vh;
+background-size:contain !important;
 }
 
-.editorial{
-
-padding:90px 8%;
+.overlay-box{
+padding:30px 20px;
+width:90%;
 }
 
-.editorial h2{
-
-font-size:2.8rem;
+.hero-logo{
+font-size:42px;
 }
 
-.operative{
-
-padding:100px 8%;
+.hero-section h1{
+font-size:56px;
 }
 
-.operative-box{
-
-padding:40px 28px;
-}
-
-.operative h3{
-
-font-size:2.2rem;
-}
-
-.operative p{
-
-font-size:1.15rem;
-}
-
-.mission{
-
-padding:100px 8%;
-}
-
-.mission h2{
-
-font-size:2.9rem;
-}
-
-.mission p{
-
-font-size:1.15rem;
-}
-
-.final-quote{
-
-padding:120px 8%;
-}
-
-.final-quote h2{
-
-font-size:2.6rem;
-}
-
-.footer-rune{
-
-width:80px;
-}
-
-.footer-logo{
-
-font-size:2rem;
-}
-
-.footer-text{
-
-font-size:0.75rem;
-
-letter-spacing:5px;
+.overlay-box h2{
+font-size:42px;
 }
 
 }
 
 </style>
-
-</head>
-
-<body>
-
-<!-- HERO -->
-
-<section class="hero">
-
-<div class="logo-wrapper">
-
-<img src="runa-minimal.png"
-class="logo-rune"
-alt="ATZ Rune">
-
-<div class="logo-text">
-ATZ
-</div>
-
-</div>
-
-<div class="page-title">
-
-<div class="page-title-small">
-RICERCA E SOCCORSO
-</div>
-
-<h1>
-
-SI PARTE<br>
-IN DUE.<br>
-SI TORNA<br>
-IN DUE.
-
-</h1>
-
-<p>
-
-Fare soccorso non è tutta la nostra vita intera.
-Farlo insieme al nostro cane però rende
-la nostra vita intera.
-
-</p>
-
-</div>
-
-</section>
-
-<!-- EDITORIAL -->
-
-<section class="editorial">
-
-<h2>
-
-QUI IL CANE<br>
-NON È UNO STRUMENTO,<br>
-
-<span class="highlight">
-
-MA L'ESTENSIONE<br>
-DEL TUO BRACCIO DESTRO.
-
-</span>
-
-</h2>
-
-</section>
-
-<!-- OPERATIVE -->
-
-<section class="operative">
-
-<div class="operative-box">
-
-<h3>
-OPERATIVITÀ
-</h3>
-
-<p>
-
-Ricerca. Resistenza.
-Lucidità operativa.
-Affidabilità reale.
-
-Il lavoro di soccorso non nasce
-dalla spettacolarizzazione.
-
-Nasce dalla preparazione.
-Dalla fiducia reciproca.
-Dalla capacità di muoversi insieme
-anche sotto pressione.
-
-Ogni uscita richiede presenza mentale,
-comunicazione e controllo emotivo.
-
-Perché quando qualcuno manca,
-non c'è spazio per l'ego.
-
-</p>
-
-</div>
-
-</section>
-
-<!-- MISSION -->
-
-<section class="mission">
-
-<h2>
-
-NON ESISTE<br>
-EROISMO<br>
-SENZA RELAZIONE.
-
-</h2>
-
-<p>
-
-Un binomio da soccorso non si costruisce
-con automatismi vuoti.
-
-Si costruisce nel tempo.
-Nel lavoro condiviso.
-Nella fiducia.
-
-Perché il cane non lavora per obbligo.
-Lavora perché sceglie di farlo insieme a te.
-
-</p>
-
-</section>
-
-<!-- FINAL QUOTE -->
-
-<section class="final-quote">
-
-<h2>
-
-“Non mi interessa altro.<br>
-Si parte in due.<br>
-Si torna in due.”
-
-</h2>
-
-</section>
-
-<!-- HOME BUTTON -->
-
-<div class="home-button-wrap">
-
-<a href="index.html"
-class="home-button">
-
-TORNA ALLA HOME
-
-</a>
-
-</div>
-
-<!-- FOOTER -->
-
-<footer>
-
-<img src="runa-incisa.png"
-class="footer-rune"
-alt="ATZ Rune">
-
-<div class="footer-logo">
-ATZ
-</div>
-
-<div class="footer-text">
-SEARCH & RESCUE DIVISION
-</div>
-
-</footer>
-
-</body>
-
-</html>
