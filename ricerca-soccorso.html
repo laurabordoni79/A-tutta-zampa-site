@@ -30,6 +30,18 @@ overflow-x:hidden;
 }
 
 /* =========================================
+GENERAL SECTION IMAGE STYLE
+========================================= */
+
+.image-section{
+
+background-repeat:no-repeat;
+background-position:center;
+background-size:contain;
+background-color:#000;
+}
+
+/* =========================================
 HERO
 ========================================= */
 
@@ -37,25 +49,27 @@ HERO
 
 position:relative;
 
-min-height:100vh;
+min-height:150vh;
 
 background:
 linear-gradient(
 to bottom,
-rgba(0,0,0,0.78),
-rgba(0,0,0,0.96)
+rgba(0,0,0,0.35),
+rgba(0,0,0,0.55)
 ),
 
-url('HeroATZ.jpg');
+url('images/soccorso/soccorso-banner.jpg');
 
-background-size:cover;
-background-position:center;
+background-repeat:no-repeat;
+background-position:center top;
+background-size:contain;
+background-color:#000;
 
 display:flex;
 flex-direction:column;
 align-items:center;
 
-padding:40px 20px 100px;
+padding:40px 20px 120px;
 }
 
 .hero::after{
@@ -68,7 +82,7 @@ bottom:0;
 left:0;
 
 width:100%;
-height:260px;
+height:240px;
 
 background:
 linear-gradient(
@@ -90,18 +104,20 @@ z-index:2;
 
 display:flex;
 align-items:center;
-gap:24px;
+gap:22px;
 
 margin-top:10px;
-margin-bottom:70px;
+margin-bottom:90px;
 }
 
 .logo-rune{
 
-width:90px;
+width:54px;
+
+opacity:0.88;
 
 filter:
-drop-shadow(0 0 14px rgba(255,255,255,0.18));
+drop-shadow(0 0 12px rgba(255,255,255,0.10));
 }
 
 .logo-text{
@@ -122,18 +138,18 @@ z-index:2;
 
 text-align:center;
 
-max-width:1000px;
+max-width:1100px;
 }
 
 .page-title-small{
 
 font-size:1.1rem;
-letter-spacing:3px;
+letter-spacing:4px;
 font-weight:300;
 
-color:#ff7a00;
+color:#8d1c2f;
 
-margin-bottom:20px;
+margin-bottom:24px;
 }
 
 .page-title h1{
@@ -143,75 +159,68 @@ line-height:0.95;
 
 text-transform:uppercase;
 
-margin-bottom:30px;
+margin-bottom:40px;
 }
 
 .page-title p{
 
-font-size:1.6rem;
+font-size:1.5rem;
 
 font-weight:300;
 
+line-height:1.6;
+
 color:#d0d0d0;
 
-line-height:1.5;
+max-width:950px;
+
+margin:auto;
 }
 
 /* =========================================
-EDITORIAL LOGO
+EDITORIAL BLOCK
 ========================================= */
 
-.editorial-logo{
+.editorial{
 
-position:relative;
-z-index:2;
+padding:140px 8%;
 
-margin-top:70px;
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,0.55),
+rgba(0,0,0,0.75)
+),
 
-display:flex;
-justify-content:center;
+url('images/soccorso/file_00000000fac8720a921c45cbc6aa3d2b.png');
+
+background-repeat:no-repeat;
+background-position:center;
+background-size:contain;
+background-color:#000;
+
+text-align:center;
 }
 
-.editorial-logo img{
+.editorial h2{
 
-width:220px;
-max-width:70vw;
+font-size:4.4rem;
 
-opacity:0.92;
+line-height:1.1;
 
-filter:
-grayscale(100%)
-brightness(1.05)
-drop-shadow(0 0 10px rgba(255,255,255,0.10));
-}
+max-width:1200px;
 
-/* =========================================
-MANIFESTO
-========================================= */
-
-.manifesto{
-
-padding:140px 10%;
-
-background:#0b0805;
-}
-
-.manifesto h2{
-
-font-size:5rem;
-line-height:1;
+margin:auto;
 
 text-transform:uppercase;
-
-max-width:1100px;
 }
 
 .highlight{
 
-color:#ff7a00;
+color:#8d1c2f;
 
 text-shadow:
-0 0 18px rgba(255,122,0,0.18);
+0 0 18px rgba(141,28,47,0.22);
 }
 
 /* =========================================
@@ -220,30 +229,54 @@ OPERATIVE
 
 .operative{
 
-padding:140px 10%;
+padding:150px 10%;
 
-background:#120b04;
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,0.55),
+rgba(0,0,0,0.78)
+),
 
-border-top:
-1px solid rgba(255,255,255,0.05);
+url('images/soccorso/file_00000000381c7243a2a79aaa7d7aabad.png');
+
+background-repeat:no-repeat;
+background-position:center;
+background-size:contain;
+background-color:#000;
+}
+
+.operative-box{
+
+max-width:1000px;
+
+margin:auto;
+
+padding:60px;
+
+background:
+rgba(0,0,0,0.50);
+
+border:
+1px solid rgba(255,255,255,0.06);
+
+backdrop-filter:blur(3px);
 }
 
 .operative h3{
 
 font-size:3rem;
 
-margin-bottom:40px;
+margin-bottom:34px;
 
-color:#ff7a00;
+color:#8d1c2f;
 }
 
 .operative p{
 
-font-size:1.5rem;
+font-size:1.45rem;
 
 line-height:1.8;
-
-max-width:1000px;
 
 font-weight:300;
 
@@ -251,79 +284,52 @@ color:#d0d0d0;
 }
 
 /* =========================================
-FORMATION
+MISSION
 ========================================= */
 
-.formation{
+.mission{
 
-padding:140px 10%;
-
-background:#0a0a0a;
-
-border-top:
-1px solid rgba(255,255,255,0.05);
-}
-
-.formation-title{
-
-font-size:3rem;
-
-margin-bottom:60px;
-
-color:#ff7a00;
-}
-
-.formation-grid{
-
-display:grid;
-
-grid-template-columns:
-repeat(2, minmax(280px, 1fr));
-
-gap:40px;
-}
-
-.formation-card{
-
-border:3px solid rgba(255,122,0,0.22);
-
-padding:50px 40px;
+padding:150px 8%;
 
 background:
-rgba(0,0,0,0.45);
+linear-gradient(
+to bottom,
+rgba(0,0,0,0.45),
+rgba(0,0,0,0.72)
+),
 
-transition:0.3s;
+url('images/soccorso/file_00000000f2347246adcde7d4dfad5509.png');
 
-box-shadow:
-0 0 18px rgba(255,122,0,0.08);
+background-repeat:no-repeat;
+background-position:center;
+background-size:contain;
+background-color:#000;
+
+text-align:center;
 }
 
-.formation-card:hover{
+.mission h2{
 
-transform:translateY(-4px);
+font-size:4.5rem;
 
-box-shadow:
-0 0 28px rgba(255,122,0,0.18);
+line-height:1.1;
+
+margin-bottom:40px;
 }
 
-.formation-card h4{
+.mission p{
 
-font-size:2rem;
+max-width:1100px;
 
-margin-bottom:24px;
+margin:auto;
 
-text-transform:uppercase;
-}
+font-size:1.45rem;
 
-.coming-soon{
+line-height:1.8;
 
-font-size:0.95rem;
+font-weight:300;
 
-letter-spacing:5px;
-
-color:#ff7a00;
-
-opacity:0.75;
+color:#d0d0d0;
 }
 
 /* =========================================
@@ -332,16 +338,28 @@ FINAL QUOTE
 
 .final-quote{
 
-padding:160px 10%;
+padding:180px 8%;
 
-background:#000;
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,0.35),
+rgba(0,0,0,0.70)
+),
+
+url('images/soccorso/file_00000000486871f49a8679acf4cb99b6.png');
+
+background-repeat:no-repeat;
+background-position:center;
+background-size:contain;
+background-color:#000;
 
 text-align:center;
 }
 
 .final-quote h2{
 
-font-size:4.2rem;
+font-size:4.3rem;
 
 line-height:1.2;
 
@@ -358,7 +376,7 @@ HOME BUTTON
 
 .home-button-wrap{
 
-padding-bottom:120px;
+padding:100px 20px 120px;
 
 display:flex;
 justify-content:center;
@@ -372,11 +390,11 @@ text-decoration:none;
 
 color:white;
 
-border:3px solid #ff7a00;
+border:3px solid #8d1c2f;
 
 padding:20px 38px;
 
-font-size:1.3rem;
+font-size:1.2rem;
 
 letter-spacing:3px;
 
@@ -385,9 +403,7 @@ transition:0.3s;
 
 .home-button:hover{
 
-background:#ff7a00;
-
-color:black;
+background:#8d1c2f;
 }
 
 /* =========================================
@@ -405,12 +421,12 @@ background:#000;
 
 .footer-rune{
 
-width:110px;
+width:100px;
 
-margin-bottom:26px;
+margin-bottom:24px;
 
 filter:
-drop-shadow(0 0 10px rgba(255,255,255,0.10));
+drop-shadow(0 0 12px rgba(255,255,255,0.10));
 }
 
 .footer-logo{
@@ -430,9 +446,9 @@ font-size:1rem;
 
 letter-spacing:10px;
 
-color:#777;
-
 text-transform:uppercase;
+
+color:#666;
 }
 
 /* =========================================
@@ -441,111 +457,108 @@ MOBILE
 
 @media(max-width:900px){
 
+.hero{
+
+min-height:110vh;
+
+background-position:center top;
+}
+
 .logo-wrapper{
 
 gap:16px;
 
-margin-bottom:50px;
+margin-bottom:60px;
 }
 
 .logo-rune{
 
-width:70px;
+width:44px;
 }
 
 .logo-text{
 
-font-size:3rem;
+font-size:2.8rem;
 }
 
 .page-title h1{
 
-font-size:3.7rem;
+font-size:3.5rem;
 }
 
 .page-title p{
 
-font-size:1.2rem;
+font-size:1.1rem;
 }
 
-.editorial-logo img{
-
-width:170px;
-}
-
-.manifesto{
+.editorial{
 
 padding:90px 8%;
 }
 
-.manifesto h2{
+.editorial h2{
 
-font-size:3rem;
+font-size:2.8rem;
 }
 
 .operative{
 
-padding:90px 8%;
+padding:100px 8%;
 }
 
-.operative h3{
-
-font-size:2.3rem;
-}
-
-.operative p{
-
-font-size:1.2rem;
-}
-
-.formation{
-
-padding:90px 8%;
-}
-
-.formation-title{
-
-font-size:2.3rem;
-}
-
-.formation-grid{
-
-grid-template-columns:1fr;
-}
-
-.formation-card{
+.operative-box{
 
 padding:40px 28px;
 }
 
-.formation-card h4{
+.operative h3{
 
-font-size:1.5rem;
+font-size:2.2rem;
+}
+
+.operative p{
+
+font-size:1.15rem;
+}
+
+.mission{
+
+padding:100px 8%;
+}
+
+.mission h2{
+
+font-size:2.9rem;
+}
+
+.mission p{
+
+font-size:1.15rem;
 }
 
 .final-quote{
 
-padding:110px 8%;
+padding:120px 8%;
 }
 
 .final-quote h2{
 
-font-size:2.5rem;
+font-size:2.6rem;
 }
 
 .footer-rune{
 
-width:85px;
+width:80px;
 }
 
 .footer-logo{
 
-font-size:2.1rem;
+font-size:2rem;
 }
 
 .footer-text{
 
-font-size:0.8rem;
+font-size:0.75rem;
 
 letter-spacing:5px;
 }
@@ -591,38 +604,29 @@ IN DUE.
 
 <p>
 
-Fare soccorso non è tutta la nostra vita intera.<br>
-Farlo insieme al nostro cane però rende la nostra vita intera.
+Fare soccorso non è tutta la nostra vita intera.
+Farlo insieme al nostro cane però rende
+la nostra vita intera.
 
 </p>
 
 </div>
 
-<div class="editorial-logo">
-
-<img src="logoATZ.jpg"
-alt="ATZ Logo">
-
-</div>
-
 </section>
 
-<!-- MANIFESTO -->
+<!-- EDITORIAL -->
 
-<section class="manifesto">
+<section class="editorial">
 
 <h2>
 
-NON MI<br>
-INTERESSA<br>
-ALTRO.<br>
+QUI IL CANE<br>
+NON È UNO STRUMENTO,<br>
 
 <span class="highlight">
 
-SI PARTE<br>
-IN DUE.<br>
-SI TORNA<br>
-IN DUE.
+MA L'ESTENSIONE<br>
+DEL TUO BRACCIO DESTRO.
 
 </span>
 
@@ -634,88 +638,63 @@ IN DUE.
 
 <section class="operative">
 
+<div class="operative-box">
+
 <h3>
 OPERATIVITÀ
 </h3>
 
 <p>
 
-Ricerca reale.
-Addestramento reale.
-Situazioni reali.
+Ricerca. Resistenza.
+Lucidità operativa.
+Affidabilità reale.
 
-Lavoriamo per costruire affidabilità,
-presenza e relazione tra cane e conduttore.
+Il lavoro di soccorso non nasce
+dalla spettacolarizzazione.
 
-Nessuna spettacolarizzazione.
-Solo lavoro, preparazione e responsabilità.
+Nasce dalla preparazione.
+Dalla fiducia reciproca.
+Dalla capacità di muoversi insieme
+anche sotto pressione.
 
-Perché nel momento in cui entri in ricerca,
-non sei mai davvero solo.
+Ogni uscita richiede presenza mentale,
+comunicazione e controllo emotivo.
+
+Perché quando qualcuno manca,
+non c'è spazio per l'ego.
 
 </p>
 
+</div>
+
 </section>
 
-<!-- FORMAZIONE -->
+<!-- MISSION -->
 
-<section class="formation">
+<section class="mission">
 
-<h3 class="formation-title">
-FORMAZIONE
-</h3>
+<h2>
 
-<div class="formation-grid">
+NON ESISTE<br>
+EROISMO<br>
+SENZA RELAZIONE.
 
-<div class="formation-card">
+</h2>
 
-<h4>
-Cani da ricerca in superficie o scovo
-</h4>
+<p>
 
-<div class="coming-soon">
-COMING SOON
-</div>
+Un binomio da soccorso non si costruisce
+con automatismi vuoti.
 
-</div>
+Si costruisce nel tempo.
+Nel lavoro condiviso.
+Nella fiducia.
 
-<div class="formation-card">
+Perché il cane non lavora per obbligo.
+Lavora perché sceglie di farlo insieme a te.
 
-<h4>
-Cani da traccia o mantrailing
-</h4>
-
-<div class="coming-soon">
-COMING SOON
-</div>
-
-</div>
-
-<div class="formation-card">
-
-<h4>
-Cani da pista
-</h4>
-
-<div class="coming-soon">
-COMING SOON
-</div>
-
-</div>
-
-<div class="formation-card">
-
-<h4>
-Formazione operativa conduttore
-</h4>
-
-<div class="coming-soon">
-COMING SOON
-</div>
-
-</div>
-
-</div>
+</p>
 
 </section>
 
@@ -725,8 +704,9 @@ COMING SOON
 
 <h2>
 
-“Qui il cane non è uno strumento,<br>
-ma l'estensione del tuo braccio destro.”
+“Non mi interessa altro.<br>
+Si parte in due.<br>
+Si torna in due.”
 
 </h2>
 
@@ -758,7 +738,7 @@ ATZ
 </div>
 
 <div class="footer-text">
-WORKING DOGS CULTURE
+SEARCH & RESCUE DIVISION
 </div>
 
 </footer>
