@@ -1,1 +1,0 @@
-Educazione e rieducazione images
