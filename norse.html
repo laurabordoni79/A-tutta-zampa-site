@@ -30,51 +30,67 @@ overflow-x:hidden;
 }
 
 /* =========================================
-IMAGE SECTIONS
+BASE SECTION BACKGROUNDS
 ========================================= */
 
-.image-section{
-
-position:relative;
-
-min-height:120vh;
-
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-
-padding:120px 8%;
+.bg-section{
 
 background-repeat:no-repeat;
 background-position:center;
 background-size:contain;
-
 background-color:#000;
-
-text-align:center;
 }
 
-.image-section::before{
+/* =========================================
+HERO
+========================================= */
 
-content:'';
+.hero{
 
-position:absolute;
-inset:0;
+position:relative;
+
+min-height:160vh;
 
 background:
 linear-gradient(
 to bottom,
-rgba(0,0,0,0.68),
-rgba(0,0,0,0.78)
-);
+rgba(0,0,0,0.45),
+rgba(0,0,0,0.55)
+),
 
-z-index:1;
+url('file_00000000015f4720aaf3b8898d4e69bb7.png');
+
+background-repeat:no-repeat;
+background-position:center;
+background-size:contain;
+background-color:#000;
+
+display:flex;
+flex-direction:column;
+align-items:center;
+
+padding:40px 20px 100px;
 }
 
-.image-section > *{
-position:relative;
-z-index:2;
+.hero::after{
+
+content:'';
+
+position:absolute;
+
+bottom:0;
+left:0;
+
+width:100%;
+height:260px;
+
+background:
+linear-gradient(
+to bottom,
+transparent,
+#000
+);
+
 }
 
 /* =========================================
@@ -83,21 +99,25 @@ TOP LOGO
 
 .logo-wrapper{
 
+position:relative;
+z-index:2;
+
 display:flex;
 align-items:center;
-gap:20px;
+gap:24px;
 
-margin-bottom:80px;
+margin-top:10px;
+margin-bottom:70px;
 }
 
 .logo-rune{
 
-width:46px;
+width:55px;
 
-opacity:0.12;
+opacity:0.10;
 
 filter:
-drop-shadow(0 0 10px rgba(255,255,255,0.06));
+drop-shadow(0 0 8px rgba(255,255,255,0.08));
 }
 
 .logo-text{
@@ -108,57 +128,110 @@ letter-spacing:4px;
 }
 
 /* =========================================
-TEXT
+TITLE
 ========================================= */
 
-.section-small{
+.page-title{
 
-font-size:1rem;
+position:relative;
+z-index:2;
 
-letter-spacing:6px;
+text-align:center;
+
+max-width:1000px;
+}
+
+.page-title-small{
+
+font-size:1.1rem;
+letter-spacing:4px;
+font-weight:300;
 
 color:#8d1c2f;
 
-margin-bottom:24px;
+margin-bottom:20px;
 }
 
-.section-title{
+.page-title h1{
 
 font-size:6rem;
-
-line-height:0.92;
+line-height:0.95;
 
 text-transform:uppercase;
 
-margin-bottom:40px;
+margin-bottom:30px;
 }
 
-.section-text{
+.page-title p{
 
-font-size:1.45rem;
+font-size:1.6rem;
 
 font-weight:300;
 
-line-height:1.8;
+color:#d0d0d0;
 
-max-width:1000px;
-
-color:#d5d5d5;
+line-height:1.5;
 }
 
 /* =========================================
-EDITORIAL QUOTES
+EDITORIAL LOGO
 ========================================= */
 
-.editorial-quote{
+.editorial-logo{
 
-font-size:5rem;
+position:relative;
+z-index:2;
 
-line-height:1.05;
+margin-top:180px;
+
+display:flex;
+justify-content:center;
+}
+
+.editorial-logo img{
+
+width:170px;
+max-width:70vw;
+
+opacity:0.92;
+
+filter:
+grayscale(100%)
+brightness(1.05)
+drop-shadow(0 0 12px rgba(255,255,255,0.10));
+}
+
+/* =========================================
+MANIFESTO
+========================================= */
+
+.manifesto{
+
+padding:160px 10%;
+
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,0.72),
+rgba(0,0,0,0.86)
+),
+
+url('file_0000000002df47243847168addb90b085.png');
+
+background-repeat:no-repeat;
+background-position:center;
+background-size:contain;
+background-color:#000;
+}
+
+.manifesto h2{
+
+font-size:4.5rem;
+line-height:1;
 
 text-transform:uppercase;
 
-max-width:1200px;
+max-width:1100px;
 }
 
 .highlight{
@@ -170,27 +243,86 @@ text-shadow:
 }
 
 /* =========================================
+WILD SECTION
+========================================= */
+
+.wild{
+
+padding:160px 10%;
+
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,0.74),
+rgba(0,0,0,0.90)
+),
+
+url('file_0000000003a5c71f4b1e77fdd2b2cc5b6.png');
+
+background-repeat:no-repeat;
+background-position:center;
+background-size:contain;
+background-color:#000;
+
+border-top:
+1px solid rgba(255,255,255,0.05);
+}
+
+.wild h3{
+
+font-size:3rem;
+
+margin-bottom:40px;
+
+color:#8d1c2f;
+}
+
+.wild p{
+
+font-size:1.5rem;
+
+line-height:1.8;
+
+max-width:1000px;
+
+font-weight:300;
+
+color:#d0d0d0;
+}
+
+/* =========================================
 FINAL QUOTE
 ========================================= */
 
 .final-quote{
 
+padding:180px 10%;
+
+text-align:center;
+
+background:#000;
+}
+
+.final-quote h2{
+
 font-size:4rem;
 
-line-height:1.25;
+line-height:1.2;
 
 font-weight:300;
 
 max-width:1100px;
+
+margin:auto;
 }
 
 /* =========================================
-BUTTON
+HOME BUTTON
 ========================================= */
 
-.button-wrap{
+.home-button-wrap{
 
-padding:100px 20px;
+padding-bottom:120px;
 
 display:flex;
 justify-content:center;
@@ -206,11 +338,11 @@ color:white;
 
 border:3px solid #8d1c2f;
 
-padding:20px 40px;
+padding:20px 38px;
 
-font-size:1.2rem;
+font-size:1.3rem;
 
-letter-spacing:4px;
+letter-spacing:3px;
 
 transition:0.3s;
 }
@@ -218,6 +350,8 @@ transition:0.3s;
 .home-button:hover{
 
 background:#8d1c2f;
+
+color:white;
 }
 
 /* =========================================
@@ -226,38 +360,40 @@ FOOTER
 
 footer{
 
-padding:90px 20px 110px;
-
-background:#000;
+padding:70px 20px 90px;
 
 text-align:center;
+
+background:#000;
 }
 
 .footer-rune{
 
-width:90px;
+width:110px;
 
-opacity:0.7;
+opacity:0.18;
 
-margin-bottom:24px;
+filter:
+drop-shadow(0 0 10px rgba(255,255,255,0.10));
 }
 
 .footer-logo{
 
-font-size:2.8rem;
+font-size:3rem;
 
 font-weight:700;
 
-letter-spacing:5px;
+letter-spacing:6px;
 
+margin-top:20px;
 margin-bottom:18px;
 }
 
 .footer-text{
 
-font-size:0.95rem;
+font-size:1rem;
 
-letter-spacing:8px;
+letter-spacing:10px;
 
 color:#777;
 
@@ -270,46 +406,80 @@ MOBILE
 
 @media(max-width:900px){
 
-.image-section{
-
-min-height:100vh;
-
-padding:90px 8%;
+.hero{
+min-height:120vh;
 }
 
 .logo-wrapper{
+
+gap:16px;
 
 margin-bottom:50px;
 }
 
 .logo-rune{
 
-width:38px;
+width:45px;
 }
 
 .logo-text{
 
-font-size:2.7rem;
+font-size:3rem;
 }
 
-.section-title{
+.page-title h1{
 
-font-size:3.6rem;
+font-size:3.5rem;
 }
 
-.section-text{
+.page-title p{
 
-font-size:1.1rem;
+font-size:1.2rem;
 }
 
-.editorial-quote{
+.editorial-logo img{
 
-font-size:2.5rem;
+width:140px;
+}
+
+.manifesto{
+
+padding:100px 8%;
+}
+
+.manifesto h2{
+
+font-size:2.8rem;
+}
+
+.wild{
+
+padding:100px 8%;
+}
+
+.wild h3{
+
+font-size:2.2rem;
+}
+
+.wild p{
+
+font-size:1.2rem;
 }
 
 .final-quote{
 
-font-size:2.2rem;
+padding:120px 8%;
+}
+
+.final-quote h2{
+
+font-size:2.5rem;
+}
+
+.footer-rune{
+
+width:80px;
 }
 
 .footer-logo{
@@ -319,9 +489,9 @@ font-size:2rem;
 
 .footer-text{
 
-font-size:0.75rem;
+font-size:0.8rem;
 
-letter-spacing:4px;
+letter-spacing:5px;
 }
 
 }
@@ -334,11 +504,7 @@ letter-spacing:4px;
 
 <!-- HERO -->
 
-<section class="image-section"
-style="
-background-image:
-url('file_000000003a5c71f4b1e77fdd2b2cc5b6.png');
-">
+<section class="hero">
 
 <div class="logo-wrapper">
 
@@ -352,45 +518,52 @@ ATZ
 
 </div>
 
-<div class="section-small">
+<div class="page-title">
+
+<div class="page-title-small">
 LINEA NORSE
 </div>
 
-<h1 class="section-title">
+<h1>
 
-BORN<br>
-WILD.<br>
-STILL STANDING.
+ONORA I MORTI.<br>
+COMBATTI<br>
+PER I VIVI.
 
 </h1>
 
-<p class="section-text">
+<p>
 
-Non tutto ciò che è selvatico
-deve essere domato.
-
-Alcune cose esistono
-per ricordarci chi siamo davvero.
+Una linea nata dalla libertà,
+dalla presenza
+e dall'identità.
 
 </p>
 
+</div>
+
+<div class="editorial-logo">
+
+<img src="logoATZ.jpg"
+alt="ATZ Logo">
+
+</div>
+
 </section>
 
-<!-- WILD -->
+<!-- MANIFESTO -->
 
-<section class="image-section"
-style="
-background-image:
-url('file_000000002df47243847168addb90b085.png');
-">
+<section class="manifesto">
 
-<h2 class="editorial-quote">
+<h2>
+
+MEGLIO<br>
+UN UCCELLO LIBERO<br>
 
 <span class="highlight">
 
-NON TUTTO<br>
-CIÒ CHE È SELVATICO<br>
-È PERDUTO.
+CHE UN RE<br>
+PRIGIONIERO.
 
 </span>
 
@@ -398,64 +571,53 @@ CIÒ CHE È SELVATICO<br>
 
 </section>
 
-<!-- GUARDIAN -->
+<!-- WILD -->
 
-<section class="image-section"
-style="
-background-image:
-url('file_0000000015f4720aaf3b8898d4e69bb7.png');
-">
+<section class="wild">
 
-<div class="section-small">
-NORSE COLLECTION
-</div>
+<h3>
+LINEA NORSE
+</h3>
 
-<h2 class="section-title">
+<p>
 
-MEGLIO<br>
-UN UCCELLO LIBERO<br>
-CHE UN RE PRIGIONIERO.
+Non tutto ciò che è selvatico
+è perduto.
 
-</h2>
+La linea Norse nasce per chi
+non cerca approvazione,
+ma identità.
 
-<p class="section-text">
+Una presenza silenziosa.
+Cruda.
+Reale.
 
-La libertà ha un prezzo.
-
-La disciplina anche.
-
-La differenza è scegliere
-per cosa vale la pena combattere.
+Abbigliamento, accessori
+e cultura visiva
+ispirati alla libertà,
+alla resistenza
+e al legame uomo-cane.
 
 </p>
 
 </section>
 
-<!-- FINAL -->
+<!-- FINAL QUOTE -->
 
-<section class="image-section"
-style="
-background:
-linear-gradient(
-to bottom,
-rgba(0,0,0,0.80),
-rgba(0,0,0,0.92)
-);
-min-height:80vh;
-">
+<section class="final-quote">
 
-<h2 class="final-quote">
+<h2>
 
-“Onora i morti.<br>
-Ma combatti per i vivi.”
+“Non tutto ciò che è selvatico<br>
+è perduto.”
 
 </h2>
 
 </section>
 
-<!-- BUTTON -->
+<!-- HOME BUTTON -->
 
-<div class="button-wrap">
+<div class="home-button-wrap">
 
 <a href="index.html"
 class="home-button">
@@ -479,7 +641,7 @@ ATZ
 </div>
 
 <div class="footer-text">
-NORSE COLLECTION
+NORSE CULTURE
 </div>
 
 </footer>
