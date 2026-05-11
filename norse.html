@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ATZ | Linea Norse</title>
+<title>ATZ | Norse</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
 
@@ -30,15 +30,61 @@ overflow-x:hidden;
 }
 
 /* =========================================
-BASE SECTION BACKGROUNDS
+GLOBAL SECTIONS
 ========================================= */
 
-.bg-section{
+section{
 
+position:relative;
+
+width:100%;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+
+padding:140px 8%;
+
+overflow:hidden;
+}
+
+.section-bg{
+
+background-size:contain;
 background-repeat:no-repeat;
 background-position:center;
-background-size:contain;
+
 background-color:#000;
+}
+
+/* =========================================
+OVERLAY
+========================================= */
+
+.dark-overlay::before{
+
+content:'';
+
+position:absolute;
+inset:0;
+
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,0.45),
+rgba(0,0,0,0.55)
+);
+
+z-index:1;
+}
+
+section > *{
+
+position:relative;
+z-index:2;
 }
 
 /* =========================================
@@ -47,50 +93,20 @@ HERO
 
 .hero{
 
-position:relative;
-
-min-height:160vh;
+min-height:150vh;
 
 background:
 linear-gradient(
 to bottom,
-rgba(0,0,0,0.45),
+rgba(0,0,0,0.35),
 rgba(0,0,0,0.55)
 ),
+url('images/norse/file_0000000015f4720aaf3b8898d4e69bb7.png');
 
-url('file_00000000015f4720aaf3b8898d4e69bb7.png');
-
+background-size:contain;
 background-repeat:no-repeat;
 background-position:center;
-background-size:contain;
 background-color:#000;
-
-display:flex;
-flex-direction:column;
-align-items:center;
-
-padding:40px 20px 100px;
-}
-
-.hero::after{
-
-content:'';
-
-position:absolute;
-
-bottom:0;
-left:0;
-
-width:100%;
-height:260px;
-
-background:
-linear-gradient(
-to bottom,
-transparent,
-#000
-);
-
 }
 
 /* =========================================
@@ -99,14 +115,10 @@ TOP LOGO
 
 .logo-wrapper{
 
-position:relative;
-z-index:2;
-
 display:flex;
 align-items:center;
-gap:24px;
+gap:22px;
 
-margin-top:10px;
 margin-bottom:70px;
 }
 
@@ -114,91 +126,56 @@ margin-bottom:70px;
 
 width:55px;
 
-opacity:0.10;
+opacity:0.22;
 
 filter:
-drop-shadow(0 0 8px rgba(255,255,255,0.08));
+drop-shadow(0 0 12px rgba(255,255,255,0.14));
 }
 
 .logo-text{
 
 font-size:4rem;
 font-weight:700;
-letter-spacing:4px;
+letter-spacing:5px;
 }
 
 /* =========================================
 TITLE
 ========================================= */
 
-.page-title{
-
-position:relative;
-z-index:2;
-
-text-align:center;
-
-max-width:1000px;
-}
-
 .page-title-small{
 
-font-size:1.1rem;
-letter-spacing:4px;
-font-weight:300;
+font-size:1rem;
+
+letter-spacing:5px;
 
 color:#8d1c2f;
 
-margin-bottom:20px;
+margin-bottom:25px;
 }
 
-.page-title h1{
+.hero h1{
 
 font-size:6rem;
-line-height:0.95;
+
+line-height:0.92;
 
 text-transform:uppercase;
 
 margin-bottom:30px;
 }
 
-.page-title p{
+.hero p{
 
-font-size:1.6rem;
+font-size:1.5rem;
 
 font-weight:300;
 
-color:#d0d0d0;
+line-height:1.7;
 
-line-height:1.5;
-}
+max-width:900px;
 
-/* =========================================
-EDITORIAL LOGO
-========================================= */
-
-.editorial-logo{
-
-position:relative;
-z-index:2;
-
-margin-top:180px;
-
-display:flex;
-justify-content:center;
-}
-
-.editorial-logo img{
-
-width:170px;
-max-width:70vw;
-
-opacity:0.92;
-
-filter:
-grayscale(100%)
-brightness(1.05)
-drop-shadow(0 0 12px rgba(255,255,255,0.10));
+color:#d2d2d2;
 }
 
 /* =========================================
@@ -207,31 +184,31 @@ MANIFESTO
 
 .manifesto{
 
-padding:160px 10%;
+min-height:120vh;
 
 background:
 linear-gradient(
 to bottom,
-rgba(0,0,0,0.72),
-rgba(0,0,0,0.86)
+rgba(0,0,0,0.45),
+rgba(0,0,0,0.65)
 ),
+url('images/norse/file_000000002df47243847168addb90b085.png');
 
-url('file_0000000002df47243847168addb90b085.png');
-
+background-size:contain;
 background-repeat:no-repeat;
 background-position:center;
-background-size:contain;
-background-color:#000;
+background-color:#050505;
 }
 
 .manifesto h2{
 
 font-size:4.5rem;
-line-height:1;
 
-text-transform:uppercase;
+line-height:1.1;
 
 max-width:1100px;
+
+text-transform:uppercase;
 }
 
 .highlight{
@@ -239,51 +216,62 @@ max-width:1100px;
 color:#8d1c2f;
 
 text-shadow:
-0 0 18px rgba(141,28,47,0.24);
+0 0 18px rgba(141,28,47,0.28);
 }
 
 /* =========================================
-WILD SECTION
+EDITORIAL
 ========================================= */
 
-.wild{
+.editorial{
 
-padding:160px 10%;
+min-height:120vh;
 
 background:
 linear-gradient(
 to bottom,
-rgba(0,0,0,0.74),
-rgba(0,0,0,0.90)
+rgba(0,0,0,0.40),
+rgba(0,0,0,0.72)
 ),
+url('images/norse/file_000000003a5c71f4b1e77fdd2b2cc5b6.png');
 
-url('file_0000000003a5c71f4b1e77fdd2b2cc5b6.png');
-
+background-size:contain;
 background-repeat:no-repeat;
 background-position:center;
-background-size:contain;
 background-color:#000;
-
-border-top:
-1px solid rgba(255,255,255,0.05);
 }
 
-.wild h3{
+.editorial-box{
 
-font-size:3rem;
+max-width:950px;
 
-margin-bottom:40px;
+padding:60px 40px;
 
-color:#8d1c2f;
+background:
+rgba(0,0,0,0.35);
+
+backdrop-filter:blur(2px);
+
+border:
+1px solid rgba(255,255,255,0.08);
 }
 
-.wild p{
+.editorial h3{
 
-font-size:1.5rem;
+font-size:3.5rem;
 
-line-height:1.8;
+line-height:1.1;
 
-max-width:1000px;
+margin-bottom:35px;
+
+text-transform:uppercase;
+}
+
+.editorial p{
+
+font-size:1.4rem;
+
+line-height:1.9;
 
 font-weight:300;
 
@@ -296,9 +284,7 @@ FINAL QUOTE
 
 .final-quote{
 
-padding:180px 10%;
-
-text-align:center;
+padding:180px 8%;
 
 background:#000;
 }
@@ -307,17 +293,15 @@ background:#000;
 
 font-size:4rem;
 
-line-height:1.2;
+line-height:1.25;
 
 font-weight:300;
 
-max-width:1100px;
-
-margin:auto;
+max-width:1000px;
 }
 
 /* =========================================
-HOME BUTTON
+BUTTON
 ========================================= */
 
 .home-button-wrap{
@@ -336,13 +320,13 @@ text-decoration:none;
 
 color:white;
 
-border:3px solid #8d1c2f;
+border:2px solid #8d1c2f;
 
-padding:20px 38px;
+padding:20px 40px;
 
-font-size:1.3rem;
+font-size:1.2rem;
 
-letter-spacing:3px;
+letter-spacing:4px;
 
 transition:0.3s;
 }
@@ -350,8 +334,6 @@ transition:0.3s;
 .home-button:hover{
 
 background:#8d1c2f;
-
-color:white;
 }
 
 /* =========================================
@@ -360,18 +342,20 @@ FOOTER
 
 footer{
 
-padding:70px 20px 90px;
-
-text-align:center;
+padding:80px 20px 100px;
 
 background:#000;
+
+text-align:center;
 }
 
 .footer-rune{
 
-width:110px;
+width:95px;
 
-opacity:0.18;
+margin-bottom:24px;
+
+opacity:0.8;
 
 filter:
 drop-shadow(0 0 10px rgba(255,255,255,0.10));
@@ -385,19 +369,18 @@ font-weight:700;
 
 letter-spacing:6px;
 
-margin-top:20px;
-margin-bottom:18px;
+margin-bottom:14px;
 }
 
 .footer-text{
 
-font-size:1rem;
+font-size:0.9rem;
 
-letter-spacing:10px;
-
-color:#777;
+letter-spacing:8px;
 
 text-transform:uppercase;
+
+color:#777;
 }
 
 /* =========================================
@@ -407,6 +390,7 @@ MOBILE
 @media(max-width:900px){
 
 .hero{
+
 min-height:120vh;
 }
 
@@ -419,32 +403,22 @@ margin-bottom:50px;
 
 .logo-rune{
 
-width:45px;
+width:48px;
 }
 
 .logo-text{
 
-font-size:3rem;
+font-size:2.8rem;
 }
 
-.page-title h1{
+.hero h1{
 
-font-size:3.5rem;
+font-size:3.7rem;
 }
 
-.page-title p{
+.hero p{
 
-font-size:1.2rem;
-}
-
-.editorial-logo img{
-
-width:140px;
-}
-
-.manifesto{
-
-padding:100px 8%;
+font-size:1.15rem;
 }
 
 .manifesto h2{
@@ -452,34 +426,24 @@ padding:100px 8%;
 font-size:2.8rem;
 }
 
-.wild{
+.editorial h3{
 
-padding:100px 8%;
+font-size:2.3rem;
 }
 
-.wild h3{
+.editorial p{
 
-font-size:2.2rem;
+font-size:1.1rem;
 }
 
-.wild p{
+.editorial-box{
 
-font-size:1.2rem;
-}
-
-.final-quote{
-
-padding:120px 8%;
+padding:40px 25px;
 }
 
 .final-quote h2{
 
 font-size:2.5rem;
-}
-
-.footer-rune{
-
-width:80px;
 }
 
 .footer-logo{
@@ -489,7 +453,7 @@ font-size:2rem;
 
 .footer-text{
 
-font-size:0.8rem;
+font-size:0.7rem;
 
 letter-spacing:5px;
 }
@@ -518,36 +482,29 @@ ATZ
 
 </div>
 
-<div class="page-title">
-
 <div class="page-title-small">
-LINEA NORSE
+NORSE LINE
 </div>
 
 <h1>
 
-ONORA I MORTI.<br>
-COMBATTI<br>
-PER I VIVI.
+NON TUTTO<br>
+CIÒ CHE È<br>
+SELVATICO<br>
+È PERDUTO.
 
 </h1>
 
 <p>
 
-Una linea nata dalla libertà,
-dalla presenza
-e dall'identità.
+Una linea costruita per chi vive il cane
+come presenza, identità e spirito libero.
+
+Non addomesticato.
+Non artificiale.
+Reale.
 
 </p>
-
-</div>
-
-<div class="editorial-logo">
-
-<img src="logoATZ.jpg"
-alt="ATZ Logo">
-
-</div>
 
 </section>
 
@@ -557,11 +514,10 @@ alt="ATZ Logo">
 
 <h2>
 
-MEGLIO<br>
-UN UCCELLO LIBERO<br>
-
 <span class="highlight">
 
+MEGLIO<br>
+UN UCCELLO LIBERO<br>
 CHE UN RE<br>
 PRIGIONIERO.
 
@@ -571,34 +527,38 @@ PRIGIONIERO.
 
 </section>
 
-<!-- WILD -->
+<!-- EDITORIAL -->
 
-<section class="wild">
+<section class="editorial">
+
+<div class="editorial-box">
 
 <h3>
-LINEA NORSE
+
+ONORA I MORTI.<br>
+COMBATTI PER I VIVI.
+
 </h3>
 
 <p>
 
-Non tutto ciò che è selvatico
-è perduto.
+Norse non nasce come estetica.
 
-La linea Norse nasce per chi
-non cerca approvazione,
-ma identità.
+Nasce come identità.
 
-Una presenza silenziosa.
-Cruda.
-Reale.
+Silenzio.
+Presenza.
+Fedeltà.
+Istinto.
 
-Abbigliamento, accessori
-e cultura visiva
-ispirati alla libertà,
-alla resistenza
-e al legame uomo-cane.
+Una linea dedicata a chi rifiuta
+la superficialità moderna
+e costruisce un rapporto reale
+con il proprio cane.
 
 </p>
+
+</div>
 
 </section>
 
@@ -608,14 +568,14 @@ e al legame uomo-cane.
 
 <h2>
 
-“Non tutto ciò che è selvatico<br>
-è perduto.”
+“Meglio vivere selvatici<br>
+che imparare a strisciare.”
 
 </h2>
 
 </section>
 
-<!-- HOME BUTTON -->
+<!-- BUTTON -->
 
 <div class="home-button-wrap">
 
@@ -641,7 +601,7 @@ ATZ
 </div>
 
 <div class="footer-text">
-NORSE CULTURE
+NORSE LINE
 </div>
 
 </footer>
