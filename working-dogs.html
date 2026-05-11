@@ -8,7 +8,7 @@
 
 <title>ATZ | Working Dogs</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swnap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -37,13 +37,13 @@ HERO
 
 position:relative;
 
-min-height:160vh;
+min-height:100vh;
 
 background:
 linear-gradient(
 to bottom,
-rgba(0,0,0,0.35),
-rgba(0,0,0,0.35)
+rgba(0,0,0,0.30),
+rgba(0,0,0,0.50)
 ),
 
 url('images/workingdogs/file_000000008634720a9d3cb35c9bb76124.png');
@@ -54,8 +54,9 @@ background-position:center;
 display:flex;
 flex-direction:column;
 align-items:center;
+justify-content:flex-start;
 
-padding:40px 20px 100px;
+padding:40px 20px 220px;
 }
 
 .hero::after{
@@ -90,16 +91,15 @@ z-index:2;
 
 display:flex;
 align-items:center;
-gap:24px;
+gap:18px;
 
 margin-top:10px;
-margin-bottom:70px;
+margin-bottom:60px;
 }
 
 .logo-rune{
 
 width:55px;
-  opacity:0.22;
 
 filter:
 drop-shadow(0 0 14px rgba(255,255,255,0.18));
@@ -128,8 +128,8 @@ max-width:1000px;
 
 .page-title-small{
 
-font-size:1.1rem;
-letter-spacing:3px;
+font-size:1rem;
+letter-spacing:4px;
 font-weight:300;
 
 color:#8d1c2f;
@@ -140,7 +140,7 @@ margin-bottom:20px;
 .page-title h1{
 
 font-size:6rem;
-line-height:0.95;
+line-height:0.92;
 
 text-transform:uppercase;
 
@@ -149,7 +149,7 @@ margin-bottom:30px;
 
 .page-title p{
 
-font-size:1.6rem;
+font-size:1.5rem;
 
 font-weight:300;
 
@@ -167,7 +167,7 @@ EDITORIAL LOGO
 position:relative;
 z-index:2;
 
-margin-top:180px;
+margin-top:90px;
 
 display:flex;
 justify-content:center;
@@ -175,15 +175,15 @@ justify-content:center;
 
 .editorial-logo img{
 
-width:160px;
-max-width:70vw;
+width:110px;
+max-width:42vw;
 
-opacity:0.92;
+opacity:0.22;
 
 filter:
 grayscale(100%)
-brightness(1.05)
-drop-shadow(0 0 10px rgba(255,255,255,0.10));
+brightness(1)
+drop-shadow(0 0 6px rgba(255,255,255,0.05));
 }
 
 /* =========================================
@@ -223,7 +223,16 @@ OPERATIVE
 
 padding:140px 10%;
 
-background:#0d0a0a;
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,0.30),
+rgba(0,0,0,0.50)
+),
+url('images/workingdogs/file_000000000384720ab95fea1f43be3812.png');
+
+background-size:cover;
+background-position:center;
 
 border-top:
 1px solid rgba(255,255,255,0.05);
@@ -259,7 +268,16 @@ FORMATION
 
 padding:140px 10%;
 
-background:#080808;
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,0.30),
+rgba(0,0,0,0.50)
+),
+url('images/workingdogs/file_000000009bc47243ad0e46682ef6cf4c.png');
+
+background-size:cover;
+background-position:center;
 
 border-top:
 1px solid rgba(255,255,255,0.05);
@@ -335,7 +353,16 @@ FINAL QUOTE
 
 padding:160px 10%;
 
-background:#000;
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,0.30),
+rgba(0,0,0,0.50)
+),
+url('images/workingdogs/file_000000009580720a87217b917876b876.png');
+
+background-size:cover;
+background-position:center;
 
 text-align:center;
 }
@@ -444,34 +471,39 @@ MOBILE
 
 .logo-wrapper{
 
-gap:16px;
+gap:14px;
 
-margin-bottom:50px;
+margin-bottom:40px;
 }
 
 .logo-rune{
 
-width:70px;
+width:42px;
 }
 
 .logo-text{
 
-font-size:3rem;
+font-size:2.6rem;
 }
 
 .page-title h1{
 
-font-size:3.7rem;
+font-size:3.6rem;
 }
 
 .page-title p{
 
-font-size:1.2rem;
+font-size:1.1rem;
+}
+
+.editorial-logo{
+
+margin-top:60px;
 }
 
 .editorial-logo img{
 
-width:170px;
+width:80px;
 }
 
 .manifesto{
@@ -631,18 +663,7 @@ PER IL SUO CANE.
 
 <!-- OPERATIVE -->
 
-<section class="operative"
-style="
-background:
-linear-gradient(
-to bottom,
-rgba(0,0,0,0.88),
-rgba(0,0,0,0.92)
-),
-url('images/workingdogs/file_000000000384720ab95fea1f43be3812.png');
-background-size:cover;
-background-position:center;
-">
+<section class="operative">
 
 <h3>
 OPERATIVITÀ
@@ -669,18 +690,7 @@ E nemmeno il suo conduttore.
 
 <!-- FORMAZIONE -->
 
-<section class="formation"
-style="
-background:
-linear-gradient(
-to bottom,
-rgba(0,0,0,0.90),
-rgba(0,0,0,0.94)
-),
-url('images/workingdogs/file_000000009bc47243ad0e46682ef6cf4c.png');
-background-size:cover;
-background-position:center;
-">
+<section class="formation">
 
 <h3 class="formation-title">
 FORMAZIONE
@@ -766,18 +776,7 @@ COMING SOON
 
 <!-- FINAL QUOTE -->
 
-<section class="final-quote"
-style="
-background:
-linear-gradient(
-to bottom,
-rgba(0,0,0,0.88),
-rgba(0,0,0,0.95)
-),
-url('images/workingdogs/file_000000009580720a87217b917876b876.png');
-background-size:cover;
-background-position:center;
-">
+<section class="final-quote">
 
 <h2>
 
