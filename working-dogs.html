@@ -37,26 +37,26 @@ HERO
 
 position:relative;
 
-min-height:100vh;
+min-height:85vh;
 
 background:
 linear-gradient(
 to bottom,
-rgba(0,0,0,0.30),
+rgba(0,0,0,0.28),
 rgba(0,0,0,0.50)
 ),
 
 url('images/workingdogs/file_000000008634720a9d3cb35c9bb76124.png');
 
 background-size:cover;
-background-position:center;
+background-position:center top;
 
 display:flex;
 flex-direction:column;
 align-items:center;
 justify-content:flex-start;
 
-padding:40px 20px 220px;
+padding:40px 20px 160px;
 }
 
 .hero::after{
@@ -69,7 +69,7 @@ bottom:0;
 left:0;
 
 width:100%;
-height:260px;
+height:220px;
 
 background:
 linear-gradient(
@@ -94,7 +94,7 @@ align-items:center;
 gap:18px;
 
 margin-top:10px;
-margin-bottom:60px;
+margin-bottom:50px;
 }
 
 .logo-rune{
@@ -124,6 +124,7 @@ z-index:2;
 text-align:center;
 
 max-width:1000px;
+padding:0 10px;
 }
 
 .page-title-small{
@@ -139,7 +140,7 @@ margin-bottom:20px;
 
 .page-title h1{
 
-font-size:6rem;
+font-size:5rem;
 line-height:0.92;
 
 text-transform:uppercase;
@@ -149,13 +150,16 @@ margin-bottom:30px;
 
 .page-title p{
 
-font-size:1.5rem;
+font-size:1.4rem;
 
 font-weight:300;
 
 color:#d0d0d0;
 
 line-height:1.5;
+
+max-width:700px;
+margin:auto;
 }
 
 /* =========================================
@@ -167,7 +171,7 @@ EDITORIAL LOGO
 position:relative;
 z-index:2;
 
-margin-top:90px;
+margin-top:70px;
 
 display:flex;
 justify-content:center;
@@ -175,10 +179,10 @@ justify-content:center;
 
 .editorial-logo img{
 
-width:110px;
-max-width:42vw;
+width:100px;
+max-width:40vw;
 
-opacity:0.22;
+opacity:0.18;
 
 filter:
 grayscale(100%)
@@ -192,14 +196,14 @@ MANIFESTO
 
 .manifesto{
 
-padding:140px 10%;
+padding:120px 10%;
 
 background:#090707;
 }
 
 .manifesto h2{
 
-font-size:4.8rem;
+font-size:4.5rem;
 line-height:1;
 
 text-transform:uppercase;
@@ -226,13 +230,13 @@ padding:140px 10%;
 background:
 linear-gradient(
 to bottom,
-rgba(0,0,0,0.30),
+rgba(0,0,0,0.28),
 rgba(0,0,0,0.50)
 ),
 url('images/workingdogs/file_000000000384720ab95fea1f43be3812.png');
 
 background-size:cover;
-background-position:center;
+background-position:center top;
 
 border-top:
 1px solid rgba(255,255,255,0.05);
@@ -249,7 +253,7 @@ color:#8d1c2f;
 
 .operative p{
 
-font-size:1.5rem;
+font-size:1.4rem;
 
 line-height:1.8;
 
@@ -271,13 +275,13 @@ padding:140px 10%;
 background:
 linear-gradient(
 to bottom,
-rgba(0,0,0,0.30),
+rgba(0,0,0,0.28),
 rgba(0,0,0,0.50)
 ),
 url('images/workingdogs/file_000000009bc47243ad0e46682ef6cf4c.png');
 
 background-size:cover;
-background-position:center;
+background-position:center top;
 
 border-top:
 1px solid rgba(255,255,255,0.05);
@@ -356,20 +360,20 @@ padding:160px 10%;
 background:
 linear-gradient(
 to bottom,
-rgba(0,0,0,0.30),
+rgba(0,0,0,0.28),
 rgba(0,0,0,0.50)
 ),
 url('images/workingdogs/file_000000009580720a87217b917876b876.png');
 
 background-size:cover;
-background-position:center;
+background-position:center top;
 
 text-align:center;
 }
 
 .final-quote h2{
 
-font-size:4.2rem;
+font-size:4rem;
 
 line-height:1.2;
 
@@ -469,11 +473,18 @@ MOBILE
 
 @media(max-width:900px){
 
+.hero{
+
+min-height:78vh;
+
+padding:30px 18px 120px;
+}
+
 .logo-wrapper{
 
 gap:14px;
 
-margin-bottom:40px;
+margin-bottom:36px;
 }
 
 .logo-rune{
@@ -488,22 +499,23 @@ font-size:2.6rem;
 
 .page-title h1{
 
-font-size:3.6rem;
+font-size:2.8rem;
+line-height:0.95;
 }
 
 .page-title p{
 
-font-size:1.1rem;
+font-size:1.05rem;
 }
 
 .editorial-logo{
 
-margin-top:60px;
+margin-top:50px;
 }
 
 .editorial-logo img{
 
-width:80px;
+width:70px;
 }
 
 .manifesto{
@@ -513,7 +525,7 @@ padding:90px 8%;
 
 .manifesto h2{
 
-font-size:3rem;
+font-size:2.8rem;
 }
 
 .operative{
@@ -523,12 +535,12 @@ padding:90px 8%;
 
 .operative h3{
 
-font-size:2.3rem;
+font-size:2.2rem;
 }
 
 .operative p{
 
-font-size:1.2rem;
+font-size:1.15rem;
 }
 
 .formation{
@@ -538,7 +550,7 @@ padding:90px 8%;
 
 .formation-title{
 
-font-size:2.3rem;
+font-size:2.2rem;
 }
 
 .formation-grid{
@@ -563,7 +575,7 @@ padding:110px 8%;
 
 .final-quote h2{
 
-font-size:2.5rem;
+font-size:2.3rem;
 }
 
 .footer-rune{
@@ -573,7 +585,7 @@ width:85px;
 
 .footer-logo{
 
-font-size:2.1rem;
+font-size:2rem;
 }
 
 .footer-text{
@@ -590,8 +602,6 @@ letter-spacing:5px;
 </head>
 
 <body>
-
-<!-- HERO -->
 
 <section class="hero">
 
@@ -639,8 +649,6 @@ alt="ATZ Logo">
 
 </section>
 
-<!-- MANIFESTO -->
-
 <section class="manifesto">
 
 <h2>
@@ -660,8 +668,6 @@ PER IL SUO CANE.
 </h2>
 
 </section>
-
-<!-- OPERATIVE -->
 
 <section class="operative">
 
@@ -688,8 +694,6 @@ E nemmeno il suo conduttore.
 
 </section>
 
-<!-- FORMAZIONE -->
-
 <section class="formation">
 
 <h3 class="formation-title">
@@ -699,82 +703,38 @@ FORMAZIONE
 <div class="formation-grid">
 
 <div class="formation-card">
-
-<h4>
-Obbedienza
-</h4>
-
-<div class="coming-soon">
-COMING SOON
-</div>
-
+<h4>Obbedienza</h4>
+<div class="coming-soon">COMING SOON</div>
 </div>
 
 <div class="formation-card">
-
-<h4>
-Discriminazione olfattiva
-</h4>
-
-<div class="coming-soon">
-COMING SOON
-</div>
-
+<h4>Discriminazione olfattiva</h4>
+<div class="coming-soon">COMING SOON</div>
 </div>
 
 <div class="formation-card">
-
-<h4>
-Morso sportivo
-</h4>
-
-<div class="coming-soon">
-COMING SOON
-</div>
-
+<h4>Morso sportivo</h4>
+<div class="coming-soon">COMING SOON</div>
 </div>
 
 <div class="formation-card">
-
-<h4>
-Dog Dance
-</h4>
-
-<div class="coming-soon">
-COMING SOON
-</div>
-
+<h4>Dog Dance</h4>
+<div class="coming-soon">COMING SOON</div>
 </div>
 
 <div class="formation-card">
-
-<h4>
-Preparazione sportiva
-</h4>
-
-<div class="coming-soon">
-COMING SOON
-</div>
-
+<h4>Preparazione sportiva</h4>
+<div class="coming-soon">COMING SOON</div>
 </div>
 
 <div class="formation-card">
-
-<h4>
-Costruzione motivazionale
-</h4>
-
-<div class="coming-soon">
-COMING SOON
-</div>
-
+<h4>Costruzione motivazionale</h4>
+<div class="coming-soon">COMING SOON</div>
 </div>
 
 </div>
 
 </section>
-
-<!-- FINAL QUOTE -->
 
 <section class="final-quote">
 
@@ -787,8 +747,6 @@ Si costruisce.”
 
 </section>
 
-<!-- HOME BUTTON -->
-
 <div class="home-button-wrap">
 
 <a href="index.html"
@@ -799,8 +757,6 @@ TORNA ALLA HOME
 </a>
 
 </div>
-
-<!-- FOOTER -->
 
 <footer>
 
