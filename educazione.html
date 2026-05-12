@@ -6,15 +6,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ATZ | Educazione e Rieducazione</title>
+<title>ATZ | Educazione</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 <style>
 
-/* =========================================
+/* =========================
 RESET
-========================================= */
+========================= */
 
 *{
 margin:0;
@@ -23,547 +23,274 @@ box-sizing:border-box;
 }
 
 body{
-background:#000;
+background:#050505;
 font-family:'Oswald',sans-serif;
 color:white;
 overflow-x:hidden;
 }
 
-/* =========================================
-HERO
-========================================= */
+/* =========================
+GENERAL
+========================= */
 
-.hero{
-
+section{
 position:relative;
+width:100%;
+overflow:hidden;
+}
+
+.image-section{
+
+min-height:120vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+padding:80px 20px;
+
+background-size:contain;
+background-repeat:no-repeat;
+background-position:center;
+background-color:#050505;
+}
+
+/* =========================
+HERO
+========================= */
+
+.hero-section{
 
 min-height:100vh;
 
+display:flex;
+justify-content:center;
+align-items:center;
+
+padding:80px 20px;
+
 background:
 linear-gradient(
 to bottom,
-rgba(0,0,0,0.78),
-rgba(0,0,0,0.96)
+rgba(0,0,0,0.38),
+rgba(0,0,0,0.72)
 ),
 
-url('HeroATZ.jpg');
+url('images/educazione/file_00000000b48471f6839640d02ad002bf.png');
 
-background-size:cover;
+background-size:contain;
+background-repeat:no-repeat;
 background-position:center;
-
-display:flex;
-flex-direction:column;
-align-items:center;
-
-padding:40px 20px 100px;
+background-color:#050505;
 }
 
-.hero::after{
+.hero-content{
 
-content:'';
+max-width:1100px;
 
-position:absolute;
+text-align:center;
+}
 
-bottom:0;
-left:0;
+.hero-logo{
 
-width:100%;
-height:260px;
+font-size:72px;
+font-weight:900;
+
+letter-spacing:6px;
+
+margin-bottom:30px;
+}
+
+.section-mini{
+
+font-size:14px;
+
+letter-spacing:6px;
+
+color:#ff2d75;
+
+margin-bottom:24px;
+}
+
+.hero-section h1{
+
+font-size:clamp(54px,9vw,130px);
+
+line-height:0.92;
+
+font-weight:900;
+
+text-transform:uppercase;
+}
+
+.hero-sub{
+
+max-width:900px;
+
+margin:40px auto 0 auto;
+
+font-size:clamp(18px,2vw,24px);
+
+line-height:1.8;
+
+color:#d5d5d5;
+}
+
+/* =========================
+EDITORIAL BOX
+========================= */
+
+.overlay-box{
 
 background:
-linear-gradient(
-to bottom,
-transparent,
-#000
-);
+rgba(0,0,0,0.42);
 
-}
+padding:50px;
 
-/* =========================================
-TOP LOGO
-========================================= */
-
-.logo-wrapper{
-
-position:relative;
-z-index:2;
-
-display:flex;
-align-items:center;
-gap:24px;
-
-margin-top:10px;
-margin-bottom:70px;
-}
-
-.logo-rune{
-
-width:90px;
-
-filter:
-drop-shadow(0 0 14px rgba(255,255,255,0.18));
-}
-
-.logo-text{
-
-font-size:4rem;
-font-weight:700;
-letter-spacing:4px;
-}
-
-/* =========================================
-TITLE
-========================================= */
-
-.page-title{
-
-position:relative;
-z-index:2;
+max-width:1000px;
 
 text-align:center;
 
-max-width:1000px;
+backdrop-filter:blur(3px);
 }
 
-.page-title-small{
+.overlay-box h2{
 
-font-size:1.1rem;
-letter-spacing:3px;
-font-weight:300;
+font-size:clamp(40px,7vw,92px);
 
-color:#d9c2a3;
+line-height:1;
 
-margin-bottom:20px;
-}
-
-.page-title h1{
-
-font-size:6rem;
-line-height:0.95;
+font-weight:900;
 
 text-transform:uppercase;
 
 margin-bottom:30px;
 }
 
-.page-title p{
+.overlay-box p{
 
-font-size:1.6rem;
-
-font-weight:300;
-
-color:#d0d0d0;
-}
-
-/* =========================================
-EDITORIAL LOGO
-========================================= */
-
-.editorial-logo{
-
-position:relative;
-z-index:2;
-
-margin-top:70px;
-
-display:flex;
-justify-content:center;
-}
-
-.editorial-logo img{
-
-width:220px;
-max-width:70vw;
-
-opacity:0.92;
-
-filter:
-grayscale(100%)
-brightness(1.05)
-drop-shadow(0 0 10px rgba(255,255,255,0.10));
-}
-
-/* =========================================
-MANIFESTO
-========================================= */
-
-.manifesto{
-
-padding:140px 10%;
-
-background:#090909;
-}
-
-.manifesto h2{
-
-font-size:5rem;
-line-height:1;
-
-text-transform:uppercase;
-
-max-width:1100px;
-}
-
-.highlight{
-
-color:#d9c2a3;
-
-text-shadow:
-0 0 18px rgba(217,194,163,0.18);
-}
-
-/* =========================================
-APPROACH
-========================================= */
-
-.approach{
-
-padding:140px 10%;
-
-background:#0f0d09;
-
-border-top:
-1px solid rgba(255,255,255,0.05);
-}
-
-.approach h3{
-
-font-size:3rem;
-
-margin-bottom:40px;
-
-color:#d9c2a3;
-}
-
-.approach p{
-
-font-size:1.5rem;
+font-size:clamp(18px,2vw,24px);
 
 line-height:1.8;
 
-max-width:1000px;
-
-font-weight:300;
-
-color:#d0d0d0;
+color:#d6d6d6;
 }
 
-/* =========================================
-FORMATION
-========================================= */
+/* =========================
+FINAL
+========================= */
 
-.formation{
+.final-section{
 
-padding:140px 10%;
+padding:140px 20px;
 
-background:#090909;
+text-align:center;
 
-border-top:
-1px solid rgba(255,255,255,0.05);
+background:#050505;
 }
 
-.formation-title{
+.final-section h2{
 
-font-size:3rem;
+font-size:clamp(42px,7vw,95px);
 
-margin-bottom:60px;
+line-height:1;
 
-color:#d9c2a3;
-}
+margin-bottom:30px;
 
-.formation-grid{
-
-display:grid;
-
-grid-template-columns:
-repeat(2, minmax(280px, 1fr));
-
-gap:40px;
-}
-
-.formation-card{
-
-border:3px solid rgba(217,194,163,0.22);
-
-padding:50px 40px;
-
-background:
-rgba(0,0,0,0.45);
-
-transition:0.3s;
-
-box-shadow:
-0 0 18px rgba(217,194,163,0.08);
-}
-
-.formation-card:hover{
-
-transform:translateY(-4px);
-
-box-shadow:
-0 0 28px rgba(217,194,163,0.18);
-}
-
-.formation-card h4{
-
-font-size:2.2rem;
-
-margin-bottom:24px;
+font-weight:900;
 
 text-transform:uppercase;
 }
 
-.formation-card p{
+.final-section p{
 
-font-size:1.3rem;
-
-line-height:1.7;
-
-font-weight:300;
-
-color:#d0d0d0;
-
-margin-bottom:28px;
-}
-
-.coming-soon{
-
-font-size:0.95rem;
-
-letter-spacing:5px;
-
-color:#d9c2a3;
-
-opacity:0.75;
-}
-
-/* =========================================
-FINAL QUOTE
-========================================= */
-
-.final-quote{
-
-padding:160px 10%;
-
-background:#000;
-
-text-align:center;
-}
-
-.final-quote h2{
-
-font-size:4.5rem;
-
-line-height:1.1;
-
-font-weight:300;
-
-max-width:1000px;
+max-width:900px;
 
 margin:auto;
+
+font-size:clamp(18px,2vw,26px);
+
+line-height:1.8;
+
+color:#d0d0d0;
 }
 
-/* =========================================
-HOME BUTTON
-========================================= */
+.stige{
 
-.home-button-wrap{
+margin-top:30px;
 
-padding-bottom:120px;
+font-size:14px;
 
-display:flex;
-justify-content:center;
+letter-spacing:8px;
 
-background:#000;
+color:#777;
 }
 
-.home-button{
-
-text-decoration:none;
-
-color:white;
-
-border:3px solid #d9c2a3;
-
-padding:20px 38px;
-
-font-size:1.3rem;
-
-letter-spacing:3px;
-
-transition:0.3s;
-}
-
-.home-button:hover{
-
-background:#d9c2a3;
-
-color:black;
-}
-
-/* =========================================
+/* =========================
 FOOTER
-========================================= */
+========================= */
 
 footer{
 
-padding:70px 20px 90px;
+padding:100px 20px;
 
 text-align:center;
 
 background:#000;
 }
 
-.footer-rune{
+footer h3{
 
-width:110px;
-
-margin-bottom:26px;
-
-filter:
-drop-shadow(0 0 10px rgba(255,255,255,0.10));
-}
-
-.footer-logo{
-
-font-size:3rem;
-
-font-weight:700;
+font-size:46px;
 
 letter-spacing:6px;
 
-margin-bottom:18px;
+margin-bottom:14px;
 }
 
-.footer-text{
-
-font-size:1rem;
-
-letter-spacing:10px;
-
-color:#777;
-
-text-transform:uppercase;
-}
-
-/* =========================================
-MOBILE
-========================================= */
-
-@media(max-width:900px){
-
-.logo-wrapper{
-
-gap:16px;
-
-margin-bottom:50px;
-}
-
-.logo-rune{
-
-width:70px;
-}
-
-.logo-text{
-
-font-size:3rem;
-}
-
-.page-title h1{
-
-font-size:3.7rem;
-}
-
-.page-title p{
-
-font-size:1.2rem;
-}
-
-.editorial-logo img{
-
-width:170px;
-}
-
-.manifesto{
-
-padding:90px 8%;
-}
-
-.manifesto h2{
-
-font-size:3rem;
-}
-
-.approach{
-
-padding:90px 8%;
-}
-
-.approach h3{
-
-font-size:2.3rem;
-}
-
-.approach p{
-
-font-size:1.2rem;
-}
-
-.formation{
-
-padding:90px 8%;
-}
-
-.formation-title{
-
-font-size:2.3rem;
-}
-
-.formation-grid{
-
-grid-template-columns:1fr;
-}
-
-.formation-card{
-
-padding:40px 28px;
-}
-
-.formation-card h4{
-
-font-size:1.7rem;
-}
-
-.formation-card p{
-
-font-size:1.1rem;
-}
-
-.final-quote{
-
-padding:110px 8%;
-}
-
-.final-quote h2{
-
-font-size:2.8rem;
-}
-
-.footer-rune{
-
-width:85px;
-}
-
-.footer-logo{
-
-font-size:2.1rem;
-}
-
-.footer-text{
-
-font-size:0.8rem;
+footer p{
 
 letter-spacing:5px;
+
+color:#777;
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media(max-width:768px){
+
+.hero-section{
+min-height:95vh;
+}
+
+.image-section{
+min-height:100vh;
+}
+
+.hero-logo{
+font-size:44px;
+}
+
+.hero-section h1{
+font-size:54px;
+}
+
+.overlay-box{
+padding:30px 20px;
+}
+
+.overlay-box h2{
+font-size:42px;
+}
+
+.overlay-box p{
+font-size:16px;
+}
+
+.final-section h2{
+font-size:44px;
 }
 
 }
@@ -576,183 +303,212 @@ letter-spacing:5px;
 
 <!-- HERO -->
 
-<section class="hero">
+<section class="hero-section">
 
-<div class="logo-wrapper">
+<div class="hero-content">
 
-<img src="runa-minimal.png"
-class="logo-rune"
-alt="ATZ Rune">
-
-<div class="logo-text">
+<div class="hero-logo">
 ATZ
 </div>
 
-</div>
-
-<div class="page-title">
-
-<div class="page-title-small">
+<p class="section-mini">
 EDUCAZIONE / RIEDUCAZIONE
-</div>
+</p>
 
 <h1>
-RELAZIONE<br>
-PRIMA DI<br>
-PRESTAZIONE.
+
+L’ EDUCAZIONE<br>
+INIZIA DA CIÒ<br>
+CHE TRASMETTI<br>
+MENTRE CAMMINI.
+
 </h1>
 
-<p>
-L'educazione non è solo il rispetto delle regole,
-ma in primis il rispetto di tutti.
-</p>
-
-</div>
-
-<div class="editorial-logo">
-
-<img src="logoATZ.jpg"
-alt="ATZ Logo">
-
 </div>
 
 </section>
 
-<!-- MANIFESTO -->
+<!-- FIDUCIA -->
 
-<section class="manifesto">
+<section class="image-section"
+
+style="
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,0.42),
+rgba(0,0,0,0.78)
+),
+
+url('images/educazione/file_00000000a32c71f6844398324ff67284.png');
+">
+
+<div class="overlay-box">
 
 <h2>
 
-NON HO PRESO<br>
-UN CANE PER<br>
-TENERLO SUL<br>
-DIVANO.<br>
-
-<span class="highlight">
-
-L'HO PRESO<br>
-COME COLLEGA<br>
-DI VITA.
-
-</span>
+LA FIDUCIA<br>
+DEVI IMPARARE<br>
+A MERITARTELA.
 
 </h2>
 
-</section>
-
-<!-- APPROACH -->
-
-<section class="approach">
-
-<h3>
-APPROCCIO
-</h3>
-
-<p>
-
-Niente perfezione da social.
-Niente circo.
-Niente umanizzazione estrema.
-
-Lavoriamo sulla relazione, sulla comunicazione e sulla comprensione reale del cane.
-
-Persone reali.
-Cani reali.
-Situazioni reali.
-
-Perché il rispetto è una cosa reciproca.
-Lo si dà quando lo si riceve.
-
-</p>
-
-</section>
-
-<!-- FORMAZIONE -->
-
-<section class="formation">
-
-<h3 class="formation-title">
-FORMAZIONE
-</h3>
-
-<div class="formation-grid">
-
-<div class="formation-card">
-
-<h4>
-Educatore cinofilo
-</h4>
-
-<p>
-Costruire relazione,
-comunicazione e cultura cinofila.
-</p>
-
-<div class="coming-soon">
-COMING SOON
-</div>
-
-</div>
-
-<div class="formation-card">
-
-<h4>
-Rieducatore comportamentale
-</h4>
-
-<p>
-Lavorare con le emozioni.
-</p>
-
-<div class="coming-soon">
-COMING SOON
-</div>
-
-</div>
-
 </div>
 
 </section>
 
-<!-- FINAL QUOTE -->
+<!-- STREET -->
 
-<section class="final-quote">
+<section class="image-section"
+
+style="
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,0.34),
+rgba(0,0,0,0.70)
+),
+
+url('images/educazione/file_000000008a9071f6a2e6e995dcfc8013.png');
+">
+
+<div class="overlay-box">
 
 <h2>
-“Il rispetto è una cosa reciproca.”
+
+RIMETTI A TERRA<br>
+QUEL CAZZO<br>
+DI CANE.
+
 </h2>
+
+</div>
+
+</section>
+
+<!-- COMUNICAZIONE -->
+
+<section class="image-section"
+
+style="
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,0.40),
+rgba(0,0,0,0.76)
+),
+
+url('images/educazione/file_00000000f99871f688c23f1c77f7e632.png');
+">
+
+<div class="overlay-box">
+
+<h2>
+
+OGNI PASSO<br>
+COSTRUISCE<br>
+COMUNICAZIONE.
+
+</h2>
+
+</div>
+
+</section>
+
+<!-- STIGE -->
+
+<section class="image-section"
+
+style="
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,0.36),
+rgba(0,0,0,0.80)
+),
+
+url('images/educazione/file_0000000047c471f68943d320d5d2b44a.png');
+">
+
+<div class="overlay-box">
+
+<h2>
+
+ALCUNI CANI<br>
+CONTINUANO<br>
+A CAMMINARTI<br>
+ACCANTO<br>
+ANCHE DOPO.
+
+</h2>
+
+<p class="stige">
+STIGE
+</p>
+
+</div>
+
+</section>
+
+<!-- FINAL -->
+
+<section class="final-section">
+
+<h2>
+
+RELAZIONE PRIMA<br>
+DI PRESTAZIONE.
+
+</h2>
+
+<p>
+
+Educare un cane non significa dominarlo.
+Significa imparare a comunicare davvero.
+
+</p>
 
 </section>
 
 <!-- HOME BUTTON -->
 
-<div class="home-button-wrap">
+<section style="
+padding:60px 20px 100px;
+display:flex;
+justify-content:center;
+background:#050505;
+">
 
 <a href="index.html"
-class="home-button">
+
+style="
+text-decoration:none;
+color:white;
+border:3px solid #8d1c2f;
+padding:18px 40px;
+font-size:1.1rem;
+letter-spacing:4px;
+text-transform:uppercase;
+transition:0.3s;
+">
 
 TORNA ALLA HOME
 
 </a>
 
-</div>
+</section>
 
 <!-- FOOTER -->
 
 <footer>
 
-<img src="runa-incisa.png"
-class="footer-rune"
-alt="ATZ Rune">
-
-<div class="footer-logo">
+<h3>
 ATZ
-</div>
+</h3>
 
-<div class="footer-text">
-WORKING DOGS CULTURE
-</div>
+<p>
+EDUCAZIONE / RIEDUCAZIONE
+</p>
 
 </footer>
 
