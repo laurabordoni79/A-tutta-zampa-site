@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ATZ | Educazione</title>
+<title>ATZ | Educazione e Rieducazione</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
 
@@ -18,129 +18,409 @@ padding:0;
 box-sizing:border-box;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
-background:#050505;
+background:#000;
 font-family:'Oswald',sans-serif;
+color:white;
 overflow-x:hidden;
 }
 
-/* SECTIONS */
+img{
+max-width:100%;
+display:block;
+}
 
-.poster-section{
+.hero{
 
-width:100%;
+position:relative;
 
 min-height:100vh;
 
+background:
+linear-gradient(
+rgba(0,0,0,0.70),
+rgba(0,0,0,0.95)
+),
+url('educazione-hero.jpg');
+
+background-size:cover;
+background-position:center;
+
+padding:40px 8%;
+
 display:flex;
-justify-content:center;
-align-items:center;
-
-background-color:#050505;
-
-padding:40px 0;
+flex-direction:column;
+justify-content:space-between;
 }
 
-/* POSTER IMAGES */
+.hero::after{
 
-.poster-image{
+content:'';
+
+position:absolute;
+left:0;
+bottom:0;
 
 width:100%;
-height:auto;
+height:260px;
 
-display:block;
+background:
+linear-gradient(
+transparent,
+#000
+);
 
-object-fit:contain;
 }
 
-/* HOME BUTTON */
+.topbar{
 
-.home-button-section{
-
-padding:80px 20px;
+position:relative;
+z-index:10;
 
 display:flex;
-justify-content:center;
+justify-content:space-between;
+align-items:flex-start;
+}
 
+.top-left{
+
+display:flex;
+align-items:center;
+gap:16px;
+}
+
+.top-rune{
+width:36px;
+opacity:0.98;
+filter:drop-shadow(0 0 10px rgba(255,255,255,0.14));
+}
+
+.top-logo{
+font-size:1.5rem;
+font-weight:700;
+letter-spacing:5px;
+}
+
+.top-right{
+font-size:0.9rem;
+letter-spacing:4px;
+color:#8d8d8d;
+text-transform:uppercase;
+}
+
+.hero-content{
+
+position:relative;
+z-index:5;
+
+max-width:900px;
+
+margin-top:60px;
+margin-bottom:80px;
+}
+
+.hero-small{
+font-size:1rem;
+letter-spacing:4px;
+color:#c4c4c4;
+margin-bottom:22px;
+text-transform:uppercase;
+}
+
+.hero-title{
+
+font-size:7rem;
+line-height:0.92;
+font-weight:700;
+text-transform:uppercase;
+
+margin-bottom:40px;
+}
+
+.hero-title span{
+color:#d9c2a3;
+}
+
+.hero-text{
+
+max-width:760px;
+
+font-size:1.45rem;
+line-height:1.7;
+font-weight:300;
+
+color:#d0d0d0;
+}
+
+.section{
+
+padding:140px 10%;
+
+border-top:
+1px solid rgba(255,255,255,0.05);
+}
+
+.section-dark{
 background:#050505;
 }
 
-.home-button{
+.section-sand{
+background:#0f0d09;
+}
 
-text-decoration:none;
+.section-image{
 
-color:white;
+min-height:90vh;
 
-border:3px solid #8d1c2f;
+background-size:contain;
+background-repeat:no-repeat;
+background-position:center;
 
-padding:18px 40px;
+position:relative;
 
-font-size:1rem;
+display:flex;
+align-items:flex-end;
+}
 
-letter-spacing:4px;
+.section-image::before{
 
+content:'';
+
+position:absolute;
+inset:0;
+
+background:
+linear-gradient(
+rgba(0,0,0,0.25),
+rgba(0,0,0,0.82)
+);
+}
+
+.image-content{
+
+position:relative;
+z-index:2;
+
+padding:80px 10%;
+
+max-width:900px;
+}
+
+.image-content h2{
+
+font-size:4.8rem;
+line-height:0.95;
 text-transform:uppercase;
 
-font-family:'Oswald',sans-serif;
+margin-bottom:30px;
+}
+
+.image-content p{
+font-size:1.4rem;
+line-height:1.7;
+font-weight:300;
+color:#d4d4d4;
+}
+
+.editorial-title{
+
+font-size:4rem;
+text-transform:uppercase;
+line-height:1;
+
+margin-bottom:35px;
+
+color:#d9c2a3;
+}
+
+.editorial-text{
+
+font-size:1.5rem;
+line-height:1.8;
+font-weight:300;
+
+max-width:900px;
+
+color:#d0d0d0;
+}
+
+.quote-block{
+
+padding:180px 10%;
+
+background:#000;
+
+text-align:center;
+}
+
+.quote-block h2{
+
+font-size:6rem;
+line-height:0.95;
+text-transform:uppercase;
+
+max-width:1100px;
+margin:auto;
+
+color:#fff;
+}
+
+.quote-block span{
+color:#d9c2a3;
+}
+
+.contacts{
+
+padding:140px 10%;
+
+background:#000;
+}
+
+.contacts h2{
+
+font-size:5rem;
+text-transform:uppercase;
+
+margin-bottom:30px;
+}
+
+.contacts-sub{
+
+font-size:1.4rem;
+line-height:1.7;
+
+color:#8f8f8f;
+
+margin-bottom:70px;
+}
+
+.contact-links{
+
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+.contact-links a{
+
+text-decoration:none;
+color:white;
+
+font-size:2.1rem;
+letter-spacing:4px;
+
+padding:18px 0;
+
+border-bottom:
+1px solid rgba(255,255,255,0.08);
 
 transition:0.3s;
 }
 
-.home-button:hover{
+.contact-links a:hover{
 
-background:#8d1c2f;
+padding-left:14px;
+
+color:#d9c2a3;
 }
-
-/* FOOTER */
 
 footer{
 
-padding:100px 20px;
-
-text-align:center;
+padding:90px 20px;
 
 background:#000;
 
-color:white;
+text-align:center;
 }
 
-footer h3{
+.footer-rune{
+width:70px;
+margin:auto auto 24px;
+opacity:0.85;
+}
 
-font-size:46px;
-
+.footer-title{
+font-size:2.5rem;
 letter-spacing:6px;
-
-margin-bottom:14px;
+margin-bottom:16px;
 }
 
-footer p{
-
-letter-spacing:5px;
-
-color:#777;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-.poster-section{
-
-min-height:auto;
-
-padding:20px 0;
-}
-
-.home-button{
-
-padding:16px 24px;
-
+.footer-sub{
 font-size:0.9rem;
+letter-spacing:5px;
+color:#7a7a7a;
+text-transform:uppercase;
 }
 
-footer h3{
+@media(max-width:900px){
 
-font-size:34px;
+.hero{
+padding:30px 7%;
+}
+
+.top-right{
+font-size:0.65rem;
+letter-spacing:2px;
+}
+
+.hero-content{
+margin-top:40px;
+}
+
+.hero-title{
+font-size:4.2rem;
+}
+
+.hero-text{
+font-size:1.15rem;
+}
+
+.section{
+padding:90px 8%;
+}
+
+.editorial-title{
+font-size:2.7rem;
+}
+
+.editorial-text{
+font-size:1.2rem;
+}
+
+.image-content{
+padding:70px 8%;
+}
+
+.image-content h2{
+font-size:3rem;
+}
+
+.image-content p{
+font-size:1.15rem;
+}
+
+.quote-block{
+padding:120px 8%;
+}
+
+.quote-block h2{
+font-size:3.2rem;
+}
+
+.contacts{
+padding:110px 8%;
+}
+
+.contacts h2{
+font-size:3.5rem;
+}
+
+.contact-links a{
+font-size:1.5rem;
 }
 
 }
@@ -151,92 +431,225 @@ font-size:34px;
 
 <body>
 
-<!-- HERO -->
+<section class="hero">
 
-<section class="poster-section">
+<div class="topbar">
 
-<img
-class="poster-image"
-src="images/educazione/file_000000002158722fb3052b47c88a75c0.png"
-alt="ATZ Educazione Hero"
->
+<div class="top-left">
 
-</section>
+<img src="runa-minimal.png"
+class="top-rune"
+alt="ATZ Rune">
 
-<!-- FIDUCIA -->
+<div class="top-logo">
+ATZ
+</div>
 
-<section class="poster-section">
+</div>
 
-<img
-class="poster-image"
-src="images/educazione/file_0000000028b471f5979dd9543db3a679.png"
-alt="ATZ Fiducia"
->
+<div class="top-right">
+EDUCAZIONE / RIEDUCAZIONE
+</div>
 
-</section>
+</div>
 
-<!-- STREET -->
+<div class="hero-content">
 
-<section class="poster-section">
+<div class="hero-small">
+Relazione. Presenza. Responsabilità.
+</div>
 
-<img
-class="poster-image"
-src="images/educazione/file_00000000ad6c722f8c571bc00e205389.png"
-alt="ATZ Street"
->
+<h1 class="hero-title">
+L'EDUCAZIONE<br>
+NON È <span>CONTROLLO.</span><br>
+È COMPRENSIONE<br>
+RECIPROCA.
+</h1>
 
-</section>
+<div class="hero-text">
+Non lavoriamo per costruire cani spenti.
+Lavoriamo per costruire comunicazione,
+fiducia e stabilità.
 
-<!-- COMUNICAZIONE -->
+<br><br>
 
-<section class="poster-section">
+Il rispetto non nasce dalla paura.
+Nasce dalla relazione.
+</div>
 
-<img
-class="poster-image"
-src="images/educazione/file_00000000cd98722fa48c03e1a0489b6c.png"
-alt="ATZ Comunicazione"
->
-
-</section>
-
-<!-- STIGE -->
-
-<section class="poster-section">
-
-<img
-class="poster-image"
-src="images/educazione/file_0000000047c471f68943d320d5d2b44a.png"
-alt="ATZ Stige"
->
+</div>
 
 </section>
 
-<!-- HOME BUTTON -->
+<section class="section section-sand">
 
-<section class="home-button-section">
+<h2 class="editorial-title">
+Relazione prima di prestazione.
+</h2>
 
-<a href="index.html" class="home-button">
+<p class="editorial-text">
+Troppo spesso l’educazione viene ridotta a un insieme di esercizi,
+comandi o risultati da esibire.
 
-TORNA ALLA HOME
+<br><br>
 
+Per noi non funziona così.
+
+<br><br>
+
+Prima della prestazione viene il rapporto.
+Prima del controllo viene la comprensione.
+Prima della tecnica viene la capacità di leggere davvero il cane.
+
+<br><br>
+
+Un cane non è un robot.
+E una relazione reale non può esistere senza ascolto reciproco.
+</p>
+
+</section>
+
+<section class="section-image"
+style="background-image:url('educazione-editoriale.jpg');">
+
+<div class="image-content">
+
+<h2>
+IL RISPETTO<br>
+È RECIPROCO.
+</h2>
+
+<p>
+Il rispetto non è obbedienza cieca.
+
+<br><br>
+
+È comunicazione.
+È fiducia.
+È presenza.
+
+<br><br>
+
+Lo si dà quando lo si riceve.
+E sì, vale anche per i cani.
+</p>
+
+</div>
+
+</section>
+
+<section class="quote-block">
+
+<h2>
+“METICOLOSAMENTE
+<span>ADDESTRATO</span>,
+UN PROPRIETARIO
+PUÒ DIVENTARE
+UN VALIDO COMPAGNO
+PER IL SUO CANE.”
+</h2>
+
+</section>
+
+<section class="section section-dark">
+
+<h2 class="editorial-title">
+Presenza.
+</h2>
+
+<p class="editorial-text">
+La maggior parte dei problemi nasce quando smettiamo di esserci davvero.
+
+<br><br>
+
+L’educazione non è fatta solo durante la lezione.
+Succede ogni giorno.
+In casa.
+Fuori.
+Nel silenzio.
+Nelle scelte.
+Nella coerenza.
+
+<br><br>
+
+Non cerchiamo perfezione.
+Cerchiamo equilibrio.
+</p>
+
+</section>
+
+<section class="section-image"
+style="background-image:url('educazione-finale.jpg');">
+
+<div class="image-content">
+
+<h2>
+NON ABBIAMO
+BISOGNO DI
+TRASFORMARLI
+IN ESSERI UMANI.
+</h2>
+
+<p>
+Li comprendiamo per ciò che sono.
+
+<br><br>
+
+E proprio per questo scegliamo di rispettarli davvero.
+</p>
+
+</div>
+
+</section>
+
+<section class="contacts">
+
+<h2>
+Contatti
+</h2>
+
+<div class="contacts-sub">
+Per collaborazioni, educazione, working dogs,
+ricerca e soccorso o progetto DWD.
+</div>
+
+<div class="contact-links">
+
+<a href="#">
+WHATSAPP
 </a>
 
-</section>
+<a href="#">
+INSTAGRAM
+</a>
 
-<!-- FOOTER -->
+<a href="#">
+FACEBOOK
+</a>
+
+<a href="mailto:tuamail@example.com">
+MAIL
+</a>
+
+</div>
+
+</section>
 
 <footer>
 
-<h3>
-ATZ
-</h3>
+<img src="runa-incisa.png"
+class="footer-rune"
+alt="ATZ Rune">
 
-<p>
-EDUCAZIONE / RIEDUCAZIONE
-</p>
+<div class="footer-title">
+ATZ
+</div>
+
+<div class="footer-sub">
+WORKING DOGS CULTURE
+</div>
 
 </footer>
 
 </body>
-
 </html>
