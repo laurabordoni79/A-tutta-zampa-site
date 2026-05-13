@@ -34,6 +34,10 @@ max-width:100%;
 display:block;
 }
 
+/* =========================================
+HERO
+========================================= */
+
 .hero{
 
 position:relative;
@@ -42,8 +46,8 @@ min-height:100vh;
 
 background:
 linear-gradient(
-rgba(0,0,0,0.68),
-rgba(0,0,0,0.94)
+rgba(0,0,0,0.65),
+rgba(0,0,0,0.92)
 ),
 url('images/educazione/file_0000000028b471f5979dd9543db3a679.png');
 
@@ -66,7 +70,7 @@ left:0;
 bottom:0;
 
 width:100%;
-height:240px;
+height:220px;
 
 background:
 linear-gradient(
@@ -163,65 +167,56 @@ color:#d2d2d2;
 }
 
 /* =========================================
-EDITORIAL SECTION
+FULL IMAGE
 ========================================= */
 
-.editorial-image{
+.full-image{
 
-position:relative;
-
-min-height:100vh;
+width:100%;
+height:100vh;
 
 background-size:contain;
 background-repeat:no-repeat;
 background-position:center;
 
-display:flex;
-align-items:flex-end;
+background-color:#000;
 }
 
-.editorial-image::before{
+/* =========================================
+MANIFESTO
+========================================= */
 
-content:'';
+.manifesto{
 
-position:absolute;
-inset:0;
+padding:180px 10%;
 
-background:
-linear-gradient(
-rgba(0,0,0,0.18),
-rgba(0,0,0,0.86)
-);
+background:#050505;
 }
 
-.editorial-content{
+.manifesto h2{
 
-position:relative;
-z-index:2;
-
-padding:100px 10%;
-
-max-width:950px;
-}
-
-.editorial-content h2{
-
-font-size:5.4rem;
+font-size:6rem;
 line-height:0.95;
 
 text-transform:uppercase;
 
-margin-bottom:34px;
+margin-bottom:40px;
+
+max-width:1000px;
 }
 
-.editorial-content p{
+.manifesto span{
+color:#d9c2a3;
+}
+
+.manifesto p{
 
 font-size:1.45rem;
 line-height:1.8;
 
 font-weight:300;
 
-color:#d5d5d5;
+color:#d0d0d0;
 
 max-width:760px;
 }
@@ -234,7 +229,7 @@ QUOTE
 
 padding:180px 10%;
 
-background:#050505;
+background:#000;
 
 text-align:center;
 }
@@ -386,15 +381,19 @@ font-size:4.2rem;
 font-size:1.15rem;
 }
 
-.editorial-content{
-padding:80px 8%;
+.full-image{
+height:75vh;
 }
 
-.editorial-content h2{
-font-size:3.2rem;
+.manifesto{
+padding:120px 8%;
 }
 
-.editorial-content p{
+.manifesto h2{
+font-size:3.4rem;
+}
+
+.manifesto p{
 font-size:1.15rem;
 }
 
@@ -403,7 +402,7 @@ padding:120px 8%;
 }
 
 .quote-section h2{
-font-size:3.4rem;
+font-size:3.3rem;
 }
 
 .contacts{
@@ -477,18 +476,22 @@ di leggere davvero il cane.
 
 </section>
 
-<!-- RESPECT -->
+<!-- IMAGE -->
 
-<section class="editorial-image"
+<section class="full-image"
 
 style="background-image:url('images/educazione/file_0000000047c471f68943d320d5d2b44a.png');">
 
-<div class="editorial-content">
+</section>
+
+<!-- MANIFESTO -->
+
+<section class="manifesto">
 
 <h2>
 
 IL RISPETTO<br>
-È RECIPROCO.
+È <span>RECIPROCO.</span>
 
 </h2>
 
@@ -503,17 +506,19 @@ vale anche per i cani.
 
 </p>
 
-</div>
-
 </section>
 
-<!-- STREET -->
+<!-- IMAGE -->
 
-<section class="editorial-image"
+<section class="full-image"
 
 style="background-image:url('images/educazione/file_00000000cd98722fa48c03e1a0489b6c.png');">
 
-<div class="editorial-content">
+</section>
+
+<!-- MANIFESTO -->
+
+<section class="manifesto">
 
 <h2>
 
@@ -533,8 +538,6 @@ Educazione non significa vivere sospesi dal mondo.
 Significa imparare a starci dentro insieme.
 
 </p>
-
-</div>
 
 </section>
 
