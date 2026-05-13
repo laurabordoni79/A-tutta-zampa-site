@@ -8,9 +8,14 @@
 
 <title>ATZ | Educazione e Rieducazione</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
+
+/* RESET */
 
 *{
 margin:0;
@@ -24,8 +29,8 @@ scroll-behavior:smooth;
 
 body{
 background:#000;
-font-family:'Oswald',sans-serif;
-color:white;
+color:#fff;
+font-family:'Inter',sans-serif;
 overflow-x:hidden;
 }
 
@@ -34,46 +39,40 @@ max-width:100%;
 display:block;
 }
 
-/* =========================================
-HOME BUTTON
-========================================= */
+/* HOME BUTTON */
 
 .home-btn{
 
 position:fixed;
 
-top:24px;
-right:24px;
+top:40px;
+right:40px;
 
 z-index:999;
 
+padding:18px 28px;
+
+border:1px solid rgba(255,255,255,0.2);
+
 text-decoration:none;
-
-color:white;
-
-border:1px solid rgba(255,255,255,0.18);
-
-padding:12px 18px;
+color:#fff;
 
 font-size:0.8rem;
-letter-spacing:3px;
+letter-spacing:4px;
+text-transform:uppercase;
 
+background:rgba(0,0,0,0.25);
 backdrop-filter:blur(6px);
-
-background:rgba(0,0,0,0.35);
 
 transition:0.3s;
 }
 
 .home-btn:hover{
-
-background:white;
-color:black;
+background:#fff;
+color:#000;
 }
 
-/* =========================================
-HERO
-========================================= */
+/* HERO */
 
 .hero{
 
@@ -84,68 +83,66 @@ min-height:100vh;
 background:
 linear-gradient(
 rgba(0,0,0,0.45),
-rgba(0,0,0,0.88)
+rgba(0,0,0,0.92)
 ),
 url('images/educazione/file_0000000028b471f5979dd9543db3a679.png');
 
 background-size:cover;
 background-position:78% center;
+background-repeat:no-repeat;
 
 display:flex;
 align-items:center;
 
 padding:120px 8%;
+
+overflow:hidden;
 }
 
+/* BLOCCA TESTO GIGANTE FANTASMA */
+
+.hero::before,
 .hero::after{
 
-content:'';
-
-position:absolute;
-left:0;
-bottom:0;
-
-width:100%;
-height:0px;
-
-background:
-linear-gradient(
-transparent,
-#000
-);
+display:none !important;
+content:none !important;
 
 }
+
+/* HERO CONTENT */
 
 .hero-content{
 
 position:relative;
 z-index:5;
 
-max-width:620px;
+max-width:650px;
 }
 
 .hero-small{
 
-font-size:1rem;
-letter-spacing:5px;
-
-color:#bdbdbd;
+font-size:0.9rem;
+letter-spacing:7px;
 
 text-transform:uppercase;
 
-margin-bottom:26px;
+color:#bdbdbd;
+
+margin-bottom:30px;
 }
 
 .hero-title{
 
-font-size:6rem;
-line-height:0.9;
+font-family:'Oswald',sans-serif;
+
+font-size:7rem;
+line-height:0.88;
 
 font-weight:700;
 
 text-transform:uppercase;
 
-margin-bottom:34px;
+margin-bottom:40px;
 }
 
 .hero-title span{
@@ -155,278 +152,201 @@ color:#d9c2a3;
 .hero-text{
 
 font-size:1.3rem;
-line-height:1.8;
-
-font-weight:300;
+line-height:1.9;
 
 color:#d0d0d0;
 
-max-width:560px;
+max-width:600px;
 }
 
-/* =========================================
-FULL IMAGE
-========================================= */
+/* FULL IMAGE */
 
 .full-image{
 
-height:100vh;
+height:90vh;
 
-background-image:url('images/educazione/file_0000000047c471f68943d320d5d2b44a.png');
+background:
+linear-gradient(
+rgba(0,0,0,0.25),
+rgba(0,0,0,0.65)
+),
+url('images/educazione/file_00000000f6c461f9bdb0c7f0d53c4d43.png');
 
 background-size:contain;
-background-repeat:no-repeat;
 background-position:center;
+background-repeat:no-repeat;
 
-background-color:#000;
+background-color:#050505;
 }
 
-/* =========================================
-MANIFESTO
-========================================= */
+/* EDITORIAL SECTION */
 
-.manifesto{
+.editorial{
 
-padding:170px 10%;
+padding:140px 10%;
 
 background:#050505;
 }
 
-.manifesto h2{
+.editorial-grid{
 
-font-size:5.5rem;
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:80px;
+
+align-items:center;
+}
+
+/* LEFT */
+
+.editorial-left h2{
+
+font-family:'Oswald',sans-serif;
+
+font-size:5rem;
+
 line-height:0.95;
 
 text-transform:uppercase;
 
-margin-bottom:40px;
-
-max-width:1000px;
+margin-bottom:30px;
 }
 
-.manifesto span{
+.editorial-left span{
 color:#d9c2a3;
 }
 
-.manifesto p{
+.editorial-left p{
 
-font-size:1.35rem;
-line-height:1.9;
+font-size:1.1rem;
 
-font-weight:300;
+line-height:2;
 
-color:#d0d0d0;
+color:#bdbdbd;
 
-max-width:760px;
+max-width:620px;
 }
 
-/* =========================================
-SPLIT SECTION
-========================================= */
+/* RIGHT */
 
-.split-section{
+.editorial-right img{
 
-display:grid;
-grid-template-columns:1fr 1fr;
+width:100%;
 
-min-height:100vh;
+height:auto;
+
+object-fit:contain;
+
+filter:brightness(0.82);
 }
 
-.split-text{
-
-display:flex;
-flex-direction:column;
-justify-content:center;
-
-padding:120px 12%;
-
-background:#080808;
-}
-
-.split-text h2{
-
-font-size:5rem;
-line-height:0.95;
-
-text-transform:uppercase;
-
-margin-bottom:34px;
-}
-
-.split-text p{
-
-font-size:1.3rem;
-line-height:1.8;
-
-font-weight:300;
-
-color:#d0d0d0;
-}
-
-.split-image{
-
-background-image:url('images/educazione/file_00000000cd98722fa48c03e1a0489b6c.png');
-
-background-size:cover;
-background-position:center;
-}
-
-/* =========================================
-FINAL QUOTE
-========================================= */
+/* QUOTE SECTION */
 
 .quote-section{
 
 padding:180px 10%;
 
-background:#000;
-
 text-align:center;
+
+background:#000;
 }
 
 .quote-section h2{
 
-font-size:5.5rem;
-line-height:0.95;
+font-family:'Oswald',sans-serif;
+
+font-size:5rem;
+
+line-height:1;
 
 text-transform:uppercase;
 
-max-width:1100px;
-
-margin:auto;
+font-weight:700;
 }
 
 .quote-section span{
 color:#d9c2a3;
 }
 
-/* =========================================
-FOOTER
-========================================= */
+/* FOOTER */
 
 footer{
 
-padding:110px 20px;
+padding:120px 20px;
 
 text-align:center;
 
-background:#000;
+background:#050505;
 }
 
 .footer-rune{
 
-width:70px;
+width:80px;
 
-margin:auto auto 24px;
+margin:0 auto 30px;
 
-opacity:0.88;
+opacity:0.9;
 }
 
 .footer-title{
 
-font-size:2.5rem;
+font-family:'Oswald',sans-serif;
+
+font-size:2rem;
 
 letter-spacing:6px;
+
+text-transform:uppercase;
 
 margin-bottom:16px;
 }
 
 .footer-sub{
 
-font-size:0.9rem;
-
-letter-spacing:5px;
-
 color:#777;
 
+letter-spacing:4px;
+
 text-transform:uppercase;
+
+font-size:0.75rem;
 }
 
-/* =========================================
-MOBILE
-========================================= */
+/* MOBILE */
 
 @media(max-width:900px){
 
-.home-btn{
-
-top:18px;
-right:18px;
-
-font-size:0.7rem;
-
-padding:10px 14px;
-}
-
 .hero{
 
-padding:120px 8% 90px;
+padding:120px 8% 80px;
 
 background-position:72% center;
 }
 
 .hero-title{
 
-font-size:4rem;
+font-size:4.5rem;
 }
 
 .hero-text{
 
-font-size:1.08rem;
+font-size:1.05rem;
+
+line-height:1.8;
 }
 
-.full-image{
-
-height:75vh;
-}
-
-.manifesto{
-
-padding:110px 8%;
-}
-
-.manifesto h2{
-
-font-size:3.2rem;
-}
-
-.manifesto p{
-
-font-size:1.12rem;
-}
-
-.split-section{
+.editorial-grid{
 
 grid-template-columns:1fr;
+
+gap:50px;
 }
 
-.split-text{
+.editorial-left h2{
 
-order:2;
-
-padding:90px 8%;
-}
-
-.split-text h2{
-
-font-size:3.2rem;
-}
-
-.split-text p{
-
-font-size:1.12rem;
-}
-
-.split-image{
-
-order:1;
-
-min-height:65vh;
-}
-
-.quote-section{
-
-padding:120px 8%;
+font-size:3.5rem;
 }
 
 .quote-section h2{
@@ -434,15 +354,12 @@ padding:120px 8%;
 font-size:3rem;
 }
 
-.footer-title{
+.home-btn{
 
-font-size:2rem;
-}
+top:20px;
+right:20px;
 
-.footer-sub{
-
-font-size:0.75rem;
-letter-spacing:3px;
+padding:14px 20px;
 }
 
 }
@@ -453,7 +370,7 @@ letter-spacing:3px;
 
 <body>
 
-<!-- HOME BUTTON -->
+<!-- HOME -->
 
 <a href="index.html" class="home-btn">
 HOME
@@ -494,62 +411,52 @@ di leggere davvero il cane.
 
 <section class="full-image"></section>
 
-<!-- MANIFESTO -->
+<!-- EDITORIAL -->
 
-<section class="manifesto">
+<section class="editorial">
+
+<div class="editorial-grid">
+
+<div class="editorial-left">
 
 <h2>
 
-IL RISPETTO<br>
-È <span>RECIPROCO.</span>
+L’EDUCAZIONE<br>
+NON È <span>CONTROLLO.</span>
 
 </h2>
 
 <p>
 
+Il rispetto è una cosa reciproca.
 Lo si dà quando lo si riceve.
+E sì, vale anche per i cani.
 
 <br><br>
 
-E sì,
-vale anche per i cani.
-
-</p>
-
-</section>
-
-<!-- SPLIT -->
-
-<section class="split-section">
-
-<div class="split-text">
-
-<h2>
-
-RIMETTI<br>
-A TERRA<br>
-QUEL CAZZO<br>
-DI CANE.
-
-</h2>
-
-<p>
-
-Educazione non significa vivere sospesi dal mondo.
+Ogni percorso reale nasce dalla fiducia,
+non dalla pressione.
 
 <br><br>
 
-Significa imparare a starci dentro insieme.
+Relazione prima di prestazione.
+Sempre.
 
 </p>
 
 </div>
 
-<div class="split-image"></div>
+<div class="editorial-right">
+
+<img src="images/educazione/file_000000009f7c61f8b2d9f2e445e61193.png">
+
+</div>
+
+</div>
 
 </section>
 
-<!-- FINAL QUOTE -->
+<!-- QUOTE -->
 
 <section class="quote-section">
 
@@ -568,20 +475,17 @@ RECIPROCA.
 
 <footer>
 
-<img src="runa-incisa.png"
-class="footer-rune"
-alt="ATZ Rune">
+<img src="runa-incisa.png" class="footer-rune">
 
 <div class="footer-title">
-ATZ
+ATZ WORKING DOG CULTURE
 </div>
 
 <div class="footer-sub">
-WORKING DOGS CULTURE
+DALL’ASFALTO AL FANGO / UN SOLO BRANCO
 </div>
 
 </footer>
 
 </body>
-
 </html>
