@@ -46,13 +46,13 @@ min-height:100vh;
 
 background:
 linear-gradient(
-rgba(0,0,0,0.65),
-rgba(0,0,0,0.92)
+rgba(0,0,0,0.50),
+rgba(0,0,0,0.90)
 ),
 url('images/educazione/file_0000000028b471f5979dd9543db3a679.png');
 
 background-size:cover;
-background-position:center;
+background-position:78% center;
 
 padding:40px 8%;
 
@@ -121,10 +121,12 @@ text-transform:uppercase;
 position:relative;
 z-index:5;
 
-max-width:950px;
+max-width:700px;
 
-margin-top:60px;
+margin-top:80px;
 margin-bottom:80px;
+
+text-align:left;
 }
 
 .hero-small{
@@ -156,9 +158,9 @@ color:#d9c2a3;
 
 .hero-text{
 
-max-width:760px;
+max-width:620px;
 
-font-size:1.45rem;
+font-size:1.35rem;
 line-height:1.8;
 
 font-weight:300;
@@ -219,6 +221,57 @@ font-weight:300;
 color:#d0d0d0;
 
 max-width:760px;
+}
+
+/* =========================================
+SPLIT SECTION
+========================================= */
+
+.split-section{
+
+display:grid;
+grid-template-columns:1fr 1fr;
+
+min-height:100vh;
+}
+
+.split-text{
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+
+padding:120px 12%;
+
+background:#080808;
+}
+
+.split-text h2{
+
+font-size:5rem;
+line-height:0.95;
+
+text-transform:uppercase;
+
+margin-bottom:35px;
+}
+
+.split-text p{
+
+font-size:1.35rem;
+line-height:1.8;
+
+font-weight:300;
+
+color:#d0d0d0;
+}
+
+.split-image{
+
+background-image:url('images/educazione/file_00000000cd98722fa48c03e1a0489b6c.png');
+
+background-size:cover;
+background-position:center;
 }
 
 /* =========================================
@@ -362,6 +415,7 @@ MOBILE
 
 .hero{
 padding:30px 7%;
+background-position:72% center;
 }
 
 .top-right{
@@ -371,6 +425,7 @@ letter-spacing:2px;
 
 .hero-content{
 margin-top:40px;
+max-width:100%;
 }
 
 .hero-title{
@@ -378,7 +433,7 @@ font-size:4.2rem;
 }
 
 .hero-text{
-font-size:1.15rem;
+font-size:1.1rem;
 }
 
 .full-image{
@@ -397,12 +452,34 @@ font-size:3.4rem;
 font-size:1.15rem;
 }
 
+.split-section{
+grid-template-columns:1fr;
+}
+
+.split-text{
+padding:90px 8%;
+order:2;
+}
+
+.split-text h2{
+font-size:3.2rem;
+}
+
+.split-text p{
+font-size:1.15rem;
+}
+
+.split-image{
+min-height:65vh;
+order:1;
+}
+
 .quote-section{
 padding:120px 8%;
 }
 
 .quote-section h2{
-font-size:3.3rem;
+font-size:3rem;
 }
 
 .contacts{
@@ -476,7 +553,7 @@ di leggere davvero il cane.
 
 </section>
 
-<!-- IMAGE -->
+<!-- FULL IMAGE -->
 
 <section class="full-image"
 
@@ -508,17 +585,11 @@ vale anche per i cani.
 
 </section>
 
-<!-- IMAGE -->
+<!-- SPLIT -->
 
-<section class="full-image"
+<section class="split-section">
 
-style="background-image:url('images/educazione/file_00000000cd98722fa48c03e1a0489b6c.png');">
-
-</section>
-
-<!-- MANIFESTO -->
-
-<section class="manifesto">
+<div class="split-text">
 
 <h2>
 
@@ -538,6 +609,10 @@ Educazione non significa vivere sospesi dal mondo.
 Significa imparare a starci dentro insieme.
 
 </p>
+
+</div>
+
+<div class="split-image"></div>
 
 </section>
 
