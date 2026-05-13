@@ -29,8 +29,27 @@ color:white;
 overflow-x:hidden;
 }
 
+img{
+max-width:100%;
+display:block;
+}
+
 /* =========================================
-GLOBAL SECTIONS
+PALETTE
+========================================= */
+
+:root{
+
+--accent:
+#bfa37a;
+
+--accent-soft:
+#d3c0a1;
+
+}
+
+/* =========================================
+GLOBAL
 ========================================= */
 
 section{
@@ -38,6 +57,19 @@ section{
 position:relative;
 
 width:100%;
+
+overflow:hidden;
+}
+
+/* =========================================
+HERO
+========================================= */
+
+.hero{
+
+position:relative;
+
+min-height:145vh;
 
 display:flex;
 flex-direction:column;
@@ -48,65 +80,44 @@ text-align:center;
 
 padding:140px 8%;
 
-overflow:hidden;
-}
-
-.section-bg{
-
-background-size:contain;
-background-repeat:no-repeat;
-background-position:center;
-
-background-color:#000;
-}
-
-/* =========================================
-OVERLAY
-========================================= */
-
-.dark-overlay::before{
-
-content:'';
-
-position:absolute;
-inset:0;
-
 background:
 linear-gradient(
 to bottom,
-rgba(0,0,0,0.45),
-rgba(0,0,0,0.55)
-);
-
-z-index:1;
-}
-
-section > *{
-
-position:relative;
-z-index:2;
-}
-
-/* =========================================
-HERO
-========================================= */
-
-.hero{
-
-min-height:150vh;
-
-background:
-linear-gradient(
-to bottom,
-rgba(0,0,0,0.35),
+rgba(0,0,0,0.18),
 rgba(0,0,0,0.55)
 ),
+
 url('images/norse/file_0000000015f4720aaf3b8898d4e69bb7.png');
 
 background-size:contain;
 background-repeat:no-repeat;
-background-position:center;
+background-position:center 46%;
+
 background-color:#000;
+}
+
+.hero::after{
+
+content:'';
+
+position:absolute;
+left:0;
+bottom:0;
+
+width:100%;
+height:220px;
+
+background:
+linear-gradient(
+transparent,
+#000
+);
+
+}
+
+.hero > *{
+position:relative;
+z-index:2;
 }
 
 /* =========================================
@@ -124,12 +135,12 @@ margin-bottom:70px;
 
 .logo-rune{
 
-width:55px;
+width:50px;
 
-opacity:0.22;
+opacity:0.18;
 
 filter:
-drop-shadow(0 0 12px rgba(255,255,255,0.14));
+drop-shadow(0 0 12px rgba(255,255,255,0.10));
 }
 
 .logo-text{
@@ -147,11 +158,11 @@ TITLE
 
 font-size:1rem;
 
-letter-spacing:5px;
+letter-spacing:6px;
 
-color:#8d1c2f;
+color:var(--accent);
 
-margin-bottom:25px;
+margin-bottom:26px;
 }
 
 .hero h1{
@@ -162,18 +173,18 @@ line-height:0.92;
 
 text-transform:uppercase;
 
-margin-bottom:30px;
+margin-bottom:34px;
 }
 
 .hero p{
 
-font-size:1.5rem;
+font-size:1.45rem;
 
 font-weight:300;
 
-line-height:1.7;
+line-height:1.9;
 
-max-width:900px;
+max-width:950px;
 
 color:#d2d2d2;
 }
@@ -184,27 +195,59 @@ MANIFESTO
 
 .manifesto{
 
+position:relative;
+
 min-height:120vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+
+padding:160px 8%;
 
 background:
 linear-gradient(
 to bottom,
-rgba(0,0,0,0.45),
-rgba(0,0,0,0.65)
+rgba(0,0,0,0.35),
+rgba(0,0,0,0.62)
 ),
 url('images/norse/file_000000002df47243847168addb90b085.png');
 
 background-size:contain;
 background-repeat:no-repeat;
 background-position:center;
+
 background-color:#050505;
+}
+
+.manifesto::before{
+
+content:'';
+
+position:absolute;
+inset:0;
+
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,0.18),
+rgba(0,0,0,0.38)
+);
+
+}
+
+.manifesto > *{
+position:relative;
+z-index:2;
 }
 
 .manifesto h2{
 
 font-size:4.5rem;
 
-line-height:1.1;
+line-height:1.05;
 
 max-width:1100px;
 
@@ -213,67 +256,69 @@ text-transform:uppercase;
 
 .highlight{
 
-color:#8d1c2f;
+color:var(--accent-soft);
 
 text-shadow:
-0 0 18px rgba(141,28,47,0.28);
+0 0 18px rgba(191,163,122,0.10);
 }
 
 /* =========================================
-EDITORIAL
+EDITORIAL SPLIT
 ========================================= */
 
-.editorial{
+.editorial-section{
 
-min-height:120vh;
+display:grid;
+grid-template-columns:1fr 1fr;
 
-background:
-linear-gradient(
-to bottom,
-rgba(0,0,0,0.40),
-rgba(0,0,0,0.72)
-),
+min-height:100vh;
+
+background:#000;
+}
+
+.editorial-image{
+
+min-height:100vh;
+
+background-image:
 url('images/norse/file_000000003a5c71f4b1e77fdd2b2cc5b6.png');
 
-background-size:contain;
 background-repeat:no-repeat;
 background-position:center;
+background-size:contain;
+
 background-color:#000;
 }
 
-.editorial-box{
+.editorial-text{
 
-max-width:950px;
+display:flex;
+flex-direction:column;
+justify-content:center;
 
-padding:60px 40px;
-
-background:
-rgba(0,0,0,0.35);
-
-backdrop-filter:blur(2px);
-
-border:
-1px solid rgba(255,255,255,0.08);
+padding:120px 10%;
 }
 
-.editorial h3{
+.editorial-text h3{
 
-font-size:3.5rem;
+font-size:4.3rem;
 
-line-height:1.1;
+line-height:1.02;
 
-margin-bottom:35px;
+margin-bottom:42px;
 
 text-transform:uppercase;
 }
 
-.editorial p{
+.editorial-text p{
 
-font-size:1.4rem;
+font-size:1.3rem;
 
-line-height:1.9;
+line-height:1.95;
 
 font-weight:300;
+
+max-width:700px;
 
 color:#d0d0d0;
 }
@@ -284,20 +329,31 @@ FINAL QUOTE
 
 .final-quote{
 
-padding:180px 8%;
+padding:220px 8%;
 
 background:#000;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+text-align:center;
 }
 
 .final-quote h2{
 
 font-size:4rem;
 
-line-height:1.25;
+line-height:1.28;
 
 font-weight:300;
 
 max-width:1000px;
+
+color:#f1ede6;
+
+text-shadow:
+0 0 18px rgba(191,163,122,0.06);
 }
 
 /* =========================================
@@ -320,20 +376,26 @@ text-decoration:none;
 
 color:white;
 
-border:2px solid #8d1c2f;
+border:1px solid rgba(191,163,122,0.45);
 
-padding:20px 40px;
+padding:22px 54px;
 
-font-size:1.2rem;
+font-size:1.05rem;
 
-letter-spacing:4px;
+letter-spacing:5px;
 
-transition:0.3s;
+transition:0.5s;
+
+background:transparent;
 }
 
 .home-button:hover{
 
-background:#8d1c2f;
+background:
+rgba(191,163,122,0.14);
+
+border:
+1px solid rgba(191,163,122,0.82);
 }
 
 /* =========================================
@@ -342,7 +404,7 @@ FOOTER
 
 footer{
 
-padding:80px 20px 100px;
+padding:90px 20px 110px;
 
 background:#000;
 
@@ -353,9 +415,9 @@ text-align:center;
 
 width:95px;
 
-margin-bottom:24px;
+margin:auto auto 24px;
 
-opacity:0.8;
+opacity:0.78;
 
 filter:
 drop-shadow(0 0 10px rgba(255,255,255,0.10));
@@ -392,6 +454,10 @@ MOBILE
 .hero{
 
 min-height:120vh;
+
+padding:100px 8%;
+
+background-position:center 44%;
 }
 
 .logo-wrapper{
@@ -403,7 +469,7 @@ margin-bottom:50px;
 
 .logo-rune{
 
-width:48px;
+width:42px;
 }
 
 .logo-text{
@@ -418,7 +484,12 @@ font-size:3.7rem;
 
 .hero p{
 
-font-size:1.15rem;
+font-size:1.12rem;
+}
+
+.manifesto{
+
+padding:120px 8%;
 }
 
 .manifesto h2{
@@ -426,24 +497,48 @@ font-size:1.15rem;
 font-size:2.8rem;
 }
 
-.editorial h3{
+.editorial-section{
 
-font-size:2.3rem;
+grid-template-columns:1fr;
 }
 
-.editorial p{
+.editorial-image{
+
+min-height:65vh;
+}
+
+.editorial-text{
+
+padding:90px 8%;
+}
+
+.editorial-text h3{
+
+font-size:2.8rem;
+}
+
+.editorial-text p{
 
 font-size:1.1rem;
 }
 
-.editorial-box{
+.final-quote{
 
-padding:40px 25px;
+padding:140px 8%;
 }
 
 .final-quote h2{
 
-font-size:2.5rem;
+font-size:2.3rem;
+}
+
+.home-button{
+
+padding:18px 40px;
+
+font-size:0.95rem;
+
+letter-spacing:4px;
 }
 
 .footer-logo{
@@ -500,6 +595,8 @@ SELVATICO<br>
 Una linea costruita per chi vive il cane
 come presenza, identità e spirito libero.
 
+<br><br>
+
 Non addomesticato.
 Non artificiale.
 Reale.
@@ -529,9 +626,11 @@ PRIGIONIERO.
 
 <!-- EDITORIAL -->
 
-<section class="editorial">
+<section class="editorial-section">
 
-<div class="editorial-box">
+<div class="editorial-image"></div>
+
+<div class="editorial-text">
 
 <h3>
 
@@ -544,12 +643,18 @@ COMBATTI PER I VIVI.
 
 Norse non nasce come estetica.
 
+<br><br>
+
 Nasce come identità.
+
+<br><br>
 
 Silenzio.
 Presenza.
 Fedeltà.
 Istinto.
+
+<br><br>
 
 Una linea dedicata a chi rifiuta
 la superficialità moderna
