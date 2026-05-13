@@ -76,7 +76,7 @@ display:flex;
 flex-direction:column;
 justify-content:center;
 
-padding:80px 9% 120px;
+padding:120px 9% 140px;
 }
 
 .hero::after{
@@ -113,7 +113,7 @@ left:0;
 
 width:100%;
 
-padding:26px 9%;
+padding:42px 9%;
 
 display:flex;
 justify-content:space-between;
@@ -126,29 +126,29 @@ z-index:10;
 
 display:flex;
 align-items:center;
-gap:16px;
+gap:18px;
 }
 
 .top-rune{
 
-width:42px;
+width:46px;
 
-opacity:0.9;
+opacity:0.92;
 }
 
 .top-logo{
 
-font-size:1.5rem;
+font-size:1.6rem;
 font-weight:700;
-letter-spacing:4px;
+letter-spacing:5px;
 }
 
 .top-right{
 
-font-size:0.95rem;
-letter-spacing:3px;
+font-size:0.9rem;
+letter-spacing:4px;
 
-color:#999;
+color:#8d8d8d;
 }
 
 /* =========================================
@@ -170,21 +170,21 @@ font-weight:300;
 
 letter-spacing:5px;
 
-color:#8c8c8c;
+color:#7f7f7f;
 
-margin-bottom:24px;
+margin-bottom:30px;
 }
 
 .manifesto-big{
 
-font-size:7rem;
-line-height:0.92;
+font-size:6.3rem;
+line-height:0.95;
 
 font-weight:700;
 
 text-transform:uppercase;
 
-margin-bottom:38px;
+margin-bottom:45px;
 }
 
 .highlight{
@@ -192,19 +192,19 @@ margin-bottom:38px;
 color:#ff2bd6;
 
 text-shadow:
-0 0 18px rgba(255,43,214,0.25);
+0 0 18px rgba(255,43,214,0.18);
 }
 
 .manifesto-sub{
 
 max-width:720px;
 
-font-size:1.4rem;
-line-height:1.7;
+font-size:1.35rem;
+line-height:1.8;
 
 font-weight:300;
 
-color:#d0d0d0;
+color:#cfcfcf;
 }
 
 /* =========================================
@@ -213,7 +213,7 @@ EDITORIAL LOGO
 
 .editorial-logo{
 
-margin-top:80px;
+margin-top:90px;
 
 display:flex;
 justify-content:flex-start;
@@ -231,7 +231,6 @@ opacity:0.82;
 filter:
 grayscale(100%)
 brightness(1.05);
-
 }
 
 /* =========================================
@@ -243,7 +242,7 @@ SECTION NAV
 position:relative;
 z-index:2;
 
-margin-top:90px;
+margin-top:100px;
 
 display:grid;
 
@@ -255,27 +254,25 @@ gap:18px;
 
 .nav-btn{
 
-border:1px solid rgba(255,255,255,0.10);
+border:1px solid rgba(255,255,255,0.08);
 
-padding:26px 26px;
+padding:28px;
 
 background:
 rgba(255,255,255,0.02);
-
-backdrop-filter:blur(2px);
 
 transition:0.35s;
 }
 
 .nav-btn:hover{
 
-transform:translateY(-3px);
+transform:translateY(-2px);
 
 background:
-rgba(255,255,255,0.05);
+rgba(255,255,255,0.04);
 
 border:
-1px solid rgba(255,255,255,0.18);
+1px solid rgba(255,255,255,0.16);
 }
 
 .nav-title{
@@ -288,12 +285,12 @@ margin-bottom:10px;
 
 .nav-sub{
 
-font-size:0.95rem;
+font-size:0.92rem;
 letter-spacing:2px;
 
 color:#8f8f8f;
 
-line-height:1.6;
+line-height:1.7;
 }
 
 .norse-full{
@@ -309,40 +306,40 @@ EDITORIAL SECTIONS
 
 .editorial{
 
-padding:180px 10%;
+padding:200px 10%;
 }
 
 .editorial-inner{
 
-max-width:950px;
+max-width:960px;
 }
 
 .editorial-label{
 
-font-size:0.95rem;
+font-size:0.9rem;
 
 letter-spacing:5px;
 
-color:#777;
+color:#6f6f6f;
 
-margin-bottom:20px;
+margin-bottom:24px;
 }
 
 .editorial h2{
 
-font-size:4.8rem;
+font-size:4.7rem;
 
 line-height:1;
 
-margin-bottom:40px;
+margin-bottom:45px;
 
 text-transform:uppercase;
 }
 
 .editorial p{
 
-font-size:1.5rem;
-line-height:1.8;
+font-size:1.45rem;
+line-height:1.9;
 
 font-weight:300;
 
@@ -362,7 +359,7 @@ color:#d9c2a3;
 }
 
 .workingdogs{
-background:#060606;
+background:#050505;
 }
 
 .workingdogs h2{
@@ -378,7 +375,7 @@ color:#ff7a00;
 }
 
 .dwd{
-background:#0c0811;
+background:#0b0810;
 }
 
 .dwd h2{
@@ -399,14 +396,14 @@ CONTACTS
 
 .contacts{
 
-padding:140px 10%;
+padding:170px 10%;
 
 background:#000;
 }
 
 .contacts-title{
 
-font-size:4rem;
+font-size:4.5rem;
 
 line-height:1;
 
@@ -419,39 +416,43 @@ text-transform:uppercase;
 
 font-size:1.2rem;
 
-line-height:1.7;
+line-height:1.8;
 
-color:#9d9d9d;
+color:#8f8f8f;
 
-margin-bottom:60px;
+margin-bottom:70px;
 
-max-width:700px;
+max-width:720px;
 }
 
-.contact-grid{
+.contact-list{
 
 display:flex;
-flex-wrap:wrap;
+flex-direction:column;
 
-gap:18px;
+gap:26px;
 }
 
-.contact-btn{
+.contact-link{
 
-border:1px solid rgba(255,255,255,0.14);
+font-size:1.6rem;
 
-padding:20px 30px;
-
-font-size:1rem;
 letter-spacing:3px;
+
+padding-bottom:10px;
+
+border-bottom:
+1px solid rgba(255,255,255,0.10);
 
 transition:0.3s;
 }
 
-.contact-btn:hover{
+.contact-link:hover{
 
-background:white;
-color:black;
+padding-left:10px;
+
+border-bottom:
+1px solid rgba(255,255,255,0.28);
 }
 
 /* =========================================
@@ -460,12 +461,12 @@ FOOTER
 
 footer{
 
-padding:140px 10% 120px;
+padding:180px 10% 140px;
 
 background:#000;
 
 border-top:
-1px solid rgba(255,255,255,0.06);
+1px solid rgba(255,255,255,0.05);
 }
 
 .footer-inner{
@@ -477,20 +478,20 @@ max-width:1100px;
 
 width:120px;
 
-margin-bottom:40px;
+margin-bottom:55px;
 
 opacity:0.92;
 }
 
 .footer-big{
 
-font-size:5rem;
+font-size:5.5rem;
 
-line-height:0.95;
+line-height:1;
 
 text-transform:uppercase;
 
-margin-bottom:30px;
+margin-bottom:45px;
 }
 
 .footer-small{
@@ -499,20 +500,21 @@ font-size:1rem;
 
 letter-spacing:5px;
 
-color:#777;
+color:#6f6f6f;
 
-margin-bottom:50px;
+margin-bottom:60px;
 }
 
 .footer-cta{
 
 display:inline-block;
 
-border:1px solid rgba(255,255,255,0.18);
+border:
+1px solid rgba(255,255,255,0.14);
 
-padding:18px 34px;
+padding:20px 36px;
 
-font-size:1rem;
+font-size:0.95rem;
 letter-spacing:4px;
 
 transition:0.3s;
@@ -533,12 +535,12 @@ MOBILE
 .hero{
 
 padding:
-120px 8% 100px;
+140px 8% 120px;
 }
 
 .topbar{
 
-padding:24px 8%;
+padding:34px 8%;
 }
 
 .top-right{
@@ -546,19 +548,24 @@ padding:24px 8%;
 display:none;
 }
 
+.top-rune{
+
+width:42px;
+}
+
 .manifesto-big{
 
-font-size:4rem;
+font-size:3.6rem;
 }
 
 .manifesto-sub{
 
-font-size:1.1rem;
+font-size:1.08rem;
 }
 
 .editorial-logo{
 
-margin-top:60px;
+margin-top:70px;
 }
 
 .editorial-logo img{
@@ -570,7 +577,7 @@ width:170px;
 
 grid-template-columns:1fr;
 
-margin-top:60px;
+margin-top:70px;
 }
 
 .norse-full{
@@ -587,7 +594,7 @@ font-size:1.5rem;
 
 .editorial{
 
-padding:110px 8%;
+padding:120px 8%;
 }
 
 .editorial h2{
@@ -602,32 +609,29 @@ font-size:1.2rem;
 
 .contacts{
 
-padding:100px 8%;
+padding:120px 8%;
 }
 
 .contacts-title{
 
-font-size:3rem;
+font-size:3.2rem;
 }
 
-.contact-grid{
+.contact-link{
 
-flex-direction:column;
-}
-
-.contact-btn{
-
-text-align:center;
+font-size:1.3rem;
 }
 
 footer{
 
-padding:100px 8% 90px;
+padding:120px 8% 110px;
 }
 
 .footer-big{
 
-font-size:3rem;
+font-size:3.2rem;
+
+line-height:1.05;
 }
 
 .footer-rune{
@@ -932,21 +936,26 @@ o progetto DWD.
 
 </div>
 
-<div class="contact-grid">
+<div class="contact-list">
 
 <a href="#"
-class="contact-btn">
+class="contact-link">
 WHATSAPP
 </a>
 
-<a href="mailto:tuamail@example.com"
-class="contact-btn">
-MAIL
+<a href="#"
+class="contact-link">
+INSTAGRAM
 </a>
 
 <a href="#"
-class="contact-btn">
-INSTAGRAM
+class="contact-link">
+FACEBOOK
+</a>
+
+<a href="mailto:tuamail@example.com"
+class="contact-link">
+MAIL
 </a>
 
 </div>
@@ -966,13 +975,14 @@ alt="ATZ Rune">
 <div class="footer-big">
 
 DALL’ASFALTO<br>
-AL FANGO.<br>
+AL FANGO.<br><br>
+
 UN SOLO BRANCO.
 
 </div>
 
 <div class="footer-small">
-ATZ WORKING DOGS CULTURE
+ATZ WORKING DOG CULTURE
 </div>
 
 <a href="#"
