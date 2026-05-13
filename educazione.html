@@ -38,31 +38,46 @@ display:block;
 HOME BUTTON
 ========================================= */
 
-.home-btn{
+.home-button-wrap{
 
-position:fixed;
+padding:80px 20px 120px;
 
-top:24px;
-right:24px;
+display:flex;
+justify-content:center;
 
-z-index:999;
+background:#000;
+}
+
+.home-button{
 
 text-decoration:none;
 
-color:white;
+color:#f2eadf;
 
-border:1px solid rgba(255,255,255,0.18);
+border:2px solid #b89b72;
 
-padding:12px 18px;
+padding:20px 44px;
 
-font-size:0.8rem;
-letter-spacing:3px;
+font-size:1.15rem;
 
-backdrop-filter:blur(6px);
+letter-spacing:4px;
 
-background:rgba(0,0,0,0.35);
+text-transform:uppercase;
 
-transition:0.3s;
+transition:0.45s;
+
+background:
+rgba(0,0,0,0.25);
+}
+
+.home-button:hover{
+
+background:#b89b72;
+
+color:#000;
+
+box-shadow:
+0 0 22px rgba(184,155,114,0.28);
 }
 
 .home-btn:hover{
@@ -455,10 +470,6 @@ letter-spacing:3px;
 
 <!-- HOME BUTTON -->
 
-<a href="index.html" class="home-btn">
-HOME
-</a>
-
 <!-- HERO -->
 
 <section class="hero">
@@ -563,6 +574,16 @@ RECIPROCA.
 </h2>
 
 </section>
+  <div class="home-button-wrap">
+
+<a href="index.html"
+class="home-button">
+
+TORNA ALLA HOME
+
+</a>
+
+</div>
 
 <!-- FOOTER -->
 
