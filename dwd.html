@@ -41,13 +41,10 @@ PALETTE
 :root{
 
 --accent:
-#b78ac8;
+#b58acb;
 
 --accent-soft:
-#d6b6e2;
-
---overlay:
-rgba(0,0,0,0.72);
+#d9c0e5;
 
 }
 
@@ -68,11 +65,13 @@ align-items:center;
 
 padding:120px 8%;
 
+text-align:center;
+
 background:
 linear-gradient(
 to bottom,
-rgba(0,0,0,0.58),
-rgba(0,0,0,0.78)
+rgba(0,0,0,0.48),
+rgba(0,0,0,0.76)
 ),
 
 url('images/dwd/dwd-banner.jpg');
@@ -82,8 +81,6 @@ background-position:center;
 background-size:contain;
 
 background-color:#000;
-
-text-align:center;
 }
 
 .hero-section::after{
@@ -111,6 +108,38 @@ z-index:2;
 }
 
 /* =========================================
+LOGO
+========================================= */
+
+.logo-wrapper{
+
+display:flex;
+align-items:center;
+gap:18px;
+
+margin-bottom:70px;
+}
+
+.logo-rune{
+
+width:42px;
+
+opacity:0.14;
+
+filter:
+drop-shadow(0 0 10px rgba(255,255,255,0.08));
+}
+
+.logo-text{
+
+font-size:3.6rem;
+
+font-weight:700;
+
+letter-spacing:4px;
+}
+
+/* =========================================
 TEXT
 ========================================= */
 
@@ -129,7 +158,7 @@ margin-bottom:28px;
 
 font-size:6rem;
 
-line-height:0.95;
+line-height:0.94;
 
 text-transform:uppercase;
 
@@ -138,28 +167,70 @@ margin-bottom:40px;
 
 .section-text{
 
-font-size:1.45rem;
+font-size:1.4rem;
 
 font-weight:300;
 
 line-height:1.9;
 
-max-width:1000px;
+max-width:950px;
 
 color:#d7d7d7;
 }
 
 /* =========================================
-EDITORIAL QUOTE
+MANIFESTO
 ========================================= */
 
-.editorial-quote-section{
+.manifesto-section{
 
-padding:220px 8%;
+position:relative;
 
-background:#050505;
+min-height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+padding:140px 8%;
 
 text-align:center;
+
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,0.60),
+rgba(0,0,0,0.80)
+),
+
+url('images/dwd/file_00000000833471f4be137aecf213eadf.png');
+
+background-repeat:no-repeat;
+background-position:center;
+background-size:contain;
+
+background-color:#000;
+}
+
+.manifesto-section::before{
+
+content:'';
+
+position:absolute;
+inset:0;
+
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,0.30),
+rgba(0,0,0,0.55)
+);
+
+}
+
+.manifesto-section > *{
+position:relative;
+z-index:2;
 }
 
 .editorial-quote{
@@ -171,8 +242,6 @@ line-height:1.02;
 text-transform:uppercase;
 
 max-width:1200px;
-
-margin:auto;
 }
 
 .highlight{
@@ -180,7 +249,7 @@ margin:auto;
 color:var(--accent-soft);
 
 text-shadow:
-0 0 20px rgba(183,138,200,0.12);
+0 0 18px rgba(181,138,203,0.12);
 }
 
 /* =========================================
@@ -222,7 +291,7 @@ padding:120px 10%;
 
 .editorial-text .section-small{
 
-margin-bottom:22px;
+margin-bottom:24px;
 }
 
 .editorial-text h2{
@@ -238,13 +307,13 @@ margin-bottom:40px;
 
 .editorial-text p{
 
-font-size:1.35rem;
+font-size:1.3rem;
 
 line-height:1.9;
 
 font-weight:300;
 
-max-width:720px;
+max-width:700px;
 
 color:#d0d0d0;
 }
@@ -260,7 +329,7 @@ padding:220px 8%;
 background:
 linear-gradient(
 to bottom,
-rgba(0,0,0,0.92),
+rgba(0,0,0,0.94),
 rgba(0,0,0,1)
 );
 
@@ -278,6 +347,11 @@ line-height:1.35;
 max-width:1100px;
 
 margin:auto;
+
+color:#f1edf4;
+
+text-shadow:
+0 0 18px rgba(181,138,203,0.08);
 }
 
 /* =========================================
@@ -300,7 +374,7 @@ text-decoration:none;
 
 color:white;
 
-border:1px solid rgba(183,138,200,0.45);
+border:1px solid rgba(181,138,203,0.45);
 
 padding:22px 54px;
 
@@ -316,10 +390,10 @@ background:transparent;
 .home-button:hover{
 
 background:
-rgba(183,138,200,0.22);
+rgba(181,138,203,0.18);
 
 border:
-1px solid rgba(183,138,200,0.75);
+1px solid rgba(181,138,203,0.78);
 }
 
 /* =========================================
@@ -379,6 +453,21 @@ min-height:95vh;
 padding:90px 8%;
 }
 
+.logo-wrapper{
+
+margin-bottom:50px;
+}
+
+.logo-rune{
+
+width:36px;
+}
+
+.logo-text{
+
+font-size:2.5rem;
+}
+
 .section-title{
 
 font-size:3.5rem;
@@ -386,17 +475,17 @@ font-size:3.5rem;
 
 .section-text{
 
-font-size:1.15rem;
+font-size:1.12rem;
 }
 
-.editorial-quote-section{
+.manifesto-section{
 
-padding:140px 8%;
+padding:120px 8%;
 }
 
 .editorial-quote{
 
-font-size:2.8rem;
+font-size:2.7rem;
 }
 
 .editorial-section{
@@ -416,7 +505,7 @@ padding:90px 8%;
 
 .editorial-text h2{
 
-font-size:3.2rem;
+font-size:3.1rem;
 }
 
 .editorial-text p{
@@ -431,12 +520,12 @@ padding:140px 8%;
 
 .final-quote{
 
-font-size:2.3rem;
+font-size:2.2rem;
 }
 
 .home-button{
 
-padding:18px 40px;
+padding:18px 38px;
 
 font-size:0.95rem;
 
@@ -467,6 +556,18 @@ letter-spacing:4px;
 
 <section class="hero-section">
 
+<div class="logo-wrapper">
+
+<img src="runa-minimal.png"
+class="logo-rune"
+alt="ATZ Rune">
+
+<div class="logo-text">
+ATZ
+</div>
+
+</div>
+
 <div class="section-small">
 DWD / UNBROKEN DOGS
 </div>
@@ -496,7 +597,7 @@ Non è compatimento.
 
 <!-- MANIFESTO -->
 
-<section class="editorial-quote-section">
+<section class="manifesto-section">
 
 <h2 class="editorial-quote">
 
