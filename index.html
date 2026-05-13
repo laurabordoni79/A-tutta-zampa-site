@@ -22,11 +22,33 @@ padding:0;
 box-sizing:border-box;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 background:#000;
 font-family:'Oswald',sans-serif;
 color:white;
 overflow-x:hidden;
+}
+
+/* =========================================
+GLOBAL
+========================================= */
+
+section{
+position:relative;
+}
+
+a{
+text-decoration:none;
+color:white;
+}
+
+img{
+max-width:100%;
+display:block;
 }
 
 /* =========================================
@@ -42,10 +64,9 @@ min-height:100vh;
 background:
 linear-gradient(
 to bottom,
-rgba(0,0,0,0.72),
+rgba(0,0,0,0.60),
 rgba(0,0,0,0.96)
 ),
-
 url('HeroATZ.jpg');
 
 background-size:cover;
@@ -53,9 +74,9 @@ background-position:center;
 
 display:flex;
 flex-direction:column;
-align-items:center;
+justify-content:center;
 
-padding:40px 20px 90px;
+padding:80px 9% 120px;
 }
 
 .hero::after{
@@ -64,11 +85,11 @@ content:'';
 
 position:absolute;
 
-bottom:0;
 left:0;
+bottom:0;
 
 width:100%;
-height:260px;
+height:240px;
 
 background:
 linear-gradient(
@@ -80,35 +101,54 @@ transparent,
 }
 
 /* =========================================
-TOP LOGO
+TOP BAR
 ========================================= */
 
-.logo-wrapper{
+.topbar{
 
-position:relative;
-z-index:2;
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+
+padding:26px 9%;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+z-index:10;
+}
+
+.top-left{
 
 display:flex;
 align-items:center;
-gap:28px;
-
-margin-top:10px;
-margin-bottom:70px;
+gap:16px;
 }
 
-.logo-rune{
+.top-rune{
 
-width:95px;
+width:42px;
 
-filter:
-drop-shadow(0 0 14px rgba(255,255,255,0.22));
+opacity:0.9;
 }
 
-.logo-text{
+.top-logo{
 
-font-size:4rem;
+font-size:1.5rem;
 font-weight:700;
 letter-spacing:4px;
+}
+
+.top-right{
+
+font-size:0.95rem;
+letter-spacing:3px;
+
+color:#999;
 }
 
 /* =========================================
@@ -120,33 +160,31 @@ MANIFESTO
 position:relative;
 z-index:2;
 
-max-width:900px;
-
-text-align:left;
-
-margin-bottom:40px;
+max-width:1000px;
 }
 
 .manifesto-small{
 
-font-size:1.2rem;
+font-size:1rem;
 font-weight:300;
 
-letter-spacing:2px;
+letter-spacing:5px;
 
-color:#cccccc;
+color:#8c8c8c;
 
-margin-bottom:15px;
+margin-bottom:24px;
 }
 
 .manifesto-big{
 
-font-size:6rem;
-line-height:0.95;
+font-size:7rem;
+line-height:0.92;
 
 font-weight:700;
 
 text-transform:uppercase;
+
+margin-bottom:38px;
 }
 
 .highlight{
@@ -154,21 +192,19 @@ text-transform:uppercase;
 color:#ff2bd6;
 
 text-shadow:
-0 0 18px rgba(255,43,214,0.45);
+0 0 18px rgba(255,43,214,0.25);
 }
 
 .manifesto-sub{
 
-margin-top:30px;
+max-width:720px;
 
 font-size:1.4rem;
-line-height:1.6;
+line-height:1.7;
 
 font-weight:300;
 
 color:#d0d0d0;
-
-max-width:800px;
 }
 
 /* =========================================
@@ -177,217 +213,180 @@ EDITORIAL LOGO
 
 .editorial-logo{
 
-position:relative;
-z-index:2;
-
-width:100%;
+margin-top:80px;
 
 display:flex;
-justify-content:center;
-align-items:center;
+justify-content:flex-start;
 
-margin-top:10px;
-margin-bottom:60px;
+position:relative;
+z-index:2;
 }
 
 .editorial-logo img{
 
 width:240px;
-max-width:70vw;
 
-opacity:0.92;
+opacity:0.82;
 
 filter:
 grayscale(100%)
-brightness(1.05)
-drop-shadow(0 0 12px rgba(255,255,255,0.10));
+brightness(1.05);
+
 }
 
 /* =========================================
-SECTION BUTTONS
+SECTION NAV
 ========================================= */
 
-.sections{
+.section-nav{
 
 position:relative;
 z-index:2;
 
+margin-top:90px;
+
 display:grid;
 
 grid-template-columns:
-repeat(2, minmax(220px, 320px));
+repeat(2,minmax(260px,340px));
 
-gap:24px;
-
-margin-top:20px;
+gap:18px;
 }
 
-.section-btn{
+.nav-btn{
 
-text-decoration:none;
+border:1px solid rgba(255,255,255,0.10);
 
-color:white;
+padding:26px 26px;
 
-padding:28px 18px;
+background:
+rgba(255,255,255,0.02);
 
-text-align:center;
+backdrop-filter:blur(2px);
 
-font-size:2rem;
+transition:0.35s;
+}
+
+.nav-btn:hover{
+
+transform:translateY(-3px);
+
+background:
+rgba(255,255,255,0.05);
+
+border:
+1px solid rgba(255,255,255,0.18);
+}
+
+.nav-title{
+
+font-size:1.8rem;
 letter-spacing:2px;
-font-weight:500;
 
-background:rgba(0,0,0,0.45);
-
-backdrop-filter:blur(3px);
-
-transition:0.3s;
+margin-bottom:10px;
 }
 
-/* EDUCAZIONE */
+.nav-sub{
 
-.educazione-btn{
+font-size:0.95rem;
+letter-spacing:2px;
 
-border:4px solid #d9c2a3;
+color:#8f8f8f;
 
-box-shadow:
-0 0 18px rgba(217,194,163,0.15);
+line-height:1.6;
 }
 
-/* WORKING DOGS */
-
-.working-btn{
-
-border:4px solid #8d1c2f;
-
-box-shadow:
-0 0 18px rgba(141,28,47,0.18);
-}
-
-/* SOCCORSO */
-
-.soccorso-btn{
-
-border:4px solid #ff7a00;
-
-box-shadow:
-0 0 18px rgba(255,122,0,0.18);
-}
-
-/* DWD */
-
-.dwd-btn{
-
-border:4px solid #ff2bd6;
-
-box-shadow:
-0 0 18px rgba(255,43,214,0.18);
-}
-
-/* NORSE */
-
-.norse-btn{
-
-border:4px solid #d0d0d0;
-
-box-shadow:
-0 0 18px rgba(255,255,255,0.12);
-}
-
-.section-btn:hover{
-
-transform:translateY(-4px);
-}
-
-.norse-center{
+.norse-full{
 
 grid-column:1 / -1;
 
-justify-self:center;
-
-width:280px;
+max-width:340px;
 }
 
 /* =========================================
 EDITORIAL SECTIONS
 ========================================= */
 
-.editorial-section{
+.editorial{
 
-padding:140px 10%;
-
-border-top:
-1px solid rgba(255,255,255,0.05);
+padding:180px 10%;
 }
 
-.editorial-section h2{
+.editorial-inner{
 
-font-size:4rem;
+max-width:950px;
+}
 
-margin-bottom:30px;
+.editorial-label{
+
+font-size:0.95rem;
+
+letter-spacing:5px;
+
+color:#777;
+
+margin-bottom:20px;
+}
+
+.editorial h2{
+
+font-size:4.8rem;
+
+line-height:1;
+
+margin-bottom:40px;
 
 text-transform:uppercase;
 }
 
-.editorial-section p{
+.editorial p{
 
 font-size:1.5rem;
-
-line-height:1.6;
-
-max-width:900px;
+line-height:1.8;
 
 font-weight:300;
+
+color:#d1d1d1;
 }
 
-/* EDUCATION */
+/* =========================================
+SECTION COLORS
+========================================= */
 
 .educazione{
-
-background:#0f0d09;
+background:#0c0b09;
 }
 
 .educazione h2{
 color:#d9c2a3;
 }
 
-/* WORKING DOGS */
-
 .workingdogs{
-
-background:#070707;
+background:#060606;
 }
 
 .workingdogs h2{
 color:#8d1c2f;
 }
 
-/* SOCCORSO */
-
 .soccorso{
-
-background:#130d05;
+background:#100c06;
 }
 
 .soccorso h2{
 color:#ff7a00;
 }
 
-/* DWD */
-
 .dwd{
-
-background:#0d0812;
+background:#0c0811;
 }
 
 .dwd h2{
 color:#ff2bd6;
 }
 
-/* NORSE */
-
 .norse{
-
-background:#080808;
+background:#050505;
 }
 
 .norse h2{
@@ -400,37 +399,58 @@ CONTACTS
 
 .contacts{
 
-padding:90px 20px 110px;
-
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-
-gap:24px;
+padding:140px 10%;
 
 background:#000;
 }
 
+.contacts-title{
+
+font-size:4rem;
+
+line-height:1;
+
+margin-bottom:30px;
+
+text-transform:uppercase;
+}
+
+.contacts-sub{
+
+font-size:1.2rem;
+
+line-height:1.7;
+
+color:#9d9d9d;
+
+margin-bottom:60px;
+
+max-width:700px;
+}
+
+.contact-grid{
+
+display:flex;
+flex-wrap:wrap;
+
+gap:18px;
+}
+
 .contact-btn{
 
-text-decoration:none;
+border:1px solid rgba(255,255,255,0.14);
 
-color:white;
+padding:20px 30px;
 
-border:3px solid #ff2bd6;
-
-padding:18px 34px;
-
-font-size:1.5rem;
-letter-spacing:2px;
+font-size:1rem;
+letter-spacing:3px;
 
 transition:0.3s;
 }
 
 .contact-btn:hover{
 
-background:#ff2bd6;
-
+background:white;
 color:black;
 }
 
@@ -440,45 +460,68 @@ FOOTER
 
 footer{
 
-padding:70px 20px 90px;
-
-text-align:center;
+padding:140px 10% 120px;
 
 background:#000;
+
+border-top:
+1px solid rgba(255,255,255,0.06);
+}
+
+.footer-inner{
+
+max-width:1100px;
 }
 
 .footer-rune{
 
 width:120px;
 
-margin-bottom:26px;
+margin-bottom:40px;
 
-opacity:0.95;
-
-filter:
-drop-shadow(0 0 10px rgba(255,255,255,0.12));
+opacity:0.92;
 }
 
-.footer-logo{
+.footer-big{
 
-font-size:3rem;
+font-size:5rem;
 
-font-weight:700;
+line-height:0.95;
 
-letter-spacing:6px;
+text-transform:uppercase;
 
-margin-bottom:18px;
+margin-bottom:30px;
 }
 
-.footer-text{
+.footer-small{
 
 font-size:1rem;
 
-letter-spacing:10px;
+letter-spacing:5px;
 
-color:#888;
+color:#777;
 
-text-transform:uppercase;
+margin-bottom:50px;
+}
+
+.footer-cta{
+
+display:inline-block;
+
+border:1px solid rgba(255,255,255,0.18);
+
+padding:18px 34px;
+
+font-size:1rem;
+letter-spacing:4px;
+
+transition:0.3s;
+}
+
+.footer-cta:hover{
+
+background:white;
+color:black;
 }
 
 /* =========================================
@@ -487,38 +530,35 @@ MOBILE
 
 @media(max-width:900px){
 
-.logo-wrapper{
+.hero{
 
-gap:18px;
-
-margin-bottom:50px;
+padding:
+120px 8% 100px;
 }
 
-.logo-rune{
+.topbar{
 
-width:70px;
+padding:24px 8%;
 }
 
-.logo-text{
+.top-right{
 
-font-size:3rem;
-}
-
-.manifesto{
-
-text-align:center;
+display:none;
 }
 
 .manifesto-big{
 
-font-size:3.9rem;
+font-size:4rem;
 }
 
 .manifesto-sub{
 
-font-size:1.15rem;
+font-size:1.1rem;
+}
 
-text-align:center;
+.editorial-logo{
+
+margin-top:60px;
 }
 
 .editorial-logo img{
@@ -526,62 +566,73 @@ text-align:center;
 width:170px;
 }
 
-.sections{
+.section-nav{
 
 grid-template-columns:1fr;
 
-width:100%;
-max-width:650px;
+margin-top:60px;
 }
 
-.section-btn{
+.norse-full{
 
-font-size:1.7rem;
+grid-column:auto;
 
-padding:24px 16px;
+max-width:none;
 }
 
-.norse-center{
+.nav-title{
 
-width:100%;
+font-size:1.5rem;
 }
 
-.editorial-section{
+.editorial{
 
-padding:90px 8%;
+padding:110px 8%;
 }
 
-.editorial-section h2{
+.editorial h2{
 
-font-size:2.8rem;
+font-size:3rem;
 }
 
-.editorial-section p{
+.editorial p{
 
 font-size:1.2rem;
 }
 
+.contacts{
+
+padding:100px 8%;
+}
+
+.contacts-title{
+
+font-size:3rem;
+}
+
+.contact-grid{
+
+flex-direction:column;
+}
+
 .contact-btn{
 
-width:85%;
-
 text-align:center;
+}
+
+footer{
+
+padding:100px 8% 90px;
+}
+
+.footer-big{
+
+font-size:3rem;
 }
 
 .footer-rune{
 
 width:90px;
-}
-
-.footer-logo{
-
-font-size:2.2rem;
-}
-
-.footer-text{
-
-letter-spacing:5px;
-font-size:0.8rem;
 }
 
 }
@@ -596,14 +647,22 @@ font-size:0.8rem;
 
 <section class="hero">
 
-<div class="logo-wrapper">
+<div class="topbar">
+
+<div class="top-left">
 
 <img src="runa-minimal.png"
-class="logo-rune"
+class="top-rune"
 alt="ATZ Rune">
 
-<div class="logo-text">
+<div class="top-logo">
 ATZ
+</div>
+
+</div>
+
+<div class="top-right">
+WORKING DOGS CULTURE
 </div>
 
 </div>
@@ -624,8 +683,8 @@ DIVANO.<br>
 <span class="highlight">
 
 L'HO PRESO<br>
-COME COLLEGA DI<br>
-VITA.
+COME COLLEGA<br>
+DI VITA.
 
 </span>
 
@@ -640,8 +699,6 @@ Li comprendiamo per ciò che sono.
 
 </div>
 
-<!-- LOGO -->
-
 <div class="editorial-logo">
 
 <img src="logoATZ.jpg"
@@ -649,33 +706,72 @@ alt="ATZ Logo">
 
 </div>
 
-<!-- BUTTONS -->
-
-<div class="sections">
+<div class="section-nav">
 
 <a href="educazione.html"
-class="section-btn educazione-btn">
+class="nav-btn">
+
+<div class="nav-title">
 EDUCAZIONE
+</div>
+
+<div class="nav-sub">
+Relazione. Presenza. Responsabilità.
+</div>
+
 </a>
 
 <a href="working-dogs.html"
-class="section-btn working-btn">
+class="nav-btn">
+
+<div class="nav-title">
 WORKING DOGS
+</div>
+
+<div class="nav-sub">
+Il lavoro vero non ha bisogno di rumore.
+</div>
+
 </a>
 
 <a href="ricerca-soccorso.html"
-class="section-btn soccorso-btn">
+class="nav-btn">
+
+<div class="nav-title">
 RICERCA E SOCCORSO
+</div>
+
+<div class="nav-sub">
+Qui il cane non è uno strumento.
+</div>
+
 </a>
 
 <a href="dwd.html"
-class="section-btn dwd-btn">
+class="nav-btn">
+
+<div class="nav-title">
 UNBROKEN DOGS
+</div>
+
+<div class="nav-sub">
+Different. Not less.
+</div>
+
 </a>
 
 <a href="norse.html"
-class="section-btn norse-btn norse-center">
+class="nav-btn norse-full">
+
+<div class="nav-title">
 NORSE
+</div>
+
+<div class="nav-sub">
+Alcune cose non si spiegano.
+Si portano addosso.
+</div>
+
 </a>
 
 </div>
@@ -684,79 +780,159 @@ NORSE
 
 <!-- EDUCAZIONE -->
 
-<section class="editorial-section educazione">
+<section class="editorial educazione">
+
+<div class="editorial-inner">
+
+<div class="editorial-label">
+ATZ / EDUCAZIONE
+</div>
 
 <h2>
-Educazione e rieducazione
+L’educazione non è controllo.
+È comprensione reciproca.
 </h2>
 
 <p>
-“Il rispetto è una cosa reciproca.
-Lo si dà quando lo si riceve.”
+
+Educare un cane non significa spegnerlo.
+Significa imparare a comunicare davvero.
+Relazione prima di ego.
+Presenza prima di imposizione.
+
 </p>
+
+</div>
 
 </section>
 
 <!-- WORKING DOGS -->
 
-<section class="editorial-section workingdogs">
+<section class="editorial workingdogs">
+
+<div class="editorial-inner">
+
+<div class="editorial-label">
+ATZ / WORKING DOGS
+</div>
 
 <h2>
-Working Dogs
+Ogni esercizio costruisce comunicazione.
 </h2>
 
 <p>
-“Relazione prima di prestazione.”
+
+Il lavoro non serve a creare macchine.
+Serve a costruire fiducia, lucidità e stabilità sotto pressione.
+Un cane da lavoro non si domina.
+Si costruisce.
+
 </p>
+
+</div>
 
 </section>
 
 <!-- SOCCORSO -->
 
-<section class="editorial-section soccorso">
+<section class="editorial soccorso">
+
+<div class="editorial-inner">
+
+<div class="editorial-label">
+ATZ / RICERCA E SOCCORSO
+</div>
 
 <h2>
-Ricerca e soccorso
+Fidarsi davvero significa partire insieme.
 </h2>
 
 <p>
-“Si parte in due.
-Si torna in due.”
+
+Qui il cane non è uno strumento.
+È il compagno con cui entri nel caos.
+Ogni ricerca è una responsabilità condivisa.
+Ogni rientro è un ritorno in due.
+
 </p>
+
+</div>
 
 </section>
 
 <!-- DWD -->
 
-<section class="editorial-section dwd">
+<section class="editorial dwd">
+
+<div class="editorial-inner">
+
+<div class="editorial-label">
+ATZ / DWD
+</div>
 
 <h2>
-DWD / Unbroken Dogs
+Non serve pietà,
+servono possibilità.
 </h2>
 
 <p>
-“I limiti sono negli occhi di chi guarda.”
+
+DWD significa Dogs With Disabilities.
+Non raccontiamo cani spezzati.
+Raccontiamo cani che continuano ad andare avanti.
+Diversi non significa inferiori.
+
 </p>
+
+</div>
 
 </section>
 
 <!-- NORSE -->
 
-<section class="editorial-section norse">
+<section class="editorial norse">
+
+<div class="editorial-inner">
+
+<div class="editorial-label">
+ATZ / NORSE
+</div>
 
 <h2>
-Norse
+Ci sono simboli
+che non appartengono alla moda.
 </h2>
 
 <p>
-“Onora i morti ma combatti per i vivi.”
+
+Alcune cose non servono a essere spiegate.
+Servono a essere portate addosso.
+Norse nasce come identità,
+non come estetica.
+
 </p>
+
+</div>
 
 </section>
 
 <!-- CONTACTS -->
 
 <section class="contacts">
+
+<h2 class="contacts-title">
+Contatti
+</h2>
+
+<div class="contacts-sub">
+
+Per collaborazioni, educazione,
+working dogs, ricerca e soccorso
+o progetto DWD.
+
+</div>
+
+<div class="contact-grid">
 
 <a href="#"
 class="contact-btn">
@@ -773,10 +949,7 @@ class="contact-btn">
 INSTAGRAM
 </a>
 
-<a href="#"
-class="contact-btn">
-TIKTOK
-</a>
+</div>
 
 </section>
 
@@ -784,16 +957,29 @@ TIKTOK
 
 <footer>
 
+<div class="footer-inner">
+
 <img src="runa-incisa.png"
 class="footer-rune"
-alt="ATZ Rune Incisa">
+alt="ATZ Rune">
 
-<div class="footer-logo">
-ATZ
+<div class="footer-big">
+
+DALL’ASFALTO<br>
+AL FANGO.<br>
+UN SOLO BRANCO.
+
 </div>
 
-<div class="footer-text">
-WORKING DOGS CULTURE
+<div class="footer-small">
+ATZ WORKING DOGS CULTURE
+</div>
+
+<a href="#"
+class="footer-cta">
+ENTRA NEL BRANCO
+</a>
+
 </div>
 
 </footer>
