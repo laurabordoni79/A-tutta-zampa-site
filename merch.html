@@ -1,1 +1,577 @@
 
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ATZ Merch | Working Dogs Culture</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+RESET
+========================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#000;
+font-family:'Oswald',sans-serif;
+color:white;
+overflow-x:hidden;
+}
+
+/* =========================
+GLOBAL
+========================= */
+
+img{
+max-width:100%;
+display:block;
+}
+
+a{
+text-decoration:none;
+color:white;
+}
+
+section{
+position:relative;
+}
+
+/* =========================
+TOPBAR
+========================= */
+
+.topbar{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+
+padding:34px 8%;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+z-index:999;
+
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,0.88),
+rgba(0,0,0,0)
+);
+}
+
+.top-left{
+
+display:flex;
+align-items:center;
+gap:16px;
+}
+
+.top-rune{
+
+width:34px;
+
+opacity:0.95;
+}
+
+.top-logo{
+
+font-size:1.2rem;
+letter-spacing:6px;
+}
+
+.back-home{
+
+font-size:0.9rem;
+
+letter-spacing:4px;
+
+color:#8f8f8f;
+
+transition:0.3s;
+}
+
+.back-home:hover{
+
+color:white;
+}
+
+/* =========================
+HERO
+========================= */
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+align-items:center;
+
+padding:180px 8% 140px;
+
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,0.72),
+rgba(0,0,0,0.96)
+),
+url('HeroATZ.jpg');
+
+background-size:cover;
+background-position:center;
+}
+
+.hero-inner{
+
+max-width:950px;
+}
+
+.hero-small{
+
+font-size:1rem;
+
+letter-spacing:6px;
+
+color:#7a7a7a;
+
+margin-bottom:30px;
+}
+
+.hero-title{
+
+font-size:7rem;
+
+line-height:0.9;
+
+text-transform:uppercase;
+
+margin-bottom:40px;
+}
+
+.hero-sub{
+
+max-width:760px;
+
+font-size:1.4rem;
+line-height:1.8;
+
+font-weight:300;
+
+color:#cfcfcf;
+}
+
+/* =========================
+EDITORIAL INTRO
+========================= */
+
+.editorial{
+
+padding:180px 8%;
+}
+
+.editorial-inner{
+
+max-width:900px;
+}
+
+.editorial-label{
+
+font-size:0.9rem;
+
+letter-spacing:5px;
+
+color:#666;
+
+margin-bottom:24px;
+}
+
+.editorial-title{
+
+font-size:5rem;
+
+line-height:1;
+
+text-transform:uppercase;
+
+margin-bottom:40px;
+}
+
+.editorial-text{
+
+font-size:1.4rem;
+
+line-height:1.9;
+
+font-weight:300;
+
+color:#cfcfcf;
+}
+
+/* =========================
+COMING COLLECTIONS
+========================= */
+
+.collections{
+
+padding:40px 8% 180px;
+}
+
+.collection-grid{
+
+display:grid;
+
+grid-template-columns:1fr;
+
+gap:120px;
+}
+
+.collection-card img{
+
+width:100%;
+
+border:
+1px solid rgba(255,255,255,0.06);
+}
+
+.collection-info{
+
+margin-top:26px;
+}
+
+.collection-name{
+
+font-size:2.3rem;
+
+letter-spacing:2px;
+
+margin-bottom:12px;
+}
+
+.collection-sub{
+
+font-size:1rem;
+
+letter-spacing:3px;
+
+color:#8f8f8f;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer{
+
+padding:140px 8%;
+
+border-top:
+1px solid rgba(255,255,255,0.06);
+}
+
+.footer-rune{
+
+width:100px;
+
+margin-bottom:50px;
+
+opacity:0.9;
+}
+
+.footer-title{
+
+font-size:4rem;
+
+line-height:1;
+
+text-transform:uppercase;
+
+margin-bottom:40px;
+}
+
+.footer-sub{
+
+font-size:1rem;
+
+letter-spacing:5px;
+
+color:#777;
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media(max-width:900px){
+
+.hero{
+
+padding:160px 8% 120px;
+}
+
+.hero-title{
+
+font-size:4rem;
+}
+
+.hero-sub{
+
+font-size:1.08rem;
+}
+
+.editorial{
+
+padding:120px 8%;
+}
+
+.editorial-title{
+
+font-size:3rem;
+}
+
+.editorial-text{
+
+font-size:1.15rem;
+}
+
+.collection-name{
+
+font-size:1.7rem;
+}
+
+.footer-title{
+
+font-size:2.8rem;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- TOPBAR -->
+
+<div class="topbar">
+
+<div class="top-left">
+
+<img src="runa-minimal.png"
+class="top-rune">
+
+<div class="top-logo">
+ATZ
+</div>
+
+</div>
+
+<a href="index.html"
+class="back-home">
+
+HOME
+
+</a>
+
+</div>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-inner">
+
+<div class="hero-small">
+ATZ WORKING DOGS CULTURE
+</div>
+
+<h1 class="hero-title">
+
+NON È MERCH.<br>
+È APPARTENENZA.
+
+</h1>
+
+<div class="hero-sub">
+
+Ogni linea nasce dalla strada,
+dal lavoro, dal fango,
+dalle relazioni costruite davvero.
+
+ATZ non veste personaggi.
+Veste identità.
+
+</div>
+
+</div>
+
+</section>
+
+<!-- INTRO -->
+
+<section class="editorial">
+
+<div class="editorial-inner">
+
+<div class="editorial-label">
+ATZ / MERCH COLLECTIONS
+</div>
+
+<h2 class="editorial-title">
+
+DALL’ASFALTO<br>
+AL FANGO.
+
+</h2>
+
+<div class="editorial-text">
+
+Non abbiamo costruito una linea merch.
+Abbiamo costruito simboli,
+frasi e immagini che raccontano
+un modo preciso di vivere i cani.
+
+Ogni collezione ha un'identità diversa.
+Ma appartiene allo stesso branco.
+
+</div>
+
+</div>
+
+</section>
+
+<!-- COLLECTIONS -->
+
+<section class="collections">
+
+<div class="collection-grid">
+
+<!-- WORKING DOGS -->
+
+<div class="collection-card">
+
+<img src="merch/workingdogs/workingdogs-collection.jpg">
+
+<div class="collection-info">
+
+<div class="collection-name">
+WORKING DOGS
+</div>
+
+<div class="collection-sub">
+Costruito sotto pressione.
+</div>
+
+</div>
+
+</div>
+
+<!-- DWD -->
+
+<div class="collection-card">
+
+<img src="merch/dwd/dwd-collection.jpg">
+
+<div class="collection-info">
+
+<div class="collection-name">
+DWD / UNBROKEN DOGS
+</div>
+
+<div class="collection-sub">
+Different. Not less.
+</div>
+
+</div>
+
+</div>
+
+<!-- NORSE -->
+
+<div class="collection-card">
+
+<img src="merch/norse/norse-collection.jpg">
+
+<div class="collection-info">
+
+<div class="collection-name">
+NORSE
+</div>
+
+<div class="collection-sub">
+Alcune cose non si spiegano.
+Si portano addosso.
+</div>
+
+</div>
+
+</div>
+
+<!-- EDUCAZIONE -->
+
+<div class="collection-card">
+
+<img src="merch/educazione/educazione-collection.jpg">
+
+<div class="collection-info">
+
+<div class="collection-name">
+EDUCAZIONE / RIEDUCAZIONE
+</div>
+
+<div class="collection-sub">
+Relazione. Presenza. Responsabilità.
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<img src="runa-incisa.png"
+class="footer-rune">
+
+<div class="footer-title">
+
+UN SOLO<br>
+BRANCO.
+
+</div>
+
+<div class="footer-sub">
+ATZ WORKING DOGS CULTURE
+</div>
+
+</footer>
+
+</body>
+
+</html>
