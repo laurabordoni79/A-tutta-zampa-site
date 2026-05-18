@@ -191,40 +191,42 @@
     }
 
     .collection-buttons a {
-      position: relative;
+  position: relative;
 
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-      padding:
-        1rem 1.6rem;
+  padding: 1rem 1.6rem;
 
-      border:
-        1px solid rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.12);
 
-      background:
-        rgba(255,255,255,.02);
+  background: rgba(255,255,255,.02);
 
-      color:
-        rgba(255,255,255,.88);
+  color: rgba(255,255,255,.88);
 
-      text-transform: uppercase;
+  text-transform: uppercase;
 
-      font-size: .72rem;
+  font-size: .72rem;
 
-      letter-spacing: .22em;
+  letter-spacing: .22em;
 
-      overflow: hidden;
+  overflow: hidden;
 
-      backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
 
-      transition:
-        background .4s ease,
-        border-color .4s ease,
-        color .4s ease,
-        transform .4s ease;
-    }
+  cursor: pointer;
+
+  will-change: transform;
+
+  transition:
+    background .4s ease,
+    border-color .4s ease,
+    color .4s ease,
+    transform .4s ease;
+}
+
+      
 
     .collection-buttons a:hover {
       background:
