@@ -242,7 +242,7 @@ display:grid;
 
 grid-template-columns:1fr;
 
-gap:120px;
+gap:140px;
 }
 
 .collection-card img{
@@ -255,7 +255,7 @@ border:
 
 .collection-info{
 
-margin-top:26px;
+margin-top:34px;
 }
 
 .collection-name{
@@ -264,7 +264,7 @@ font-size:2.3rem;
 
 letter-spacing:2px;
 
-margin-bottom:12px;
+margin-bottom:14px;
 }
 
 .collection-sub{
@@ -274,44 +274,47 @@ font-size:1rem;
 letter-spacing:3px;
 
 color:#8f8f8f;
+
+margin-bottom:34px;
+
+line-height:1.7;
 }
 
 /* =========================
-COLLECTION META
+DETAILS
 ========================= */
 
-.collection-meta{
+.collection-details{
 
-display:flex;
-flex-wrap:wrap;
+padding-top:28px;
 
-gap:40px;
-
-margin-top:28px;
+border-top:
+1px solid rgba(255,255,255,0.08);
 }
 
-.meta-block{
+.details-row{
 
-display:flex;
-flex-direction:column;
-
-gap:10px;
+margin-bottom:24px;
 }
 
-.meta-label{
+.details-row span{
 
-font-size:0.75rem;
+display:block;
+
+font-size:0.8rem;
 
 letter-spacing:4px;
 
 color:#666;
+
+margin-bottom:10px;
 }
 
-.meta-values{
+.details-row p{
 
-font-size:0.95rem;
+font-size:1rem;
 
-letter-spacing:2px;
+line-height:1.7;
 
 color:#d0d0d0;
 }
@@ -325,25 +328,22 @@ BUTTONS
 display:flex;
 flex-wrap:wrap;
 
-gap:16px;
+gap:14px;
 
 margin-top:40px;
 }
 
 .collection-buttons a{
 
-padding:14px 26px;
+padding:
+14px 22px;
 
 border:
 1px solid rgba(255,255,255,0.12);
 
-font-size:0.78rem;
+font-size:0.8rem;
 
-letter-spacing:4px;
-
-text-transform:uppercase;
-
-color:#dcdcdc;
+letter-spacing:3px;
 
 transition:0.3s;
 
@@ -354,10 +354,7 @@ rgba(255,255,255,0.02);
 .collection-buttons a:hover{
 
 background:white;
-
 color:black;
-
-transform:translateY(-2px);
 }
 
 /* =========================
@@ -447,21 +444,17 @@ font-size:1.7rem;
 font-size:2.8rem;
 }
 
-.collection-meta{
-
-gap:24px;
-}
-
 .collection-buttons{
 
-gap:12px;
+gap:10px;
 }
 
 .collection-buttons a{
 
-width:100%;
+font-size:0.7rem;
 
-text-align:center;
+padding:
+12px 18px;
 }
 
 }
@@ -567,6 +560,48 @@ Ma appartiene allo stesso branco.
 
 <div class="collection-grid">
 
+<!-- CORE -->
+
+<div class="collection-card">
+
+<img src="merch/core/core-collection.jpg">
+
+<div class="collection-info">
+
+<div class="collection-name">
+CORE ATZ
+</div>
+
+<div class="collection-sub">
+Dall’asfalto al fango / Un solo branco.
+</div>
+
+<div class="collection-details">
+
+<div class="details-row">
+<span>COLORI</span>
+<p>Nero assoluto / Asphalt Grey / Sabbia Nordica</p>
+</div>
+
+<div class="details-row">
+<span>TAGLIE</span>
+<p>S / M / L / XL / XXL</p>
+</div>
+
+<div class="collection-buttons">
+
+<a href="#">SHOP</a>
+<a href="#">LOOKBOOK</a>
+<a href="#">IDENTITÀ</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 <!-- WORKING DOGS -->
 
 <div class="collection-card">
@@ -583,32 +618,16 @@ WORKING DOGS
 Costruito sotto pressione.
 </div>
 
-<div class="collection-meta">
+<div class="collection-details">
 
-<div class="meta-block">
-
-<div class="meta-label">
-COLORI
+<div class="details-row">
+<span>COLORI</span>
+<p>Nero / Tactical Green / Dark Earth</p>
 </div>
 
-<div class="meta-values">
-NERO / TACTICAL GREEN / CHARCOAL
-</div>
-
-</div>
-
-<div class="meta-block">
-
-<div class="meta-label">
-TAGLIE
-</div>
-
-<div class="meta-values">
-S / M / L / XL / XXL
-</div>
-
-</div>
-
+<div class="details-row">
+<span>TAGLIE</span>
+<p>S / M / L / XL / XXL</p>
 </div>
 
 <div class="collection-buttons">
@@ -616,6 +635,50 @@ S / M / L / XL / XXL
 <a href="#">SHOP</a>
 <a href="#">LOOKBOOK</a>
 <a href="#">DETTAGLI</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- RICERCA E SOCCORSO -->
+
+<div class="collection-card">
+
+<img src="merch/soccorso/soccorso-collection.jpg">
+
+<div class="collection-info">
+
+<div class="collection-name">
+RICERCA E SOCCORSO
+</div>
+
+<div class="collection-sub">
+Non mi interessa altro. Si parte in due, si torna in due.
+</div>
+
+<div class="collection-details">
+
+<div class="details-row">
+<span>COLORI</span>
+<p>Nero / Smoke Grey / Burgundy Scuro</p>
+</div>
+
+<div class="details-row">
+<span>TAGLIE</span>
+<p>S / M / L / XL / XXL</p>
+</div>
+
+<div class="collection-buttons">
+
+<a href="#">SHOP</a>
+<a href="#">LOOKBOOK</a>
+<a href="#">STORIA</a>
+
+</div>
 
 </div>
 
@@ -639,39 +702,25 @@ DWD / UNBROKEN DOGS
 Different. Not less.
 </div>
 
-<div class="collection-meta">
+<div class="collection-details">
 
-<div class="meta-block">
-
-<div class="meta-label">
-COLORI
+<div class="details-row">
+<span>COLORI</span>
+<p>Nero / Ash Grey / Lavanda Spenta</p>
 </div>
 
-<div class="meta-values">
-BLACK / ASH GREY / OFF WHITE
-</div>
-
-</div>
-
-<div class="meta-block">
-
-<div class="meta-label">
-TAGLIE
-</div>
-
-<div class="meta-values">
-S / M / L / XL / XXL
-</div>
-
-</div>
-
+<div class="details-row">
+<span>TAGLIE</span>
+<p>S / M / L / XL / XXL</p>
 </div>
 
 <div class="collection-buttons">
 
 <a href="#">SHOP</a>
+<a href="#">LOOKBOOK</a>
 <a href="#">MANIFESTO</a>
-<a href="#">DETTAGLI</a>
+
+</div>
 
 </div>
 
@@ -696,32 +745,16 @@ Alcune cose non si spiegano.
 Si portano addosso.
 </div>
 
-<div class="collection-meta">
+<div class="collection-details">
 
-<div class="meta-block">
-
-<div class="meta-label">
-COLORI
+<div class="details-row">
+<span>COLORI</span>
+<p>Nero / Sabbia Nordica / Granite Grey</p>
 </div>
 
-<div class="meta-values">
-BLACK / SAND / GRANITE GREY
-</div>
-
-</div>
-
-<div class="meta-block">
-
-<div class="meta-label">
-TAGLIE
-</div>
-
-<div class="meta-values">
-S / M / L / XL / XXL
-</div>
-
-</div>
-
+<div class="details-row">
+<span>TAGLIE</span>
+<p>S / M / L / XL / XXL</p>
 </div>
 
 <div class="collection-buttons">
@@ -729,6 +762,8 @@ S / M / L / XL / XXL
 <a href="#">SHOP</a>
 <a href="#">LOOKBOOK</a>
 <a href="#">DETTAGLI</a>
+
+</div>
 
 </div>
 
@@ -752,96 +787,25 @@ EDUCAZIONE / RIEDUCAZIONE
 Relazione. Presenza. Responsabilità.
 </div>
 
-<div class="collection-meta">
+<div class="collection-details">
 
-<div class="meta-block">
-
-<div class="meta-label">
-COLORI
+<div class="details-row">
+<span>COLORI</span>
+<p>Nero / Washed Grey / Sabbia</p>
 </div>
 
-<div class="meta-values">
-BLACK / ASPHALT / DESERT
-</div>
-
-</div>
-
-<div class="meta-block">
-
-<div class="meta-label">
-TAGLIE
-</div>
-
-<div class="meta-values">
-S / M / L / XL / XXL
-</div>
-
-</div>
-
-</div>
-
-<div class="collection-buttons">
-
-<a href="#">SHOP</a>
-<a href="#">FILOSOFIA</a>
-<a href="#">DETTAGLI</a>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- SOCCORSO -->
-
-<div class="collection-card">
-
-<img src="merch/soccorso/soccorso-collection.jpg">
-
-<div class="collection-info">
-
-<div class="collection-name">
-RICERCA E SOCCORSO
-</div>
-
-<div class="collection-sub">
-Non mi interessa altro.
-Si parte in due, si torna in due.
-</div>
-
-<div class="collection-meta">
-
-<div class="meta-block">
-
-<div class="meta-label">
-COLORI
-</div>
-
-<div class="meta-values">
-BLACK / BURGUNDY / SMOKE GREY
-</div>
-
-</div>
-
-<div class="meta-block">
-
-<div class="meta-label">
-TAGLIE
-</div>
-
-<div class="meta-values">
-S / M / L / XL / XXL
-</div>
-
-</div>
-
+<div class="details-row">
+<span>TAGLIE</span>
+<p>S / M / L / XL / XXL</p>
 </div>
 
 <div class="collection-buttons">
 
 <a href="#">SHOP</a>
 <a href="#">LOOKBOOK</a>
-<a href="#">STORIA</a>
+<a href="#">FILOSOFIA</a>
+
+</div>
 
 </div>
 
