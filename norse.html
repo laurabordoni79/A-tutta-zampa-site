@@ -40,11 +40,8 @@ PALETTE
 
 :root{
 
---accent:
-#bfa37a;
-
---accent-soft:
-#d3c0a1;
+--accent:#bfa37a;
+--accent-soft:#d3c0a1;
 
 }
 
@@ -55,10 +52,9 @@ GLOBAL
 section{
 
 position:relative;
-
 width:100%;
-
 overflow:hidden;
+
 }
 
 /* =========================================
@@ -84,7 +80,7 @@ background:
 linear-gradient(
 to bottom,
 rgba(0,0,0,0.18),
-rgba(0,0,0,0.55)
+rgba(0,0,0,0.60)
 ),
 
 url('images/norse/file_0000000015f4720aaf3b8898d4e69bb7.png');
@@ -175,7 +171,8 @@ text-transform:uppercase;
 
 margin-bottom:50px;
 }
-  .hero p{
+
+.hero p{
 
 font-size:1.45rem;
 
@@ -188,14 +185,12 @@ max-width:780px;
 color:#d2d2d2;
 
 background:
-rgba(0,0,0,0.16);
+rgba(0,0,0,0.14);
 
 padding:10px 18px;
 
 backdrop-filter:blur(2px);
-
 }
-
 
 /* =========================================
 MANIFESTO
@@ -219,8 +214,9 @@ background:
 linear-gradient(
 to bottom,
 rgba(0,0,0,0.35),
-rgba(0,0,0,0.62)
+rgba(0,0,0,0.65)
 ),
+
 url('images/norse/file_000000002df47243847168addb90b085.png');
 
 background-size:contain;
@@ -241,7 +237,7 @@ background:
 linear-gradient(
 to bottom,
 rgba(0,0,0,0.18),
-rgba(0,0,0,0.38)
+rgba(0,0,0,0.42)
 );
 
 }
@@ -332,6 +328,107 @@ color:#d0d0d0;
 }
 
 /* =========================================
+LEATHER CRAFT
+========================================= */
+
+.leather-section{
+
+padding:220px 10%;
+
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,0.72),
+rgba(0,0,0,0.92)
+),
+
+url('images/norse/leathercraft-norse.jpg');
+
+background-size:contain;
+background-repeat:no-repeat;
+background-position:center;
+
+background-color:#000;
+
+text-align:center;
+}
+
+.leather-section h2{
+
+font-size:4.4rem;
+
+line-height:1;
+
+text-transform:uppercase;
+
+margin-bottom:42px;
+}
+
+.leather-section p{
+
+max-width:820px;
+
+margin:auto;
+
+font-size:1.28rem;
+
+line-height:1.95;
+
+font-weight:300;
+
+color:#d0d0d0;
+}
+
+/* =========================================
+NORSE LINK
+========================================= */
+
+.norse-link-wrap{
+
+padding-top:90px;
+
+display:flex;
+justify-content:center;
+}
+
+.norse-link{
+
+text-decoration:none;
+
+color:#f1ede6;
+
+border:
+1px solid rgba(191,163,122,0.28);
+
+padding:30px 42px;
+
+font-size:0.95rem;
+
+letter-spacing:5px;
+
+line-height:2;
+
+text-transform:uppercase;
+
+transition:
+0.5s ease;
+
+background:
+rgba(255,255,255,0.02);
+}
+
+.norse-link:hover{
+
+background:
+rgba(191,163,122,0.10);
+
+border:
+1px solid rgba(191,163,122,0.72);
+
+transform:translateY(-2px);
+}
+
+/* =========================================
 FINAL QUOTE
 ========================================= */
 
@@ -365,7 +462,7 @@ text-shadow:
 }
 
 /* =========================================
-BUTTON
+HOME BUTTON
 ========================================= */
 
 .home-button-wrap{
@@ -530,6 +627,32 @@ font-size:2.8rem;
 font-size:1.1rem;
 }
 
+.leather-section{
+
+padding:140px 8%;
+}
+
+.leather-section h2{
+
+font-size:2.8rem;
+}
+
+.leather-section p{
+
+font-size:1.08rem;
+}
+
+.norse-link{
+
+font-size:0.78rem;
+
+letter-spacing:3px;
+
+padding:24px 26px;
+
+line-height:1.8;
+}
+
 .final-quote{
 
 padding:140px 8%;
@@ -675,6 +798,50 @@ con il proprio cane.
 
 </section>
 
+<!-- LEATHER CRAFT -->
+
+<section class="leather-section">
+
+<h2>
+
+NORSE<br>
+LEATHER CRAFT
+
+</h2>
+
+<p>
+
+Collari, guinzagli e accessori
+costruiti per durare.
+
+<br><br>
+
+Pelle vera.
+Metallo.
+Usura.
+Tempo.
+
+<br><br>
+
+Oggetti pensati per essere vissuti,
+non semplicemente indossati.
+
+</p>
+
+<div class="norse-link-wrap">
+
+<a href="merch.html"
+class="norse-link">
+
+LA LINEA NORSE CONTINUA<br>
+NELLA PAGINA DEDICATA
+
+</a>
+
+</div>
+
+</section>
+
 <!-- FINAL QUOTE -->
 
 <section class="final-quote">
@@ -688,7 +855,7 @@ che imparare a strisciare.”
 
 </section>
 
-<!-- BUTTON -->
+<!-- HOME BUTTON -->
 
 <div class="home-button-wrap">
 
