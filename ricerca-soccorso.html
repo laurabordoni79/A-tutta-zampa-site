@@ -29,6 +29,11 @@ color:white;
 overflow-x:hidden;
 }
 
+a{
+text-decoration:none;
+color:white;
+}
+
 /* =========================================
 GENERAL
 ========================================= */
@@ -64,12 +69,12 @@ background:
 linear-gradient(
 to bottom,
 rgba(0,0,0,0.18),
-rgba(0,0,0,0.72)
+rgba(0,0,0,0.78)
 ),
 
 url('images/soccorso/file_00000000381c7243a2a79aaa7d7aabad.png');
 
-background-size:contain;
+background-size:cover;
 background-repeat:no-repeat;
 background-position:center;
 background-color:#050505;
@@ -198,6 +203,78 @@ font-weight:300;
 color:#d0d0d0;
 
 max-width:700px;
+}
+
+/* =========================================
+FORMATION
+========================================= */
+
+.formation{
+
+padding:180px 10%;
+
+background:#050505;
+
+border-top:
+1px solid rgba(255,255,255,0.05);
+}
+
+.formation-title{
+
+font-size:3rem;
+
+margin-bottom:70px;
+
+color:#8d1c2f;
+}
+
+.formation-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(3, minmax(280px,1fr));
+
+gap:40px;
+}
+
+.formation-card{
+
+border:1px solid rgba(141,28,47,0.18);
+
+padding:50px 40px;
+
+background:
+rgba(8,8,8,0.58);
+
+transition:all 0.5s ease;
+
+box-shadow:
+0 0 18px rgba(141,28,47,0.05);
+
+backdrop-filter:blur(6px);
+
+display:block;
+}
+
+.formation-card:hover{
+
+transform:translateY(-3px);
+
+border:
+1px solid rgba(141,28,47,0.38);
+
+box-shadow:
+0 0 30px rgba(141,28,47,0.14);
+}
+
+.formation-card h4{
+
+font-size:2rem;
+
+line-height:1.2;
+
+text-transform:uppercase;
 }
 
 /* =========================================
@@ -371,6 +448,31 @@ font-size:42px;
 .editorial-text p{
 
 font-size:17px;
+}
+
+.formation{
+
+padding:110px 8%;
+}
+
+.formation-title{
+
+font-size:2.2rem;
+}
+
+.formation-grid{
+
+grid-template-columns:1fr;
+}
+
+.formation-card{
+
+padding:40px 28px;
+}
+
+.formation-card h4{
+
+font-size:1.5rem;
 }
 
 .full-quote{
@@ -587,6 +689,47 @@ Il cane legge ciò che l’uomo non vede.
 style="
 background-image:url('images/soccorso/file_00000000f2347246adcded74dfad5509.png');
 ">
+
+</div>
+
+</section>
+
+<!-- FORMAZIONE -->
+
+<section class="formation">
+
+<h3 class="formation-title">
+SPECIALIZZAZIONI
+</h3>
+
+<div class="formation-grid">
+
+<a href="#" class="formation-card">
+<h4>
+
+Ricerca a Scovo<br>
+/ Superficie
+
+</h4>
+</a>
+
+<a href="#" class="formation-card">
+<h4>
+
+Ricerca su<br>
+Pista
+
+</h4>
+</a>
+
+<a href="#" class="formation-card">
+<h4>
+
+Ricerca su Traccia<br>
+(Mantrailing)
+
+</h4>
+</a>
 
 </div>
 
