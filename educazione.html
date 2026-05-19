@@ -29,6 +29,11 @@ color:white;
 overflow-x:hidden;
 }
 
+a{
+text-decoration:none;
+color:white;
+}
+
 img{
 max-width:100%;
 display:block;
@@ -311,6 +316,165 @@ background-position:center;
 }
 
 /* =========================================
+SERVIZI
+========================================= */
+
+.services{
+
+padding:190px 10%;
+
+background:#050505;
+
+border-top:
+1px solid rgba(255,255,255,0.05);
+}
+
+.services-title{
+
+font-size:3.2rem;
+
+margin-bottom:70px;
+
+text-transform:uppercase;
+
+color:#d9c2a3;
+}
+
+.services-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(2, minmax(280px,1fr));
+
+gap:40px;
+}
+
+.service-card{
+
+border:
+1px solid rgba(184,155,114,0.18);
+
+padding:50px 40px;
+
+background:
+rgba(10,10,10,0.6);
+
+transition:0.45s ease;
+
+display:block;
+}
+
+.service-card:hover{
+
+transform:translateY(-4px);
+
+border:
+1px solid rgba(184,155,114,0.42);
+
+box-shadow:
+0 0 28px rgba(184,155,114,0.12);
+}
+
+.service-card h4{
+
+font-size:2rem;
+
+line-height:1.2;
+
+text-transform:uppercase;
+}
+
+/* =========================================
+FORMAZIONE
+========================================= */
+
+.educator-section{
+
+padding:210px 10%;
+
+background:#000;
+
+border-top:
+1px solid rgba(255,255,255,0.05);
+}
+
+.educator-title{
+
+font-size:4.2rem;
+
+line-height:0.95;
+
+text-transform:uppercase;
+
+margin-bottom:90px;
+
+max-width:900px;
+}
+
+.educator-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(2, minmax(300px,1fr));
+
+gap:50px;
+}
+
+.educator-card{
+
+padding:70px 55px;
+
+border:
+1px solid rgba(184,155,114,0.22);
+
+background:
+linear-gradient(
+180deg,
+rgba(18,18,18,0.88),
+rgba(0,0,0,0.95)
+);
+
+transition:0.45s ease;
+
+display:block;
+}
+
+.educator-card:hover{
+
+transform:translateY(-5px);
+
+border:
+1px solid rgba(184,155,114,0.52);
+
+box-shadow:
+0 0 40px rgba(184,155,114,0.10);
+}
+
+.educator-card h3{
+
+font-size:2.5rem;
+
+line-height:1.05;
+
+text-transform:uppercase;
+
+margin-bottom:28px;
+}
+
+.educator-card p{
+
+font-size:1.08rem;
+
+line-height:1.9;
+
+font-weight:300;
+
+color:#cfcfcf;
+}
+
+/* =========================================
 FINAL QUOTE
 ========================================= */
 
@@ -503,6 +667,60 @@ min-height:78vh;
 background-position:center top;
 }
 
+.services{
+
+padding:120px 8%;
+}
+
+.services-title{
+
+font-size:2.3rem;
+
+margin-bottom:50px;
+}
+
+.services-grid{
+
+grid-template-columns:1fr;
+}
+
+.service-card{
+
+padding:40px 28px;
+}
+
+.service-card h4{
+
+font-size:1.5rem;
+}
+
+.educator-section{
+
+padding:140px 8%;
+}
+
+.educator-title{
+
+font-size:2.9rem;
+
+margin-bottom:60px;
+}
+
+.educator-grid{
+
+grid-template-columns:1fr;
+}
+
+.educator-card{
+
+padding:50px 35px;
+}
+
+.educator-card h3{
+
+font-size:2rem;
+}
+
 .quote-section{
 
 padding:190px 8% 150px;
@@ -559,7 +777,8 @@ font-size:3.35rem;
 
 .manifesto h2,
 .split-text h2,
-.quote-section h2{
+.quote-section h2,
+.educator-title{
 
 font-size:2.7rem;
 }
@@ -666,6 +885,92 @@ Significa imparare a starci dentro insieme.
 </div>
 
 <div class="split-image"></div>
+
+</section>
+
+<!-- SERVIZI -->
+
+<section class="services">
+
+<h3 class="services-title">
+AREA OPERATIVA
+</h3>
+
+<div class="services-grid">
+
+<a href="#" class="service-card">
+<h4>Educazione Base</h4>
+</a>
+
+<a href="#" class="service-card">
+<h4>Rieducazione Comportamentale</h4>
+</a>
+
+<a href="#" class="service-card">
+<h4>Gestione Urbana</h4>
+</a>
+
+<a href="#" class="service-card">
+<h4>Relazione e Comunicazione</h4>
+</a>
+
+</div>
+
+</section>
+
+<!-- FORMAZIONE -->
+
+<section class="educator-section">
+
+<h2 class="educator-title">
+
+FORMARE<br>
+ESSERI UMANI<br>
+COMPETENTI.
+
+</h2>
+
+<div class="educator-grid">
+
+<a href="#" class="educator-card">
+
+<h3>
+
+Corso<br>
+Educatori
+
+</h3>
+
+<p>
+
+Percorsi dedicati alla costruzione
+di figure competenti, lucide e presenti.
+
+</p>
+
+</a>
+
+<a href="#" class="educator-card">
+
+<h3>
+
+Corso<br>
+Rieducatori<br>
+Comportamentali
+
+</h3>
+
+<p>
+
+Studio della relazione,
+lettura del comportamento
+e gestione reale dei casi complessi.
+
+</p>
+
+</a>
+
+</div>
 
 </section>
 
