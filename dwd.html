@@ -49,6 +49,15 @@ PALETTE
 }
 
 /* =========================================
+GENERAL
+========================================= */
+
+section{
+position:relative;
+overflow:hidden;
+}
+
+/* =========================================
 HERO
 ========================================= */
 
@@ -71,7 +80,7 @@ background:
 linear-gradient(
 to bottom,
 rgba(0,0,0,0.48),
-rgba(0,0,0,0.64)
+rgba(0,0,0,0.70)
 ),
 
 url('images/dwd/dwd-banner.jpg');
@@ -319,6 +328,104 @@ color:#d0d0d0;
 }
 
 /* =========================================
+DWD HUMAN SECTION
+========================================= */
+
+.human-section{
+
+padding:220px 10%;
+
+background:#050505;
+
+text-align:center;
+}
+
+.human-small{
+
+font-size:0.95rem;
+
+letter-spacing:6px;
+
+color:var(--accent);
+
+margin-bottom:28px;
+}
+
+.human-title{
+
+font-size:4.8rem;
+
+line-height:0.96;
+
+text-transform:uppercase;
+
+margin-bottom:42px;
+}
+
+.human-text{
+
+max-width:900px;
+
+margin:auto;
+
+font-size:1.28rem;
+
+line-height:1.95;
+
+font-weight:300;
+
+color:#d0d0d0;
+}
+
+/* =========================================
+BUTTONS
+========================================= */
+
+.dwd-buttons{
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+
+gap:22px;
+
+margin-top:80px;
+}
+
+.dwd-buttons a{
+
+text-decoration:none;
+
+color:white;
+
+border:1px solid rgba(181,138,203,0.35);
+
+padding:22px 34px;
+
+font-size:0.92rem;
+
+letter-spacing:4px;
+
+text-transform:uppercase;
+
+transition:0.45s;
+
+background:
+rgba(255,255,255,0.02);
+}
+
+.dwd-buttons a:hover{
+
+background:
+rgba(181,138,203,0.16);
+
+border:
+1px solid rgba(181,138,203,0.82);
+
+transform:translateY(-2px);
+}
+
+/* =========================================
 FINAL
 ========================================= */
 
@@ -513,6 +620,39 @@ font-size:3.1rem;
 font-size:1.1rem;
 }
 
+.human-section{
+
+padding:140px 8%;
+}
+
+.human-title{
+
+font-size:3rem;
+}
+
+.human-text{
+
+font-size:1.08rem;
+}
+
+.dwd-buttons{
+
+gap:14px;
+}
+
+.dwd-buttons a{
+
+width:100%;
+
+text-align:center;
+
+padding:20px 24px;
+
+font-size:0.82rem;
+
+letter-spacing:3px;
+}
+
 .final-section{
 
 padding:140px 8%;
@@ -650,6 +790,49 @@ non è ciò che manca.
 nonostante tutto.
 
 </p>
+
+</div>
+
+</section>
+
+<!-- HUMAN -->
+
+<section class="human-section">
+
+<div class="human-small">
+DWD HUMAN SIDE
+</div>
+
+<h2 class="human-title">
+
+NON SERVE<br>
+PIETÀ.<br>
+SERVONO<br>
+POSSIBILITÀ.
+
+</h2>
+
+<p class="human-text">
+
+DWD nasce anche per le persone.
+
+Per chi sceglie di adattarsi,
+ricostruire equilibrio,
+imparare nuove possibilità
+e continuare a vivere davvero
+insieme al proprio cane.
+
+</p>
+
+<div class="dwd-buttons">
+
+<a href="#">
+DWD CORSO ISTRUTTORI
+</a>
+
+<a href="#">
+TESTIMONIANZE PROPRIETARI
+</a>
 
 </div>
 
