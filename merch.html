@@ -242,7 +242,7 @@ display:grid;
 
 grid-template-columns:1fr;
 
-gap:140px;
+gap:120px;
 }
 
 .collection-card img{
@@ -255,7 +255,7 @@ border:
 
 .collection-info{
 
-margin-top:34px;
+margin-top:26px;
 }
 
 .collection-name{
@@ -264,7 +264,7 @@ font-size:2.3rem;
 
 letter-spacing:2px;
 
-margin-bottom:14px;
+margin-bottom:12px;
 }
 
 .collection-sub{
@@ -275,48 +275,7 @@ letter-spacing:3px;
 
 color:#8f8f8f;
 
-margin-bottom:34px;
-
-line-height:1.7;
-}
-
-/* =========================
-DETAILS
-========================= */
-
-.collection-details{
-
-padding-top:28px;
-
-border-top:
-1px solid rgba(255,255,255,0.08);
-}
-
-.details-row{
-
-margin-bottom:24px;
-}
-
-.details-row span{
-
-display:block;
-
-font-size:0.8rem;
-
-letter-spacing:4px;
-
-color:#666;
-
-margin-bottom:10px;
-}
-
-.details-row p{
-
-font-size:1rem;
-
-line-height:1.7;
-
-color:#d0d0d0;
+margin-bottom:28px;
 }
 
 /* =========================
@@ -326,22 +285,22 @@ BUTTONS
 .collection-buttons{
 
 display:flex;
-flex-wrap:wrap;
 
 gap:14px;
 
-margin-top:40px;
+flex-wrap:wrap;
+
+margin-bottom:22px;
 }
 
 .collection-buttons a{
 
-padding:
-14px 22px;
+padding:12px 18px;
 
 border:
 1px solid rgba(255,255,255,0.12);
 
-font-size:0.8rem;
+font-size:0.72rem;
 
 letter-spacing:3px;
 
@@ -355,6 +314,40 @@ rgba(255,255,255,0.02);
 
 background:white;
 color:black;
+}
+
+/* =========================
+COLORS + SIZES
+========================= */
+
+.product-colors,
+.product-sizes{
+
+display:flex;
+
+gap:10px;
+
+flex-wrap:wrap;
+
+margin-top:14px;
+}
+
+.product-colors span,
+.product-sizes span{
+
+padding:8px 14px;
+
+border:
+1px solid rgba(255,255,255,0.08);
+
+font-size:0.72rem;
+
+letter-spacing:2px;
+
+color:#bdbdbd;
+
+background:
+rgba(255,255,255,0.02);
 }
 
 /* =========================
@@ -442,19 +435,6 @@ font-size:1.7rem;
 .footer-title{
 
 font-size:2.8rem;
-}
-
-.collection-buttons{
-
-gap:10px;
-}
-
-.collection-buttons a{
-
-font-size:0.7rem;
-
-padding:
-12px 18px;
 }
 
 }
@@ -564,7 +544,7 @@ Ma appartiene allo stesso branco.
 
 <div class="collection-card">
 
-<img src="merch/core/core-collection.jpg">
+<img src="images/core/core-collection.jpg">
 
 <div class="collection-info">
 
@@ -576,25 +556,28 @@ CORE ATZ
 Dall’asfalto al fango / Un solo branco.
 </div>
 
-<div class="collection-details">
-
-<div class="details-row">
-<span>COLORI</span>
-<p>Nero assoluto / Asphalt Grey / Sabbia Nordica</p>
-</div>
-
-<div class="details-row">
-<span>TAGLIE</span>
-<p>S / M / L / XL / XXL</p>
-</div>
-
 <div class="collection-buttons">
 
-<a href="#">SHOP</a>
 <a href="#">LOOKBOOK</a>
-<a href="#">IDENTITÀ</a>
+<a href="#">COLORI</a>
+<a href="#">ACQUISTA</a>
 
 </div>
+
+<div class="product-colors">
+
+<span>Nero</span>
+<span>Asphalt Grey</span>
+<span>Sand</span>
+
+</div>
+
+<div class="product-sizes">
+
+<span>S</span>
+<span>M</span>
+<span>L</span>
+<span>XL</span>
 
 </div>
 
@@ -606,7 +589,7 @@ Dall’asfalto al fango / Un solo branco.
 
 <div class="collection-card">
 
-<img src="merch/workingdogs/workingdogs-collection.jpg">
+<img src="images/workingdogs/workingdogs-collection.jpg">
 
 <div class="collection-info">
 
@@ -618,23 +601,28 @@ WORKING DOGS
 Costruito sotto pressione.
 </div>
 
-<div class="collection-details">
-
-<div class="details-row">
-<span>COLORI</span>
-<p>Nero / Tactical Green / Dark Earth</p>
-</div>
-
-<div class="details-row">
-<span>TAGLIE</span>
-<p>S / M / L / XL / XXL</p>
-</div>
-
 <div class="collection-buttons">
 
-<a href="#">SHOP</a>
 <a href="#">LOOKBOOK</a>
 <a href="#">DETTAGLI</a>
+<a href="#">ACQUISTA</a>
+
+</div>
+
+<div class="product-colors">
+
+<span>Nero</span>
+<span>Tactical Green</span>
+<span>Dark Earth</span>
+
+</div>
+
+<div class="product-sizes">
+
+<span>S</span>
+<span>M</span>
+<span>L</span>
+<span>XL</span>
 
 </div>
 
@@ -642,13 +630,11 @@ Costruito sotto pressione.
 
 </div>
 
-</div>
-
-<!-- RICERCA E SOCCORSO -->
+<!-- SOCCORSO -->
 
 <div class="collection-card">
 
-<img src="merch/soccorso/soccorso-collection.jpg">
+<img src="images/soccorso/soccorso-collection.jpg">
 
 <div class="collection-info">
 
@@ -657,28 +643,32 @@ RICERCA E SOCCORSO
 </div>
 
 <div class="collection-sub">
-Non mi interessa altro. Si parte in due, si torna in due.
-</div>
-
-<div class="collection-details">
-
-<div class="details-row">
-<span>COLORI</span>
-<p>Nero / Smoke Grey / Burgundy Scuro</p>
-</div>
-
-<div class="details-row">
-<span>TAGLIE</span>
-<p>S / M / L / XL / XXL</p>
+Non mi interessa altro,
+si parte in due, si torna in due.
 </div>
 
 <div class="collection-buttons">
 
-<a href="#">SHOP</a>
-<a href="#">LOOKBOOK</a>
 <a href="#">STORIA</a>
+<a href="#">MISSIONE</a>
+<a href="#">ACQUISTA</a>
 
 </div>
+
+<div class="product-colors">
+
+<span>Nero</span>
+<span>Smoke Grey</span>
+<span>Burgundy</span>
+
+</div>
+
+<div class="product-sizes">
+
+<span>S</span>
+<span>M</span>
+<span>L</span>
+<span>XL</span>
 
 </div>
 
@@ -690,7 +680,7 @@ Non mi interessa altro. Si parte in due, si torna in due.
 
 <div class="collection-card">
 
-<img src="merch/dwd/dwd-collection.jpg">
+<img src="images/dwd/dwd-collection.jpg">
 
 <div class="collection-info">
 
@@ -702,25 +692,73 @@ DWD / UNBROKEN DOGS
 Different. Not less.
 </div>
 
-<div class="collection-details">
+<div class="collection-buttons">
 
-<div class="details-row">
-<span>COLORI</span>
-<p>Nero / Ash Grey / Lavanda Spenta</p>
+<a href="#">MANIFESTO</a>
+<a href="#">DETTAGLI</a>
+<a href="#">ACQUISTA</a>
+
 </div>
 
-<div class="details-row">
-<span>TAGLIE</span>
-<p>S / M / L / XL / XXL</p>
+<div class="product-colors">
+
+<span>Nero</span>
+<span>Lavender Ash</span>
+<span>Off White</span>
+
+</div>
+
+<div class="product-sizes">
+
+<span>S</span>
+<span>M</span>
+<span>L</span>
+<span>XL</span>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- EDUCAZIONE -->
+
+<div class="collection-card">
+
+<img src="images/educazione/educazione-collection.jpg">
+
+<div class="collection-info">
+
+<div class="collection-name">
+EDUCAZIONE / RIEDUCAZIONE
+</div>
+
+<div class="collection-sub">
+Relazione. Presenza. Responsabilità.
 </div>
 
 <div class="collection-buttons">
 
-<a href="#">SHOP</a>
-<a href="#">LOOKBOOK</a>
-<a href="#">MANIFESTO</a>
+<a href="#">FILOSOFIA</a>
+<a href="#">LINEA</a>
+<a href="#">ACQUISTA</a>
 
 </div>
+
+<div class="product-colors">
+
+<span>Nero</span>
+<span>Sand</span>
+<span>Charcoal</span>
+
+</div>
+
+<div class="product-sizes">
+
+<span>S</span>
+<span>M</span>
+<span>L</span>
+<span>XL</span>
 
 </div>
 
@@ -732,7 +770,7 @@ Different. Not less.
 
 <div class="collection-card">
 
-<img src="merch/norse/norse-collection.jpg">
+<img src="images/norse/norse-collection.jpg">
 
 <div class="collection-info">
 
@@ -745,23 +783,28 @@ Alcune cose non si spiegano.
 Si portano addosso.
 </div>
 
-<div class="collection-details">
-
-<div class="details-row">
-<span>COLORI</span>
-<p>Nero / Sabbia Nordica / Granite Grey</p>
-</div>
-
-<div class="details-row">
-<span>TAGLIE</span>
-<p>S / M / L / XL / XXL</p>
-</div>
-
 <div class="collection-buttons">
 
-<a href="#">SHOP</a>
 <a href="#">LOOKBOOK</a>
 <a href="#">DETTAGLI</a>
+<a href="#">ACQUISTA</a>
+
+</div>
+
+<div class="product-colors">
+
+<span>Nero</span>
+<span>Granite Grey</span>
+<span>Nordic Sand</span>
+
+</div>
+
+<div class="product-sizes">
+
+<span>S</span>
+<span>M</span>
+<span>L</span>
+<span>XL</span>
 
 </div>
 
@@ -769,43 +812,44 @@ Si portano addosso.
 
 </div>
 
-</div>
-
-<!-- EDUCAZIONE -->
+<!-- NORSE LEATHER CRAFT -->
 
 <div class="collection-card">
 
-<img src="merch/educazione/educazione-collection.jpg">
+<img src="images/norse/leather-craft.jpg">
 
 <div class="collection-info">
 
 <div class="collection-name">
-EDUCAZIONE / RIEDUCAZIONE
+NORSE / LEATHER CRAFT
 </div>
 
 <div class="collection-sub">
-Relazione. Presenza. Responsabilità.
-</div>
-
-<div class="collection-details">
-
-<div class="details-row">
-<span>COLORI</span>
-<p>Nero / Washed Grey / Sabbia</p>
-</div>
-
-<div class="details-row">
-<span>TAGLIE</span>
-<p>S / M / L / XL / XXL</p>
+Pelle pieno fiore.
+Costruita per durare.
 </div>
 
 <div class="collection-buttons">
 
-<a href="#">SHOP</a>
-<a href="#">LOOKBOOK</a>
-<a href="#">FILOSOFIA</a>
+<a href="#">DETTAGLI</a>
+<a href="#">MISURE</a>
+<a href="#">ACQUISTA</a>
 
 </div>
+
+<div class="product-colors">
+
+<span>Nero</span>
+<span>Brown</span>
+<span>Dark Earth</span>
+
+</div>
+
+<div class="product-sizes">
+
+<span>1.5 MT</span>
+<span>2 MT</span>
+<span>3 MT</span>
 
 </div>
 
@@ -832,7 +876,7 @@ BRANCO.
 </div>
 
 <div class="footer-sub">
-ATZ WORKING DOGS CULTURE
+ATZ WORKING DOG CULTURE
 </div>
 
 </footer>
