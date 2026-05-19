@@ -29,6 +29,11 @@ color:white;
 overflow-x:hidden;
 }
 
+a{
+text-decoration:none;
+color:white;
+}
+
 /* =========================================
 HERO
 ========================================= */
@@ -43,12 +48,12 @@ background:
 linear-gradient(
 to bottom,
 rgba(0,0,0,0.12),
-rgba(0,0,0,0.50)
+rgba(0,0,0,0.56)
 ),
 
 url('images/workingdogs/file_000000008634720a9d3cb35c9bb76124.png');
 
-background-size:contain;
+background-size:cover;
 background-repeat:no-repeat;
 background-position:center;
 background-color:#000;
@@ -139,8 +144,8 @@ margin-bottom:24px;
 
 .page-title h1{
 
-font-size:4.6rem;
-line-height:0.97;
+font-size:4.8rem;
+line-height:0.95;
 
 text-transform:uppercase;
 
@@ -317,14 +322,16 @@ border:1px solid rgba(141,28,47,0.18);
 padding:50px 40px;
 
 background:
-rgba(0,0,0,0.22);
+rgba(8,8,8,0.58);
 
 transition:all 0.5s ease;
 
 box-shadow:
 0 0 18px rgba(141,28,47,0.05);
 
-backdrop-filter:blur(0px);
+backdrop-filter:blur(6px);
+
+display:block;
 }
 
 .formation-card:hover{
@@ -487,6 +494,7 @@ text-transform:uppercase;
 /* =========================================
 TABLET
 ========================================= */
+
 @media(min-width:901px) and (max-width:1200px){
 
 .hero{
@@ -496,9 +504,11 @@ background-position:center center;
 }
 
 }
-  /* =========================================
+
+/* =========================================
 MOBILE
 ========================================= */
+
 @media(max-width:900px){
 
 .hero{
@@ -628,7 +638,7 @@ WORKING DOGS
 
 <h1>
 
-STABILITÀ<br>
+COSTRUITO<br>
 SOTTO<br>
 PRESSIONE.
 
@@ -705,35 +715,35 @@ FORMAZIONE
 
 <div class="formation-grid">
 
-<div class="formation-card">
+<a href="#" class="formation-card">
 <h4>Obbedienza</h4>
 <div class="coming-soon">COMING SOON</div>
-</div>
+</a>
 
-<div class="formation-card">
+<a href="#" class="formation-card">
 <h4>Discriminazione olfattiva</h4>
 <div class="coming-soon">COMING SOON</div>
-</div>
+</a>
 
-<div class="formation-card">
+<a href="#" class="formation-card">
 <h4>Morso sportivo</h4>
 <div class="coming-soon">COMING SOON</div>
-</div>
+</a>
 
-<div class="formation-card">
+<a href="#" class="formation-card">
 <h4>Dog Dance</h4>
 <div class="coming-soon">COMING SOON</div>
-</div>
+</a>
 
-<div class="formation-card">
+<a href="#" class="formation-card">
 <h4>Preparazione sportiva</h4>
 <div class="coming-soon">COMING SOON</div>
-</div>
+</a>
 
-<div class="formation-card">
+<a href="#" class="formation-card">
 <h4>Costruzione motivazionale</h4>
 <div class="coming-soon">COMING SOON</div>
-</div>
+</a>
 
 </div>
 
