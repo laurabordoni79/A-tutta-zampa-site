@@ -8,10 +8,6 @@
 
 <style>
 
-/* =========================
-   BASE FIX (NO CHANGE STYLE)
-========================= */
-
 body {
   margin: 0;
   padding: 0;
@@ -19,8 +15,6 @@ body {
   background: #0b0b0b;
   color: #f2f2f2;
 }
-
-/* TYPOGRAPHY */
 
 h1, h2, h3 {
   text-transform: uppercase;
@@ -34,14 +28,10 @@ p {
   margin: 0 0 15px 0;
 }
 
-/* SECTIONS */
-
 section {
   padding: 80px 20px;
   text-align: center;
 }
-
-/* HERO FIX */
 
 .hero {
   position: relative;
@@ -50,77 +40,35 @@ section {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
-  background: #000; /* FIX: evita immagini rotte che distruggono layout */
+  background: #000;
 }
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-}
-
-/* =========================
-   BUTTONS (FIX SENZA CAMBIARE ESTETICA)
-========================= */
 
 .btn {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-
   width: 100%;
   max-width: 320px;
-
   padding: 14px 18px;
   margin: 8px auto;
-
   border: 1px solid rgba(255,255,255,0.4);
   background: transparent;
   color: #f2f2f2;
-
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1.2px;
   font-size: 13px;
-
-  transition: 0.25s ease;
 }
-
-.btn:hover {
-  background: rgba(255,255,255,0.08);
-  border-color: rgba(255,255,255,0.7);
-}
-
-/* GRID */
 
 .grid {
   display: flex;
   flex-direction: column;
   gap: 25px;
-  margin-top: 20px;
 }
 
 .card {
   border: 1px solid rgba(255,255,255,0.15);
   padding: 25px 20px;
-}
-
-/* MOBILE FIX (NON CAMBIA DESIGN) */
-
-@media (max-width: 768px) {
-  section {
-    padding: 60px 15px;
-  }
-
-  .btn {
-    max-width: 100%;
-  }
 }
 
 </style>
@@ -129,121 +77,60 @@ section {
 
 <body>
 
+<!-- 🔴 TEST VISIVO -->
+<h1 style="color:red; position:fixed; top:10px; left:10px; z-index:9999;">
+TEST ATZ
+</h1>
+
 <!-- HERO -->
 <section class="hero">
-
-  <div class="overlay"></div>
-
-  <div class="hero-content">
-    <h1>ATZ WORKING DOGS CULTURE</h1>
-    <p>NON È MERCH. È APPARTENENZA.</p>
-
-    <a href="#collections" class="btn">SCOPRI LE COLLEZIONI</a>
-  </div>
-
+  <h1>ATZ WORKING DOGS CULTURE</h1>
+  <p>NON È MERCH. È APPARTENENZA.</p>
+  <a class="btn" href="#collections">SCOPRI LE COLLEZIONI</a>
 </section>
 
 <!-- INTRO -->
 <section>
-  <h2>DALL’ASFALTO AL FANGO.</h2>
-
-  <p>
-    Non abbiamo costruito una linea merch. Abbiamo costruito simboli, frasi e immagini che raccontano un modo preciso di vivere i cani.
-  </p>
-
-  <p>
-    Ogni collezione ha un'identità diversa. Ma appartiene allo stesso branco.
-  </p>
+  <h2>DALL’ASFALTO AL FANGO</h2>
+  <p>Non abbiamo costruito una linea merch. Abbiamo costruito simboli, frasi e immagini che raccontano un modo preciso di vivere i cani.</p>
+  <p>Ogni collezione ha un’identità diversa. Ma appartiene allo stesso branco.</p>
 </section>
 
 <!-- COLLECTIONS -->
 <section id="collections">
 
-  <h2>ATZ / MERCH COLLECTIONS</h2>
+  <h2>COLLEZIONI</h2>
 
   <div class="grid">
 
     <div class="card">
       <h3>CORE ATZ</h3>
       <p>Dall’asfalto al fango / Un solo branco.</p>
-      <p>Colori: Nero assoluto / Asphalt Grey / Sabbia Nordica</p>
-      <p>Taglie: S / M / L / XL / XXL</p>
-
-      <a href="#" class="btn">SHOP</a>
-      <a href="#" class="btn">LOOKBOOK</a>
-      <a href="#" class="btn">IDENTITÀ</a>
+      <a class="btn" href="#">SHOP</a>
+      <a class="btn" href="#">LOOKBOOK</a>
+      <a class="btn" href="#">IDENTITÀ</a>
     </div>
 
     <div class="card">
       <h3>WORKING DOGS</h3>
       <p>Costruito sotto pressione.</p>
-      <p>Colori: Nero / Tactical Green / Dark Earth</p>
-      <p>Taglie: S / M / L / XL / XXL</p>
-
-      <a href="#" class="btn">SHOP</a>
-      <a href="#" class="btn">LOOKBOOK</a>
-      <a href="#" class="btn">DETTAGLI</a>
+      <a class="btn" href="#">SHOP</a>
+      <a class="btn" href="#">LOOKBOOK</a>
+      <a class="btn" href="#">DETTAGLI</a>
     </div>
 
     <div class="card">
       <h3>RICERCA E SOCCORSO</h3>
       <p>Si parte in due, si torna in due.</p>
-      <p>Colori: Nero / Smoke Grey / Burgundy</p>
-      <p>Taglie: S / M / L / XL / XXL</p>
-
-      <a href="#" class="btn">SHOP</a>
-      <a href="#" class="btn">LOOKBOOK</a>
-      <a href="#" class="btn">STORIA</a>
-    </div>
-
-    <div class="card">
-      <h3>DWD / UNBROKEN DOGS</h3>
-      <p>Different. Not less.</p>
-      <p>Colori: Nero / Ash Grey / Lavanda Spenta</p>
-      <p>Taglie: S / M / L / XL / XXL</p>
-
-      <a href="#" class="btn">SHOP</a>
-      <a href="#" class="btn">LOOKBOOK</a>
-      <a href="#" class="btn">MANIFESTO</a>
-    </div>
-
-    <div class="card">
-      <h3>NORSE</h3>
-      <p>Alcune cose non si spiegano. Si portano addosso.</p>
-      <p>Colori: Nero / Sabbia Nordica / Granite Grey</p>
-      <p>Taglie: S / M / L / XL / XXL</p>
-
-      <a href="#" class="btn">SHOP</a>
-      <a href="#" class="btn">LOOKBOOK</a>
-      <a href="#" class="btn">DETTAGLI</a>
-    </div>
-
-    <div class="card">
-      <h3>LEATHER CRAFT</h3>
-      <p>Pelle pieno fiore. Costruita per durare.</p>
-      <p>1.5M / 2M / 3M</p>
-      <p>Colori: Nero / Brown / Dark Earth</p>
-
-      <a href="#" class="btn">SHOP</a>
-      <a href="#" class="btn">DETTAGLI</a>
-    </div>
-
-    <div class="card">
-      <h3>EDUCAZIONE</h3>
-      <p>Relazione. Presenza. Responsabilità.</p>
-      <p>Colori: Nero / Washed Grey / Sabbia</p>
-      <p>Taglie: S / M / L / XL / XXL</p>
-
-      <a href="#" class="btn">SHOP</a>
-      <a href="#" class="btn">LOOKBOOK</a>
-      <a href="#" class="btn">FILOSOFIA</a>
+      <a class="btn" href="#">SHOP</a>
+      <a class="btn" href="#">LOOKBOOK</a>
+      <a class="btn" href="#">STORIA</a>
     </div>
 
   </div>
 
 </section>
 
-<!-- END -->
 <section>
   <h2>UN SOLO BRANCO</h2>
   <p>ATZ WORKING DOGS CULTURE</p>
