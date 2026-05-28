@@ -11,10 +11,7 @@
 
 <style>
 
-/* =========================
-RESET
-========================= */
-
+/* RESET */
 *{
 margin:0;
 padding:0;
@@ -32,51 +29,21 @@ color:white;
 overflow-x:hidden;
 }
 
-img{
-max-width:100%;
-display:block;
-}
+img{max-width:100%;display:block;}
+a{text-decoration:none;color:white;}
 
-a{
-text-decoration:none;
-color:white;
-}
+section{position:relative;}
 
-section{
-position:relative;
-}
-
-/* =========================
-TOPBAR
-========================= */
-
+/* TOPBAR */
 .topbar{
 position:fixed;
-top:0;
-left:0;
-width:100%;
+top:0;left:0;width:100%;
 padding:34px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
 z-index:999;
-background:
-linear-gradient(
-to bottom,
-rgba(0,0,0,0.88),
-rgba(0,0,0,0)
-);
-}
-
-.top-left{
-display:flex;
-align-items:center;
-gap:16px;
-}
-
-.top-rune{
-width:34px;
-opacity:0.95;
+background:linear-gradient(to bottom,rgba(0,0,0,0.88),rgba(0,0,0,0));
 }
 
 .top-logo{
@@ -91,40 +58,19 @@ color:#8f8f8f;
 transition:0.3s;
 }
 
-.back-home:hover{
-color:white;
-}
+.back-home:hover{color:white;}
 
-/* =========================
-HERO
-========================= */
-
+/* HERO */
 .hero{
 min-height:100vh;
 display:flex;
 align-items:center;
 padding:180px 8% 140px;
 background:
-linear-gradient(
-to bottom,
-rgba(0,0,0,0.72),
-rgba(0,0,0,0.96)
-),
+linear-gradient(rgba(0,0,0,0.72),rgba(0,0,0,0.96)),
 url('HeroATZ.jpg');
-
 background-size:cover;
 background-position:center;
-}
-
-.hero-inner{
-max-width:950px;
-}
-
-.hero-small{
-font-size:1rem;
-letter-spacing:6px;
-color:#7a7a7a;
-margin-bottom:30px;
 }
 
 .hero-title{
@@ -142,43 +88,7 @@ font-weight:300;
 color:#cfcfcf;
 }
 
-/* =========================
-EDITORIAL INTRO
-========================= */
-
-.editorial{
-padding:180px 8%;
-}
-
-.editorial-inner{
-max-width:900px;
-}
-
-.editorial-label{
-font-size:0.9rem;
-letter-spacing:5px;
-color:#666;
-margin-bottom:24px;
-}
-
-.editorial-title{
-font-size:5rem;
-line-height:1;
-text-transform:uppercase;
-margin-bottom:40px;
-}
-
-.editorial-text{
-font-size:1.4rem;
-line-height:1.9;
-font-weight:300;
-color:#cfcfcf;
-}
-
-/* =========================
-COLLECTIONS
-========================= */
-
+/* COLLECTIONS */
 .collections{
 padding:40px 8% 180px;
 }
@@ -194,10 +104,6 @@ width:100%;
 border:1px solid rgba(255,255,255,0.06);
 }
 
-.collection-info{
-margin-top:34px;
-}
-
 .collection-name{
 font-size:2.3rem;
 letter-spacing:2px;
@@ -209,60 +115,22 @@ font-size:1rem;
 letter-spacing:3px;
 color:#8f8f8f;
 margin-bottom:34px;
-line-height:1.7;
 }
-
-/* =========================
-DETAILS
-========================= */
-
-.collection-details{
-padding-top:28px;
-border-top:
-1px solid rgba(255,255,255,0.08);
-}
-
-.details-row{
-margin-bottom:24px;
-}
-
-.details-row span{
-display:block;
-font-size:0.8rem;
-letter-spacing:4px;
-color:#666;
-margin-bottom:10px;
-}
-
-.details-row p{
-font-size:1rem;
-line-height:1.7;
-color:#d0d0d0;
-}
-
-/* =========================
-BUTTONS
-========================= */
 
 .collection-buttons{
 display:flex;
-flex-wrap:wrap;
 gap:14px;
+flex-wrap:wrap;
 margin-top:40px;
 }
 
 .collection-buttons a{
 padding:14px 22px;
-border:
-1px solid rgba(255,255,255,0.12);
-
+border:1px solid rgba(255,255,255,0.12);
 font-size:0.8rem;
 letter-spacing:3px;
-
+background:rgba(255,255,255,0.02);
 transition:0.3s;
-
-background:
-rgba(255,255,255,0.02);
 }
 
 .collection-buttons a:hover{
@@ -270,27 +138,10 @@ background:white;
 color:black;
 }
 
-/* =========================
-FOOTER
-========================= */
-
+/* FOOTER */
 footer{
 padding:140px 8%;
-border-top:
-1px solid rgba(255,255,255,0.06);
-}
-
-.footer-rune{
-width:100px;
-margin-bottom:50px;
-opacity:0.9;
-}
-
-.footer-title{
-font-size:4rem;
-line-height:1;
-text-transform:uppercase;
-margin-bottom:40px;
+border-top:1px solid rgba(255,255,255,0.06);
 }
 
 .footer-sub{
@@ -299,194 +150,48 @@ letter-spacing:5px;
 color:#777;
 }
 
-/* =========================
-MOBILE FINAL FIX
-========================= */
-
+/* MOBILE */
 @media(max-width:900px){
 
-.hero{
-padding:120px 8% 80px;
-}
+.hero-title{font-size:4rem;}
 
-.hero-title{
-font-size:2.6rem;
-line-height:1;
-letter-spacing:1px;
-margin-bottom:20px;
-}
-
-.hero-sub{
-font-size:1rem;
-line-height:1.6;
-}
-
-.editorial{
-padding:80px 8%;
-}
-
-.editorial-title{
-font-size:2rem;
-line-height:1.1;
-margin-bottom:25px;
-}
-
-.editorial-text{
-font-size:1rem;
-line-height:1.7;
-}
-
-.collections{
-padding:40px 8% 100px;
-}
-
-.collection-grid{
-gap:70px;
-}
-
-.collection-card img{
-border:1px solid rgba(255,255,255,0.04);
-}
-
-.collection-name{
-font-size:1.5rem;
-letter-spacing:1px;
-}
-
-.collection-sub{
-font-size:0.9rem;
-letter-spacing:2px;
-margin-bottom:20px;
-}
-
-.details-row p{
-font-size:0.95rem;
-line-height:1.5;
-}
-
-.collection-buttons{
-flex-direction:column;
-gap:10px;
-margin-top:25px;
-}
+.collection-name{font-size:1.7rem;}
 
 .collection-buttons a{
-width:100%;
-text-align:center;
-padding:12px 16px;
-font-size:0.75rem;
-letter-spacing:2px;
-}
-
-.topbar{
-padding:20px 6%;
-}
-
-.top-logo{
-font-size:1rem;
-letter-spacing:4px;
-}
-
-.back-home{
-font-size:0.8rem;
-letter-spacing:3px;
-}
-
-.footer-title{
-font-size:2rem;
-line-height:1.1;
+font-size:0.7rem;
+padding:12px 18px;
 }
 
 }
 
 </style>
-
 </head>
 
 <body>
 
-<!-- TOPBAR -->
-
 <div class="topbar">
 
-<div class="top-left">
+<div class="top-logo">ATZ</div>
 
-<img src="runa-minimal.png" class="top-rune">
-
-<div class="top-logo">
-ATZ
-</div>
+<a href="index.html" class="back-home">HOME</a>
 
 </div>
-
-<a href="index.html" class="back-home">
-HOME
-</a>
-
-</div>
-
-<!-- HERO -->
 
 <section class="hero">
 
-<div class="hero-inner">
-
-<div class="hero-small">
-ATZ WORKING DOGS CULTURE
-</div>
+<div>
 
 <h1 class="hero-title">
-NON È MERCH.<br>
-È APPARTENENZA.
+NON È MERCH.<br>È APPARTENENZA.
 </h1>
 
 <div class="hero-sub">
-
-Ogni linea nasce dalla strada,
-dal lavoro, dal fango,
-dalle relazioni costruite davvero.
-
-ATZ non veste personaggi.
-Veste identità.
-
+ATZ WORKING DOGS CULTURE
 </div>
 
 </div>
 
 </section>
-
-<!-- INTRO -->
-
-<section class="editorial">
-
-<div class="editorial-inner">
-
-<div class="editorial-label">
-ATZ / MERCH COLLECTIONS
-</div>
-
-<h2 class="editorial-title">
-DALL’ASFALTO<br>
-AL FANGO.
-</h2>
-
-<div class="editorial-text">
-
-Non abbiamo costruito una linea merch.
-Abbiamo costruito simboli,
-frasi e immagini che raccontano
-un modo preciso di vivere i cani.
-
-Ogni collezione ha un'identità diversa.
-Ma appartiene allo stesso branco.
-
-</div>
-
-</div>
-
-</section>
-
-<!-- COLLECTIONS -->
 
 <section class="collections">
 
@@ -494,300 +199,81 @@ Ma appartiene allo stesso branco.
 
 <!-- CORE -->
 <div class="collection-card">
-
 <img src="merch/core/core-collection.jpg">
-
-<div class="collection-info">
-
-<div class="collection-name">
-CORE ATZ
-</div>
-
-<div class="collection-sub">
-Dall’asfalto al fango / Un solo branco.
-</div>
-
-<div class="collection-details">
-
-<div class="details-row">
-<span>COLORI</span>
-<p>Nero assoluto / Asphalt Grey / Sabbia Nordica</p>
-</div>
-
-<div class="details-row">
-<span>TAGLIE</span>
-<p>S / M / L / XL / XXL</p>
-</div>
-
+<div class="collection-name">CORE ATZ</div>
+<div class="collection-sub">Dall’asfalto al fango / Un solo branco.</div>
 <div class="collection-buttons">
 <a href="#">SHOP</a>
 <a href="#">LOOKBOOK</a>
 <a href="#">IDENTITÀ</a>
 </div>
-
-</div>
-
-</div>
-
 </div>
 
 <!-- WORKING DOGS -->
 <div class="collection-card">
-
 <img src="merch/workingdogs/workingdogs-collection.jpg">
-
-<div class="collection-info">
-
-<div class="collection-name">
-WORKING DOGS
-</div>
-
-<div class="collection-sub">
-Costruito sotto pressione.
-</div>
-
-<div class="collection-details">
-
-<div class="details-row">
-<span>COLORI</span>
-<p>Nero / Tactical Green / Dark Earth</p>
-</div>
-
-<div class="details-row">
-<span>TAGLIE</span>
-<p>S / M / L / XL / XXL</p>
-</div>
-
+<div class="collection-name">WORKING DOGS</div>
+<div class="collection-sub">Costruito sotto pressione.</div>
 <div class="collection-buttons">
 <a href="#">SHOP</a>
 <a href="#">LOOKBOOK</a>
-<a href="#">METODO</a>
+<a href="working-dogs-metodo.html">METODO</a>
 </div>
-
-</div>
-
-</div>
-
 </div>
 
 <!-- SOCCORSO -->
 <div class="collection-card">
-
 <img src="merch/soccorso/soccorso-collection.jpg">
-
-<div class="collection-info">
-
-<div class="collection-name">
-RICERCA E SOCCORSO
-</div>
-
-<div class="collection-sub">
-Non mi interessa altro.
-Si parte in due, si torna in due.
-</div>
-
-<div class="collection-details">
-
-<div class="details-row">
-<span>COLORI</span>
-<p>Nero / Smoke Grey / Burgundy Scuro</p>
-</div>
-
-<div class="details-row">
-<span>TAGLIE</span>
-<p>S / M / L / XL / XXL</p>
-</div>
-
+<div class="collection-name">RICERCA E SOCCORSO</div>
+<div class="collection-sub">Si parte in due, si torna in due.</div>
 <div class="collection-buttons">
 <a href="#">SHOP</a>
 <a href="#">LOOKBOOK</a>
 <a href="#">BINOMIO</a>
 </div>
-
-</div>
-
-</div>
-
 </div>
 
 <!-- DWD -->
 <div class="collection-card">
-
 <img src="merch/dwd/dwd-collection.jpg">
-
-<div class="collection-info">
-
-<div class="collection-name">
-DWD / UNBROKEN DOGS
-</div>
-
-<div class="collection-sub">
-Different. Not less.
-</div>
-
-<div class="collection-details">
-
-<div class="details-row">
-<span>COLORI</span>
-<p>Nero / Ash Grey / Lavanda Spenta</p>
-</div>
-
-<div class="details-row">
-<span>TAGLIE</span>
-<p>S / M / L / XL / XXL</p>
-</div>
-
+<div class="collection-name">DWD / UNBROKEN DOGS</div>
+<div class="collection-sub">Different. Not less.</div>
 <div class="collection-buttons">
 <a href="#">SHOP</a>
 <a href="#">LOOKBOOK</a>
 <a href="#">MANIFESTO</a>
 </div>
-
-</div>
-
-</div>
-
 </div>
 
 <!-- NORSE -->
 <div class="collection-card">
-
 <img src="merch/norse/norse-collection.jpg">
-
-<div class="collection-info">
-
-<div class="collection-name">
-NORSE
-</div>
-
-<div class="collection-sub">
-Alcune cose non si spiegano.
-Si portano addosso.
-</div>
-
-<div class="collection-details">
-
-<div class="details-row">
-<span>COLORI</span>
-<p>Nero / Sabbia Nordica / Granite Grey</p>
-</div>
-
-<div class="details-row">
-<span>TAGLIE</span>
-<p>S / M / L / XL / XXL</p>
-</div>
-
+<div class="collection-name">NORSE</div>
+<div class="collection-sub">Alcune cose non si spiegano. Si portano addosso.</div>
 <div class="collection-buttons">
 <a href="#">SHOP</a>
 <a href="#">LOOKBOOK</a>
-<a href="#">MITO</a>
+<a href="norse-mito.html">MITO</a>
 </div>
-
-</div>
-
-</div>
-
 </div>
 
 <!-- LEATHER -->
 <div class="collection-card">
-
 <img src="merch/norse/leather-craft.jpg">
-
-<div class="collection-info">
-
-<div class="collection-name">
-NORSE / LEATHER CRAFT
-</div>
-
-<div class="collection-sub">
-Pelle pieno fiore.
-Costruita per durare.
-</div>
-
-<div class="collection-details">
-
-<div class="details-row">
-<span>COLORI</span>
-<p>Nero / Brown / Dark Earth</p>
-</div>
-
-<div class="details-row">
-<span>MISURE</span>
-<p>1.5 MT / 2 MT / 3 MT</p>
-</div>
-
+<div class="collection-name">NORSE / LEATHER CRAFT</div>
 <div class="collection-buttons">
 <a href="#">SHOP</a>
 <a href="#">DETTAGLI</a>
 <a href="#">CRAFT</a>
 </div>
-
-</div>
-
-</div>
-
 </div>
 
 <!-- EDUCAZIONE -->
 <div class="collection-card">
-
 <img src="merch/educazione/educazione-collection.jpg">
-
-<div class="collection-info">
-
-<div class="collection-name">
-EDUCAZIONE / RIEDUCAZIONE
-</div>
-
-<div class="collection-sub">
-Relazione. Presenza. Responsabilità.
-</div>
-
-<div class="collection-details">
-
-<div class="details-row">
-<span>COLORI</span>
-<p>Nero / Washed Grey / Sabbia</p>
-</div>
-
-<div class="details-row">
-<span>TAGLIE</span>
-<p>S / M / L / XL / XXL</p>
-</div>
-
+<div class="collection-name">EDUCAZIONE / RIEDUCAZIONE</div>
+<div class="collection-sub">Relazione. Presenza. Responsabilità.</div>
 <div class="collection-buttons">
 <a href="#">SHOP</a>
 <a href="#">LOOKBOOK</a>
-<a href="#">FILOSOFIA</a>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-
-
-<!-- FOOTER -->
-
-<footer>
-
-<img src="runa-incisa.png" class="footer-rune">
-
-<div class="footer-title">
-UN SOLO<br>
-BRANCO.
-</div>
-
-<div class="footer-sub">
-ATZ WORKING DOGS CULTURE
-</div>
-
-</footer>
-
-</body>
-</html>
+<a href="#">FIL
