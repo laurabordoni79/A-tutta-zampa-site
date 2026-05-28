@@ -1,69 +1,145 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ATZ MERCH</title>
+<title>ATZ CORE | Identity</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 <style>
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background: #0b0b0b;
-  color: #f2f2f2;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-section {
-  padding: 100px 20px;
-  text-align: center;
+body{
+background:#000;
+color:#fff;
+font-family:'Oswald',sans-serif;
+overflow-x:hidden;
 }
 
-h1, h2, h3 {
-  text-transform: uppercase;
-  letter-spacing: 2px;
+/* TOPBAR */
+
+.topbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:30px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:999;
+background:linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
 }
 
-p {
-  font-size: 14px;
-  line-height: 1.6;
-  opacity: 0.9;
+.topbar a{
+color:#aaa;
+letter-spacing:4px;
+font-size:0.9rem;
+text-decoration:none;
 }
 
-/* GRID */
-.grid {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+.topbar a:hover{
+color:#fff;
 }
 
-/* CARD */
-.card {
-  border: 1px solid rgba(255,255,255,0.15);
-  padding: 25px 20px;
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+padding:160px 8%;
+background:
+linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.95)),
+url('core-hero.jpg');
+background-size:cover;
+background-position:center;
 }
 
-/* BUTTON */
-.btn {
-  display: block;
-  margin: 8px auto;
-  padding: 12px 16px;
-  border: 1px solid white;
-  text-decoration: none;
-  color: white;
-  text-transform: uppercase;
-  font-size: 13px;
+.hero h1{
+font-size:6rem;
+line-height:1;
+text-transform:uppercase;
 }
 
-.hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: black;
+.hero p{
+margin-top:30px;
+font-size:1.3rem;
+color:#cfcfcf;
+max-width:700px;
+line-height:1.8;
+font-weight:300;
+}
+
+/* MANIFESTO */
+
+.manifesto{
+padding:160px 8%;
+}
+
+.manifesto p{
+font-size:1.4rem;
+line-height:2;
+max-width:850px;
+color:#ddd;
+font-weight:300;
+}
+
+.manifesto span{
+display:block;
+margin-top:40px;
+color:#888;
+letter-spacing:3px;
+font-size:0.9rem;
+}
+
+/* CTA */
+
+.cta{
+padding:140px 8%;
+text-align:center;
+}
+
+.cta a{
+display:inline-block;
+margin:10px;
+padding:16px 26px;
+border:1px solid rgba(255,255,255,0.2);
+letter-spacing:4px;
+font-size:0.8rem;
+text-decoration:none;
+color:#fff;
+transition:0.3s;
+}
+
+.cta a:hover{
+background:#fff;
+color:#000;
+}
+
+@media(max-width:900px){
+
+.hero h1{
+font-size:3.2rem;
+}
+
+.hero p{
+font-size:1.1rem;
+}
+
+.manifesto p{
+font-size:1.1rem;
+}
+
 }
 
 </style>
@@ -72,73 +148,70 @@ p {
 
 <body>
 
+<!-- TOP -->
+
+<div class="topbar">
+
+<a href="index.html">HOME</a>
+
+<a href="merch.html">MERCH</a>
+
+</div>
+
+<!-- HERO -->
+
 <section class="hero">
-  <h1>ATZ WORKING DOGS CULTURE</h1>
-  <p>NON È MERCH. È APPARTENENZA.</p>
-</section>
 
-<section>
-  <h2>DALL’ASFALTO AL FANGO</h2>
-  <p>Ogni linea nasce dalla strada, dal lavoro, dal fango, dalle relazioni costruite davvero.</p>
-  <p>ATZ non veste personaggi. Veste identità.</p>
-</section>
+<div>
 
-<section>
+<h1>
+CORE
+</h1>
 
-  <h2>ATZ / MERCH COLLECTIONS</h2>
+<p>
+Dall’asfalto al fango / Un solo branco.
 
-  <div class="grid">
+Non è una collezione.
+È il punto di ingresso nel sistema ATZ.
+</p>
 
-    <div class="card">
-      <h3>CORE ATZ</h3>
-      <p>Dall’asfalto al fango / Un solo branco.</p>
-      <p>Colori: Nero assoluto / Asphalt Grey / Sabbia Nordica</p>
-      <p>S / M / L / XL / XXL</p>
-      <a class="btn">SHOP</a>
-      <a class="btn">LOOKBOOK</a>
-      <a class="btn">IDENTITÀ</a>
-    </div>
-
-    <div class="card">
-      <h3>WORKING DOGS</h3>
-      <p>Costruito sotto pressione.</p>
-      <p>Nero / Tactical Green / Dark Earth</p>
-      <a class="btn">SHOP</a>
-      <a class="btn">LOOKBOOK</a>
-      <a class="btn">DETTAGLI</a>
-    </div>
-
-    <div class="card">
-      <h3>RICERCA E SOCCORSO</h3>
-      <p>Si parte in due, si torna in due.</p>
-      <a class="btn">SHOP</a>
-      <a class="btn">LOOKBOOK</a>
-      <a class="btn">STORIA</a>
-    </div>
-
-    <div class="card">
-      <h3>DWD</h3>
-      <p>Different. Not less.</p>
-      <a class="btn">SHOP</a>
-      <a class="btn">LOOKBOOK</a>
-      <a class="btn">MANIFESTO</a>
-    </div>
-
-    <div class="card">
-      <h3>NORSE</h3>
-      <p>Alcune cose non si spiegano. Si portano addosso.</p>
-      <a class="btn">SHOP</a>
-      <a class="btn">LOOKBOOK</a>
-      <a class="btn">DETTAGLI</a>
-    </div>
-
-  </div>
+</div>
 
 </section>
 
-<section>
-  <h2>UN SOLO BRANCO</h2>
+<!-- MANIFESTO -->
+
+<section class="manifesto">
+
+<p>
+CORE ATZ non è performance.
+Non è estetica.
+Non è sport.
+
+È relazione.
+
+Qui non si simula.
+Si costruisce sotto pressione reale.
+
+Il cane non è un ruolo.
+È un sistema vivo.
+</p>
+
+<span>
+ATZ / CORE IDENTITY
+</span>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+
+<a href="merch.html">ENTRA NEL MERCH</a>
+<a href="#">SCOPRI LE COLLEZIONI</a>
+
 </section>
 
 </body>
+
 </html>
