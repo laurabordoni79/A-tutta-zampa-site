@@ -9,8 +9,8 @@
 <style>
 
 /* =========================
-   ATZ MERCH PAGE
-   MOBILE FIRST LOOKBOOK
+   ATZ MERCH RESTORE v1
+   (stessa estetica, codice pulito)
 ========================= */
 
 body {
@@ -22,7 +22,23 @@ body {
 }
 
 /* =========================
-   SECTIONS
+   TYPOGRAPHY
+========================= */
+
+h1, h2, h3 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 0 10px 0;
+}
+
+p {
+  font-size: 14px;
+  opacity: 0.85;
+  margin: 0 0 15px 0;
+}
+
+/* =========================
+   LAYOUT SECTIONS
 ========================= */
 
 section {
@@ -32,28 +48,32 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
   text-align: center;
+  gap: 20px;
 }
 
 /* =========================
-   TYPOGRAPHY
+   HERO
 ========================= */
 
-h1, h2 {
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin: 0;
+.hero {
+  position: relative;
+  background: url("merch-hero.jpg") center/cover no-repeat;
 }
 
-p {
-  font-size: 14px;
-  opacity: 0.85;
-  margin: 0;
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
 }
 
 /* =========================
-   BUTTONS
+   BUTTON SYSTEM (UNIFICATO)
 ========================= */
 
 .btn {
@@ -61,11 +81,11 @@ p {
   justify-content: center;
   align-items: center;
 
-  padding: 14px 18px;
-  margin: 10px auto;
-
   width: 100%;
   max-width: 320px;
+
+  padding: 14px 18px;
+  margin: 8px auto;
 
   border: 1px solid rgba(255,255,255,0.4);
   background: transparent;
@@ -87,46 +107,23 @@ p {
 }
 
 /* =========================
-   HERO MERCH
-========================= */
-
-.hero {
-  background: url("merch-hero.jpg") center/cover no-repeat;
-  position: relative;
-}
-
-.overlay {
-  position: absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background: rgba(0,0,0,0.6);
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-}
-
-/* =========================
    COLLECTION GRID
 ========================= */
 
 .grid {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px;
   margin-top: 20px;
 }
 
 .card {
   border: 1px solid rgba(255,255,255,0.15);
-  padding: 20px;
+  padding: 25px 20px;
 }
 
 /* =========================
-   MOBILE OPTIMIZATION
+   MOBILE
 ========================= */
 
 @media (max-width: 768px) {
@@ -146,58 +143,127 @@ p {
 <body>
 
 <!-- =========================
-   HERO
+   HOME MERCH
 ========================= -->
 <section class="hero">
+
   <div class="overlay"></div>
 
   <div class="hero-content">
-    <h1>ATZ MERCH</h1>
-    <p>Non è merch. È appartenenza.</p>
+    <h1>ATZ WORKING DOGS CULTURE</h1>
 
-    <a href="#collection" class="btn">SCOPRI LE LINEE</a>
+    <p>NON È MERCH. È APPARTENENZA.</p>
+
+    <a href="#collections" class="btn">SCOPRI LE COLLEZIONI</a>
   </div>
+
 </section>
 
 <!-- =========================
    INTRO
 ========================= -->
 <section>
-  <h2>DALL’ASFALTO AL FANGO</h2>
-  <p>Ogni linea è un’identità. Ogni pezzo è un’appartenenza.</p>
+  <h2>DALL’ASFALTO AL FANGO.</h2>
+
+  <p>
+    Non abbiamo costruito una linea merch. Abbiamo costruito simboli, frasi e immagini che raccontano un modo preciso di vivere i cani.
+  </p>
+
+  <p>
+    Ogni collezione ha un'identità diversa. Ma appartiene allo stesso branco.
+  </p>
 </section>
 
 <!-- =========================
    COLLECTIONS
 ========================= -->
-<section id="collection">
+<section id="collections">
 
-  <h2>COLLEZIONI</h2>
+  <h2>ATZ / MERCH COLLECTIONS</h2>
 
   <div class="grid">
 
+    <!-- CORE -->
     <div class="card">
       <h3>CORE ATZ</h3>
-      <p>Identità pura. Origine del sistema.</p>
-      <a href="#" class="btn">ENTRA</a>
+      <p>Dall’asfalto al fango / Un solo branco.</p>
+      <p>Colori: Nero assoluto / Asphalt Grey / Sabbia Nordica</p>
+      <p>Taglie: S / M / L / XL / XXL</p>
+
+      <a href="#" class="btn">SHOP</a>
+      <a href="#" class="btn">LOOKBOOK</a>
+      <a href="#" class="btn">IDENTITÀ</a>
     </div>
 
+    <!-- WORKING DOGS -->
     <div class="card">
       <h3>WORKING DOGS</h3>
       <p>Costruito sotto pressione.</p>
-      <a href="#" class="btn">ENTRA</a>
+      <p>Colori: Nero / Tactical Green / Dark Earth</p>
+      <p>Taglie: S / M / L / XL / XXL</p>
+
+      <a href="#" class="btn">SHOP</a>
+      <a href="#" class="btn">LOOKBOOK</a>
+      <a href="#" class="btn">DETTAGLI</a>
     </div>
 
+    <!-- SOCCORSO -->
     <div class="card">
-      <h3>DWD</h3>
-      <p>Different. Not less.</p>
-      <a href="#" class="btn">ENTRA</a>
+      <h3>RICERCA E SOCCORSO</h3>
+      <p>Si parte in due, si torna in due.</p>
+      <p>Colori: Nero / Smoke Grey / Burgundy</p>
+      <p>Taglie: S / M / L / XL / XXL</p>
+
+      <a href="#" class="btn">SHOP</a>
+      <a href="#" class="btn">LOOKBOOK</a>
+      <a href="#" class="btn">STORIA</a>
     </div>
 
+    <!-- DWD -->
+    <div class="card">
+      <h3>DWD / UNBROKEN DOGS</h3>
+      <p>Different. Not less.</p>
+      <p>Colori: Nero / Ash Grey / Lavanda Spenta</p>
+      <p>Taglie: S / M / L / XL / XXL</p>
+
+      <a href="#" class="btn">SHOP</a>
+      <a href="#" class="btn">LOOKBOOK</a>
+      <a href="#" class="btn">MANIFESTO</a>
+    </div>
+
+    <!-- NORSE -->
     <div class="card">
       <h3>NORSE</h3>
-      <p>Onora il percorso.</p>
-      <a href="#" class="btn">ENTRA</a>
+      <p>Alcune cose non si spiegano. Si portano addosso.</p>
+      <p>Colori: Nero / Sabbia Nordica / Granite Grey</p>
+      <p>Taglie: S / M / L / XL / XXL</p>
+
+      <a href="#" class="btn">SHOP</a>
+      <a href="#" class="btn">LOOKBOOK</a>
+      <a href="#" class="btn">DETTAGLI</a>
+    </div>
+
+    <!-- LEATHER CRAFT -->
+    <div class="card">
+      <h3>NORSE / LEATHER CRAFT</h3>
+      <p>Pelle pieno fiore. Costruita per durare.</p>
+      <p>Misure: 1.5M / 2M / 3M</p>
+      <p>Colori: Nero / Brown / Dark Earth</p>
+
+      <a href="#" class="btn">SHOP</a>
+      <a href="#" class="btn">DETTAGLI CRAFT</a>
+    </div>
+
+    <!-- EDUCAZIONE -->
+    <div class="card">
+      <h3>EDUCAZIONE / RIEDUCAZIONE</h3>
+      <p>Relazione. Presenza. Responsabilità.</p>
+      <p>Colori: Nero / Washed Grey / Sabbia</p>
+      <p>Taglie: S / M / L / XL / XXL</p>
+
+      <a href="#" class="btn">SHOP</a>
+      <a href="#" class="btn">LOOKBOOK</a>
+      <a href="#" class="btn">FILOSOFIA</a>
     </div>
 
   </div>
@@ -205,13 +271,12 @@ p {
 </section>
 
 <!-- =========================
-   MANIFESTO MERCH
+   CLOSING
 ========================= -->
 <section>
-  <h2>MANIFESTO</h2>
-  <p>Non è moda. Non è branding. È appartenenza reale.</p>
+  <h2>UN SOLO BRANCO.</h2>
 
-  <a href="#" class="btn">LEGGI</a>
+  <p>ATZ WORKING DOGS CULTURE</p>
 </section>
 
 </body>
