@@ -9,8 +9,7 @@
 <style>
 
 /* =========================
-   ATZ MERCH FULL RESTORE
-   (NO CUT, ONLY FIX)
+   BASE STABILE
 ========================= */
 
 * {
@@ -21,12 +20,14 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background: #0b0b0b;
+  background: #0a0a0a;
   color: #f2f2f2;
   -webkit-font-smoothing: antialiased;
 }
 
-/* TYPOGRAPHY */
+/* =========================
+   TYPOGRAPHY (ATZ STYLE)
+========================= */
 
 h1, h2, h3 {
   text-transform: uppercase;
@@ -34,42 +35,45 @@ h1, h2, h3 {
   margin: 0 0 12px 0;
 }
 
-h1 { font-size: 36px; }
-h2 { font-size: 26px; }
-h3 { font-size: 18px; }
+h1 { font-size: 42px; line-height: 1.1; }
+h2 { font-size: 28px; margin-bottom: 25px; }
+h3 { font-size: 19px; letter-spacing: 1.5px; }
 
 p {
   font-size: 14px;
-  line-height: 1.6;
-  opacity: 0.9;
+  line-height: 1.7;
+  opacity: 0.88;
   margin: 0 0 12px 0;
 }
 
-/* LAYOUT */
+/* =========================
+   LAYOUT
+========================= */
 
 section {
-  padding: 90px 20px;
+  padding: 110px 22px;
   text-align: center;
 }
 
-/* HERO (SAFE VERSION) */
-
+/* HERO */
 .hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
   background: #000;
-  position: relative;
 }
 
-.hero h1 {
-  margin-bottom: 10px;
+.hero p {
+  font-size: 16px;
+  margin-top: 10px;
+  opacity: 0.9;
 }
 
-/* BUTTON SYSTEM (UNCHANGED STYLE FEEL) */
+/* =========================
+   BUTTON SYSTEM (ATZ)
+========================= */
 
 .btn {
   display: inline-flex;
@@ -79,54 +83,56 @@ section {
   width: 100%;
   max-width: 320px;
 
-  padding: 14px 18px;
+  padding: 15px 18px;
   margin: 8px auto;
 
-  border: 1px solid rgba(255,255,255,0.4);
+  border: 1px solid rgba(255,255,255,0.28);
   background: transparent;
   color: #f2f2f2;
 
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 1.2px;
-  font-size: 13px;
+  letter-spacing: 1.4px;
+  font-size: 12.5px;
 
   transition: 0.25s ease;
 }
 
 .btn:hover {
-  background: rgba(255,255,255,0.08);
-  border-color: rgba(255,255,255,0.7);
+  border-color: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.06);
 }
 
-/* GRID */
+/* =========================
+   COLLECTIONS
+========================= */
 
 .grid {
   display: flex;
   flex-direction: column;
-  gap: 25px;
-  margin-top: 25px;
+  gap: 30px;
+  margin-top: 35px;
 }
 
 .card {
-  border: 1px solid rgba(255,255,255,0.15);
-  padding: 25px 20px;
-  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 30px 22px;
+  background: rgba(255,255,255,0.015);
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 768px) {
+
   section {
-    padding: 60px 15px;
+    padding: 85px 16px;
   }
 
-  h1 { font-size: 28px; }
+  h1 { font-size: 30px; }
   h2 { font-size: 22px; }
 
-  .btn {
-    max-width: 100%;
-  }
 }
 
 </style>
@@ -154,7 +160,7 @@ section {
   </p>
 
   <p>
-    Ogni collezione ha un'identità diversa. Ma appartiene allo stesso branco.
+    Ogni collezione ha un’identità diversa. Ma appartiene allo stesso branco.
   </p>
 </section>
 
@@ -168,7 +174,7 @@ section {
     <div class="card">
       <h3>CORE ATZ</h3>
       <p>Dall’asfalto al fango / Un solo branco.</p>
-      <p>Colori: Nero assoluto / Asphalt Grey / Sabbia Nordica</p>
+      <p>Nero assoluto / Asphalt Grey / Sabbia Nordica</p>
       <p>S / M / L / XL / XXL</p>
 
       <a class="btn" href="#">SHOP</a>
