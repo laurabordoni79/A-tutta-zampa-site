@@ -9,9 +9,12 @@
 <style>
 
 /* =========================
-   ATZ MERCH RESTORE v1
-   (stessa estetica, codice pulito)
+   ATZ MERCH v3 CLEAN
 ========================= */
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -19,80 +22,66 @@ body {
   font-family: Arial, sans-serif;
   background: #0b0b0b;
   color: #f2f2f2;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* =========================
-   TYPOGRAPHY
-========================= */
+/* TYPOGRAPHY */
 
 h1, h2, h3 {
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin: 0 0 10px 0;
+  margin: 0 0 12px 0;
 }
+
+h1 { font-size: 34px; }
+h2 { font-size: 24px; }
+h3 { font-size: 18px; }
 
 p {
   font-size: 14px;
-  opacity: 0.85;
-  margin: 0 0 15px 0;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin: 0 0 12px 0;
 }
 
-/* =========================
-   LAYOUT SECTIONS
-========================= */
+/* LAYOUT */
 
 section {
   padding: 80px 20px;
-  min-height: 100vh;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   text-align: center;
-  gap: 20px;
 }
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero {
-  position: relative;
-  background: url("merch-hero.jpg") center/cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  background: #000;
 }
 
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
+.hero h1 {
+  margin-bottom: 10px;
 }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-}
-
-/* =========================
-   BUTTON SYSTEM (UNIFICATO)
-========================= */
+/* BUTTONS */
 
 .btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-
+  display: inline-block;
   width: 100%;
   max-width: 320px;
 
   padding: 14px 18px;
   margin: 8px auto;
 
-  border: 1px solid rgba(255,255,255,0.4);
+  border: 1px solid rgba(255,255,255,0.35);
   background: transparent;
-
   color: #f2f2f2;
-  text-decoration: none;
 
+  text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1.2px;
   font-size: 13px;
@@ -103,37 +92,31 @@ section {
 .btn:hover {
   background: rgba(255,255,255,0.08);
   border-color: rgba(255,255,255,0.7);
-  transform: translateY(-1px);
 }
 
-/* =========================
-   COLLECTION GRID
-========================= */
+/* COLLECTIONS */
 
 .grid {
   display: flex;
   flex-direction: column;
-  gap: 25px;
-  margin-top: 20px;
+  gap: 20px;
+  margin-top: 30px;
 }
 
 .card {
   border: 1px solid rgba(255,255,255,0.15);
-  padding: 25px 20px;
+  padding: 20px;
+  background: rgba(255,255,255,0.02);
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media (max-width: 768px) {
   section {
     padding: 60px 15px;
   }
 
-  .btn {
-    max-width: 100%;
-  }
+  h1 { font-size: 28px; }
 }
 
 </style>
@@ -142,140 +125,107 @@ section {
 
 <body>
 
-<!-- =========================
-   HOME MERCH
-========================= -->
+<!-- HERO -->
 <section class="hero">
-
-  <div class="overlay"></div>
-
-  <div class="hero-content">
-    <h1>ATZ WORKING DOGS CULTURE</h1>
-
-    <p>NON È MERCH. È APPARTENENZA.</p>
-
-    <a href="#collections" class="btn">SCOPRI LE COLLEZIONI</a>
-  </div>
-
+  <h1>ATZ WORKING DOGS CULTURE</h1>
+  <p>NON È MERCH. È APPARTENENZA.</p>
+  <a class="btn" href="#collections">SCOPRI LE COLLEZIONI</a>
 </section>
 
-<!-- =========================
-   INTRO
-========================= -->
+<!-- INTRO -->
 <section>
-  <h2>DALL’ASFALTO AL FANGO.</h2>
-
+  <h2>DALL’ASFALTO AL FANGO</h2>
   <p>
     Non abbiamo costruito una linea merch. Abbiamo costruito simboli, frasi e immagini che raccontano un modo preciso di vivere i cani.
   </p>
-
   <p>
-    Ogni collezione ha un'identità diversa. Ma appartiene allo stesso branco.
+    Ogni collezione ha un’identità diversa. Ma appartiene allo stesso branco.
   </p>
 </section>
 
-<!-- =========================
-   COLLECTIONS
-========================= -->
+<!-- COLLECTIONS -->
 <section id="collections">
 
-  <h2>ATZ / MERCH COLLECTIONS</h2>
+  <h2>COLLEZIONI</h2>
 
   <div class="grid">
 
-    <!-- CORE -->
     <div class="card">
       <h3>CORE ATZ</h3>
       <p>Dall’asfalto al fango / Un solo branco.</p>
-      <p>Colori: Nero assoluto / Asphalt Grey / Sabbia Nordica</p>
-      <p>Taglie: S / M / L / XL / XXL</p>
-
-      <a href="#" class="btn">SHOP</a>
-      <a href="#" class="btn">LOOKBOOK</a>
-      <a href="#" class="btn">IDENTITÀ</a>
+      <p>Nero assoluto / Asphalt Grey / Sabbia Nordica</p>
+      <p>S / M / L / XL / XXL</p>
+      <a class="btn" href="#">SHOP</a>
+      <a class="btn" href="#">LOOKBOOK</a>
+      <a class="btn" href="#">IDENTITÀ</a>
     </div>
 
-    <!-- WORKING DOGS -->
     <div class="card">
       <h3>WORKING DOGS</h3>
       <p>Costruito sotto pressione.</p>
-      <p>Colori: Nero / Tactical Green / Dark Earth</p>
-      <p>Taglie: S / M / L / XL / XXL</p>
-
-      <a href="#" class="btn">SHOP</a>
-      <a href="#" class="btn">LOOKBOOK</a>
-      <a href="#" class="btn">DETTAGLI</a>
+      <p>Nero / Tactical Green / Dark Earth</p>
+      <p>S / M / L / XL / XXL</p>
+      <a class="btn" href="#">SHOP</a>
+      <a class="btn" href="#">LOOKBOOK</a>
+      <a class="btn" href="#">DETTAGLI</a>
     </div>
 
-    <!-- SOCCORSO -->
     <div class="card">
       <h3>RICERCA E SOCCORSO</h3>
       <p>Si parte in due, si torna in due.</p>
-      <p>Colori: Nero / Smoke Grey / Burgundy</p>
-      <p>Taglie: S / M / L / XL / XXL</p>
-
-      <a href="#" class="btn">SHOP</a>
-      <a href="#" class="btn">LOOKBOOK</a>
-      <a href="#" class="btn">STORIA</a>
+      <p>Nero / Smoke Grey / Burgundy</p>
+      <p>S / M / L / XL / XXL</p>
+      <a class="btn" href="#">SHOP</a>
+      <a class="btn" href="#">LOOKBOOK</a>
+      <a class="btn" href="#">STORIA</a>
     </div>
 
-    <!-- DWD -->
     <div class="card">
       <h3>DWD / UNBROKEN DOGS</h3>
       <p>Different. Not less.</p>
-      <p>Colori: Nero / Ash Grey / Lavanda Spenta</p>
-      <p>Taglie: S / M / L / XL / XXL</p>
-
-      <a href="#" class="btn">SHOP</a>
-      <a href="#" class="btn">LOOKBOOK</a>
-      <a href="#" class="btn">MANIFESTO</a>
+      <p>Nero / Ash Grey / Lavanda Spenta</p>
+      <p>S / M / L / XL / XXL</p>
+      <a class="btn" href="#">SHOP</a>
+      <a class="btn" href="#">LOOKBOOK</a>
+      <a class="btn" href="#">MANIFESTO</a>
     </div>
 
-    <!-- NORSE -->
     <div class="card">
       <h3>NORSE</h3>
       <p>Alcune cose non si spiegano. Si portano addosso.</p>
-      <p>Colori: Nero / Sabbia Nordica / Granite Grey</p>
-      <p>Taglie: S / M / L / XL / XXL</p>
-
-      <a href="#" class="btn">SHOP</a>
-      <a href="#" class="btn">LOOKBOOK</a>
-      <a href="#" class="btn">DETTAGLI</a>
+      <p>Nero / Sabbia Nordica / Granite Grey</p>
+      <p>S / M / L / XL / XXL</p>
+      <a class="btn" href="#">SHOP</a>
+      <a class="btn" href="#">LOOKBOOK</a>
+      <a class="btn" href="#">DETTAGLI</a>
     </div>
 
-    <!-- LEATHER CRAFT -->
     <div class="card">
-      <h3>NORSE / LEATHER CRAFT</h3>
+      <h3>LEATHER CRAFT</h3>
       <p>Pelle pieno fiore. Costruita per durare.</p>
-      <p>Misure: 1.5M / 2M / 3M</p>
-      <p>Colori: Nero / Brown / Dark Earth</p>
-
-      <a href="#" class="btn">SHOP</a>
-      <a href="#" class="btn">DETTAGLI CRAFT</a>
+      <p>1.5M / 2M / 3M</p>
+      <p>Nero / Brown / Dark Earth</p>
+      <a class="btn" href="#">SHOP</a>
+      <a class="btn" href="#">DETTAGLI</a>
     </div>
 
-    <!-- EDUCAZIONE -->
     <div class="card">
-      <h3>EDUCAZIONE / RIEDUCAZIONE</h3>
+      <h3>EDUCAZIONE</h3>
       <p>Relazione. Presenza. Responsabilità.</p>
-      <p>Colori: Nero / Washed Grey / Sabbia</p>
-      <p>Taglie: S / M / L / XL / XXL</p>
-
-      <a href="#" class="btn">SHOP</a>
-      <a href="#" class="btn">LOOKBOOK</a>
-      <a href="#" class="btn">FILOSOFIA</a>
+      <p>Nero / Washed Grey / Sabbia</p>
+      <p>S / M / L / XL / XXL</p>
+      <a class="btn" href="#">SHOP</a>
+      <a class="btn" href="#">LOOKBOOK</a>
+      <a class="btn" href="#">FILOSOFIA</a>
     </div>
 
   </div>
 
 </section>
 
-<!-- =========================
-   CLOSING
-========================= -->
+<!-- END -->
 <section>
-  <h2>UN SOLO BRANCO.</h2>
-
+  <h2>UN SOLO BRANCO</h2>
   <p>ATZ WORKING DOGS CULTURE</p>
 </section>
 
