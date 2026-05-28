@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ATZ - MERCH</title>
+<title>ATZ - MERCH TEST</title>
 
 <style>
 
 /* =========================
-   BASE STABILE
+   BASE
 ========================= */
 
 * {
@@ -20,119 +20,78 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background: #0a0a0a;
+  background: #0b0b0b;
   color: #f2f2f2;
-  -webkit-font-smoothing: antialiased;
 }
 
 /* =========================
-   TYPOGRAPHY (ATZ STYLE)
+   LAYOUT DEBUG MODE
 ========================= */
+
+section {
+  padding: 80px 20px;
+  text-align: center;
+  border: 2px solid blue; /* DEBUG SECTION */
+}
+
+/* GRID TEST */
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  border: 4px solid red; /* 🔴 DEVI VEDERE QUESTO */
+}
+
+/* CARD TEST */
+.card {
+  border: 4px solid lime; /* 🟢 DEVI VEDERE QUESTO */
+  padding: 20px;
+  background: rgba(255,255,255,0.03);
+}
+
+/* TYPO */
 
 h1, h2, h3 {
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin: 0 0 12px 0;
 }
-
-h1 { font-size: 42px; line-height: 1.1; }
-h2 { font-size: 28px; margin-bottom: 25px; }
-h3 { font-size: 19px; letter-spacing: 1.5px; }
 
 p {
   font-size: 14px;
-  line-height: 1.7;
-  opacity: 0.88;
-  margin: 0 0 12px 0;
+  opacity: 0.85;
 }
 
-/* =========================
-   LAYOUT
-========================= */
+/* BUTTONS */
 
-section {
-  padding: 110px 22px;
-  text-align: center;
+.btn {
+  display: inline-block;
+  margin: 8px auto;
+  padding: 12px 16px;
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 13px;
 }
 
 /* HERO */
+
 .hero {
   min-height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  background: #000;
-}
-
-.hero p {
-  font-size: 16px;
-  margin-top: 10px;
-  opacity: 0.9;
-}
-
-/* =========================
-   BUTTON SYSTEM (ATZ)
-========================= */
-
-.btn {
-  display: inline-flex;
   justify-content: center;
   align-items: center;
-
-  width: 100%;
-  max-width: 320px;
-
-  padding: 15px 18px;
-  margin: 8px auto;
-
-  border: 1px solid rgba(255,255,255,0.28);
-  background: transparent;
-  color: #f2f2f2;
-
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 1.4px;
-  font-size: 12.5px;
-
-  transition: 0.25s ease;
+  background: black;
 }
 
-.btn:hover {
-  border-color: rgba(255,255,255,0.85);
-  background: rgba(255,255,255,0.06);
-}
-
-/* =========================
-   COLLECTIONS
-========================= */
-
-.grid {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  margin-top: 35px;
-}
-
-.card {
-  border: 1px solid rgba(255,255,255,0.12);
-  padding: 30px 22px;
-  background: rgba(255,255,255,0.015);
-}
-
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media (max-width: 768px) {
-
   section {
-    padding: 85px 16px;
+    padding: 60px 15px;
   }
-
-  h1 { font-size: 30px; }
-  h2 { font-size: 22px; }
-
 }
 
 </style>
@@ -143,118 +102,41 @@ section {
 
 <!-- HERO -->
 <section class="hero">
-
   <h1>ATZ WORKING DOGS CULTURE</h1>
-  <p>NON È MERCH. È APPARTENENZA.</p>
-
-  <a href="#collections" class="btn">SCOPRI LE COLLEZIONI</a>
-
+  <p>TEST LAYOUT MODE</p>
 </section>
 
 <!-- INTRO -->
 <section>
-  <h2>DALL’ASFALTO AL FANGO</h2>
-
-  <p>
-    Non abbiamo costruito una linea merch. Abbiamo costruito simboli, frasi e immagini che raccontano un modo preciso di vivere i cani.
-  </p>
-
-  <p>
-    Ogni collezione ha un’identità diversa. Ma appartiene allo stesso branco.
-  </p>
+  <h2>TEST INTRO</h2>
+  <p>Se vedi i bordi rossi e verdi, il layout funziona.</p>
 </section>
 
 <!-- COLLECTIONS -->
-<section id="collections">
+<section>
 
-  <h2>ATZ / MERCH COLLECTIONS</h2>
+  <h2>COLLECTION TEST</h2>
 
   <div class="grid">
 
     <div class="card">
       <h3>CORE ATZ</h3>
-      <p>Dall’asfalto al fango / Un solo branco.</p>
-      <p>Nero assoluto / Asphalt Grey / Sabbia Nordica</p>
-      <p>S / M / L / XL / XXL</p>
-
+      <p>TEST CARD 1</p>
       <a class="btn" href="#">SHOP</a>
       <a class="btn" href="#">LOOKBOOK</a>
-      <a class="btn" href="#">IDENTITÀ</a>
+      <a class="btn" href="#">INFO</a>
     </div>
 
     <div class="card">
       <h3>WORKING DOGS</h3>
-      <p>Costruito sotto pressione.</p>
-      <p>Nero / Tactical Green / Dark Earth</p>
-      <p>S / M / L / XL / XXL</p>
-
+      <p>TEST CARD 2</p>
       <a class="btn" href="#">SHOP</a>
       <a class="btn" href="#">LOOKBOOK</a>
-      <a class="btn" href="#">DETTAGLI</a>
-    </div>
-
-    <div class="card">
-      <h3>RICERCA E SOCCORSO</h3>
-      <p>Si parte in due, si torna in due.</p>
-      <p>Nero / Smoke Grey / Burgundy</p>
-      <p>S / M / L / XL / XXL</p>
-
-      <a class="btn" href="#">SHOP</a>
-      <a class="btn" href="#">LOOKBOOK</a>
-      <a class="btn" href="#">STORIA</a>
-    </div>
-
-    <div class="card">
-      <h3>DWD / UNBROKEN DOGS</h3>
-      <p>Different. Not less.</p>
-      <p>Nero / Ash Grey / Lavanda Spenta</p>
-      <p>S / M / L / XL / XXL</p>
-
-      <a class="btn" href="#">SHOP</a>
-      <a class="btn" href="#">LOOKBOOK</a>
-      <a class="btn" href="#">MANIFESTO</a>
-    </div>
-
-    <div class="card">
-      <h3>NORSE</h3>
-      <p>Alcune cose non si spiegano. Si portano addosso.</p>
-      <p>Nero / Sabbia Nordica / Granite Grey</p>
-      <p>S / M / L / XL / XXL</p>
-
-      <a class="btn" href="#">SHOP</a>
-      <a class="btn" href="#">LOOKBOOK</a>
-      <a class="btn" href="#">DETTAGLI</a>
-    </div>
-
-    <div class="card">
-      <h3>LEATHER CRAFT</h3>
-      <p>Pelle pieno fiore. Costruita per durare.</p>
-      <p>1.5M / 2M / 3M</p>
-      <p>Nero / Brown / Dark Earth</p>
-
-      <a class="btn" href="#">SHOP</a>
-      <a class="btn" href="#">DETTAGLI</a>
-    </div>
-
-    <div class="card">
-      <h3>EDUCAZIONE</h3>
-      <p>Relazione. Presenza. Responsabilità.</p>
-      <p>Nero / Washed Grey / Sabbia</p>
-      <p>S / M / L / XL / XXL</p>
-
-      <a class="btn" href="#">SHOP</a>
-      <a class="btn" href="#">LOOKBOOK</a>
-      <a class="btn" href="#">FILOSOFIA</a>
+      <a class="btn" href="#">INFO</a>
     </div>
 
   </div>
 
-</section>
-
-<!-- END -->
-<section>
-  <h2>UN SOLO BRANCO</h2>
-  <p>ATZ WORKING DOGS CULTURE</p>
 </section>
 
 </body>
