@@ -4,17 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ATZ - MERCH TEST</title>
+<title>ATZ MERCH</title>
 
 <style>
-
-/* =========================
-   BASE
-========================= */
-
-* {
-  box-sizing: border-box;
-}
 
 body {
   margin: 0;
@@ -24,33 +16,10 @@ body {
   color: #f2f2f2;
 }
 
-/* =========================
-   LAYOUT DEBUG MODE
-========================= */
-
 section {
-  padding: 80px 20px;
+  padding: 100px 20px;
   text-align: center;
-  border: 2px solid blue; /* DEBUG SECTION */
 }
-
-/* GRID TEST */
-.grid {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-
-  border: 4px solid red; /* 🔴 DEVI VEDERE QUESTO */
-}
-
-/* CARD TEST */
-.card {
-  border: 4px solid lime; /* 🟢 DEVI VEDERE QUESTO */
-  padding: 20px;
-  background: rgba(255,255,255,0.03);
-}
-
-/* TYPO */
 
 h1, h2, h3 {
   text-transform: uppercase;
@@ -59,23 +28,34 @@ h1, h2, h3 {
 
 p {
   font-size: 14px;
-  opacity: 0.85;
+  line-height: 1.6;
+  opacity: 0.9;
 }
 
-/* BUTTONS */
+/* GRID */
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
 
+/* CARD */
+.card {
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 25px 20px;
+}
+
+/* BUTTON */
 .btn {
-  display: inline-block;
+  display: block;
   margin: 8px auto;
   padding: 12px 16px;
   border: 1px solid white;
-  color: white;
   text-decoration: none;
+  color: white;
   text-transform: uppercase;
   font-size: 13px;
 }
-
-/* HERO */
 
 .hero {
   min-height: 100vh;
@@ -86,57 +66,78 @@ p {
   background: black;
 }
 
-/* MOBILE */
-
-@media (max-width: 768px) {
-  section {
-    padding: 60px 15px;
-  }
-}
-
 </style>
 
 </head>
 
 <body>
 
-<!-- HERO -->
 <section class="hero">
   <h1>ATZ WORKING DOGS CULTURE</h1>
-  <p>TEST LAYOUT MODE</p>
+  <p>NON È MERCH. È APPARTENENZA.</p>
 </section>
 
-<!-- INTRO -->
 <section>
-  <h2>TEST INTRO</h2>
-  <p>Se vedi i bordi rossi e verdi, il layout funziona.</p>
+  <h2>DALL’ASFALTO AL FANGO</h2>
+  <p>Ogni linea nasce dalla strada, dal lavoro, dal fango, dalle relazioni costruite davvero.</p>
+  <p>ATZ non veste personaggi. Veste identità.</p>
 </section>
 
-<!-- COLLECTIONS -->
 <section>
 
-  <h2>COLLECTION TEST</h2>
+  <h2>ATZ / MERCH COLLECTIONS</h2>
 
   <div class="grid">
 
     <div class="card">
       <h3>CORE ATZ</h3>
-      <p>TEST CARD 1</p>
-      <a class="btn" href="#">SHOP</a>
-      <a class="btn" href="#">LOOKBOOK</a>
-      <a class="btn" href="#">INFO</a>
+      <p>Dall’asfalto al fango / Un solo branco.</p>
+      <p>Colori: Nero assoluto / Asphalt Grey / Sabbia Nordica</p>
+      <p>S / M / L / XL / XXL</p>
+      <a class="btn">SHOP</a>
+      <a class="btn">LOOKBOOK</a>
+      <a class="btn">IDENTITÀ</a>
     </div>
 
     <div class="card">
       <h3>WORKING DOGS</h3>
-      <p>TEST CARD 2</p>
-      <a class="btn" href="#">SHOP</a>
-      <a class="btn" href="#">LOOKBOOK</a>
-      <a class="btn" href="#">INFO</a>
+      <p>Costruito sotto pressione.</p>
+      <p>Nero / Tactical Green / Dark Earth</p>
+      <a class="btn">SHOP</a>
+      <a class="btn">LOOKBOOK</a>
+      <a class="btn">DETTAGLI</a>
+    </div>
+
+    <div class="card">
+      <h3>RICERCA E SOCCORSO</h3>
+      <p>Si parte in due, si torna in due.</p>
+      <a class="btn">SHOP</a>
+      <a class="btn">LOOKBOOK</a>
+      <a class="btn">STORIA</a>
+    </div>
+
+    <div class="card">
+      <h3>DWD</h3>
+      <p>Different. Not less.</p>
+      <a class="btn">SHOP</a>
+      <a class="btn">LOOKBOOK</a>
+      <a class="btn">MANIFESTO</a>
+    </div>
+
+    <div class="card">
+      <h3>NORSE</h3>
+      <p>Alcune cose non si spiegano. Si portano addosso.</p>
+      <a class="btn">SHOP</a>
+      <a class="btn">LOOKBOOK</a>
+      <a class="btn">DETTAGLI</a>
     </div>
 
   </div>
 
+</section>
+
+<section>
+  <h2>UN SOLO BRANCO</h2>
 </section>
 
 </body>
