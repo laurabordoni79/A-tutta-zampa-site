@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>ATZ Merch | Working Dogs Culture</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -23,10 +24,15 @@ color:white;
 overflow-x:hidden;
 }
 
-img{max-width:100%;display:block;}
-a{text-decoration:none;color:white;}
+img{
+max-width:100%;
+display:block;
+}
 
-section{position:relative;}
+a{
+text-decoration:none;
+color:white;
+}
 
 /* TOPBAR */
 .topbar{
@@ -34,26 +40,26 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
-padding:34px 8%;
+padding:30px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
 z-index:999;
-background:linear-gradient(to bottom,rgba(0,0,0,0.88),rgba(0,0,0,0));
+background:linear-gradient(to bottom,rgba(0,0,0,0.9),transparent);
 }
 
 .top-logo{
 letter-spacing:6px;
+font-size:1.2rem;
 }
 
 .back-home{
-font-size:0.9rem;
 letter-spacing:4px;
-color:#8f8f8f;
+color:#aaa;
 }
 
 .back-home:hover{
-color:white;
+color:#fff;
 }
 
 /* HERO */
@@ -61,86 +67,99 @@ color:white;
 min-height:100vh;
 display:flex;
 align-items:center;
-padding:180px 8% 140px;
+padding:160px 8% 100px;
 background:
-linear-gradient(to bottom,rgba(0,0,0,0.72),rgba(0,0,0,0.96)),
+linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.95)),
 url('HeroATZ.jpg');
 background-size:cover;
 background-position:center;
 }
 
 .hero-title{
-font-size:7rem;
-line-height:0.9;
+font-size:6rem;
 text-transform:uppercase;
-margin-bottom:40px;
-}
-
-/* EDITORIAL */
-.editorial{
-padding:180px 8%;
-}
-
-.editorial-title{
-font-size:5rem;
-text-transform:uppercase;
-margin-bottom:40px;
+line-height:0.95;
 }
 
 /* COLLECTIONS */
 .collections{
-padding:40px 8% 180px;
+padding:80px 8% 160px;
 }
 
 .collection-grid{
 display:grid;
 grid-template-columns:1fr;
-gap:140px;
+gap:120px;
 }
 
-/* 🔴 FIX INSERITO QUI */
 .collection-card{
-margin-bottom:120px;
+margin-bottom:80px;
 }
 
 .collection-card img{
-width:100%;
-border:1px solid rgba(255,255,255,0.06);
+border:1px solid rgba(255,255,255,0.08);
 }
 
 .collection-name{
-font-size:2.3rem;
-margin-bottom:14px;
+font-size:2rem;
+margin-top:20px;
+letter-spacing:2px;
 }
 
 .collection-sub{
-color:#8f8f8f;
-margin-bottom:34px;
+color:#aaa;
+margin-top:10px;
+margin-bottom:20px;
 }
 
 /* BUTTONS */
+.collection-buttons{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+}
+
 .collection-buttons a{
-padding:14px 22px;
-border:1px solid rgba(255,255,255,0.12);
+padding:12px 18px;
+border:1px solid rgba(255,255,255,0.2);
+letter-spacing:2px;
 font-size:0.8rem;
-letter-spacing:3px;
-background:rgba(255,255,255,0.02);
+transition:0.3s;
 }
 
 .collection-buttons a:hover{
-background:white;
-color:black;
+background:#fff;
+color:#000;
 }
 
 /* FOOTER */
 footer{
-padding:140px 8%;
-border-top:1px solid rgba(255,255,255,0.06);
+padding:120px 8%;
+border-top:1px solid rgba(255,255,255,0.08);
+margin-top:120px;
 }
 
-.footer-title{
-font-size:4rem;
-text-transform:uppercase;
+.footer-sub{
+color:#777;
+letter-spacing:4px;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+
+.hero-title{
+font-size:3.5rem;
+}
+
+.collection-name{
+font-size:1.5rem;
+}
+
+.collection-buttons a{
+font-size:0.7rem;
+padding:10px 14px;
+}
+
 }
 
 </style>
@@ -148,7 +167,98 @@ text-transform:uppercase;
 
 <body>
 
-<!-- tutto il tuo HTML IDENTICO a prima -->
+<!-- TOPBAR -->
+<div class="topbar">
+<div class="top-logo">ATZ</div>
+<a class="back-home" href="index.html">HOME</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+<h1 class="hero-title">
+NON È MERCH.<br>È APPARTENENZA.
+</h1>
+</section>
+
+<!-- COLLECTIONS -->
+<section class="collections">
+
+<div class="collection-grid">
+
+<!-- CORE -->
+<div class="collection-card">
+<img src="merch/core/core-collection.jpg">
+<div class="collection-name">CORE ATZ</div>
+<div class="collection-sub">Dall’asfalto al fango / Un solo branco.</div>
+<div class="collection-buttons">
+<a href="#">SHOP</a>
+<a href="#">LOOKBOOK</a>
+<a href="#">IDENTITÀ</a>
+</div>
+</div>
+
+<!-- WORKING DOGS -->
+<div class="collection-card">
+<img src="merch/workingdogs/workingdogs-collection.jpg">
+<div class="collection-name">WORKING DOGS</div>
+<div class="collection-sub">Costruito sotto pressione.</div>
+<div class="collection-buttons">
+<a href="#">SHOP</a>
+<a href="working-dogs-metodo.html">METODO</a>
+</div>
+</div>
+
+<!-- SOCCORSO -->
+<div class="collection-card">
+<img src="merch/soccorso/soccorso-collection.jpg">
+<div class="collection-name">RICERCA E SOCCORSO</div>
+<div class="collection-sub">Si parte in due, si torna in due.</div>
+<div class="collection-buttons">
+<a href="#">SHOP</a>
+<a href="#">BINOMIO</a>
+</div>
+</div>
+
+<!-- DWD -->
+<div class="collection-card">
+<img src="merch/dwd/dwd-collection.jpg">
+<div class="collection-name">DWD / UNBROKEN DOGS</div>
+<div class="collection-sub">Different. Not less.</div>
+<div class="collection-buttons">
+<a href="#">SHOP</a>
+<a href="#">MANIFESTO</a>
+</div>
+</div>
+
+<!-- NORSE -->
+<div class="collection-card">
+<img src="merch/norse/norse-collection.jpg">
+<div class="collection-name">NORSE</div>
+<div class="collection-sub">Alcune cose non si spiegano. Si portano addosso.</div>
+<div class="collection-buttons">
+<a href="#">SHOP</a>
+<a href="norse-mito.html">MITO</a>
+</div>
+</div>
+
+<!-- EDUCAZIONE -->
+<div class="collection-card">
+<img src="merch/educazione/educazione-collection.jpg">
+<div class="collection-name">EDUCAZIONE</div>
+<div class="collection-sub">Relazione. Presenza. Responsabilità.</div>
+<div class="collection-buttons">
+<a href="#">SHOP</a>
+<a href="#">FILOSOFIA</a>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+<div class="footer-sub">ATZ WORKING DOGS CULTURE</div>
+</footer>
 
 </body>
 </html>
