@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>NORSE | ATZ MITO</title>
+<title>NORSE | MITO ATZ</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
 
@@ -23,113 +23,124 @@ font-family:'Oswald',sans-serif;
 overflow-x:hidden;
 }
 
-/* ENTRY (NON HERO) */
+/* APPARIZIONE */
 
-.entry{
+.apparition{
 min-height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-padding:140px 8%;
+
+padding:120px 8%;
 
 background:
-linear-gradient(rgba(0,0,0,0.88),rgba(0,0,0,0.98)),
+linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.98)),
 url('merch/norse/norse-collection.jpg');
 
 background-size:cover;
 background-position:center;
 }
 
-.entry h1{
+.apparition h1{
 font-size:5rem;
-letter-spacing:8px;
+letter-spacing:10px;
 font-weight:400;
 }
 
 /* SILENZIO */
 
 .silence{
-padding:180px 8%;
+padding:200px 8%;
 text-align:center;
 font-size:1.6rem;
-line-height:2;
+line-height:2.4;
 color:#cfcfcf;
 font-weight:300;
 }
 
-/* FRAMMENTO */
+/* FRAMMENTO MINIMALE */
 
 .fragment{
-padding:160px 8%;
-max-width:720px;
+padding:220px 8%;
+max-width:680px;
 margin:auto;
 
 text-align:center;
 
-font-size:1.15rem;
-line-height:2.4;
+font-size:1.1rem;
+line-height:2.6;
 
 color:#b8b8b8;
 
 font-weight:300;
 }
 
-/* OGGETTO */
+/* OGGETTO RITUALE */
 
-.object{
-padding:180px 8%;
+.ritual{
+padding:200px 8%;
 text-align:center;
 
-border-top:1px solid rgba(255,255,255,0.06);
-border-bottom:1px solid rgba(255,255,255,0.06);
+border-top:1px solid rgba(255,255,255,0.05);
+border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
-.object h2{
-font-size:2.4rem;
-letter-spacing:4px;
-font-weight:400;
+.ritual h2{
+font-size:2.6rem;
+letter-spacing:6px;
+font-weight:300;
 }
 
-.object p{
-margin-top:24px;
+.ritual p{
+margin-top:30px;
 color:#9d9d9d;
 font-size:1rem;
-line-height:1.8;
+line-height:2;
 }
 
 /* CHIUSURA */
 
 .end{
-padding:160px 8%;
+padding:220px 8%;
 text-align:center;
-color:#666;
-letter-spacing:5px;
-font-size:0.9rem;
+
+color:#5e5e5e;
+
+letter-spacing:6px;
+
+font-size:0.85rem;
 }
+
+/* MOBILE */
 
 @media(max-width:900px){
 
-.entry h1{
-font-size:3.2rem;
+.apparition h1{
+font-size:3rem;
 }
 
 .silence{
+padding:140px 8%;
 font-size:1.2rem;
-padding:120px 8%;
 }
 
 .fragment{
-padding:120px 8%;
+padding:140px 8%;
 font-size:1rem;
+line-height:2.4;
 }
 
-.object{
-padding:120px 8%;
+.ritual{
+padding:140px 8%;
 }
 
-.object h2{
-font-size:1.8rem;
+.ritual h2{
+font-size:2rem;
+}
+
+.end{
+padding:140px 8%;
 }
 
 }
@@ -140,7 +151,7 @@ font-size:1.8rem;
 
 <body>
 
-<section class="entry">
+<section class="apparition">
 <h1>NORSE</h1>
 </section>
 
@@ -150,24 +161,24 @@ Si portano addosso.
 </section>
 
 <section class="fragment">
-NORSE non è una collezione.<br><br>
+Materia che non chiede attenzione.<br>
+La impone.<br><br>
 
-È materia che prende forma nel tempo.<br>
-Non è ciò che vedi.<br>
-È ciò che resta.
+Non nasce per essere vista.<br>
+Nasce per restare.
 </section>
 
-<section class="object">
+<section class="ritual">
 <h2>LEATHER CRAFT</h2>
 <p>
 Pelle pieno fiore.<br>
-Tagliata per durare, non per apparire.
+Tagliata per resistere al tempo, non alla moda.
 </p>
 </section>
 
 <section class="fragment">
-Ogni segno è una scelta.<br>
-Ogni scelta è un peso.
+Ogni segno è una perdita.<br>
+Ogni perdita è una forma.
 </section>
 
 <div class="end">
