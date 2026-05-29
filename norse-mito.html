@@ -23,91 +23,93 @@ font-family:'Oswald',sans-serif;
 overflow-x:hidden;
 }
 
-/* APPARIZIONE */
+/* SILENZIO INIZIALE */
 
-.apparition{
+.silence{
 min-height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
 
-padding:120px 8%;
+padding:140px 8%;
 
 background:
-linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.98)),
+linear-gradient(rgba(0,0,0,0.92),rgba(0,0,0,0.99)),
 url('merch/norse/norse-collection.jpg');
 
 background-size:cover;
 background-position:center;
 }
 
-.apparition h1{
+.silence h1{
 font-size:5rem;
-letter-spacing:10px;
-font-weight:400;
+letter-spacing:14px;
+font-weight:300;
 }
 
-/* SILENZIO */
+/* FRAMMENTO 1 */
 
-.silence{
-padding:200px 8%;
+.block{
+padding:240px 8%;
 text-align:center;
-font-size:1.6rem;
-line-height:2.4;
+
+font-size:1.4rem;
+line-height:2.8;
+
 color:#cfcfcf;
-font-weight:300;
-}
-
-/* FRAMMENTO MINIMALE */
-
-.fragment{
-padding:220px 8%;
-max-width:680px;
-margin:auto;
-
-text-align:center;
-
-font-size:1.1rem;
-line-height:2.6;
-
-color:#b8b8b8;
 
 font-weight:300;
 }
 
-/* OGGETTO RITUALE */
+/* VUOTO */
+
+.empty{
+height:200px;
+}
+
+/* RITUALE */
 
 .ritual{
-padding:200px 8%;
+padding:240px 8%;
 text-align:center;
 
-border-top:1px solid rgba(255,255,255,0.05);
-border-bottom:1px solid rgba(255,255,255,0.05);
+border-top:1px solid rgba(255,255,255,0.04);
+border-bottom:1px solid rgba(255,255,255,0.04);
 }
 
 .ritual h2{
-font-size:2.6rem;
-letter-spacing:6px;
+font-size:2.8rem;
+letter-spacing:8px;
 font-weight:300;
 }
 
 .ritual p{
-margin-top:30px;
+margin-top:40px;
+font-size:1.05rem;
+line-height:2.2;
 color:#9d9d9d;
-font-size:1rem;
-line-height:2;
+}
+
+/* FRAMMENTO 2 */
+
+.block strong{
+color:#ffffff;
+font-weight:400;
 }
 
 /* CHIUSURA */
 
 .end{
-padding:220px 8%;
+min-height:80vh;
+display:flex;
+align-items:center;
+justify-content:center;
 text-align:center;
 
-color:#5e5e5e;
+color:#555;
 
-letter-spacing:6px;
+letter-spacing:8px;
 
 font-size:0.85rem;
 }
@@ -116,31 +118,23 @@ font-size:0.85rem;
 
 @media(max-width:900px){
 
-.apparition h1{
+.silence h1{
 font-size:3rem;
+letter-spacing:10px;
 }
 
-.silence{
-padding:140px 8%;
-font-size:1.2rem;
-}
-
-.fragment{
-padding:140px 8%;
-font-size:1rem;
+.block{
+padding:160px 8%;
+font-size:1.1rem;
 line-height:2.4;
 }
 
 .ritual{
-padding:140px 8%;
+padding:160px 8%;
 }
 
 .ritual h2{
 font-size:2rem;
-}
-
-.end{
-padding:140px 8%;
 }
 
 }
@@ -151,35 +145,38 @@ padding:140px 8%;
 
 <body>
 
-<section class="apparition">
+<section class="silence">
 <h1>NORSE</h1>
 </section>
 
-<section class="silence">
+<div class="block">
 Alcune cose non si spiegano.<br>
-Si portano addosso.
-</section>
+Si portano addosso.<br><br>
 
-<section class="fragment">
-Materia che non chiede attenzione.<br>
-La impone.<br><br>
+Non sono create per essere comprese.<br>
+Sono create per restare.
+</div>
 
-Non nasce per essere vista.<br>
-Nasce per restare.
-</section>
+<div class="empty"></div>
 
 <section class="ritual">
 <h2>LEATHER CRAFT</h2>
 <p>
 Pelle pieno fiore.<br>
-Tagliata per resistere al tempo, non alla moda.
+Tagliata per resistere al tempo.<br>
+Non alla moda.<br>
 </p>
 </section>
 
-<section class="fragment">
+<div class="empty"></div>
+
+<div class="block">
 Ogni segno è una perdita.<br>
-Ogni perdita è una forma.
-</section>
+Ogni perdita è una forma.<br><br>
+
+<strong>Non si possiede NORSE.</strong><br>
+Si attraversa.
+</div>
 
 <div class="end">
 ATZ WORKING DOGS CULTURE
