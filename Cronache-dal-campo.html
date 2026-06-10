@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ATZ | Cronache dal Campo</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#000;
+color:white;
+font-family:'Oswald',sans-serif;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:white;
+}
+
+.hero{
+
+min-height:70vh;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+
+padding:120px 8%;
+}
+
+.hero h1{
+
+font-size:6rem;
+
+line-height:0.95;
+
+letter-spacing:4px;
+
+margin-bottom:40px;
+
+text-transform:uppercase;
+}
+
+.hero p{
+
+max-width:800px;
+
+font-size:1.3rem;
+
+line-height:2;
+
+font-weight:300;
+
+color:#bdbdbd;
+}
+
+.cards{
+
+padding:0 8% 180px;
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(320px,1fr));
+
+gap:40px;
+
+max-width:1600px;
+
+margin:auto;
+}
+
+.card{
+
+display:flex;
+flex-direction:column;
+
+background:#050505;
+
+border:
+1px solid rgba(255,255,255,0.06);
+
+transition:0.35s;
+}
+
+.card:hover{
+
+transform:translateY(-4px);
+
+border:
+1px solid rgba(255,255,255,0.14);
+}
+
+.card-image{
+
+height:320px;
+
+background:
+linear-gradient(
+135deg,
+#0a0a0a,
+#111
+);
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+font-size:0.9rem;
+
+letter-spacing:4px;
+
+color:#555;
+}
+
+.card-content{
+
+padding:40px;
+}
+
+.card h2{
+
+font-size:2.4rem;
+
+margin-bottom:20px;
+
+text-transform:uppercase;
+}
+
+.card p{
+
+font-size:1.1rem;
+
+line-height:1.8;
+
+font-weight:300;
+
+color:#bdbdbd;
+
+margin-bottom:35px;
+}
+
+.card-btn{
+
+display:inline-block;
+
+padding:14px 24px;
+
+border:
+1px solid rgba(255,255,255,0.12);
+
+letter-spacing:3px;
+
+font-size:0.85rem;
+
+transition:0.3s;
+}
+
+.card-btn:hover{
+
+background:white;
+
+color:black;
+}
+
+footer{
+
+padding:100px 8%;
+
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.footer-rune{
+
+width:90px;
+
+opacity:0.8;
+}
+
+@media(max-width:900px){
+
+.hero h1{
+
+font-size:3.5rem;
+}
+
+.hero p{
+
+font-size:1.1rem;
+}
+
+.card-image{
+
+height:240px;
+}
+
+.card h2{
+
+font-size:2rem;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+
+<h1>
+
+CRONACHE<br>
+DAL CAMPO
+
+</h1>
+
+<p>
+
+Non tutto quello che conta finisce in una lezione.<br><br>
+
+Non tutto quello che insegna nasce da un esercizio.
+
+</p>
+
+</section>
+
+<section class="cards">
+
+<!-- VITA DEL BRANCO -->
+
+<div class="card">
+
+<div class="card-image">
+FOTO IN ARRIVO
+</div>
+
+<div class="card-content">
+
+<h2>
+Vita del Branco
+</h2>
+
+<p>
+
+Non tutto quello che conta accade durante il lavoro.
+
+</p>
+
+<a href="vita-del-branco.html"
+class="card-btn">
+
+ENTRA
+
+</a>
+
+</div>
+
+</div>
+
+<!-- QUANDO SERVE -->
+
+<div class="card">
+
+<div class="card-image">
+FOTO IN ARRIVO
+</div>
+
+<div class="card-content">
+
+<h2>
+Quando Serve
+</h2>
+
+<p>
+
+Ci si prepara molto prima del momento in cui serve davvero.
+
+</p>
+
+<a href="quando-serve.html"
+class="card-btn">
+
+ENTRA
+
+</a>
+
+</div>
+
+</div>
+
+<!-- EVENTI -->
+
+<div class="card">
+
+<div class="card-image">
+FOTO IN ARRIVO
+</div>
+
+<div class="card-content">
+
+<h2>
+Eventi
+</h2>
+
+<p>
+
+Persone diverse. Cani diversi. Lo stesso desiderio di imparare.
+
+</p>
+
+<a href="eventi.html"
+class="card-btn">
+
+ENTRA
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CORSI -->
+
+<div class="card">
+
+<div class="card-image">
+FOTO IN ARRIVO
+</div>
+
+<div class="card-content">
+
+<h2>
+Corsi
+</h2>
+
+<p>
+
+La crescita si costruisce nel tempo.
+
+</p>
+
+<a href="corsi.html"
+class="card-btn">
+
+ENTRA
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<img src="runa-incisa.png"
+class="footer-rune"
+alt="ATZ Rune">
+
+</footer>
+
+</body>
+
+</html>
