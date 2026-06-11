@@ -1,1 +1,1161 @@
 
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ATZ | Working Dogs Culture</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#000;
+font-family:'Oswald',sans-serif;
+color:white;
+overflow-x:hidden;
+}
+
+section{
+position:relative;
+}
+
+a{
+text-decoration:none;
+color:white;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+/* =========================================
+HERO
+========================================= */
+
+.hero{
+position:relative;
+min-height:100vh;
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,0.60),
+rgba(0,0,0,0.96)
+),
+url('HeroATZ.jpg');
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+
+padding:120px 9% 140px;
+}
+
+.hero::after{
+
+content:'';
+
+position:absolute;
+left:0;
+bottom:0;
+
+width:100%;
+height:240px;
+
+background:
+linear-gradient(
+to bottom,
+transparent,
+#000
+);
+
+}
+
+/* =========================================
+TOPBAR
+========================================= */
+
+.topbar{
+
+position:absolute;
+top:0;
+left:0;
+
+width:100%;
+
+padding:42px 9%;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+z-index:10;
+}
+
+.top-left{
+
+display:flex;
+align-items:center;
+gap:18px;
+}
+
+.top-rune{
+
+width:36px;
+opacity:0.98;
+}
+
+.top-logo{
+
+font-size:1.6rem;
+font-weight:700;
+letter-spacing:5px;
+}
+
+.top-right{
+
+font-size:0.9rem;
+letter-spacing:4px;
+
+color:#8d8d8d;
+}
+
+/* =========================================
+MANIFESTO
+========================================= */
+
+.manifesto{
+
+position:relative;
+z-index:2;
+
+max-width:1000px;
+}
+
+.manifesto-small{
+
+font-size:1rem;
+font-weight:300;
+
+letter-spacing:5px;
+
+color:#7f7f7f;
+
+margin-bottom:30px;
+}
+
+.manifesto-big{
+
+font-size:6.3rem;
+line-height:0.95;
+
+font-weight:700;
+
+text-transform:uppercase;
+
+margin-bottom:45px;
+}
+
+.highlight{
+
+color:#ff2bd6;
+
+text-shadow:
+0 0 18px rgba(255,43,214,0.18);
+}
+
+.manifesto-sub{
+
+max-width:720px;
+
+font-size:1.35rem;
+line-height:1.8;
+
+font-weight:300;
+
+color:#cfcfcf;
+}
+
+/* =========================================
+EDITORIAL LOGO
+========================================= */
+
+.editorial-logo{
+
+margin-top:90px;
+
+display:flex;
+justify-content:flex-start;
+
+position:relative;
+z-index:2;
+}
+
+.editorial-logo img{
+
+width:240px;
+opacity:0.82;
+}
+
+/* =========================================
+NAVIGATION
+========================================= */
+
+.section-nav{
+
+position:relative;
+z-index:2;
+
+margin-top:100px;
+
+display:grid;
+
+grid-template-columns:
+repeat(2,minmax(260px,340px));
+
+gap:18px;
+}
+
+.nav-btn{
+
+border:
+1px solid rgba(255,255,255,0.08);
+
+padding:28px;
+
+background:
+rgba(255,255,255,0.02);
+
+transition:0.35s;
+}
+
+.nav-btn:hover{
+
+transform:translateY(-2px);
+
+background:
+rgba(255,255,255,0.04);
+
+border:
+1px solid rgba(255,255,255,0.16);
+}
+
+.nav-title{
+
+font-size:1.8rem;
+
+letter-spacing:2px;
+
+margin-bottom:10px;
+}
+
+.nav-sub{
+
+font-size:0.92rem;
+
+letter-spacing:2px;
+
+color:#8f8f8f;
+
+line-height:1.7;
+}
+
+.norse-full{
+
+grid-column:1 / -1;
+
+max-width:340px;
+}
+
+/* =========================================
+EDITORIAL SECTIONS
+========================================= */
+
+.editorial{
+
+padding:200px 10%;
+}
+
+.editorial-inner{
+
+max-width:960px;
+}
+
+.editorial-label{
+
+font-size:0.9rem;
+
+letter-spacing:5px;
+
+color:#6f6f6f;
+
+margin-bottom:24px;
+}
+
+.editorial h2{
+
+font-size:4.7rem;
+
+line-height:1;
+
+margin-bottom:45px;
+
+text-transform:uppercase;
+}
+
+.editorial p{
+
+font-size:1.45rem;
+
+line-height:1.9;
+
+font-weight:300;
+
+color:#d1d1d1;
+}
+
+/* =========================================
+SECTION COLORS
+========================================= */
+
+.educazione{
+background:#0c0b09;
+}
+
+.educazione h2{
+color:#d9c2a3;
+}
+
+.workingdogs{
+background:#050505;
+}
+
+.workingdogs h2{
+color:#8d1c2f;
+}
+
+.soccorso{
+background:#100c06;
+}
+
+.soccorso h2{
+color:#ff7a00;
+}
+
+.dwd{
+background:#0b0810;
+}
+
+.dwd h2{
+color:#ff2bd6;
+}
+
+.norse{
+background:#050505;
+}
+
+.norse h2{
+color:#d0d0d0;
+}
+
+/* =========================================
+FINAL CTA
+========================================= */
+
+.final-cta{
+
+padding:120px 10% 140px;
+
+background:#000;
+
+text-align:center;
+}
+
+.final-cta h2{
+
+font-size:5rem;
+
+line-height:1;
+
+text-transform:uppercase;
+
+margin-bottom:45px;
+}
+
+.footer-cta{
+
+display:inline-block;
+
+border:
+1.5px solid rgba(141,28,47,0.78);
+
+padding:20px 36px;
+
+font-size:0.95rem;
+
+letter-spacing:4px;
+
+background:
+rgba(0,0,0,0.18);
+
+box-shadow:
+0 0 12px rgba(141,28,47,0.18);
+
+backdrop-filter:blur(2px);
+
+transition:
+background 0.45s ease,
+border 0.45s ease,
+box-shadow 0.45s ease,
+transform 0.45s ease,
+color 0.45s ease;
+}
+
+.footer-cta:hover{
+
+background:
+rgba(141,28,47,0.82);
+
+border:
+1.5px solid rgba(141,28,47,1);
+
+box-shadow:
+0 0 22px rgba(141,28,47,0.34);
+
+color:white;
+
+transform:translateY(-2px);
+}
+/* =========================================
+CRONACHE DAL CAMPO
+========================================= */
+
+.cronache{
+
+padding:180px 10%;
+
+background:#020202;
+
+text-align:center;
+
+border-top:
+1px solid rgba(255,255,255,0.04);
+
+border-bottom:
+1px solid rgba(255,255,255,0.04);
+
+}
+
+.cronache-inner{
+
+max-width:900px;
+
+margin:auto;
+}
+
+.cronache h2{
+
+font-size:5rem;
+
+line-height:1;
+
+text-transform:uppercase;
+
+letter-spacing:4px;
+
+margin-bottom:50px;
+}
+
+.cronache p{
+
+font-size:1.4rem;
+
+line-height:2;
+
+font-weight:300;
+
+color:#bdbdbd;
+
+margin-bottom:60px;
+}
+
+.cronache-btn{
+
+display:inline-block;
+
+padding:20px 36px;
+
+border:
+1.5px solid rgba(255,255,255,0.12);
+
+letter-spacing:4px;
+
+font-size:0.95rem;
+
+transition:0.35s;
+}
+
+.cronache-btn:hover{
+
+background:white;
+
+color:black;
+}
+@media(max-width:1200px){
+
+.manifesto-big{
+font-size:4.8rem;
+}
+
+.section-nav{
+grid-template-columns:1fr;
+max-width:500px;
+}
+
+.norse-full{
+grid-column:auto;
+max-width:none;
+}
+
+.editorial h2{
+font-size:3.5rem;
+}
+
+.final-cta h2{
+font-size:3.8rem;
+}
+
+.contact-list{
+gap:18px;
+}
+
+.contact-link{
+font-size:1.3rem;
+letter-spacing:2px;
+}
+
+.footer-rune{
+width:90px;
+}
+@media(max-width:900px){
+
+.cronache{
+
+padding:120px 8%;
+}
+
+.cronache h2{
+
+font-size:3rem;
+}
+
+.cronache p{
+
+font-size:1.1rem;
+
+line-height:1.9;
+}
+
+/* =========================================
+CONTACTS
+========================================= */
+
+.contacts{
+
+padding:170px 10%;
+
+background:#000;
+}
+
+.contacts-title{
+
+font-size:4.5rem;
+
+line-height:1;
+
+margin-bottom:30px;
+
+text-transform:uppercase;
+}
+
+.contacts-sub{
+
+font-size:1.2rem;
+
+line-height:1.8;
+
+color:#8f8f8f;
+
+margin-bottom:70px;
+
+max-width:720px;
+}
+
+.contact-list{
+
+display:flex;
+flex-direction:column;
+
+gap:26px;
+}
+
+.contact-link{
+
+font-size:1.6rem;
+
+letter-spacing:3px;
+
+padding-bottom:10px;
+
+border-bottom:
+1px solid rgba(255,255,255,0.10);
+
+transition:0.3s;
+}
+
+.contact-link:hover{
+
+padding-left:10px;
+
+border-bottom:
+1px solid rgba(255,255,255,0.28);
+}
+
+/* =========================================
+FOOTER
+========================================= */
+
+footer{
+
+padding:80px 10% 100px;
+
+background:#000;
+
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.footer-inner{
+
+text-align:center;
+}
+
+.footer-rune{
+
+width:110px;
+
+opacity:0.9;
+}
+
+/* =========================================
+MOBILE
+========================================= */
+
+@media(max-width:900px){
+
+.hero{
+
+padding:
+140px 8% 120px;
+}
+
+.topbar{
+
+padding:34px 8%;
+}
+
+.top-right{
+display:none;
+}
+
+.top-rune{
+width:42px;
+}
+
+.manifesto-big{
+font-size:3.6rem;
+}
+
+.manifesto-sub{
+font-size:1.08rem;
+}
+
+.editorial-logo{
+margin-top:70px;
+}
+
+.editorial-logo img{
+width:170px;
+}
+
+.section-nav{
+grid-template-columns:1fr;
+margin-top:70px;
+}
+
+.norse-full{
+grid-column:auto;
+max-width:none;
+}
+
+.nav-title{
+font-size:1.5rem;
+}
+
+.editorial{
+padding:120px 8%;
+}
+
+.editorial h2{
+font-size:3rem;
+}
+
+.editorial p{
+font-size:1.2rem;
+}
+
+.final-cta{
+padding:120px 8%;
+}
+
+.final-cta h2{
+font-size:2.8rem;
+}
+
+.contacts{
+padding:120px 8%;
+}
+
+.contacts-title{
+font-size:3.2rem;
+}
+
+.contact-link{
+font-size:1.3rem;
+}
+
+footer{
+padding:90px 8% 90px;
+}
+
+.footer-rune{
+width:90px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="topbar">
+
+<div class="top-left">
+
+<img src="runa-minimal.png"
+class="top-rune"
+alt="ATZ Rune">
+
+<div class="top-logo">
+ATZ
+</div>
+
+</div>
+
+<div class="top-right">
+WORKING DOGS CULTURE
+</div>
+
+</div>
+
+<div class="manifesto">
+
+<div class="manifesto-small">
+WORKING DOGS CULTURE
+</div>
+
+<div class="manifesto-big">
+
+NON HO PRESO<br>
+UN CANE PER<br>
+TENERLO SUL<br>
+DIVANO.<br>
+
+<span class="highlight">
+
+L'HO PRESO<br>
+COME COLLEGA<br>
+DI VITA.
+
+</span>
+
+</div>
+
+<div class="manifesto-sub">
+
+Non abbiamo bisogno di trasformare i cani in esseri umani per rispettarli.
+Li comprendiamo per ciò che sono.
+
+</div>
+
+</div>
+
+<div class="editorial-logo">
+
+<img src="logoATZ.jpg"
+alt="ATZ Logo">
+
+</div>
+
+<div class="section-nav">
+
+<a href="educazione.html"
+class="nav-btn">
+
+<div class="nav-title">
+EDUCAZIONE
+</div>
+
+<div class="nav-sub">
+Relazione. Presenza. Responsabilità.
+</div>
+
+</a>
+
+<a href="working-dogs.html"
+class="nav-btn">
+
+<div class="nav-title">
+WORKING DOGS
+</div>
+
+<div class="nav-sub">
+Il lavoro vero non ha bisogno di rumore.
+</div>
+
+</a>
+
+<a href="ricerca-soccorso.html"
+class="nav-btn">
+
+<div class="nav-title">
+RICERCA E SOCCORSO
+</div>
+
+<div class="nav-sub">
+Qui il cane non è uno strumento.
+</div>
+
+</a>
+
+<a href="dwd.html"
+class="nav-btn">
+
+<div class="nav-title">
+UNBROKEN DOGS
+</div>
+
+<div class="nav-sub">
+Different. Not less.
+</div>
+
+</a>
+
+<a href="norse.html"
+class="nav-btn norse-full">
+
+<div class="nav-title">
+NORSE
+</div>
+
+<div class="nav-sub">
+Alcune cose non si spiegano.
+Si portano addosso.
+</div>
+
+</a>
+
+</div>
+
+</section>
+
+<!-- EDUCAZIONE -->
+
+<section class="editorial educazione">
+
+<div class="editorial-inner">
+
+<div class="editorial-label">
+ATZ / EDUCAZIONE
+</div>
+
+<h2>
+L’educazione non è controllo.
+È comprensione reciproca.
+</h2>
+
+<p>
+Educare un cane non significa spegnerlo.
+Significa imparare a comunicare davvero.
+Relazione prima di ego.
+Presenza prima di imposizione.
+</p>
+
+</div>
+
+</section>
+
+<!-- WORKING DOGS -->
+
+<section class="editorial workingdogs">
+
+<div class="editorial-inner">
+
+<div class="editorial-label">
+ATZ / WORKING DOGS
+</div>
+
+<h2>
+Ogni esercizio costruisce comunicazione.
+</h2>
+
+<p>
+Il lavoro non serve a creare macchine.
+Serve a costruire fiducia, lucidità e stabilità sotto pressione.
+Un cane da lavoro non si domina.
+Si costruisce.
+</p>
+
+</div>
+
+</section>
+
+<!-- SOCCORSO -->
+
+<section class="editorial soccorso">
+
+<div class="editorial-inner">
+
+<div class="editorial-label">
+ATZ / RICERCA E SOCCORSO
+</div>
+
+<h2>
+Fidarsi davvero significa partire insieme.
+</h2>
+
+<p>
+Qui il cane non è uno strumento.
+È il compagno con cui entri nel caos.
+Ogni ricerca è una responsabilità condivisa.
+Ogni rientro è un ritorno in due.
+</p>
+
+</div>
+
+</section>
+
+<!-- DWD -->
+
+<section class="editorial dwd">
+
+<div class="editorial-inner">
+
+<div class="editorial-label">
+ATZ / DWD
+</div>
+
+<h2>
+Non serve pietà,
+servono possibilità.
+</h2>
+
+<p>
+DWD significa Dogs With Disabilities.
+Non raccontiamo cani spezzati.
+Raccontiamo cani che continuano ad andare avanti.
+Diversi non significa inferiori.
+</p>
+
+</div>
+
+</section>
+
+<!-- NORSE -->
+
+<section class="editorial norse">
+
+<div class="editorial-inner">
+
+<div class="editorial-label">
+ATZ / NORSE
+</div>
+
+<h2>
+Ci sono simboli
+che non appartengono alla moda.
+</h2>
+
+<p>
+Alcune cose non servono a essere spiegate.
+Servono a essere portate addosso.
+Norse nasce come identità,
+non come estetica.
+</p>
+
+</div>
+
+</section>
+
+<!-- FINAL CTA -->
+
+<section class="final-cta">
+
+<h2>
+
+DALL’ASFALTO<br>
+AL FANGO.<br><br>
+
+UN SOLO BRANCO.
+
+</h2>
+
+<a href="merch.html"
+class="footer-cta">
+
+ENTRA NEL BRANCO
+
+</a>
+
+</section>
+<!-- CRONACHE DAL CAMPO -->
+
+<section class="cronache">
+
+<div class="cronache-inner">
+
+<h2>
+CRONACHE<br>
+DAL CAMPO
+</h2>
+
+<p>
+
+Non tutto quello che conta finisce in una lezione.<br><br>
+
+Non tutto quello che insegna nasce da un esercizio.
+
+</p>
+
+<a href="cronache-dal-campo.html"
+class="cronache-btn">
+
+APRI LE CRONACHE
+
+</a>
+
+</div>
+
+</section>
+<!-- CONTACTS -->
+
+<section class="contacts">
+
+<h2 class="contacts-title">
+Contatti
+</h2>
+
+<div class="contacts-sub">
+
+Per collaborazioni, educazione,
+working dogs, ricerca e soccorso
+o progetto DWD.
+
+</div>
+
+<div class="contact-list">
+
+<a href="https://wa.me/393533019361"
+class="contact-link"
+target="_blank">
+
+WHATSAPP / FIORENZO
+
+</a>
+
+<a href="https://wa.me/393930132398"
+class="contact-link"
+target="_blank">
+
+WHATSAPP / LAURA
+
+</a>
+
+<a href="https://www.instagram.com/atzworkdogculture?igsh=MWg1bWJrNWQ3cXhpMA==&utm_source=ig_contact_invite"
+class="contact-link"
+target="_blank">
+
+INSTAGRAM
+
+</a>
+
+<a href="https://www.facebook.com/share/1N7rKajyjB/"
+class="contact-link"
+target="_blank">
+
+FACEBOOK
+
+</a>
+
+<a href="mailto:atzworkdogculture@gmail.com"
+class="contact-link">
+
+MAIL
+
+</a>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-inner">
+
+<img src="runa-incisa.png"
+class="footer-rune"
+alt="ATZ Rune">
+
+</div>
+
+</footer>
+
+</body>
+</html>
