@@ -39,7 +39,7 @@ display:block;
 max-width:100%;
 }
 
-/* HOME BUTTON */
+/* CRONACHE BUTTON */
 
 .home-btn{
 
@@ -77,7 +77,7 @@ color:black;
 
 .hero{
 
-min-height:70vh;
+min-height:45vh;
 
 display:flex;
 flex-direction:column;
@@ -86,18 +86,18 @@ align-items:center;
 
 text-align:center;
 
-padding:120px 8%;
+padding:120px 8% 80px;
 }
 
 .hero h1{
 
-font-size:6rem;
+font-size:4.5rem;
 
 line-height:0.95;
 
 letter-spacing:4px;
 
-margin-bottom:40px;
+margin-bottom:35px;
 
 text-transform:uppercase;
 }
@@ -106,7 +106,7 @@ text-transform:uppercase;
 
 max-width:800px;
 
-font-size:1.3rem;
+font-size:1.2rem;
 
 line-height:2;
 
@@ -124,9 +124,16 @@ padding:0 8% 180px;
 
 .archive-grid{
 
-max-width:1000px;
+max-width:1400px;
 
 margin:auto;
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(360px,1fr));
+
+gap:40px;
 }
 
 .event-card{
@@ -153,13 +160,14 @@ border:
 .event-card img{
 
 width:100%;
-height:auto;
+
 display:block;
 }
 
 .event-content{
 
-padding:50px;
+padding:30px;
+
 text-align:center;
 }
 
@@ -176,7 +184,7 @@ margin-bottom:15px;
 
 .event-content h2{
 
-font-size:3rem;
+font-size:2rem;
 
 line-height:1;
 
@@ -187,13 +195,13 @@ text-transform:uppercase;
 
 .event-date{
 
-font-size:1rem;
+font-size:0.95rem;
 
 letter-spacing:3px;
 
 color:#bdbdbd;
 
-margin-bottom:35px;
+margin-bottom:30px;
 }
 
 .event-btn{
@@ -215,6 +223,7 @@ transition:0.3s;
 .event-btn:hover{
 
 background:white;
+
 color:black;
 }
 
@@ -250,6 +259,11 @@ padding:10px 16px;
 font-size:0.75rem;
 }
 
+.hero{
+
+padding:120px 8% 60px;
+}
+
 .hero h1{
 
 font-size:3.5rem;
@@ -257,17 +271,29 @@ font-size:3.5rem;
 
 .hero p{
 
-font-size:1.1rem;
+font-size:1.05rem;
+}
+
+.archive{
+
+padding:0 8% 120px;
+}
+
+.archive-grid{
+
+grid-template-columns:1fr;
+
+gap:30px;
 }
 
 .event-content{
 
-padding:35px 25px;
+padding:25px;
 }
 
 .event-content h2{
 
-font-size:2.2rem;
+font-size:1.8rem;
 }
 
 }
@@ -327,20 +353,22 @@ CARLO FAGIOLI
 
 <div class="event-date">
 
-14 GIUGNO 2026
+ROMA • 13–14 GIUGNO 2026
 
 </div>
 
 <a href="carlo-fagioli.html"
 class="event-btn">
 
-APRI ARCHIVIO
+ENTRA NELLO STAGE
 
 </a>
 
 </div>
 
 </div>
+
+<!-- DUPLICA QUESTA CARD PER I FUTURI EVENTI -->
 
 </div>
 
