@@ -1,1 +1,359 @@
+<!DOCTYPE html>
+<html lang="it">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ATZ | Eventi</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#000;
+color:white;
+font-family:'Oswald',sans-serif;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:white;
+}
+
+img{
+display:block;
+max-width:100%;
+}
+
+/* HOME BUTTON */
+
+.home-btn{
+
+position:fixed;
+
+top:30px;
+left:30px;
+
+z-index:9999;
+
+padding:14px 22px;
+
+border:
+1px solid rgba(255,255,255,0.12);
+
+background:
+rgba(0,0,0,0.55);
+
+backdrop-filter:blur(4px);
+
+font-size:0.85rem;
+
+letter-spacing:3px;
+
+transition:0.3s;
+}
+
+.home-btn:hover{
+
+background:white;
+color:black;
+}
+
+/* HERO */
+
+.hero{
+
+min-height:70vh;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+
+padding:120px 8%;
+}
+
+.hero h1{
+
+font-size:6rem;
+
+line-height:0.95;
+
+letter-spacing:4px;
+
+margin-bottom:40px;
+
+text-transform:uppercase;
+}
+
+.hero p{
+
+max-width:800px;
+
+font-size:1.3rem;
+
+line-height:2;
+
+font-weight:300;
+
+color:#bdbdbd;
+}
+
+/* ARCHIVIO */
+
+.archive{
+
+padding:0 8% 180px;
+}
+
+.archive-grid{
+
+max-width:1000px;
+
+margin:auto;
+}
+
+.event-card{
+
+border:
+1px solid rgba(255,255,255,0.08);
+
+background:
+rgba(255,255,255,0.02);
+
+overflow:hidden;
+
+transition:0.3s;
+}
+
+.event-card:hover{
+
+transform:translateY(-4px);
+
+border:
+1px solid rgba(255,255,255,0.18);
+}
+
+.event-card img{
+
+width:100%;
+height:auto;
+display:block;
+}
+
+.event-content{
+
+padding:50px;
+text-align:center;
+}
+
+.event-label{
+
+font-size:0.9rem;
+
+letter-spacing:4px;
+
+color:#8f8f8f;
+
+margin-bottom:15px;
+}
+
+.event-content h2{
+
+font-size:3rem;
+
+line-height:1;
+
+margin-bottom:20px;
+
+text-transform:uppercase;
+}
+
+.event-date{
+
+font-size:1rem;
+
+letter-spacing:3px;
+
+color:#bdbdbd;
+
+margin-bottom:35px;
+}
+
+.event-btn{
+
+display:inline-block;
+
+padding:16px 30px;
+
+border:
+1px solid rgba(255,255,255,0.12);
+
+font-size:0.85rem;
+
+letter-spacing:3px;
+
+transition:0.3s;
+}
+
+.event-btn:hover{
+
+background:white;
+color:black;
+}
+
+/* FOOTER */
+
+footer{
+
+padding:120px 8%;
+
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.footer-rune{
+
+width:90px;
+
+opacity:0.8;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.home-btn{
+
+top:20px;
+left:20px;
+
+padding:10px 16px;
+
+font-size:0.75rem;
+}
+
+.hero h1{
+
+font-size:3.5rem;
+}
+
+.hero p{
+
+font-size:1.1rem;
+}
+
+.event-content{
+
+padding:35px 25px;
+}
+
+.event-content h2{
+
+font-size:2.2rem;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<a href="cronache-dal-campo.html" class="home-btn">
+
+CRONACHE
+
+</a>
+
+<section class="hero">
+
+<h1>
+
+EVENTI
+
+</h1>
+
+<p>
+
+Ogni incontro lascia qualcosa.<br><br>
+
+Alcuni diventano parte della nostra storia.
+
+</p>
+
+</section>
+
+<section class="archive">
+
+<div class="archive-grid">
+
+<div class="event-card">
+
+<img src="images/cronache/eventi/2026-06-carlo-fagioli/file_0000000043d471f4b1778c3fb4f9f432.png"
+alt="Stage Carlo Fagioli">
+
+<div class="event-content">
+
+<div class="event-label">
+
+STAGE
+
+</div>
+
+<h2>
+
+CARLO FAGIOLI
+
+</h2>
+
+<div class="event-date">
+
+14 GIUGNO 2026
+
+</div>
+
+<a href="carlo-fagioli.html"
+class="event-btn">
+
+APRI ARCHIVIO
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<img src="runa-incisa.png"
+class="footer-rune"
+alt="ATZ Rune">
+
+</footer>
+
+</body>
+
+</html>
