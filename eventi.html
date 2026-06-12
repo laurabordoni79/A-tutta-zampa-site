@@ -36,10 +36,10 @@ color:white;
 
 img{
 display:block;
-max-width:100%;
+width:100%;
 }
 
-/* CRONACHE BUTTON */
+/* CRONACHE */
 
 .home-btn{
 
@@ -77,7 +77,7 @@ color:black;
 
 .hero{
 
-min-height:45vh;
+min-height:25vh;
 
 display:flex;
 flex-direction:column;
@@ -86,29 +86,29 @@ align-items:center;
 
 text-align:center;
 
-padding:120px 8% 80px;
+padding:120px 8% 70px;
 }
 
 .hero h1{
 
-font-size:4.5rem;
+font-size:4rem;
 
-line-height:0.95;
+line-height:1;
 
 letter-spacing:4px;
 
-margin-bottom:35px;
+margin-bottom:25px;
 
 text-transform:uppercase;
 }
 
 .hero p{
 
-max-width:800px;
+max-width:500px;
 
-font-size:1.2rem;
+font-size:1.1rem;
 
-line-height:2;
+line-height:1.9;
 
 font-weight:300;
 
@@ -124,29 +124,29 @@ padding:0 8% 180px;
 
 .archive-grid{
 
-max-width:1400px;
+max-width:1100px;
 
 margin:auto;
 
 display:grid;
 
 grid-template-columns:
-repeat(auto-fit,minmax(360px,1fr));
+repeat(auto-fit,minmax(300px,1fr));
 
 gap:40px;
 }
 
 .event-card{
 
-border:
-1px solid rgba(255,255,255,0.08);
-
 background:
 rgba(255,255,255,0.02);
 
+border:
+1px solid rgba(255,255,255,0.08);
+
 overflow:hidden;
 
-transition:0.3s;
+transition:0.35s;
 }
 
 .event-card:hover{
@@ -159,61 +159,61 @@ border:
 
 .event-card img{
 
-width:100%;
+aspect-ratio:4/5;
 
-display:block;
+object-fit:cover;
 }
 
 .event-content{
 
-padding:30px;
+padding:28px;
 
 text-align:center;
 }
 
 .event-label{
 
-font-size:0.9rem;
+font-size:0.8rem;
 
 letter-spacing:4px;
 
 color:#8f8f8f;
 
-margin-bottom:15px;
+margin-bottom:12px;
 }
 
 .event-content h2{
 
-font-size:2rem;
+font-size:1.8rem;
 
 line-height:1;
 
-margin-bottom:20px;
-
 text-transform:uppercase;
+
+margin-bottom:18px;
 }
 
 .event-date{
 
-font-size:0.95rem;
+font-size:0.9rem;
 
 letter-spacing:3px;
 
 color:#bdbdbd;
 
-margin-bottom:30px;
+margin-bottom:28px;
 }
 
 .event-btn{
 
 display:inline-block;
 
-padding:16px 30px;
+padding:14px 24px;
 
 border:
 1px solid rgba(255,255,255,0.12);
 
-font-size:0.85rem;
+font-size:0.8rem;
 
 letter-spacing:3px;
 
@@ -225,6 +225,30 @@ transition:0.3s;
 background:white;
 
 color:black;
+}
+
+/* PLACEHOLDER */
+
+.placeholder{
+
+aspect-ratio:4/5;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:
+linear-gradient(
+180deg,
+#111,
+#050505
+);
+
+font-size:1rem;
+
+letter-spacing:6px;
+
+color:#666;
 }
 
 /* FOOTER */
@@ -261,17 +285,17 @@ font-size:0.75rem;
 
 .hero{
 
-padding:120px 8% 60px;
+padding:110px 8% 50px;
 }
 
 .hero h1{
 
-font-size:3.5rem;
+font-size:3rem;
 }
 
 .hero p{
 
-font-size:1.05rem;
+font-size:1rem;
 }
 
 .archive{
@@ -288,12 +312,12 @@ gap:30px;
 
 .event-content{
 
-padding:25px;
+padding:24px;
 }
 
 .event-content h2{
 
-font-size:1.8rem;
+font-size:1.5rem;
 }
 
 }
@@ -304,7 +328,8 @@ font-size:1.8rem;
 
 <body>
 
-<a href="cronache-dal-campo.html" class="home-btn">
+<a href="cronache-dal-campo.html"
+class="home-btn">
 
 CRONACHE
 
@@ -332,10 +357,12 @@ Alcuni diventano parte della nostra storia.
 
 <div class="archive-grid">
 
+<!-- CARLO FAGIOLI -->
+
 <div class="event-card">
 
 <img src="images/cronache/eventi/2026-06-carlo-fagioli/file_0000000043d471f4b1778c3fb4f9f432.png"
-alt="Stage Carlo Fagioli">
+alt="Carlo Fagioli">
 
 <div class="event-content">
 
@@ -368,7 +395,91 @@ ENTRA NELLO STAGE
 
 </div>
 
-<!-- DUPLICA QUESTA CARD PER I FUTURI EVENTI -->
+<!-- EVENTO FUTURO -->
+
+<div class="event-card">
+
+<div class="placeholder">
+
+EVENTO
+
+FUTURO
+
+</div>
+
+<div class="event-content">
+
+<div class="event-label">
+
+WORKSHOP
+
+</div>
+
+<h2>
+
+PROSSIMAMENTE
+
+</h2>
+
+<div class="event-date">
+
+IN PROGRAMMAZIONE
+
+</div>
+
+<a href="#"
+class="event-btn">
+
+IN ARRIVO
+
+</a>
+
+</div>
+
+</div>
+
+<!-- EVENTO FUTURO -->
+
+<div class="event-card">
+
+<div class="placeholder">
+
+EVENTO
+
+FUTURO
+
+</div>
+
+<div class="event-content">
+
+<div class="event-label">
+
+SEMINARIO
+
+</div>
+
+<h2>
+
+PROSSIMAMENTE
+
+</h2>
+
+<div class="event-date">
+
+IN PROGRAMMAZIONE
+
+</div>
+
+<a href="#"
+class="event-btn">
+
+IN ARRIVO
+
+</a>
+
+</div>
+
+</div>
 
 </div>
 
